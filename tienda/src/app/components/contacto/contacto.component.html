@@ -1,0 +1,344 @@
+<app-nav></app-nav>
+
+    <!-- Breadcrumb -->
+    <nav class="bg-secondary mb-3" aria-label="breadcrumb">
+        <div class="container">
+          <ol class="breadcrumb breadcrumb-alt mb-0">
+            <li class="breadcrumb-item">
+              <a href="index.html"><i class="ci-home"></i></a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Contactanos</li>
+          </ol>
+        </div>
+      </nav>
+
+
+      <!-- Page content -->
+      <section class="container pt-3 pt-md-4">
+        <div class="row">
+
+          <!-- Nav tabs -->
+          <div class="col-md-4">
+            <div class="mb-md-5 mb-4 pb-lg-4" data-simplebar data-simplebar-auto-hide="false">
+              <ul class="nav flex-md-column flex-nowrap text-nowrap" role="tablist">
+                <li class="nav-item">
+                  <a href="#contact" id="contact-tab" class="nav-link h3 me-md-0 me-sm-5 me-4 mb-0 px-0 active" data-bs-toggle="tab" role="tab" aria-controls="contact" aria-selected="true">
+                    Contactanos
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#stores" id="stores-tab" class="nav-link h3 me-md-0 me-sm-5 me-4 mb-0 px-0" data-bs-toggle="tab" role="tab" aria-controls="stores" aria-selected="false">
+                    Nuestras Tiendas
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#faq" id="faq-tab" class="nav-link h3 me-md-0 me-sm-5 me-4 mb-0 px-0" data-bs-toggle="tab" role="tab" aria-controls="faq" aria-selected="false">
+                    Preguntas Frecuentes
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Tabs content -->
+          <div class="col-md-8 ms-auto pt-md-2">
+            <div class="tab-content pb-2 pb-sm-4 pb-lg-5">
+
+              <!-- Tab: Contact Us -->
+              <div id="contact" class="tab-pane pb-5 fade show active" role="tabpanel" aria-labelledby="contact-tab">
+                <p class="text-dark lead fw-bold">Si tiene alguna pregunta, inquietud o comentario, ¡nos encantaría ayudarlo! Envíe su consulta utilizando cualquiera de los métodos siguientes:</p>
+                <div class="nav-dark mb-5">
+                  <a href="tel:4055550128" class="nav-link d-flex align-items-center fw-normal p-0 mb-2">
+                    <i class="ci-iphone text-primary lead me-2"></i>
+                    <span>(405) 555-0128</span>
+                  </a>
+                  <a href="mailto:support&#64;example.com" class="nav-link d-flex align-items-center fw-normal p-0 mb-2">
+                    <i class="ci-mail text-primary lead me-2"></i>
+                    <span>support&#64;example.com</span>
+                  </a>
+                  <a href="#" class="nav-link d-flex align-items-center fw-normal p-0 mb-2">
+                    <i class="ci-messenger text-primary lead me-2"></i>
+                    <span>Connect on Messenger</span>
+                  </a>
+                  <a href="#" class="nav-link d-flex align-items-center fw-normal p-0 mb-2">
+                    <i class="ci-twitter text-primary lead me-2"></i>
+                    <span>Tweet us</span>
+                  </a>
+                </div>
+                <p class="text-dark lead fw-bold pb-2">O póngase en contacto con nosotros completando el siguiente formulario:</p>
+                <form class="needs-validation" novalidate>
+                  <div class="row">
+                    <div class="col-sm-6 mb-4">
+                      <label for="cont-name" class="form-label-lg">Nombre *</label>
+                      <input type="text" id="cont-name" class="form-control form-control-lg" placeholder="John Doe" required>
+                      <div class="invalid-feedback">Please let us know your name.</div>
+                    </div>
+                    <div class="col-sm-6 mb-4">
+                      <label for="cont-email" class="form-label-lg">Email *</label>
+                      <input type="email" id="cont-email" class="form-control form-control-lg" placeholder="johndoe&#64;example.com" required>
+                      <div class="invalid-feedback">Please provide valid email address.</div>
+                    </div>
+                    <div class="col-sm-6 mb-4">
+                      <label for="cont-phone" class="form-label-lg">Phone</label>
+                      <input type="text" id="cont-phone" class="form-control form-control-lg bg-0" data-format="custom" data-delimiter="-" data-blocks="2 3 4" placeholder="00-000-0000">
+                    </div>
+                    <div class="col-sm-6 mb-4">
+                      <label for="cont-subject" class="form-label-lg">Subject</label>
+                      <input type="text" id="cont-subject" class="form-control form-control-lg bg-0" placeholder="Title of your message">
+                    </div>
+                    <div class="col-12 mb-4">
+                      <label for="cont-message" class="form-label-lg">Message *</label>
+                      <textarea id="cont-message" class="form-control form-control-lg" rows="5" placeholder="Write your message here" required></textarea>
+                      <div class="invalid-feedback">Please write your message.</div>
+                    </div>
+                    <div class="col-lg-4 col-sm-5 pt-2">
+                      <button type="submit" class="btn btn-primary btn-lg w-100">Send message</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Tab: Outlet Stores -->
+              <div id="stores" class="tab-pane pb-3 fade" role="tabpanel" aria-labelledby="stores-tab">
+                <div class="row">
+                  <div class="col-sm-6 mb-grid-gutter">
+                    <div class="card card-hover">
+                      <img class="card-img-top" src="../assets/img/ecommerce/contacts/01.jpg" alt="Card image">
+                      <div class="card-body">
+                        <h3 class="h4">New York, USA</h3>
+                        <ul class="mb-0 list-unstyled nav-dark">
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link fw-normal p-0" href="tel:4055550128">
+                              <i class="ci-iphone mt-1 me-2 pe-1 lead text-primary"></i>
+                              (405) 555-0128
+                            </a>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link fw-normal p-0" href="mailto:newyork&#64;example.com">
+                              <i class="ci-mail mt-1 me-2 pe-1 lead text-primary"></i>
+                              newyork&#64;example.com
+                            </a>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <div class="d-flex">
+                              <i class="ci-clock mt-1 me-2 pe-1 lead text-primary"></i>
+                              Daily from 9am to 9pm
+                            </div>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link fw-normal p-0" href="#">
+                              <i class="ci-map-pin-outline mt-1 me-2 pe-1 lead text-primary"></i>
+                              20 W 29th Street New York, NY 10001
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 mb-grid-gutter">
+                    <div class="card card-hover">
+                      <img class="card-img-top" src="../assets/img/ecommerce/contacts/02.jpg" alt="Card image">
+                      <div class="card-body">
+                        <h3 class="h4">Delaware, USA</h3>
+                        <ul class="mb-0 list-unstyled nav-dark">
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link fw-normal p-0" href="tel:8085550111">
+                              <i class="ci-iphone mt-1 me-2 pe-1 lead text-primary"></i>
+                              (808) 555-0111
+                            </a>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link fw-normal p-0" href="mailto:delaware&#64;example.com">
+                              <i class="ci-mail mt-1 me-2 pe-1 lead text-primary"></i>
+                              delaware&#64;example.com
+                            </a>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <div class="d-flex">
+                              <i class="ci-clock mt-1 me-2 pe-1 lead text-primary"></i>
+                              Daily from 10am to 9pm
+                            </div>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link fw-normal p-0" href="#">
+                              <i class="ci-map-pin-outline mt-1 me-2 pe-1 lead text-primary"></i>
+                              6391 Elgin St. Celina, Delaware 10299
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 mb-grid-gutter">
+                    <div class="card card-hover">
+                      <img class="card-img-top" src="../assets/img/ecommerce/contacts/03.jpg" alt="Card image">
+                      <div class="card-body">
+                        <h3 class="h4">New Jersey, USA</h3>
+                        <ul class="mb-0 list-unstyled nav-dark">
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link fw-normal p-0" href="tel:7025550122">
+                              <i class="ci-iphone mt-1 me-2 pe-1 lead text-primary"></i>
+                              (702) 555-0122
+                            </a>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link fw-normal p-0" href="mailto:newjersey&#64;example.com">
+                              <i class="ci-mail mt-1 me-2 pe-1 lead text-primary"></i>
+                              newjersey&#64;example.com
+                            </a>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <div class="d-flex">
+                              <i class="ci-clock mt-1 me-2 pe-1 lead text-primary"></i>
+                              Daily from 9am to 8pm
+                            </div>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link fw-normal p-0" href="#">
+                              <i class="ci-map-pin-outline mt-1 me-2 pe-1 lead text-primary"></i>
+                              2464 Royal Ln. Mesa, New Jersey 45463
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 mb-grid-gutter">
+                    <div class="card card-hover">
+                      <img class="card-img-top" src="../assets/img/ecommerce/contacts/04.jpg" alt="Card image">
+                      <div class="card-body">
+                        <h3 class="h4">Maine, USA</h3>
+                        <ul class="mb-0 list-unstyled nav-dark">
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link fw-normal p-0" href="tel:2195550114">
+                              <i class="ci-iphone mt-1 me-2 pe-1 lead text-primary"></i>
+                              (219) 555-0114
+                            </a>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link fw-normal p-0" href="mailto:maine&#64;example.com">
+                              <i class="ci-mail mt-1 me-2 pe-1 lead text-primary"></i>
+                              maine&#64;example.com
+                            </a>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <div class="d-flex">
+                              <i class="ci-clock mt-1 me-2 pe-1 lead text-primary"></i>
+                              Daily from 9am to 8pm
+                            </div>
+                          </li>
+                          <li class="mb-2 pb-1">
+                            <a class="d-flex nav-link fw-normal p-0" href="#">
+                              <i class="ci-map-pin-outline mt-1 me-2 pe-1 lead text-primary"></i>
+                              8502 Preston Rd. Inglewood, Maine 98380
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab: FAQ -->
+              <div id="faq" class="tab-pane fade mt-n3 mt-dm-0 pb-5" role="tabpanel" aria-labelledby="faq-tab">
+
+                <!-- Accordion -->
+                <div class="accordion accordion-alt " id="accordion">
+
+                  <!-- Item -->
+                  <div class="accordion-item">
+                    <h5 class="accordion-header" id="accordionHeading-1">
+                      <button class="accordion-button border-bottom-0" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse-1" aria-expanded="true" aria-controls="accordionCollapse-1">Do I need to register to place an order?</button>
+                    </h5>
+                    <div class="accordion-collapse collapse show" id="accordionCollapse-1" aria-labelledby="accordionHeading-1" data-bs-parent="#accordion">
+                      <div class="accordion-body pt-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="accordion-item">
+                    <h5 class="accordion-header" id="accordionHeading-2">
+                      <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse-2" aria-expanded="false" aria-controls="accordionCollapse-2">What is the estimated delivery time?</button>
+                    </h5>
+                    <div class="accordion-collapse collapse" id="accordionCollapse-2" aria-labelledby="accordionHeading-2" data-bs-parent="#accordion">
+                      <div class="accordion-body pt-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="accordion-item">
+                    <h5 class="accordion-header" id="accordionHeading-3">
+                      <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse-3" aria-expanded="false" aria-controls="accordionCollapse-3">How can I pay for my order?</button>
+                    </h5>
+                    <div class="accordion-collapse collapse" id="accordionCollapse-3" aria-labelledby="accordionHeading-3" data-bs-parent="#accordion">
+                      <div class="accordion-body pt-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="accordion-item">
+                    <h5 class="accordion-header" id="accordionHeading-4">
+                      <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse-4" aria-expanded="false" aria-controls="accordionCollapse-4">Can I get a refund if the price has changed since I ordered it?</button>
+                    </h5>
+                    <div class="accordion-collapse collapse" id="accordionCollapse-4" aria-labelledby="accordionHeading-4" data-bs-parent="#accordion">
+                      <div class="accordion-body pt-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="accordion-item">
+                    <h5 class="accordion-header" id="accordionHeading-5">
+                      <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse-5" aria-expanded="false" aria-controls="accordionCollapse-5">Do you refund delivery charges if I return something?</button>
+                    </h5>
+                    <div class="accordion-collapse collapse" id="accordionCollapse-5" aria-labelledby="accordionHeading-5" data-bs-parent="#accordion">
+                      <div class="accordion-body pt-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="accordion-item">
+                    <h5 class="accordion-header" id="accordionHeading-6">
+                      <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse-6" aria-expanded="false" aria-controls="accordionCollapse-6">What documents will be provided with the order?</button>
+                    </h5>
+                    <div class="accordion-collapse collapse" id="accordionCollapse-6" aria-labelledby="accordionHeading-6" data-bs-parent="#accordion">
+                      <div class="accordion-body pt-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="accordion-item">
+                    <h5 class="accordion-header" id="accordionHeading-7">
+                      <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse-7" aria-expanded="false" aria-controls="accordionCollapse-7">Can I return the order to the courier if anything does not suit me?</button>
+                    </h5>
+                    <div class="accordion-collapse collapse" id="accordionCollapse-7" aria-labelledby="accordionHeading-7" data-bs-parent="#accordion">
+                      <div class="accordion-body pt-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="accordion-item">
+                    <h5 class="accordion-header" id="accordionHeading-8">
+                      <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse-8" aria-expanded="false" aria-controls="accordionCollapse-8">What should I do if my order hasn't been delivered yet?</button>
+                    </h5>
+                    <div class="accordion-collapse collapse" id="accordionCollapse-8" aria-labelledby="accordionHeading-8" data-bs-parent="#accordion">
+                      <div class="accordion-body pt-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+
+                  <!-- Item -->
+                  <div class="accordion-item">
+                    <h5 class="accordion-header" id="accordionHeading-9">
+                      <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordionCollapse-9" aria-expanded="false" aria-controls="accordionCollapse-9">What is your Returns Policy?</button>
+                    </h5>
+                    <div class="accordion-collapse collapse" id="accordionCollapse-9" aria-labelledby="accordionHeading-9" data-bs-parent="#accordion">
+                      <div class="accordion-body pt-0">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<app-footer></app-footer>

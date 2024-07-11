@@ -1,0 +1,166 @@
+<app-sidebar></app-sidebar>
+
+
+<div class="border-bottom pt-1 mt-2 mb-2">
+    <h2 class="mt-2 mt-md-4 mb-3 pt-5">Clientes</h2>
+    <div class="d-flex flex-wrap flex-md-nowrap justify-content-between">
+        <p class="text-muted">Modulo Edición de Cliente</p>
+    </div>
+</div>
+
+<div class="card box-shadow-sm">
+    <div class="card-header">
+        <h5 style="margin-bottom: 0px;">Editar Cliente</h5>
+    </div>
+    <div class="card-body">
+        <!-- <form action="" > -->
+        <form #ActualizarclienteForm="ngForm" appUnambiguousRole (ngSubmit)="actualizar(ActualizarclienteForm)">
+            <div class="row">
+
+                <div class=" col-md-4  form-group">
+                    <label for="nombres" class="form-label">Nombres</label>
+                    <input type="text" id="nombres" name="nombres" class="form-control" required minlength="4"
+                        [(ngModel)]="cliente.nombres" #nombres="ngModel">
+
+                    <div *ngIf="nombres.invalid && (nombres.dirty || nombres.touched)" class="invalido">
+                        <div *ngIf="nombres.hasError('required')">
+                            El nombres es Requerido.
+                        </div>
+                        <div *ngIf="nombres.hasError('minlength')">
+                            Debe ser superior a 4 caracteres.
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" col-md-4  form-group">
+                    <label for="apellidos" class="form-label">Apellidos</label>
+                    <input type="text" id="apellidos" name="apellidos" class="form-control" required minlength="4"
+                        [(ngModel)]="cliente.apellidos" #apellidos="ngModel">
+                    <div *ngIf="apellidos.invalid && (apellidos.dirty || apellidos.touched)" class="invalido">
+                        <div *ngIf="apellidos.hasError('required')">
+                            El Apellido es Requerido.
+                        </div>
+                        <div *ngIf="apellidos.hasError('minlength')">
+                            Debe ser superior a 4 caracteres.
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" col-md-4  form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required email
+                        [(ngModel)]="cliente.email" #email="ngModel">
+                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="invalido">
+                        <div *ngIf="email.hasError('required')">
+                            El email es Requerido.
+                        </div>
+
+                        <div *ngIf="email.hasError('email')">
+                            Formato de email invalido
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class=" col-md-4  form-group">
+                    <label for="telefono" class="form-label">Telefono</label>
+                    <input type="number" id="telefono" name="telefono" class="form-control" required
+                        [(ngModel)]="cliente.telefono" #telefono="ngModel">
+                    <div *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)" class="invalido">
+
+                        <div *ngIf="telefono.hasError('required')">
+                            El telefono es Requerido.
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class=" col-md-4  form-group">
+                    <label for="dni" class="form-label">Documento de Identificación</label>
+                    <input type="number" id="dni" name="dni" class="form-control" required [(ngModel)]="cliente.dni"
+                        #dni="ngModel">
+                    <div *ngIf="dni.invalid && (dni.dirty || dni.touched)" class="invalido">
+
+                        <div *ngIf="dni.hasError('required')">
+                            El Documento es Requerido.
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" col-md-4  form-group">
+                    <label for="fecha_nacimiento" class="form-label">Fecha de Nacimiento</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" class="form-control" required
+                        [(ngModel)]="cliente.fecha_nacimiento" #fecha_nacimiento="ngModel">
+                    <div *ngIf="fecha_nacimiento.invalid && (fecha_nacimiento.dirty || fecha_nacimiento.touched)"
+                        class="invalido">
+
+                        <div *ngIf="fecha_nacimiento.hasError('required')">
+                            La fecha de nacimiento es requerida.
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" col-md-4  form-group">
+                    <label for="genero">Genero</label>
+                    <select id="genero" name="genero" required [(ngModel)]="cliente.genero" #genero="ngModel">
+                        <option *ngFor="let genero of generos" [value]="genero">{{ genero }}</option>
+                    </select>
+
+                    <div *ngIf="genero.errors && genero.touched" class="invalido">
+                        <div *ngIf="genero.errors['required']">Indique un Genero</div>
+                    </div>
+                </div>
+
+
+                <!-- 
+                 -->
+
+                <div class="col-md-4 form-group">
+                    <label>¿Modificar Contraseña?</label>
+                            <div class="form-check form-inline">
+                                <input type="radio" class="form-check-input" id="radio1" [value]="true"
+                                    [(ngModel)]="modificarPassword" name="opcion">
+                                <label for="radio1" class="form-check-label">Si</label>
+                            </div>
+
+                            <div class="form-check form-inline">
+                                <input type="radio" class="form-check-input" id="radio2" [value]="false"
+                                    [(ngModel)]="modificarPassword" name="opcion" checked>
+                                <label for="radio2" class="form-check-label">No</label>
+                            </div>
+                </div>
+
+                <!--  -->
+                
+                <div *ngIf="modificarPassword" class="col-md-4 form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="text" id="password" name="password" class="form-control" required
+                        [(ngModel)]="cliente.password" #password="ngModel">
+                    <div *ngIf="modificarPassword && password.invalid && (password.dirty || password.touched)" class="invalido">
+                        <div *ngIf="password.hasError('required')">
+                            Indique una contraseña.
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+              
+                <div class="card-footer col-md-12">
+
+                    <a class="btn btn-warning btn-shadow mr-3" [routerLink]="['/panel/clientes']"
+                        routerLinkActive="router-link-active">Regresar</a>
+                    <button class="btn btn-primary btn-shadow" type="submit">Actualizar</button>
+
+                    <button disabled *ngIf="load_btn" type="button" class="btn btn-primary btn-shadow">
+                        <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                        Creando...
+                    </button>
+
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>

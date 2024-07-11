@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tienda</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Favicon and Touch Icons-->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+     -->
+    <link rel="manifest" href="../assets/img/site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="../assets/img/safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="../assets/vendor/tiny-slider/dist/tiny-slider.css"/>
+ 
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="../assets/css/theme.min.css">
+    <link rel="stylesheet" href="assets/css/iziToast.min.css">
+     <link rel="stylesheet" href="assets/css/simplebar.min.css">
+    <link rel="stylesheet" href="assets/css/nouislider.min.css">
+
+     <!-- Demo Specific Styles -->
+     <style>
+      :root {
+        --cx-primary: #17696a;
+        --cx-primary-rgb: 23,105,106;
+        --cx-gradient-from-color: #17696a;
+        --cx-gradient-to-color: #0a9193;
+        --cx-link-color: #17696a;
+        --cx-link-hover-color: #0e3f40;
+      }
+      .btn-primary {
+        --cx-btn-bg: #17696a;
+        --cx-btn-border-color: #17696a;
+        --cx-btn-hover-bg: #104a4b;
+        --cx-btn-active-bg: #104a4b;
+        --cx-btn-hover-border-color: #104a4b;
+        --cx-btn-active-border-color: #104a4b;
+      }
+      .btn-outline-primary {
+        --cx-btn-color: #17696a;
+        --cx-btn-border-color: rgba(23,105,106, .4);
+        --cx-btn-hover-bg: #17696a;
+        --cx-btn-active-bg: #17696a;
+        --cx-btn-hover-border-color: #17696a;
+        --cx-btn-active-border-color: #17696a;
+      }
+      .btn-translucent-primary {
+        --cx-btn-color: #17696a;
+        --cx-btn-bg: rgba(23,105,106, .2);
+        --cx-btn-hover-bg: #17696a;
+        --cx-btn-active-bg: #17696a;
+      }
+      .btn-hover-shadow:hover.btn-primary,
+      .btn-hover-shadow:hover.btn-outline-primary,
+      .btn-hover-shadow:hover.btn-translucent-primary,
+      .btn-hover-shadow:hover.btn-gradient {
+        --cx-btn-hover-shadow-color: rgba(23,105,106, .92);
+      }
+      .btn-scroll-top {
+        --cx-btn-scroll-top-bg: #17696a;
+        --cx-btn-scroll-top-hover-bg: #104a4b;
+      }
+      .accordion {
+        --cx-accordion-active-color: #17696a;
+        --cx-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3e%3cpath fill-rule='evenodd' d='M7.999.667c.368 0 .667.298.667.667v6h6c.368 0 .667.298.667.667s-.299.667-.667.667h-6v6c0 .368-.298.667-.667.667s-.667-.299-.667-.667v-6h-6C.964 8.667.666 8.369.666 8s.298-.667.667-.667h6v-6c0-.368.298-.667.667-.667z' fill='%2317696a'/%3e%3c/svg%3e");
+        --cx-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none'%3e%3cpath fill-rule='evenodd' d='M.666 8c0-.368.298-.667.667-.667v1.333C.964 8.666.666 8.368.666 8zm14 0v.667H1.333V7.333h13.333V8zm0 0v.667c.368 0 .667-.298.667-.667s-.299-.667-.667-.667V8z' fill='%2317696a'/%3e%3c/svg%3e");
+      }
+    </style>
+    <!-- Page loading styles-->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #787a80;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        background-color: #cfcfd1;
+        border-radius: 50%;
+        opacity: 0;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+      @keyframes spinner {
+        0% {
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        }
+        50% {
+          opacity: 1;
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+
+    <!-- Nouislider -->
+    <style>
+      .cs-range-slider-ui .noUi-handle {
+          top: 50% !important;
+          width: .875rem !important;
+          height: .875rem !important;
+          margin-top: -.4375rem !important;
+          border: 2px solid #fff !important;
+          border-radius: 50% !important;
+          box-shadow: none !important;
+          background-color: #17696a !important;
+      }
+      .cs-range-slider-ui {
+          height: .125rem !important;
+          margin: 3rem 0 !important;
+          border: 0 !important;
+          background-color: #dadbdd !important;
+          box-shadow: none !important;
+      }
+    </style>
+
+</head>
+<body>
+
+    <!-- Page loading spinner-->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+
+
+ <main class="page-wrapper">
+  <app-root></app-root>
+ </main>
+
+
+      <!-- Back to top button-->
+      <a class="btn-scroll-top" href="#top" data-scroll data-fixed-element>
+        <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+        <i class="btn-scroll-top-icon ci-angle-up"></i>
+      </a>
+  
+  
+      <!-- Vendor scripts: js libraries and plugins-->
+      <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+      <script src="../assets/vendor/tiny-slider/dist/min/tiny-slider.js"></script>
+  
+
+      <script src="https://kit.fontawesome.com/4b793fdcfb.js" crossorigin="anonymous"></script>
+      <script src="assets/vendor/jquery/dist/jquery.slim.min.js"></script>
+      <script src="assets/vendor/simplebar/dist/simplebar.min.js"></script>
+
+
+      <!-- Main theme script-->
+      <script src="../assets/js/theme.min.js"></script>
+      <script src="assets/js/iziToast.min.js"></script>
+
+      <script src="assets/js/simplebar.min.js"></script>
+      <script src="assets/js/nouislider.min.js"></script>
+      <script src="assets/js/smooth-scroll.polyfills.min.js"></script>
+</body>
+</html>

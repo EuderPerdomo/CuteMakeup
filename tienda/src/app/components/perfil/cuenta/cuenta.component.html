@@ -1,0 +1,152 @@
+<app-nav></app-nav>
+
+<ng-container *ngIf="user_login">
+   <!-- Breadcrumb -->
+   <nav class="bg-secondary mb-3" aria-label="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb breadcrumb-alt mb-0">
+        <li class="breadcrumb-item">
+          <a href="index.html"><i class="ci-home"></i></a>
+        </li>
+        <li class="breadcrumb-item">
+          <a href="#">Account</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">My profile</li>
+      </ol>
+    </div>
+  </nav>
+
+
+  <!-- Page container -->
+  <section class="container pt-3 pt-lg-4 pb-5 pb-lg-6" >
+    <div class="row pb-2 pb-lg-0" >
+      <!-- Account menu (sticky sidebar) -->
+      <aside class="col-xl-3 col-lg-4 pb-3 mb-4 mb-lg-0">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title mb-1">{{user_login.apellidos}} {{user_login.nombres}}</h5>
+            <p class="card-text text-muted mb-lg-0">{{user_login.email}}</p>
+            <a href="#account-menu" class="btn btn-primary w-100 d-lg-none" data-bs-toggle="collapse">Account Menu</a>
+          </div>
+          <div id="account-menu" class="collapse d-lg-block">
+            <div class="list-group list-group-flush border-top">
+              <a href="account-profile.html" class="list-group-item list-group-item-action d-flex align-items-center active">
+                <i class="ci-profile fs-lg me-2"></i>
+                <span>Perfil</span>
+              </a>
+              <a href="account-orders.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="ci-bag fs-lg me-2"></i>
+                <span>Ordenes</span>
+              </a>
+              <a href="account-wishlist.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="ci-heart fs-lg me-2"></i>
+                <span>Lista de Deseos</span>
+                <span class="badge bg-warning ms-auto">2</span>
+              </a>
+              <a href="account-recently-viewed.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="ci-eye fs-lg me-2"></i>
+                <span>Visto Reciente</span>
+              </a>
+              <a href="account-reviews.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="ci-star fs-lg me-2"></i>
+                <span>Reseñas</span>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action d-flex align-items-center">
+                <i class="ci-logout fs-lg me-2"></i>
+                <span>Sign out</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Content -->
+      <div class="col-lg-8 ms-auto">
+        <div class="d-flex align-items-center justify-content-between mb-4 pb-1 pb-sm-3">
+          <h1 class="h2 mb-0">Mi Perfil</h1>
+          <a href="#" class="btn text-danger btn-link fs-base text-decoration-none pe-0">
+            <i class="ci-delete fs-lg mt-n1 me-2"></i>
+           Eliminar Cuenta
+          </a>
+        </div>
+        <form>
+          <div class="row pb-3">
+            <div class="col-sm-6 mb-4">
+              <label for="ac-fn" class="form-label-lg">Nombres</label>
+              <input type="text" id="ac-fn" class="form-control form-control-lg" value="{{cliente.apellidos}}">
+            </div>
+            <div class="col-sm-6 mb-4">
+              <label for="ac-ln" class="form-label-lg">Apellidos</label>
+              <input type="text" id="ac-ln" class="form-control form-control-lg" value="{{cliente.nombres}}">
+            </div>
+            <div class="col-sm-6 mb-4">
+              <label for="ac-email" class="form-label-lg">Email</label>
+              <input type="email" id="ac-email" class="form-control form-control-lg" value="{{cliente.email}}">
+            </div>
+            <div class="col-sm-6 mb-4">
+              <label for="ac-phone" class="form-label-lg">Telefono</label>
+              <input type="text" id="ac-phone" class="form-control form-control-lg" value="{{cliente.telefono}}">
+            </div>
+            <div class="col-sm-6 mb-4">
+              <label for="ac-password" class="form-label-lg">New Password</label>
+              <div class="password-toggle">
+                <input class="form-control form-control-lg" type="password" id="ac-password">
+                <label class="password-toggle-btn" aria-label="Show/hide password">
+                  <input class="password-toggle-check" type="checkbox">
+                  <span class="password-toggle-indicator"></span>
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-4">
+              <label for="ac-password-confirm" class="form-label-lg">New Password</label>
+              <div class="password-toggle">
+                <input class="form-control form-control-lg" type="password" id="ac-password-confirm">
+                <label class="password-toggle-btn" aria-label="Show/hide password">
+                  <input class="password-toggle-check" type="checkbox">
+                  <span class="password-toggle-indicator"></span>
+                </label>
+              </div>
+            </div>
+            <div class="col-sm-6 mb-4">
+              <label for="ac-country" class="form-label-lg">Country</label>
+              <select id="ac-country" class="form-select form-select-lg">
+                <option value="" disabled>Choose country</option>
+                <option value="argentina">Australia</option>
+                <option value="brazil">Brazil</option>
+                <option value="belgium">Belgium</option>
+                <option value="france">France</option>
+                <option value="germany">Germany</option>
+                <option value="uk">United Kingdom</option>
+                <option value="usa" selected>USA</option>
+              </select>
+            </div>
+            <div class="col-sm-6 mb-4">
+              <label for="ac-city" class="form-label-lg">City</label>
+              <select id="ac-city" class="form-select form-select-lg">
+                <option value="" disabled>Choose city</option>
+                <option value="belgium">Brussels</option>
+                <option value="germany">Berlin</option>
+                <option value="uk">London</option>
+                <option value="argentina">Melbourne</option>
+                <option value="usa" selected>New Jersey</option>
+                <option value="france">Paris</option>
+                <option value="brazil">Rio de Janeiro</option>
+              </select>
+            </div>
+            <div class="col-sm-6 mb-4">
+              <label for="ac-address" class="form-label-lg">Dirección</label>
+              <input type="text" id="ac-address" class="form-control form-control-lg" value="{{cliente.direccion}}">
+            </div>
+            <div class="col-sm-6 mb-4">
+              <label for="ac-zip" class="form-label-lg">ZIP Code</label>
+              <input type="text" id="ac-zip" class="form-control form-control-lg" value="45463">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">&nbsp;Save changes&nbsp;</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</ng-container>
+<app-footer></app-footer>
