@@ -30,7 +30,8 @@ io.on('connection',function(socket){
 */
 var cliente_routes = require('./routes/cliente');
 var admin_routes = require('./routes/admin');
-//var cupon_routes = require('./routes/cupon');
+var config_routes = require('./routes/config');
+var producto_routes = require('./routes/producto');
 
 const connectDB = async () => {
     try {
@@ -65,6 +66,7 @@ app.use((req,res,next)=>{
 
 app.use('/api',cliente_routes);
 app.use('/api',admin_routes);
-//app.use('/api',cupon_routes);
+app.use('/api',config_routes)
+app.use('/api',producto_routes);
 
 module.exports = app;

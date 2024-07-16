@@ -25,6 +25,9 @@ export class NavComponent {
     email: '',
     password: ''
   }
+  
+  public categorias: Array<any> = [];
+
 /*
   public user_login: Cliente = {
     apellidos: "",
@@ -53,6 +56,14 @@ export class NavComponent {
       //this.obtener_carrito();
     }
  
+
+    this._clienteService.get_categorias_publico().subscribe(
+      response=>{
+        this.categorias = response.data;
+        console.log('categorias',this.categorias)
+      }
+    );
+
 
   }
 

@@ -29,5 +29,16 @@ export class ClienteService {
   }
   
 
+  get_categorias_publico(): Observable<any> {
+    let headers = new HttpHeaders().set('Content-Type','application/json');
+    return this._http.get(this.url + 'get_categorias_publico', { headers: headers });
+  }
+  
+  listar_productos_public(filtro:any): Observable<any> {
+    let headers = new HttpHeaders().set('Content-Type','application/json');
+    return this._http.get(this.url + 'listar_productos_public/'+filtro, { headers: headers });
+  }
+  
+
 
 }
