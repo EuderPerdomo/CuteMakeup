@@ -16,7 +16,9 @@ const cloudinary = require('cloudinary').v2
 cloudinary.config(process.env.CLOUDINARY_URL)
 
 listar_productos_public = async function (req, res) {
-        var productos = await Producto.find();
+    var filtro=req.params['filtro']
+        var productos = await Producto.find({titulo:new RegExp(filtro, 'i')}).populate('categoria');
+        console.log(productos)
         res.status(200).send({ data: productos });
 }
 

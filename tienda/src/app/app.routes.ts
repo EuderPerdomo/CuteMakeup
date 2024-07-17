@@ -20,6 +20,7 @@ export const routes: Routes = [
   { path: 'contactenos', component:ContactoComponent },
 
   { path: 'productos', component:IndexProductoComponent },
+  { path: 'productos/categoria/:categoria', component:IndexProductoComponent },
 
   //Ruta comodin Para cuando no encuentre ninguna ruta coincidente
 

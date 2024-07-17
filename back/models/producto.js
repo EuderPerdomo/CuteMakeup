@@ -45,7 +45,8 @@ var ProductoSchema=Schema({
     npuntos:{type:Number, default:0, required:true},
     //variedades:[{type:Object,require:false}],
     variedades:[variedadesSchema],
-    categoria:{type:String,required:true},
+    //categoria:{type:String,required:true},
+    categoria: {type: Schema.ObjectId, ref: 'categoria', required: true},
     titulo_variedad:{type:String,required:false},
     estado:{type:String, default:'Edicion', required:true},
     createdAt:{type:Date,default:Date.now,required:true}

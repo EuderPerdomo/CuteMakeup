@@ -1,378 +1,580 @@
 <app-nav></app-nav>
- <!-- Breadcrumb + Active filters -->
- <nav class="bg-secondary mb-3" aria-label="breadcrumb">
-    <div class="container d-sm-flex align-items-center">
-      <ol class="breadcrumb breadcrumb-alt mb-0">
-        <li class="breadcrumb-item">
-          <a href="index.html"><i class="ci-home"></i></a>
-        </li>
-        <li class="breadcrumb-item">
-          <a href="#">Women</a>
-        </li>
-        <li class="breadcrumb-item active" aria-current="page">Categorias</li>
-      </ol>
-      <hr class="d-sm-none">
-      <div class="ms-auto py-2">
-        <a class="active-filter ps-0" href="#">Dresses</a>
-        <a class="active-filter" href="#">Yellow</a>
-        <a class="active-filter" href="#">Cotton</a>
-        <a class="active-filter text-dark pe-0" href="#">Clear all</a>
-      </div>
+<!-- Breadcrumb + Active filters -->
+<nav class="bg-secondary mb-3" aria-label="breadcrumb">
+  <div class="container d-sm-flex align-items-center">
+    <ol class="breadcrumb breadcrumb-alt mb-0">
+      <li class="breadcrumb-item">
+        <a href="index.html"><i class="ci-home"></i></a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="#">Women</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">Categorias</li>
+    </ol>
+    <hr class="d-sm-none">
+    <div class="ms-auto py-2">
+      <a class="active-filter ps-0" href="#">Dresses</a>
+      <a class="active-filter" href="#">Yellow</a>
+      <a class="active-filter" href="#">Cotton</a>
+      <a class="active-filter text-dark pe-0" href="#">Clear all</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
 
-  <!-- Shop catalog -->
-  <section class="container pt-3 pb-5 pb-md-6 mb-2 mb-lg-0">
+<!-- Shop catalog -->
+<section class="container pt-3 pb-5 pb-md-6 mb-2 mb-lg-0">
 
 
-    <!-- Toolbar + Pagination -->
-    <div class="row mb-4 pb-2">
-      <div class="col-md-3 pe-lg-4 mb-3 mb-md-0">
+  <!-- Toolbar + Pagination -->
+  <div class="row mb-4 pb-2">
+    <div class="col-md-3 pe-lg-4 mb-3 mb-md-0">
 
-        <!-- Show / hide filters on Desktop -->
-        <div class="d-none d-lg-block">
-          <button type="button" class="btn btn-primary w-100 d-none d-lg-block" data-filters-hide="#filtersSidebar">
-            <i class="ci-filter-1 me-1"></i>
-            Hide filters
-          </button>
-          <button type="button" class="btn btn-primary w-100 mt-0 d-lg-none" data-filters-show="#filtersSidebar">
-            <i class="ci-filter-2 me-1"></i>
-            Show filters
-          </button>
-        </div>
-
-        <!-- Show / hide filters (offcanvas) on Mobile -->
-        <button type="button" class="btn btn-primary w-100 mt-0 d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#filtersOffcanvas">
+      <!-- Show / hide filters on Desktop -->
+      <div class="d-none d-lg-block">
+        <button type="button" class="btn btn-primary w-100 d-none d-lg-block" data-filters-hide="#filtersSidebar">
+          <i class="ci-filter-1 me-1"></i>
+          Hide filters
+        </button>
+        <button type="button" class="btn btn-primary w-100 mt-0 d-lg-none" data-filters-show="#filtersSidebar">
           <i class="ci-filter-2 me-1"></i>
           Show filters
         </button>
       </div>
 
-      <div class="col-md-9">
-        <div class="d-flex align-items-center">
-          <div class="d-flex align-items-center flex-nowrap me-3 me-xl-5">
-            <label for="sorting-top" class="fw-bold text-nowrap me-2 pe-1 d-none d-lg-block">Sort by</label>
-            <select id="sorting-top" class="form-select">
-              <option>Popularity</option>
-              <option>Low - Hight Price</option>
-              <option>High - Low Price</option>
-              <option>Average Rating</option>
-              <option>A - Z Order</option>
-              <option>Z - A Order</option>
-            </select>
-          </div>
-          <div class="d-flex align-items-center flex-nowrap d-none d-sm-flex me-3 me-xl-5">
-            <label for="pager-top" class="fw-bold text-nowrap me-2 pe-1 d-none d-lg-block">Show</label>
-            <select id="pager-top" class="form-select">
-              <option>12</option>
-              <option>24</option>
-              <option>48</option>
-              <option>72</option>
-              <option>96</option>
-            </select>
-            <span class="fs-sm text-muted text-nowrap ms-2 d-none d-lg-block">products per page</span>
-          </div>
-          <nav class="ms-auto" aria-label="Pagination">
-            <ul class="pagination mb-0">
-              <li class="page-item d-sm-none">
-                <span class="page-link page-link-static">1 / 5</span>
-              </li>
-              <li class="page-item active d-none d-sm-block" aria-current="page">
-                <span class="page-link">1
-                  <span class="visually-hidden">(current)</span>
-                </span>
-              </li>
-              <li class="page-item d-none d-sm-block">
-                <a class="page-link" href="#">2</a>
-              </li>
-              <li class="page-item d-none d-sm-block">
-                <a class="page-link" href="#">3</a>
-              </li>
-              <li class="page-item d-none d-sm-block">
-                <a class="page-link" href="#">4</a>
-              </li>
-              <li class="page-item d-none d-sm-block">
-                <a class="page-link" href="#">5</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">
-                  <i class="ci-arrow-right"></i>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+      <!-- Show / hide filters (offcanvas) on Mobile -->
+      <button type="button" class="btn btn-primary w-100 mt-0 d-lg-none" data-bs-toggle="offcanvas"
+        data-bs-target="#filtersOffcanvas">
+        <i class="ci-filter-2 me-1"></i>
+        Show filters
+      </button>
     </div>
 
-    <div class="row flex-lg-nowrap">
+    <div class="col-md-9">
+      <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center flex-nowrap me-3 me-xl-5">
+          <label for="sorting-top" class="fw-bold text-nowrap me-2 pe-1 d-none d-lg-block">Sort by</label>
+          <select id="sorting-top" class="form-select">
+            <option>Popularity</option>
+            <option>Low - Hight Price</option>
+            <option>High - Low Price</option>
+            <option>Average Rating</option>
+            <option>A - Z Order</option>
+            <option>Z - A Order</option>
+          </select>
+        </div>
+        <div class="d-flex align-items-center flex-nowrap d-none d-sm-flex me-3 me-xl-5">
+          <label for="pager-top" class="fw-bold text-nowrap me-2 pe-1 d-none d-lg-block">Show</label>
+          <select id="pager-top" class="form-select">
+            <option>12</option>
+            <option>24</option>
+            <option>48</option>
+            <option>72</option>
+            <option>96</option>
+          </select>
+          <span class="fs-sm text-muted text-nowrap ms-2 d-none d-lg-block">products per page</span>
+        </div>
+        <nav class="ms-auto" aria-label="Pagination">
+          <ul class="pagination mb-0">
+            <li class="page-item d-sm-none">
+              <span class="page-link page-link-static">1 / 5</span>
+            </li>
+            <li class="page-item active d-none d-sm-block" aria-current="page">
+              <span class="page-link">1
+                <span class="visually-hidden">(current)</span>
+              </span>
+            </li>
+            <li class="page-item d-none d-sm-block">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item d-none d-sm-block">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item d-none d-sm-block">
+              <a class="page-link" href="#">4</a>
+            </li>
+            <li class="page-item d-none d-sm-block">
+              <a class="page-link" href="#">5</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                <i class="ci-arrow-right"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="row flex-lg-nowrap">
 
 
-      <!-- Filters (sidebar) -->
-      <div id="filtersSidebar" class="col-lg-3 pe-lg-4">
-        <div id="filtersOffcanvas" class="offcanvas-lg offcanvas-start">
-          <div class="offcanvas-header align-items-center border-bottom mb-3">
-            <h2 class="h5 mb-0">Shop filters</h2>
-            <button class="btn-close me-n1" type="button" data-bs-dismiss="offcanvas" data-bs-target="#filtersOffcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body pb-4">
+    <!-- Filters (sidebar) -->
+    <div id="filtersSidebar" class="col-lg-3 pe-lg-4">
+      <div id="filtersOffcanvas" class="offcanvas-lg offcanvas-start">
+        <div class="offcanvas-header align-items-center border-bottom mb-3">
+          <h2 class="h5 mb-0">Shop filters</h2>
+          <button class="btn-close me-n1" type="button" data-bs-dismiss="offcanvas" data-bs-target="#filtersOffcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body pb-4">
 
-            <!-- Accordion -->
-            <div class="accordion accordion-alt w-100" id="sidebarAccordion">
+          <!-- Accordion -->
+          <div class="accordion accordion-alt w-100" id="sidebarAccordion">
 
-              <!-- Item -->
-              <div class="accordion-item">
-                <h6 class="accordion-header" id="sidebarAccordionHeading-1">
-                  <button class="accordion-button border-bottom-0" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarAccordionCollapse-1" aria-expanded="true" aria-controls="sidebarAccordionCollapse-1">Categorias</button>
-                </h6>
-                <div class="accordion-collapse collapse show" id="sidebarAccordionCollapse-1" aria-labelledby="sidebarAccordionHeading-1" data-bs-parent="#sidebarAccordion">
-                  <div class="accordion-body pt-0">
+
+            <!-- Item  Busqueda -->
+            <div class="accordion-item">
+              <h6 class="accordion-header" id="filtro_producto_2">
+                <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#BusquedaProducto" aria-expanded="false" aria-controls="BusquedaProducto">Buscar
+                  Producto</button>
+              </h6>
+              <div class="accordion-collapse collapse" id="BusquedaProducto" aria-labelledby="filtro_producto_2"
+                data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body pt-0">
+                  <div class="widget ps-1  pb-4 mt-n3">
+
+
+                    <div class="input-group d-lg-block d-none order-lg-3 mt-3">
+                      <input class="form-control w-100 " type="text" placeholder="Buscar Producto"
+                        name="filtro_producto" [(ngModel)]="filtro_producto">
+                      <i class="ci-search lead position-absolute end-0 top-50 translate-middle-y me-3 zindex-5"
+                        style="cursor:pointer;" (click)="buscar_producto()"></i>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Item -->
+            <div class="accordion-item">
+              <h6 class="accordion-header" id="sidebarAccordionHeading-1">
+                <button class="accordion-button border-bottom-0" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#sidebarAccordionCollapse-1" aria-expanded="true"
+                  aria-controls="sidebarAccordionCollapse-1">Categorias</button>
+              </h6>
+              <!-- Para desplegar por defecto
+               <div class="accordion-collapse collapse show" id="sidebarAccordionCollapse-1" -->
+              <div class="accordion-collapse collapse show" id="sidebarAccordionCollapse-1"
+                aria-labelledby="sidebarAccordionHeading-1" data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body pt-0">
+                  <div class="widget-data-list filter">
+                    <div class="position-relative mb-3">
+                      <input class="filter-search form-control form-control-sm pe-5" type="text"
+                        placeholder="Buscar Categoria" name="filtrar_categoria" [(ngModel)]="filtrar_categoria"
+                        (keyup)="buscar_categoria()">
+                      <i class="ci-search fs-sm position-absolute top-50 end-0 translate-middle-y me-3 zindex-5"></i>
+                    </div>
+                    <ul class="filter-list list-unstyled pe-3" style="height: 12rem;" data-simplebar
+                      data-simplebar-auto-hide="false">
+
+                      <li class="filter-item" >
+                        <div class="form-check">
+                          <input type="radio" name="group1" class="form-check-input" id="categorias-todos" 
+                          value="todos" 
+                          [(ngModel)]="filtro_categoria_producto"
+                          (change)="buscar_por_categoria()">
+
+                          <label for="categorias-todos" class="form-check-label">
+                            <span class="filter-item-text">Todos</span>
+                            <!-- <span class="ps-1 text-muted">(235)</span> -->
+                          </label>
+                        </div>
+                      </li>
+
+                      <li class="filter-item" *ngFor="let item of categorias; let indice=index">
+                        <div class="form-check">
+                          <input type="radio" name="group1" class="form-check-input" id="categorias-{{indice}}" 
+                          value="{{item.titulo}}" 
+                          [(ngModel)]="filtro_categoria_producto"
+                          (change)="buscar_por_categoria()">
+                          <label for="categorias-{{indice}}" class="form-check-label">
+                            <span class="filter-item-text">{{item.titulo}} </span>
+                            <!-- <span class="ps-1 text-muted">(235)</span> -->
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="accordion-item">
+              <h6 class="accordion-header" id="sidebarAccordionHeading-2">
+                <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#sidebarAccordionCollapse-2" aria-expanded="false"
+                  aria-controls="sidebarAccordionCollapse-2">Precio</button>
+              </h6>
+              <div class="accordion-collapse collapse" id="sidebarAccordionCollapse-2"
+                aria-labelledby="sidebarAccordionHeading-2" data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body pt-0">
+                  <div class="widget ps-1 pe-3 pb-4 mt-n3">
+                    <div class="range-slider" data-start-min="250" data-start-max="680" data-min="0" data-max="1000"
+                      data-step="1">
+                      <div class="cs-range-slider-ui" id="slider"></div>
+                      <div class="d-flex align-items-center mt-3">
+                        <div class="w-50">
+                          <div class="form-group position-relative mb-0">
+                            <input type="number" class="form-control form-control-sm range-slider-value-min">
+                          </div>
+                        </div>
+                        <div class="mx-1 px-2 fs-xs">—</div>
+                        <div class="w-50">
+                          <div class="form-group position-relative mb-0">
+                            <input type="number" class="form-control form-control-sm range-slider-value-max">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-12">
+                          <button class="btn btn-primary btn-sm btn-block" (click)="buscar_precios()">Filtrar</button>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="accordion-item">
+              <h6 class="accordion-header" id="sidebarAccordionHeading-3">
+                <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#sidebarAccordionCollapse-3" aria-expanded="false"
+                  aria-controls="sidebarAccordionCollapse-3">Color</button>
+              </h6>
+              <div class="accordion-collapse collapse" id="sidebarAccordionCollapse-3"
+                aria-labelledby="sidebarAccordionHeading-3" data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body pt-0">
+                  <div class="d-flex justify-content-between px-3 pb-3">
+                    <div class="d-flex flex-column text-center">
+
+                      <!-- Color option -->
+                      <div class="form-check form-option form-option-color form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color" id="c-black" value="Black">
+                        <label class="form-option-label rounded-circle" for="c-black">
+                          <span class="form-option-color-indicator rounded-circle"
+                            style="background-color: #111;"></span>
+                        </label>
+                        <label class="form-option-color-text" for="c-black">Black</label>
+                      </div>
+
+                      <!-- Color option -->
+                      <div class="form-check form-option form-option-color form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color" id="c-dark-blue" value="Dark blue">
+                        <label class="form-option-label rounded-circle" for="c-dark-blue">
+                          <span class="form-option-color-indicator rounded-circle"
+                            style="background-color: #0c2c7e;"></span>
+                        </label>
+                        <label class="form-option-color-text" for="c-dark-blue">Dark blue</label>
+                      </div>
+
+                      <!-- Color option -->
+                      <div class="form-check form-option form-option-color form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color" id="c-purple" value="Purple">
+                        <label class="form-option-label rounded-circle" for="c-purple">
+                          <span class="form-option-color-indicator rounded-circle"
+                            style="background-color: #a27ac9;"></span>
+                        </label>
+                        <label class="form-option-color-text" for="c-purple">Purple</label>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+
+                      <!-- Color option -->
+                      <div class="form-check form-option form-option-color form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color" id="c-blue-gray" value="Blue-gray">
+                        <label class="form-option-label rounded-circle" for="c-blue-gray">
+                          <span class="form-option-color-indicator rounded-circle"
+                            style="background-color: #c0dded;"></span>
+                        </label>
+                        <label class="form-option-color-text" for="c-blue-gray">Blue-gray</label>
+                      </div>
+
+                      <!-- Color option -->
+                      <div class="form-check form-option form-option-color form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color" id="c-beige" value="Beige">
+                        <label class="form-option-label rounded-circle" for="c-beige">
+                          <span class="form-option-color-indicator rounded-circle"
+                            style="background-color: #d8c1ad;"></span>
+                        </label>
+                        <label class="form-option-color-text" for="c-beige">Beige</label>
+                      </div>
+
+                      <!-- Color option -->
+                      <div class="form-check form-option form-option-color form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color" id="c-green" value="Green">
+                        <label class="form-option-label rounded-circle" for="c-green">
+                          <span class="form-option-color-indicator rounded-circle"
+                            style="background-color: #67ba92;"></span>
+                        </label>
+                        <label class="form-option-color-text" for="c-green">Green</label>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+
+                      <!-- Color option -->
+                      <div class="form-check form-option form-option-color form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color" id="c-yellow" value="Yellow">
+                        <label class="form-option-label rounded-circle" for="c-yellow">
+                          <span class="form-option-color-indicator rounded-circle"
+                            style="background-color: #fcd164;"></span>
+                        </label>
+                        <label class="form-option-color-text" for="c-yellow">Yellow</label>
+                      </div>
+
+                      <!-- Color option -->
+                      <div class="form-check form-option form-option-color form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color" id="c-brown" value="Brown">
+                        <label class="form-option-label rounded-circle" for="c-brown">
+                          <span class="form-option-color-indicator rounded-circle"
+                            style="background-color: #874e19;"></span>
+                        </label>
+                        <label class="form-option-color-text" for="c-brown">Brown</label>
+                      </div>
+
+                      <!-- Color option -->
+                      <div class="form-check form-option form-option-color form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color" id="c-orange" value="Orange">
+                        <label class="form-option-label rounded-circle" for="c-orange">
+                          <span class="form-option-color-indicator rounded-circle"
+                            style="background-color: #fb9620;"></span>
+                        </label>
+                        <label class="form-option-color-text" for="c-orange">Orange</label>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+
+                      <!-- Color option -->
+                      <div class="form-check form-option form-option-color form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color" id="c-red" value="Red">
+                        <label class="form-option-label rounded-circle" for="c-red">
+                          <span class="form-option-color-indicator rounded-circle"
+                            style="background-color: #f75151;"></span>
+                        </label>
+                        <label class="form-option-color-text" for="c-red">Red</label>
+                      </div>
+
+                      <!-- Color option -->
+                      <div class="form-check form-option form-option-color form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color" id="c-gray" value="Gray">
+                        <label class="form-option-label rounded-circle" for="c-gray">
+                          <span class="form-option-color-indicator rounded-circle"
+                            style="background-color: #9a9494;"></span>
+                        </label>
+                        <label class="form-option-color-text" for="c-gray">Gray</label>
+                      </div>
+
+                      <!-- Color option -->
+                      <div class="form-check form-option form-option-color form-check-inline mb-2">
+                        <input class="form-check-input" type="radio" name="color" id="c-white" value="White">
+                        <label class="form-option-label rounded-circle" for="c-white">
+                          <span class="form-option-color-indicator rounded-circle"
+                            style="background-color: #f1f1f1;"></span>
+                        </label>
+                        <label class="form-option-color-text" for="c-white">White</label>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="accordion-item">
+              <h6 class="accordion-header" id="sidebarAccordionHeading-4">
+                <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#sidebarAccordionCollapse-4" aria-expanded="false"
+                  aria-controls="sidebarAccordionCollapse-4">Size</button>
+              </h6>
+              <div class="accordion-collapse collapse" id="sidebarAccordionCollapse-4"
+                aria-labelledby="sidebarAccordionHeading-4" data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body pt-0">
+                  <div class="widget-data-list">
+                    <ul class="list-unstyled">
+                      <li>
+                        <div class="form-check custom-checkbox">
+                          <input type="checkbox" class="form-check-input" id="xs">
+                          <label for="xs" class="form-check-label">
+                            <span class="filter-item-text">XS</span>
+                            <span class="ps-1 text-muted">(16)</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check custom-checkbox">
+                          <input type="checkbox" class="form-check-input" id="s">
+                          <label for="s" class="form-check-label">
+                            <span class="filter-item-text">S</span>
+                            <span class="ps-1 text-muted">(12)</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check custom-checkbox">
+                          <input type="checkbox" class="form-check-input" id="m">
+                          <label for="m" class="form-check-label">
+                            <span class="filter-item-text">M</span>
+                            <span class="ps-1 text-muted">(5)</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check custom-checkbox">
+                          <input type="checkbox" class="form-check-input" id="l">
+                          <label for="l" class="form-check-label">
+                            <span class="filter-item-text">L</span>
+                            <span class="ps-1 text-muted">(11)</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check custom-checkbox">
+                          <input type="checkbox" class="form-check-input" id="xl">
+                          <label for="xl" class="form-check-label">
+                            <span class="filter-item-text">XL</span>
+                            <span class="ps-1 text-muted">(18)</span>
+                          </label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="form-check custom-checkbox">
+                          <input type="checkbox" class="form-check-input" id="plus">
+                          <label for="plus" class="form-check-label">
+                            <span class="filter-item-text">Plus Size</span>
+                            <span class="ps-1 text-muted">(4)</span>
+                          </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="accordion-item">
+              <h6 class="accordion-header" id="sidebarAccordionHeading-5">
+                <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#sidebarAccordionCollapse-5" aria-expanded="false"
+                  aria-controls="sidebarAccordionCollapse-5">Material</button>
+              </h6>
+              <div class="accordion-collapse collapse" id="sidebarAccordionCollapse-5"
+                aria-labelledby="sidebarAccordionHeading-5" data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body pt-0">
+                  <div class="widget">
                     <div class="widget-data-list filter">
                       <div class="position-relative mb-3">
-                        <input class="filter-search form-control form-control-sm pe-5" 
-                        type="text" 
-                        placeholder="Buscar Categoria"
-                        name="filtrar_categoria"
-                        [(ngModel)]="filtrar_categoria"
-                        (keyup)="buscar_categoria()">
+                        <input class="filter-search form-control form-control-sm pe-5" type="text"
+                          placeholder="Search the material">
                         <i class="ci-search fs-sm position-absolute top-50 end-0 translate-middle-y me-3 zindex-5"></i>
                       </div>
-                      <ul class="filter-list list-unstyled pe-3" style="height: 12rem;" data-simplebar data-simplebar-auto-hide="false">
-                        <li class="filter-item" *ngFor="let item of categorias; let indice=index">
+                      <ul class="filter-list list-unstyled pe-3" style="height: 12rem;" data-simplebar
+                        data-simplebar-auto-hide="false">
+                        <li class="filter-item">
                           <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="categorias-{{indice}}">
-                            <label for="categorias-{{indice}}" class="form-check-label">
-                              <span class="filter-item-text">{{item.titulo}}</span>
-                              <!-- <span class="ps-1 text-muted">(235)</span> -->
+                            <input class="form-check-input" type="checkbox" id="material-1">
+                            <label class="form-check-label" for="material-1">
+                              <span class="filter-item-text">Cotton</span>
+                              <span class="ps-1 text-muted">(162)</span>
                             </label>
                           </div>
                         </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Item -->
-              <div class="accordion-item">
-                <h6 class="accordion-header" id="sidebarAccordionHeading-2">
-                  <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarAccordionCollapse-2" aria-expanded="false" aria-controls="sidebarAccordionCollapse-2">Precio</button>
-                </h6>
-                <div class="accordion-collapse collapse" id="sidebarAccordionCollapse-2" aria-labelledby="sidebarAccordionHeading-2" data-bs-parent="#sidebarAccordion">
-                  <div class="accordion-body pt-0">
-                    <div class="widget ps-1 pe-3 pb-4 mt-n3">
-                      <div class="range-slider" data-start-min="250" data-start-max="680" data-min="0" data-max="1000" data-step="1">
-                        <div class="cs-range-slider-ui" id="slider"></div>
-                        <div class="d-flex align-items-center mt-3">
-                          <div class="w-50">
-                            <div class="form-group position-relative mb-0">
-                              <input type="number" class="form-control form-control-sm range-slider-value-min">
-                            </div>
-                          </div>
-                          <div class="mx-1 px-2 fs-xs">—</div>
-                          <div class="w-50">
-                            <div class="form-group position-relative mb-0">
-                              <input type="number" class="form-control form-control-sm range-slider-value-max">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Item -->
-              <div class="accordion-item">
-                <h6 class="accordion-header" id="sidebarAccordionHeading-3">
-                  <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarAccordionCollapse-3" aria-expanded="false" aria-controls="sidebarAccordionCollapse-3">Color</button>
-                </h6>
-                <div class="accordion-collapse collapse" id="sidebarAccordionCollapse-3" aria-labelledby="sidebarAccordionHeading-3" data-bs-parent="#sidebarAccordion">
-                  <div class="accordion-body pt-0">
-                    <div class="d-flex justify-content-between px-3 pb-3">
-                      <div class="d-flex flex-column text-center">
-
-                        <!-- Color option -->
-                        <div class="form-check form-option form-option-color form-check-inline mb-2">
-                          <input class="form-check-input" type="radio" name="color" id="c-black" value="Black">
-                          <label class="form-option-label rounded-circle" for="c-black">
-                            <span class="form-option-color-indicator rounded-circle" style="background-color: #111;"></span>
-                          </label>
-                          <label class="form-option-color-text" for="c-black">Black</label>
-                        </div>
-
-                        <!-- Color option -->
-                        <div class="form-check form-option form-option-color form-check-inline mb-2">
-                          <input class="form-check-input" type="radio" name="color" id="c-dark-blue" value="Dark blue">
-                          <label class="form-option-label rounded-circle" for="c-dark-blue">
-                            <span class="form-option-color-indicator rounded-circle" style="background-color: #0c2c7e;"></span>
-                          </label>
-                          <label class="form-option-color-text" for="c-dark-blue">Dark blue</label>
-                        </div>
-
-                        <!-- Color option -->
-                        <div class="form-check form-option form-option-color form-check-inline mb-2">
-                          <input class="form-check-input" type="radio" name="color" id="c-purple" value="Purple">
-                          <label class="form-option-label rounded-circle" for="c-purple">
-                            <span class="form-option-color-indicator rounded-circle" style="background-color: #a27ac9;"></span>
-                          </label>
-                          <label class="form-option-color-text" for="c-purple">Purple</label>
-                        </div>
-                      </div>
-                      <div class="d-flex flex-column text-center">
-
-                        <!-- Color option -->
-                        <div class="form-check form-option form-option-color form-check-inline mb-2">
-                          <input class="form-check-input" type="radio" name="color" id="c-blue-gray" value="Blue-gray">
-                          <label class="form-option-label rounded-circle" for="c-blue-gray">
-                            <span class="form-option-color-indicator rounded-circle" style="background-color: #c0dded;"></span>
-                          </label>
-                          <label class="form-option-color-text" for="c-blue-gray">Blue-gray</label>
-                        </div>
-
-                        <!-- Color option -->
-                        <div class="form-check form-option form-option-color form-check-inline mb-2">
-                          <input class="form-check-input" type="radio" name="color" id="c-beige" value="Beige">
-                          <label class="form-option-label rounded-circle" for="c-beige">
-                            <span class="form-option-color-indicator rounded-circle" style="background-color: #d8c1ad;"></span>
-                          </label>
-                          <label class="form-option-color-text" for="c-beige">Beige</label>
-                        </div>
-
-                        <!-- Color option -->
-                        <div class="form-check form-option form-option-color form-check-inline mb-2">
-                          <input class="form-check-input" type="radio" name="color" id="c-green" value="Green">
-                          <label class="form-option-label rounded-circle" for="c-green">
-                            <span class="form-option-color-indicator rounded-circle" style="background-color: #67ba92;"></span>
-                          </label>
-                          <label class="form-option-color-text" for="c-green">Green</label>
-                        </div>
-                      </div>
-                      <div class="d-flex flex-column text-center">
-
-                        <!-- Color option -->
-                        <div class="form-check form-option form-option-color form-check-inline mb-2">
-                          <input class="form-check-input" type="radio" name="color" id="c-yellow" value="Yellow">
-                          <label class="form-option-label rounded-circle" for="c-yellow">
-                            <span class="form-option-color-indicator rounded-circle" style="background-color: #fcd164;"></span>
-                          </label>
-                          <label class="form-option-color-text" for="c-yellow">Yellow</label>
-                        </div>
-
-                        <!-- Color option -->
-                        <div class="form-check form-option form-option-color form-check-inline mb-2">
-                          <input class="form-check-input" type="radio" name="color" id="c-brown" value="Brown">
-                          <label class="form-option-label rounded-circle" for="c-brown">
-                            <span class="form-option-color-indicator rounded-circle" style="background-color: #874e19;"></span>
-                          </label>
-                          <label class="form-option-color-text" for="c-brown">Brown</label>
-                        </div>
-
-                        <!-- Color option -->
-                        <div class="form-check form-option form-option-color form-check-inline mb-2">
-                          <input class="form-check-input" type="radio" name="color" id="c-orange" value="Orange">
-                          <label class="form-option-label rounded-circle" for="c-orange">
-                            <span class="form-option-color-indicator rounded-circle" style="background-color: #fb9620;"></span>
-                          </label>
-                          <label class="form-option-color-text" for="c-orange">Orange</label>
-                        </div>
-                      </div>
-                      <div class="d-flex flex-column text-center">
-
-                        <!-- Color option -->
-                        <div class="form-check form-option form-option-color form-check-inline mb-2">
-                          <input class="form-check-input" type="radio" name="color" id="c-red" value="Red">
-                          <label class="form-option-label rounded-circle" for="c-red">
-                            <span class="form-option-color-indicator rounded-circle" style="background-color: #f75151;"></span>
-                          </label>
-                          <label class="form-option-color-text" for="c-red">Red</label>
-                        </div>
-
-                        <!-- Color option -->
-                        <div class="form-check form-option form-option-color form-check-inline mb-2">
-                          <input class="form-check-input" type="radio" name="color" id="c-gray" value="Gray">
-                          <label class="form-option-label rounded-circle" for="c-gray">
-                            <span class="form-option-color-indicator rounded-circle" style="background-color: #9a9494;"></span>
-                          </label>
-                          <label class="form-option-color-text" for="c-gray">Gray</label>
-                        </div>
-
-                        <!-- Color option -->
-                        <div class="form-check form-option form-option-color form-check-inline mb-2">
-                          <input class="form-check-input" type="radio" name="color" id="c-white" value="White">
-                          <label class="form-option-label rounded-circle" for="c-white">
-                            <span class="form-option-color-indicator rounded-circle" style="background-color: #f1f1f1;"></span>
-                          </label>
-                          <label class="form-option-color-text" for="c-white">White</label>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-
-              <!-- Item -->
-              <div class="accordion-item">
-                <h6 class="accordion-header" id="sidebarAccordionHeading-4">
-                  <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarAccordionCollapse-4" aria-expanded="false" aria-controls="sidebarAccordionCollapse-4">Size</button>
-                </h6>
-                <div class="accordion-collapse collapse" id="sidebarAccordionCollapse-4" aria-labelledby="sidebarAccordionHeading-4" data-bs-parent="#sidebarAccordion">
-                  <div class="accordion-body pt-0">
-                    <div class="widget-data-list">
-                      <ul class="list-unstyled">
-                        <li>
-                          <div class="form-check custom-checkbox">
-                            <input type="checkbox" class="form-check-input" id="xs">
-                            <label for="xs" class="form-check-label">
-                              <span class="filter-item-text">XS</span>
-                              <span class="ps-1 text-muted">(16)</span>
-                            </label>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="form-check custom-checkbox">
-                            <input type="checkbox" class="form-check-input" id="s">
-                            <label for="s" class="form-check-label">
-                              <span class="filter-item-text">S</span>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="synthetics">
+                            <label for="synthetics" class="form-check-label">
+                              <span class="filter-item-text">Synthetics</span>
                               <span class="ps-1 text-muted">(12)</span>
                             </label>
                           </div>
                         </li>
-                        <li>
-                          <div class="form-check custom-checkbox">
-                            <input type="checkbox" class="form-check-input" id="m">
-                            <label for="m" class="form-check-label">
-                              <span class="filter-item-text">M</span>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="nappa">
+                            <label for="nappa" class="form-check-label">
+                              <span class="filter-item-text">Nappa leather</span>
+                              <span class="ps-1 text-muted">(26)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="leather">
+                            <label for="leather" class="form-check-label">
+                              <span class="filter-item-text">Leather</span>
                               <span class="ps-1 text-muted">(5)</span>
                             </label>
                           </div>
                         </li>
-                        <li>
-                          <div class="form-check custom-checkbox">
-                            <input type="checkbox" class="form-check-input" id="l">
-                            <label for="l" class="form-check-label">
-                              <span class="filter-item-text">L</span>
-                              <span class="ps-1 text-muted">(11)</span>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="cashmere">
+                            <label for="cashmere" class="form-check-label">
+                              <span class="filter-item-text">Cashmere</span>
+                              <span class="ps-1 text-muted">(41)</span>
                             </label>
                           </div>
                         </li>
-                        <li>
-                          <div class="form-check custom-checkbox">
-                            <input type="checkbox" class="form-check-input" id="xl">
-                            <label for="xl" class="form-check-label">
-                              <span class="filter-item-text">XL</span>
-                              <span class="ps-1 text-muted">(18)</span>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="denim">
+                            <label for="denim" class="form-check-label">
+                              <span class="filter-item-text">Denim</span>
+                              <span class="ps-1 text-muted">(48)</span>
                             </label>
                           </div>
                         </li>
-                        <li>
-                          <div class="form-check custom-checkbox">
-                            <input type="checkbox" class="form-check-input" id="plus">
-                            <label for="plus" class="form-check-label">
-                              <span class="filter-item-text">Plus Size</span>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="batiste">
+                            <label for="batiste" class="form-check-label">
+                              <span class="filter-item-text">Batiste</span>
+                              <span class="ps-1 text-muted">(17)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="velour">
+                            <label for="velour" class="form-check-label">
+                              <span class="filter-item-text">Velours</span>
+                              <span class="ps-1 text-muted">(3)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="veil">
+                            <label for="veil" class="form-check-label">
+                              <span class="filter-item-text">Veil</span>
+                              <span class="ps-1 text-muted">(9)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="suede">
+                            <label for="suede" class="form-check-label">
+                              <span class="filter-item-text">Suede</span>
                               <span class="ps-1 text-muted">(4)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="organza">
+                            <label for="organza" class="form-check-label">
+                              <span class="filter-item-text">Organza</span>
+                              <span class="ps-1 text-muted">(1)</span>
                             </label>
                           </div>
                         </li>
@@ -381,423 +583,321 @@
                   </div>
                 </div>
               </div>
+            </div>
 
-              <!-- Item -->
-              <div class="accordion-item">
-                <h6 class="accordion-header" id="sidebarAccordionHeading-5">
-                  <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarAccordionCollapse-5" aria-expanded="false" aria-controls="sidebarAccordionCollapse-5">Material</button>
-                </h6>
-                <div class="accordion-collapse collapse" id="sidebarAccordionCollapse-5" aria-labelledby="sidebarAccordionHeading-5" data-bs-parent="#sidebarAccordion">
-                  <div class="accordion-body pt-0">
-                    <div class="widget">
-                      <div class="widget-data-list filter">
-                        <div class="position-relative mb-3">
-                          <input class="filter-search form-control form-control-sm pe-5" type="text" placeholder="Search the material">
-                          <i class="ci-search fs-sm position-absolute top-50 end-0 translate-middle-y me-3 zindex-5"></i>
-                        </div>
-                        <ul class="filter-list list-unstyled pe-3" style="height: 12rem;" data-simplebar data-simplebar-auto-hide="false">
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" id="material-1">
-                              <label class="form-check-label" for="material-1">
-                                <span class="filter-item-text">Cotton</span>
-                                <span class="ps-1 text-muted">(162)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="synthetics">
-                              <label for="synthetics" class="form-check-label">
-                                <span class="filter-item-text">Synthetics</span>
-                                <span class="ps-1 text-muted">(12)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="nappa">
-                              <label for="nappa" class="form-check-label">
-                                <span class="filter-item-text">Nappa leather</span>
-                                <span class="ps-1 text-muted">(26)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="leather">
-                              <label for="leather" class="form-check-label">
-                                <span class="filter-item-text">Leather</span>
-                                <span class="ps-1 text-muted">(5)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="cashmere">
-                              <label for="cashmere" class="form-check-label">
-                                <span class="filter-item-text">Cashmere</span>
-                                <span class="ps-1 text-muted">(41)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="denim">
-                              <label for="denim" class="form-check-label">
-                                <span class="filter-item-text">Denim</span>
-                                <span class="ps-1 text-muted">(48)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="batiste">
-                              <label for="batiste" class="form-check-label">
-                                <span class="filter-item-text">Batiste</span>
-                                <span class="ps-1 text-muted">(17)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="velour">
-                              <label for="velour" class="form-check-label">
-                                <span class="filter-item-text">Velours</span>
-                                <span class="ps-1 text-muted">(3)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="veil">
-                              <label for="veil" class="form-check-label">
-                                <span class="filter-item-text">Veil</span>
-                                <span class="ps-1 text-muted">(9)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="suede">
-                              <label for="suede" class="form-check-label">
-                                <span class="filter-item-text">Suede</span>
-                                <span class="ps-1 text-muted">(4)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="organza">
-                              <label for="organza" class="form-check-label">
-                                <span class="filter-item-text">Organza</span>
-                                <span class="ps-1 text-muted">(1)</span>
-                              </label>
-                            </div>
-                          </li>
-                        </ul>
+            <!-- Item -->
+            <div class="accordion-item">
+              <h6 class="accordion-header" id="sidebarAccordionHeading-6">
+                <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#sidebarAccordionCollapse-6" aria-expanded="false"
+                  aria-controls="sidebarAccordionCollapse-6">Brand</button>
+              </h6>
+              <div class="accordion-collapse collapse" id="sidebarAccordionCollapse-6"
+                aria-labelledby="sidebarAccordionHeading-6" data-bs-parent="#sidebarAccordion">
+                <div class="accordion-body pt-0">
+                  <div class="widget">
+                    <div class="widget-data-list filter">
+                      <div class="position-relative mb-3">
+                        <input class="filter-search form-control form-control-sm pe-5" type="text"
+                          placeholder="Search the brand">
+                        <i class="ci-search fs-sm position-absolute top-50 end-0 translate-middle-y me-3 zindex-5"></i>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Item -->
-              <div class="accordion-item">
-                <h6 class="accordion-header" id="sidebarAccordionHeading-6">
-                  <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarAccordionCollapse-6" aria-expanded="false" aria-controls="sidebarAccordionCollapse-6">Brand</button>
-                </h6>
-                <div class="accordion-collapse collapse" id="sidebarAccordionCollapse-6" aria-labelledby="sidebarAccordionHeading-6" data-bs-parent="#sidebarAccordion">
-                  <div class="accordion-body pt-0">
-                    <div class="widget">
-                      <div class="widget-data-list filter">
-                        <div class="position-relative mb-3">
-                          <input class="filter-search form-control form-control-sm pe-5" type="text" placeholder="Search the brand">
-                          <i class="ci-search fs-sm position-absolute top-50 end-0 translate-middle-y me-3 zindex-5"></i>
-                        </div>
-                        <ul class="filter-list list-unstyled pe-3" style="height: 12rem;" data-simplebar data-simplebar-auto-hide="false">
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="adidas">
-                              <label for="adidas" class="form-check-label">
-                                <span class="filter-item-text">Adidas</span>
-                                <span class="ps-1 text-muted">(425)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="ann-taylor">
-                              <label for="ann-taylor" class="form-check-label">
-                                <span class="filter-item-text">Ann Taylor</span>
-                                <span class="ps-1 text-muted">(15)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="armani">
-                              <label for="armani" class="form-check-label">
-                                <span class="filter-item-text">Armani</span>
-                                <span class="ps-1 text-muted">(18)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="banana">
-                              <label for="banana" class="form-check-label">
-                                <span class="filter-item-text">Banana Republic</span>
-                                <span class="ps-1 text-muted">(103)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="bilabong">
-                              <label for="bilabong" class="form-check-label">
-                                <span class="filter-item-text">Bilabong</span>
-                                <span class="ps-1 text-muted">(27)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="birkenstock">
-                              <label for="birkenstock" class="form-check-label">
-                                <span class="filter-item-text">Birkenstock</span>
-                                <span class="ps-1 text-muted">(10)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="klein">
-                              <label for="klein" class="form-check-label">
-                                <span class="filter-item-text">Calvin Klein</span>
-                                <span class="ps-1 text-muted">(365)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="columbia">
-                              <label for="columbia" class="form-check-label">
-                                <span class="filter-item-text">Columbia</span>
-                                <span class="ps-1 text-muted">(508)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="converse">
-                              <label for="converse" class="form-check-label">
-                                <span class="filter-item-text">Converse</span>
-                                <span class="ps-1 text-muted">(176)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="dockers">
-                              <label for="dockers" class="form-check-label">
-                                <span class="filter-item-text">Dockers</span>
-                                <span class="ps-1 text-muted">(54)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="fruit">
-                              <label for="fruit" class="form-check-label">
-                                <span class="filter-item-text">Fruit of the Loom</span>
-                                <span class="ps-1 text-muted">(239)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="hanes">
-                              <label for="hanes" class="form-check-label">
-                                <span class="filter-item-text">Hanes</span>
-                                <span class="ps-1 text-muted">(92)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="choo">
-                              <label for="choo" class="form-check-label">
-                                <span class="filter-item-text">Jimmy Choo</span>
-                                <span class="ps-1 text-muted">(17)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="levis">
-                              <label for="levis" class="form-check-label">
-                                <span class="filter-item-text">Levi's</span>
-                                <span class="ps-1 text-muted">(361)</span>
-                              </label>
-                            </div>
-                          </li>
-                          <li class="filter-item">
-                            <div class="form-check">
-                              <input type="checkbox" class="form-check-input" id="new-balance">
-                              <label for="new-balance" class="form-check-label">
-                                <span class="filter-item-text">New Balance</span>
-                                <span class="ps-1 text-muted">(218)</span>
-                              </label>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
+                      <ul class="filter-list list-unstyled pe-3" style="height: 12rem;" data-simplebar
+                        data-simplebar-auto-hide="false">
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="adidas">
+                            <label for="adidas" class="form-check-label">
+                              <span class="filter-item-text">Adidas</span>
+                              <span class="ps-1 text-muted">(425)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="ann-taylor">
+                            <label for="ann-taylor" class="form-check-label">
+                              <span class="filter-item-text">Ann Taylor</span>
+                              <span class="ps-1 text-muted">(15)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="armani">
+                            <label for="armani" class="form-check-label">
+                              <span class="filter-item-text">Armani</span>
+                              <span class="ps-1 text-muted">(18)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="banana">
+                            <label for="banana" class="form-check-label">
+                              <span class="filter-item-text">Banana Republic</span>
+                              <span class="ps-1 text-muted">(103)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="bilabong">
+                            <label for="bilabong" class="form-check-label">
+                              <span class="filter-item-text">Bilabong</span>
+                              <span class="ps-1 text-muted">(27)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="birkenstock">
+                            <label for="birkenstock" class="form-check-label">
+                              <span class="filter-item-text">Birkenstock</span>
+                              <span class="ps-1 text-muted">(10)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="klein">
+                            <label for="klein" class="form-check-label">
+                              <span class="filter-item-text">Calvin Klein</span>
+                              <span class="ps-1 text-muted">(365)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="columbia">
+                            <label for="columbia" class="form-check-label">
+                              <span class="filter-item-text">Columbia</span>
+                              <span class="ps-1 text-muted">(508)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="converse">
+                            <label for="converse" class="form-check-label">
+                              <span class="filter-item-text">Converse</span>
+                              <span class="ps-1 text-muted">(176)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="dockers">
+                            <label for="dockers" class="form-check-label">
+                              <span class="filter-item-text">Dockers</span>
+                              <span class="ps-1 text-muted">(54)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="fruit">
+                            <label for="fruit" class="form-check-label">
+                              <span class="filter-item-text">Fruit of the Loom</span>
+                              <span class="ps-1 text-muted">(239)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="hanes">
+                            <label for="hanes" class="form-check-label">
+                              <span class="filter-item-text">Hanes</span>
+                              <span class="ps-1 text-muted">(92)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="choo">
+                            <label for="choo" class="form-check-label">
+                              <span class="filter-item-text">Jimmy Choo</span>
+                              <span class="ps-1 text-muted">(17)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="levis">
+                            <label for="levis" class="form-check-label">
+                              <span class="filter-item-text">Levi's</span>
+                              <span class="ps-1 text-muted">(361)</span>
+                            </label>
+                          </div>
+                        </li>
+                        <li class="filter-item">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="new-balance">
+                            <label for="new-balance" class="form-check-label">
+                              <span class="filter-item-text">New Balance</span>
+                              <span class="ps-1 text-muted">(218)</span>
+                            </label>
+                          </div>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-
-      <!-- Product grid -->
-      <div class="col">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3" data-filters-columns>
-
-          <!-- Item -->
-          <div class="col pb-sm-2 mb-grid-gutter" *ngFor="let item of productos">
-            <div class="card card-product mx-auto">
-              <div class="card-product-img">
-                <a href="shop-single.html" class="card-img-top">
-                  <img [src]="item.portada" alt=""> 
-                  
-                </a>
-                <div class="card-product-widgets-top">
-                  <div class="star-rating ms-auto">
-                    <i class="sr-star ci-star-filled active"></i>
-                    <i class="sr-star ci-star-filled active"></i>
-                    <i class="sr-star ci-star-filled active"></i>
-                    <i class="sr-star ci-star-filled active"></i>
-                    <i class="sr-star ci-star-filled active"></i>
-                  </div>
-                </div>
-                <div class="card-product-widgets-bottom">
-                  <a href="#" class="btn-wishlist ms-auto" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"></a>
-                </div>
-              </div>
-              <div class="card-body pb-2">
-                <h3 class="card-product-title text-truncate mb-2">
-                  <a href="shop-single.html" class="nav-link">{{item.titulo}}</a>
-                </h3>
-                <div class="d-flex align-items-center">
-                  <span class="h5 d-inline-block mb-0">{{item.precio |currency:'COP':'$':'3.0'}}</span>
-                </div>
-              </div>
-              <div class="card-footer">
-                <div class="d-flex align-items-center mb-2 pb-1">
-                  <div class="mt-n2">
-                    <div class="form-check form-option form-option-sm form-option-size form-check-inline">
-                      <input type="radio" class="form-check-input" name="size-1" id="l-1">
-                      <label for="l-1" class="form-option-label">L</label>
-                    </div>
-                    <div class="form-check form-option form-option-sm form-option-size form-check-inline">
-                      <input type="radio" class="form-check-input" name="size-1" id="m-1" checked>
-                      <label for="m-1" class="form-option-label">M</label>
-                    </div>
-                    <div class="form-check form-option form-option-sm form-option-size form-check-inline">
-                      <input type="radio" class="form-check-input" name="size-1" id="s-1">
-                      <label for="s-1" class="form-option-label">S</label>
-                    </div>
-                  </div>
-                  <div class="ms-auto">
-                    <div class="form-check form-option form-option-sm form-option-color form-check-inline">
-                      <input type="radio" class="form-check-input" name="color-1" id="blue-1" value="Blue" checked>
-                      <label for="blue-1" class="form-option-label rounded-circle">
-                        <span class="form-option-color-indicator rounded-circle" style="background-color: #6a9bf4;"></span>
-                      </label>
-                    </div>
-                    <div class="form-check form-option form-option-sm form-option-color form-check-inline">
-                      <input type="radio" class="form-check-input" name="color-1" id="orange-1" value="Orange">
-                      <label for="orange-1" class="form-option-label rounded-circle">
-                        <span class="form-option-color-indicator rounded-circle" style="background-color: #ff9d50;"></span>
-                      </label>
-                    </div>
-                    <div class="form-check form-option form-option-sm form-option-color form-check-inline">
-                      <input type="radio" class="form-check-input" name="color-1" id="green-1" value="Green">
-                      <label for="green-1" class="form-option-label rounded-circle">
-                        <span class="form-option-color-indicator rounded-circle" style="background-color: #16c995;"></span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <button type="button" class="btn btn-primary w-100">
-                  <i class="ci-cart align-middle mt-n1 me-2"></i>
-                  Add to cart
-                </button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Toolbar + Pagination -->
-        <div class="d-flex align-items-center pt-md-4">
-          <div class="d-flex align-items-center flex-nowrap me-3 me-xl-5 pt-1">
-            <label for="sorting-bottom" class="fw-bold text-nowrap me-2 pe-1 d-none d-md-block">Sort by</label>
-            <select id="sorting-bottom" class="form-select">
-              <option>Popularity</option>
-              <option>Low - Hight Price</option>
-              <option>High - Low Price</option>
-              <option>Average Rating</option>
-              <option>A - Z Order</option>
-              <option>Z - A Order</option>
-            </select>
-          </div>
-          <div class="d-flex align-items-center flex-nowrap d-none d-sm-flex me-3 me-xl-5 pt-1">
-            <label for="pager-bottom" class="fw-bold text-nowrap me-2 pe-1 d-none d-md-block">Show</label>
-            <select id="pager-bottom" class="form-select">
-              <option>12</option>
-              <option>24</option>
-              <option>48</option>
-              <option>72</option>
-              <option>96</option>
-            </select>
-            <span class="fs-sm text-muted text-nowrap ms-2 d-none d-md-block">products per page</span>
-          </div>
-          <nav class="pt-1 ms-auto" aria-label="Pagination">
-            <ul class="pagination mb-0">
-              <li class="page-item d-sm-none">
-                <span class="page-link page-link-static">1 / 5</span>
-              </li>
-              <li class="page-item active d-none d-sm-block" aria-current="page">
-                <span class="page-link">1
-                  <span class="visually-hidden">(current)</span>
-                </span>
-              </li>
-              <li class="page-item d-none d-sm-block">
-                <a class="page-link" href="#">2</a>
-              </li>
-              <li class="page-item d-none d-sm-block">
-                <a class="page-link" href="#">3</a>
-              </li>
-              <li class="page-item d-none d-sm-block">
-                <a class="page-link" href="#">4</a>
-              </li>
-              <li class="page-item d-none d-sm-block">
-                <a class="page-link" href="#">5</a>
-              </li>
-              <li class="page-item">
-                <a class="page-link" href="#">
-                  <i class="ci-arrow-right"></i>
-                </a>
-              </li>
-            </ul>
-          </nav>
         </div>
       </div>
     </div>
-  </section>
+
+
+    <!-- Product grid -->
+    <div class="col">
+      <div class="row" *ngIf="load_data">
+        <div class="col-12 text-center">
+          <div class="spinner-border " style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only"> loading....</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3" data-filters-columns *ngIf="!load_data">
+
+        <!-- Item -->
+        <div class="col pb-sm-2 mb-grid-gutter" *ngFor="let item of productos">
+          <div class="card card-product mx-auto">
+            <div class="card-product-img">
+              <a href="shop-single.html" class="card-img-top">
+                <img [src]="item.portada" alt="">
+
+              </a>
+              <div class="card-product-widgets-top">
+                <div class="star-rating ms-auto">
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                </div>
+              </div>
+              <div class="card-product-widgets-bottom">
+                <a href="#" class="btn-wishlist ms-auto" data-bs-toggle="tooltip" data-bs-placement="left"
+                  title="Add to wishlist"></a>
+              </div>
+            </div>
+            <div class="card-body pb-2">
+              <h3 class="card-product-title text-truncate mb-2">
+                <a href="shop-single.html" class="nav-link">{{item.titulo}}</a>
+              </h3>
+              <div class="d-flex align-items-center">
+                <span class="h5 d-inline-block mb-0">{{item.precio |currency:'COP':'$':'3.0'}}</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="d-flex align-items-center mb-2 pb-1">
+                <div class="mt-n2">
+                  <div class="form-check form-option form-option-sm form-option-size form-check-inline">
+                    <input type="radio" class="form-check-input" name="size-1" id="l-1">
+                    <label for="l-1" class="form-option-label">L</label>
+                  </div>
+                  <div class="form-check form-option form-option-sm form-option-size form-check-inline">
+                    <input type="radio" class="form-check-input" name="size-1" id="m-1" checked>
+                    <label for="m-1" class="form-option-label">M</label>
+                  </div>
+                  <div class="form-check form-option form-option-sm form-option-size form-check-inline">
+                    <input type="radio" class="form-check-input" name="size-1" id="s-1">
+                    <label for="s-1" class="form-option-label">S</label>
+                  </div>
+                </div>
+                <div class="ms-auto">
+                  <div class="form-check form-option form-option-sm form-option-color form-check-inline">
+                    <input type="radio" class="form-check-input" name="color-1" id="blue-1" value="Blue" checked>
+                    <label for="blue-1" class="form-option-label rounded-circle">
+                      <span class="form-option-color-indicator rounded-circle"
+                        style="background-color: #6a9bf4;"></span>
+                    </label>
+                  </div>
+                  <div class="form-check form-option form-option-sm form-option-color form-check-inline">
+                    <input type="radio" class="form-check-input" name="color-1" id="orange-1" value="Orange">
+                    <label for="orange-1" class="form-option-label rounded-circle">
+                      <span class="form-option-color-indicator rounded-circle"
+                        style="background-color: #ff9d50;"></span>
+                    </label>
+                  </div>
+                  <div class="form-check form-option form-option-sm form-option-color form-check-inline">
+                    <input type="radio" class="form-check-input" name="color-1" id="green-1" value="Green">
+                    <label for="green-1" class="form-option-label rounded-circle">
+                      <span class="form-option-color-indicator rounded-circle"
+                        style="background-color: #16c995;"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary w-100">
+                <i class="ci-cart align-middle mt-n1 me-2"></i>
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Toolbar + Pagination -->
+      <div class="d-flex align-items-center pt-md-4">
+        <div class="d-flex align-items-center flex-nowrap me-3 me-xl-5 pt-1">
+          <label for="sorting-bottom" class="fw-bold text-nowrap me-2 pe-1 d-none d-md-block">Sort by</label>
+          <select id="sorting-bottom" class="form-select">
+            <option>Popularity</option>
+            <option>Low - Hight Price</option>
+            <option>High - Low Price</option>
+            <option>Average Rating</option>
+            <option>A - Z Order</option>
+            <option>Z - A Order</option>
+          </select>
+        </div>
+        <div class="d-flex align-items-center flex-nowrap d-none d-sm-flex me-3 me-xl-5 pt-1">
+          <label for="pager-bottom" class="fw-bold text-nowrap me-2 pe-1 d-none d-md-block">Show</label>
+          <select id="pager-bottom" class="form-select">
+            <option>12</option>
+            <option>24</option>
+            <option>48</option>
+            <option>72</option>
+            <option>96</option>
+          </select>
+          <span class="fs-sm text-muted text-nowrap ms-2 d-none d-md-block">products per page</span>
+        </div>
+        <nav class="pt-1 ms-auto" aria-label="Pagination">
+          <ul class="pagination mb-0">
+            <li class="page-item d-sm-none">
+              <span class="page-link page-link-static">1 / 5</span>
+            </li>
+            <li class="page-item active d-none d-sm-block" aria-current="page">
+              <span class="page-link">1
+                <span class="visually-hidden">(current)</span>
+              </span>
+            </li>
+            <li class="page-item d-none d-sm-block">
+              <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item d-none d-sm-block">
+              <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item d-none d-sm-block">
+              <a class="page-link" href="#">4</a>
+            </li>
+            <li class="page-item d-none d-sm-block">
+              <a class="page-link" href="#">5</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                <i class="ci-arrow-right"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
 <app-footer></app-footer>
