@@ -28,6 +28,9 @@ export class NavComponent {
   
   public categorias: Array<any> = [];
 
+  //carrito de compras
+  public op_cart=false
+
 /*
   public user_login: Cliente = {
     apellidos: "",
@@ -136,5 +139,15 @@ export class NavComponent {
 
     console.log('Logout',this.user_login)
   }
+
+op_modal_cart(){
+  if(!this.op_cart){
+this.op_cart=true
+$('#cart').addClass('show')
+  }else{
+    this.op_cart=false
+$('#cart').removeClass('show')
+  }
+}
 
 }

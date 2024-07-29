@@ -35,8 +35,42 @@ export class ClienteService {
   }
   
   listar_productos_public(filtro:any): Observable<any> {
+    console.log('consultando productos')
     let headers = new HttpHeaders().set('Content-Type','application/json');
     return this._http.get(this.url + 'listar_productos_public/'+filtro, { headers: headers });
+  }
+  
+
+  public isAuthenticate(allowedroles: string[]): boolean {
+    const token = String(localStorage.getItem('token') || '');
+    if (!token) {
+      return false
+    }
+    try {
+      const helper = new JwtHelperService();
+      var decodedToken = helper.decodeToken(token);
+      console.log(decodedToken,decodedToken['role'],decodedToken['rol'])
+      if (helper.isTokenExpired(token)) {
+        localStorage.clear()
+        return false
+      } 
+      if (!decodedToken) {
+        localStorage.removeItem('token')
+        return false
+      }
+  
+    } catch (error) {
+      localStorage.removeItem('token')
+      return false
+    }
+    //En este punto el token existe y es valido, se verifican los permisos
+    if(allowedroles.includes(decodedToken['role'])){
+      console.log('Token decofificado',decodedToken['role'])
+      return true
+    }else{
+      return false //retornar identificador de permiso invalido
+    }
+  
   }
   
 

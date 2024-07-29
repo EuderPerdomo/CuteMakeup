@@ -56,7 +56,7 @@
                                       </tbody>
                         
                                       <ng-container  *ngIf="!load_data_etiqueta">
-                                        <tbody *ngFor="let item of etiquetas| slice: (page-1)*pageSize : (page-1) * pageSize + pageSize; let indice = index">
+                                        <tbody *ngFor="let item of etiquetas ; let indice = index">
                                           <tr>
                                             <td>{{item.titulo}}</td>
                         

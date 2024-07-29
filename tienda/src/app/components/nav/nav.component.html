@@ -96,12 +96,21 @@
             </a>
           </li>
           <li class="divider-vertical mb-0 d-lg-block d-none"></li>
-          <li class="nav-item align-self-center mb-0">
-            <a href="#" class="nav-tool pe-lg-0" data-bs-toggle="offcanvas" data-bs-target="#cart">
+
+          <li class="nav-item align-self-center mb-0" *ngIf="user_login != undefined">
+            <a  style="cursor:pointer;" class="nav-tool pe-lg-0" (click)="op_modal_cart()">
               <i class="ci-cart nav-tool-icon"></i>
               <span class="badge bg-success align-middle mt-n1 ms-2 px-2 py-1 fs-xs">4</span>
             </a>
           </li>
+
+          <li class="nav-item align-self-center mb-0" *ngIf="user_login == undefined">
+            <a  style="cursor:pointer;" class="nav-tool pe-lg-0" [routerLink]="['/login']">
+              <i class="ci-cart nav-tool-icon"></i>
+              <span class="badge bg-success align-middle mt-n1 ms-2 px-2 py-1 fs-xs">0</span>
+            </a>
+          </li>
+
           <li class="divider-vertical mb-0 d-lg-none d-block"></li>
           <li class="nav-item mb-0">
             <button class="navbar-toggler mt-n1 me-n3" type="button" data-bs-toggle="collapse"
@@ -353,3 +362,145 @@
     </div>
   </div>
 </div>
+
+<!-- Inicia carrito de compras ************************************************************************************-->
+  <!-- Shopping cart offcanvas -->
+  <div id="cart" class="offcanvas offcanvas-end">
+
+    <!-- Header -->
+    <div class="offcanvas-header align-items-center border-bottom">
+      <h2 class="h5 mb-0">Tu Carrito</h2>
+      <button class="btn-close me-n1" type="button" data-bs-dismiss="offcanvas" aria-label="Close" (click)="op_modal_cart()"></button>
+    </div>
+
+    <!-- Body -->
+    <div class="offcanvas-body">
+      <!-- Item -->
+      <div class="d-flex align-items-start p-4 border-bottom mx-n4">
+        <a href="shop-single.html" style="min-width: 80px;">
+          <img src="../assets/img/ecommerce/cart/01.png" width="80" alt="Product thumb">
+        </a>
+        <div class="w-100 ps-3">
+          <div class="d-flex justify-content-between">
+            <div class="w-100 pe-2">
+              <h3 class="fs-sm mb-3">
+                <a href="shop-single.html" class="nav-link fw-bold">Basic hooded sweatshirt in pink</a>
+              </h3>
+              <ul class="list-unstyled fs-xs mt-n2 mb-2">
+                <li class="mb-0"><span class="text-muted">Color:</span> Pink</li>
+                <li class="mb-0"><span class="text-muted">Size:</span> S</li>
+              </ul>
+              <div class="d-flex align-items-center">
+                <input type="number" class="form-control form-control-sm bg-light me-3" min="1" style="width: 4.5rem;" value="1">
+                <div class="text-nowrap"><strong class="text-danger">$15.00</strong> <s class="fs-xs text-muted">$31.00</s></div>
+              </div>
+              <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                Move to
+                <i class="ci-heart ms-1"></i>
+              </button>
+            </div>
+            <div class="nav-muted me-n2">
+              <a href="#" class="nav-link px-2 mt-n2" data-bs-toggle="tooltip" data-bs-placement="left" title="Remove"><i class="ci-delete"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Item -->
+      <div class="d-flex align-items-start p-4 border-bottom mx-n4">
+        <a href="shop-single.html" style="min-width: 80px;">
+          <img src="../assets/img/ecommerce/cart/02.png" width="80" alt="Product thumb">
+        </a>
+        <div class="w-100 ps-3">
+          <div class="d-flex justify-content-between">
+            <div class="w-100 pe-2">
+              <h3 class="fs-sm mb-3">
+                <a href="shop-single.html" class="nav-link fw-bold">Black and white sport cap</a>
+              </h3>
+              <div class="d-flex align-items-center">
+                <input type="number" class="form-control form-control-sm bg-light me-3" min="1" style="width: 4.5rem;" value="1">
+                <div class="text-nowrap"><strong>$18.15</strong></div>
+              </div>
+              <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                Move to
+                <i class="ci-heart ms-1"></i>
+              </button>
+            </div>
+            <div class="nav-muted me-n2">
+              <a href="#" class="nav-link px-2 mt-n2" data-bs-toggle="tooltip" data-bs-placement="left" title="Remove"><i class="ci-delete"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Item -->
+      <div class="d-flex align-items-start p-4 border-bottom mx-n4">
+        <a href="shop-single.html" style="min-width: 80px;">
+          <img src="../assets/img/ecommerce/cart/03.png" width="80" alt="Product thumb">
+        </a>
+        <div class="w-100 ps-3">
+          <div class="d-flex justify-content-between">
+            <div class="w-100 pe-2">
+              <h3 class="fs-sm mb-3">
+                <a href="shop-single.html" class="nav-link fw-bold">Mid-rise slim cropped fit jeans</a>
+              </h3>
+              <ul class="list-unstyled fs-xs mt-n2 mb-2">
+                <li class="mb-0"><span class="text-muted">Size:</span> M</li>
+              </ul>
+              <div class="d-flex align-items-center">
+                <input type="number" class="form-control form-control-sm bg-light me-3" min="1" style="width: 4.5rem;" value="1">
+                <div class="text-nowrap"><strong>$76.00</strong></div>
+              </div>
+              <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                Move to
+                <i class="ci-heart ms-1"></i>
+              </button>
+            </div>
+            <div class="nav-muted me-n2">
+              <a href="#" class="nav-link px-2 mt-n2" data-bs-toggle="tooltip" data-bs-placement="left" title="Remove"><i class="ci-delete"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Item -->
+      <div class="d-flex align-items-start p-4 mx-n4">
+        <a href="shop-single.html" style="min-width: 80px;">
+          <img src="../assets/img/ecommerce/cart/04.png" width="80" alt="Product thumb">
+        </a>
+        <div class="w-100 ps-3">
+          <div class="d-flex justify-content-between">
+            <div class="w-100 pe-2">
+              <h3 class="fs-sm mb-3">
+                <a href="shop-single.html" class="nav-link fw-bold">Men fashion gray shoes</a>
+              </h3>
+              <ul class="list-unstyled fs-xs mt-n2 mb-2">
+                <li class="mb-0"><span class="text-muted">Color:</span> Gray</li>
+                <li class="mb-0"><span class="text-muted">Size:</span> 10.5</li>
+              </ul>
+              <div class="d-flex align-items-center">
+                <input type="number" class="form-control form-control-sm bg-light me-3" min="1" style="width: 4.5rem;" value="1">
+                <div class="text-nowrap"><strong>$84.00</strong></div>
+              </div>
+              <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">
+                Move to
+                <i class="ci-heart ms-1"></i>
+              </button>
+            </div>
+            <div class="nav-muted me-n2">
+              <a href="#" class="nav-link px-2 mt-n2" data-bs-toggle="tooltip" data-bs-placement="left" title="Remove"><i class="ci-delete"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="offcanvas-header flex-column border-top">
+      <div class="d-flex align-items-center justify-content-between mb-3 pb-1">
+        <span class="text-muted me-2">Subtotal:</span>
+        <span class="h5 mb-0">$198.65</span>
+      </div>
+      <a [routerLink]="['/carrito']" class="btn btn-primary btn-lg w-100">
+        <i class="ci-credit-card fs-lg me-1"></i>
+        Checkout
+      </a>
+    </div>
+  </div>

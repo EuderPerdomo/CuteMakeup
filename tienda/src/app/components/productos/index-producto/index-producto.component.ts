@@ -4,7 +4,8 @@ import { FooterComponent } from '../../footer/footer.component';
 import { ClienteService } from '../../../service/cliente.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 declare var jQuery: any;
 declare var iziToast: { show: (arg0: { title: string; class: string; titleColor: string; position: string; message: string; }) => void; };
@@ -15,7 +16,7 @@ declare var noUiSlider: any
 @Component({
   selector: 'app-index-producto',
   standalone: true,
-  imports: [NavComponent, FooterComponent, CommonModule, FormsModule],
+  imports: [NavComponent, FooterComponent, CommonModule, FormsModule, NgbPaginationModule,RouterModule],
   templateUrl: './index-producto.component.html',
   styleUrl: './index-producto.component.css'
 })
@@ -35,6 +36,11 @@ export class IndexProductoComponent implements OnInit {
   //Categoria de la ruta
   public route_categoria: any
 
+  // Paginación
+  public page = 1
+  public pageSize = 15
+
+  public sort_by = 'Defecto'
 
 
   constructor(
@@ -45,22 +51,22 @@ export class IndexProductoComponent implements OnInit {
     this._route.params.subscribe(
       params => {
         this.route_categoria = params['categoria']
-
-        if(this.route_categoria){
-          this._clienteService.listar_productos_public(this.filtro_producto).subscribe(
+        if (this.route_categoria) {
+          this._clienteService.listar_productos_public('').subscribe(
             response => {
-              this.productos=response.data
+              this.productos = response.data
               console.log(this.productos)
               this.productos = this.productos.filter(item => item.categoria.titulo == this.route_categoria)
               this.load_data = false
             },
           )
 
-        }else{
-
-          this._clienteService.listar_productos_public(this.filtro_producto).subscribe(
+        } else {
+          console.log('pRODUCTOS buscar no categoria')
+          this._clienteService.listar_productos_public('').subscribe(
             response => {
               this.productos = response.data
+              console.log(this.productos)
               this.load_data = false
             },
           )
@@ -101,25 +107,11 @@ export class IndexProductoComponent implements OnInit {
     this._clienteService.get_categorias_publico().subscribe(
       response => {
         this.categorias = response.data;
-        console.log('categorias', this.categorias)
       }
     );
-
-    /*Listamos los productos*/
-/*
-    this._clienteService.listar_productos_public(this.filtro_producto).subscribe(
-      response => {
-        this.productos = response.data
-        console.log(this.productos)
-        this.load_data = false
-      },
-    )
-    */
-
   }
 
   buscar_categoria() {
-    console.log(this.filtrar_categoria)
     if (this.filtrar_categoria) {
       var search = new RegExp(this.filtrar_categoria, 'i')
       this.categorias = this.categorias.filter(
@@ -129,7 +121,6 @@ export class IndexProductoComponent implements OnInit {
       this._clienteService.get_categorias_publico().subscribe(
         response => {
           this.categorias = response.data;
-          console.log('categorias', this.categorias)
         }
       );
     }
@@ -139,7 +130,6 @@ export class IndexProductoComponent implements OnInit {
     this._clienteService.listar_productos_public(this.filtro_producto).subscribe(
       response => {
         this.productos = response.data
-        console.log(this.productos)
         this.load_data = false
       },
     )
@@ -175,17 +165,16 @@ export class IndexProductoComponent implements OnInit {
       this._clienteService.listar_productos_public(this.filtro_producto).subscribe(
         response => {
           this.productos = response.data
-          this.load_data=false
+          this.load_data = false
         }
       )
 
     } else {
-      console.log(this.filtro_categoria_producto)
       this._clienteService.listar_productos_public(this.filtro_producto).subscribe(
         response => {
           this.productos = response.data
           this.productos = this.productos.filter(item => item.categoria.titulo == this.filtro_categoria_producto)
-          this.load_data=false
+          this.load_data = false
         }
       )
 
@@ -194,5 +183,92 @@ export class IndexProductoComponent implements OnInit {
 
   }
 
+  reset_productos() {
+    this.filtro_producto = ''
+    this._clienteService.listar_productos_public('').subscribe(
+      response => {
+        this.productos = response.data
+        this.load_data = false
+      }
+    )
 
+  }
+
+  ordenar_por() {
+    if (this.sort_by == 'Defecto') {
+      this._clienteService.listar_productos_public('').subscribe(
+        response => {
+          this.productos = response.data
+          this.load_data = false
+        }
+      )
+    }
+    //Popularidad
+    else if (this.sort_by == 'Popularidad') {
+      this.productos.sort(function (a, b) {
+        if (a.nventas < b.nventas) {
+          return 1
+        }
+        if (a.nventas > b.nventas) {
+          return -1
+        }
+        return 0
+      })
+    }
+    //Precio +-
+    else if (this.sort_by == '+-precio') {
+      this.productos.sort(function (a, b) {
+        if (a.precio > b.precio) {
+          return 1
+        }
+        if (a.precio < b.precio) {
+          return -1
+        }
+        return 0
+      })
+    }
+
+     //Precio -+
+     else if (this.sort_by == '-+precio') {
+      this.productos.sort(function (a, b) {
+        if (a.precio < b.precio) {
+          return 1
+        }
+        if (a.precio > b.precio) {
+          return -1
+        }
+        return 0
+      })
+    }
+
+  //Titulo AZ
+  else if (this.sort_by == 'az') {
+    this.productos.sort(function (a, b) {
+      if (a.titulo > b.titulo) {
+        return 1
+      }
+      if (a.titulo < b.titulo) {
+        return -1
+      }
+      return 0
+    })
+  }
+
+   //Titulo ZA
+   else if (this.sort_by == 'za') {
+    this.productos.sort(function (a, b) {
+      if (a.titulo < b.titulo) {
+        return 1
+      }
+      if (a.titulo > b.titulo) {
+        return -1
+      }
+      return 0
+    })
+  } 
+
+
+  }
+
+  
 }

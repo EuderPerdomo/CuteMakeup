@@ -44,6 +44,7 @@ const login_cliente = async function(req,res){
     var cliente_arr = [];
 
     cliente_arr = await Cliente.find({email:data.email});
+    console.log('cliente encontrado para login',cliente_arr)
 
     if(cliente_arr.length == 0){
         res.status(200).send({message: 'Usuario no registrado', data: undefined});

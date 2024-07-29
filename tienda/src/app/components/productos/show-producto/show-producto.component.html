@@ -1,0 +1,821 @@
+<app-nav></app-nav>
+<!-- Breadcrumb -->
+<nav class="bg-secondary mb-3" aria-label="breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb breadcrumb-alt mb-0">
+      <li class="breadcrumb-item">
+        <a [routerLink]="['/']"><i class="ci-home"></i></a>
+      </li>
+      <li class="breadcrumb-item">
+        <a [routerLink]="['/productos/categoria',producto.categoria.titulo]">{{producto.categoria.titulo}}</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">{{producto.titulo}}</li>
+    </ol>
+  </div>
+</nav>
+
+
+
+<!-- Page title -->
+<section *ngIf="producto._id" class="container d-md-flex align-items-center justify-content-between py-3 py-md-4 mb-3">
+  <h1 class="mb-2 mb-md-0">{{producto.titulo}}</h1>
+  <span class="text-muted"><strong>Art. No.</strong> {{producto._id.toUpperCase()}}</span>
+</section>
+
+
+<!-- Single product -->
+<section class="container mb-lg-3">
+
+  <!-- Nav tabs -->
+  <div data-simplebar data-simplebar-auto-hide="false">
+    <ul class="nav nav-tabs flex-nowrap text-nowrap" role="tablist">
+      <li class="nav-item">
+        <a href="#info" class="nav-link active" data-bs-toggle="tab" role="tab">Información General</a>
+      </li>
+      <li class="nav-item">
+        <a href="#details" class="nav-link" data-bs-toggle="tab" role="tab">Detalles</a>
+      </li>
+      <li class="nav-item">
+        <a href="#reviews" class="nav-link" data-bs-toggle="tab" role="tab">
+          Reseñas
+          <sup class="ms-1">12</sup>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="tab-content border-top pt-4">
+
+    <!-- General info -->
+    <div class="tab-pane fade show active pt-3" id="info" role="tabpanel">
+      <div class="row">
+        <div class="col-md-6 mb-md-0 mb-4">
+
+
+
+
+
+          <!-- Mi propia galeria -->
+
+          <div class="tns-carousel-wrapper gallery product-gallery mx-auto" data-video="true" style="max-width: 570px;">
+            <div class="tns-carousel-inner cs-carousel-inner" data-carousel-options='{
+    "gutter": 15,
+    "navContainer": "#tns-thumbnails",
+    "navAsThumbnails": true
+  }'>
+
+              <!-- Product gallery item -->
+              <a class="gallery-item cs-gallery-item" *ngFor="let item of galeria" href="{{item.imagen}}"
+                data-sub-html='<h6 class="text-light">Gallery image caption #1</h6>'>
+                <img class="rounded" [src]="item.imagen" alt="Carousel image">
+                <span class="gallery-caption">Gallery image caption #1</span>
+              </a>
+
+            </div>
+
+            <!-- Product gallery thumbnails -->
+            <div class="tns-thumbnails" id="tns-thumbnails">
+              <button type="button" [attr.data-nav]="indice" *ngFor="let item of galeria; let indice =index">
+                <img [src]="item.imagen" alt="Thumbnail">
+              </button>
+            </div>
+          </div>
+
+          <!-- Finaliza mi propia galeria -->
+
+
+        </div>
+        <div class="col-md-6 ps-xl-5">
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+
+            <!-- Price -->
+            <div class="d-flex align-items-center mb-sm-0 mb-4">
+              <span class="h3 d-inline-block mb-0 text-danger">{{producto.precio |currency:'COP':'$':'3.0'}}</span>
+              <del class="d-inline-block ms-2 ps-1 fs-lg text-muted">$31.00</del>
+              <span class="ms-4 p-2 badge bg-danger fs-base fw-bold">- 50%</span>
+            </div>
+
+            <!-- Rating -->
+            <div class="text-sm-end">
+              <div class="star-rating ms-auto">
+                <i class="sr-star ci-star-filled active"></i>
+                <i class="sr-star ci-star-filled active"></i>
+                <i class="sr-star ci-star-filled active"></i>
+                <i class="sr-star ci-star-filled active"></i>
+                <i class="sr-star ci-star"></i>
+              </div>
+              <span class="fs-sm text-muted">12 reviews</span>
+            </div>
+          </div>
+
+          <!-- Ordering form -->
+          <form class="row">
+            <div class="col-12">
+              <div class="mb-4">
+                <label for="pink" class="form-label-lg">Color</label>
+                <div class="d-flex align-items-middle">
+                  <div class="form-check form-option form-option-sm form-option-color form-check-inline me-2 mb-2">
+                    <input class="form-check-input" type="radio" name="color" id="pink" value="Pink"
+                      data-label="colorOptionText" checked>
+                    <label class="form-option-label rounded-circle" for="pink">
+                      <span class="form-option-color-indicator rounded-circle"
+                        style="background-color: #e0aea2;"></span>
+                    </label>
+                  </div>
+                  <div class="form-check form-option form-option-sm form-option-color form-check-inline me-2 mb-2">
+                    <input class="form-check-input" type="radio" name="color" id="blue" value="Blue"
+                      data-label="colorOptionText">
+                    <label class="form-option-label rounded-circle" for="blue">
+                      <span class="form-option-color-indicator rounded-circle"
+                        style="background-color: #c0dded;"></span>
+                    </label>
+                  </div>
+                  <div class="form-check form-option form-option-sm form-option-color form-check-inline me-2 mb-2">
+                    <input class="form-check-input" type="radio" name="color" id="yellow" value="Yellow"
+                      data-label="colorOptionText">
+                    <label class="form-option-label rounded-circle" for="yellow">
+                      <span class="form-option-color-indicator rounded-circle"
+                        style="background-color: #fede41;"></span>
+                    </label>
+                  </div>
+                  <span class="d-inline-block ps-2 text-muted" id="colorOptionText">Pink</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-8 order-sm-1 order-2">
+              <div class="mb-4">
+                <label for="size" class="form-label-lg">Variedades</label>
+                <select class="form-control form-select" id="size" name="variedad_seleccionada"
+                  [(ngModel)]="variedad_seleccionada" (change)="cambioVariedad()">
+                  <!-- <option value="" selected disabled>Seleccione....</option> -->
+                  <option value="{{item._id}}" *ngFor="let item of producto.variedades">{{item.titulo}}</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-sm-4 order-sm-2 order-1 text-sm-end">
+              <a *ngIf="producto.categoria.titulo == 'Moda'" href="#modal-sizing" data-bs-toggle="modal"
+                class="d-inline-block mt-sm-4 mb-sm-0 mb-4 pt-sm-3 fw-bold text-decoration-none text-dark">
+                <i class="ci-hanger me-2"></i>
+                Sise chart
+              </a>
+            </div>
+
+            <div class="col-lg-2 col-4 order-lg-3 order-3">
+              <div class="mb-4">
+                <select class="form-control form-select pe-3" id="select-input">
+                  <option value="1" selected>1</option>
+                  <option value="2">2</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-6 order-lg-4 order-4">
+              <button class="btn d-block w-100 btn-primary">
+                <i class="ci-cart me-2"></i>
+                Al carrito
+              </button>
+            </div>
+            <div class="col-lg-4 col-8 order-lg-5 order-2">
+              <button class="btn d-block w-100 btn-outline-primary px-lg-4">
+                <i class="ci-heart me-2"></i>
+                Deseos
+              </button>
+            </div>
+          </form>
+
+          <!-- Terms -->
+          <!-- Accordion -->
+          <div class="accordion accordion-alt mb-4" id="accordion">
+
+            <!-- Item -->
+            <div class="accordion-item">
+              <h6 class="accordion-header" id="accordionHeading-1">
+                <button class="accordion-button border-bottom-0" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#accordionCollapse-1" aria-expanded="true"
+                  aria-controls="accordionCollapse-1">Delivery</button>
+              </h6>
+              <div class="accordion-collapse collapse show" id="accordionCollapse-1"
+                aria-labelledby="accordionHeading-1" data-bs-parent="#accordion">
+                <div class="accordion-body pt-0">
+                  <p class="fs-sm">
+                    Free standard shipping on orders <strong>over $35</strong> before tax, plus free returns.
+                  </p>
+
+                  <!-- Delivery table -->
+                  <div class="table-responsive px-md-3">
+                    <table class="table mb-0" style="min-width: 450px;">
+                      <thead class="fs-xs text-uppercase text-muted">
+                        <tr>
+                          <th class="border-0 fw-normal">Type</th>
+                          <th class="border-0 fw-normal">How long</th>
+                          <th class="border-0 fw-normal">How much</th>
+                        </tr>
+                      </thead>
+                      <tbody class="fs-sm">
+                        <tr>
+                          <th class="fw-normal">Standard delivery</th>
+                          <td>1-4 business days</td>
+                          <td>$4.50</td>
+                        </tr>
+                        <tr>
+                          <th class="fw-normal">Express delivery</th>
+                          <td>1 business day</td>
+                          <td>$10.00</td>
+                        </tr>
+                        <tr>
+                          <th class="fw-normal border-bottom-0">Pick up in store</th>
+                          <td class="border-bottom-0">1-3 business days</td>
+                          <td class="border-bottom-0">Free</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="accordion-item">
+              <h6 class="accordion-header" id="accordionHeading-2">
+                <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#accordionCollapse-2" aria-expanded="false"
+                  aria-controls="accordionCollapse-2">Return</button>
+              </h6>
+              <div class="accordion-collapse border-bottom-0 collapse" id="accordionCollapse-2"
+                aria-labelledby="accordionHeading-2" data-bs-parent="#accordion">
+                <div class="accordion-body pt-0">
+                  <p class="fs-sm">
+                    You have <strong>60 days</strong> to return the item(s) using any of the following methods:
+                  </p>
+                  <ul class="ps-3">
+                    <li>Free store return</li>
+                    <li>Free returns via USPS Dropoff Service</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Share -->
+          <div class="mb-5 text-nowrap">
+            <h6 class="d-inline-block align-middle me-2 mb-0">Compartir:</h6>
+            <a href="#" class="btn-social bs-solid align-middle me-2" data-bs-toggle="tooltip" title="Facebook">
+              <i class="ci-facebook"></i>
+            </a>
+            <a href="#" class="btn-social bs-solid align-middle me-2" data-bs-toggle="tooltip" title="Twitter">
+              <i class="ci-twitter"></i>
+            </a>
+            <a href="#" class="btn-social bs-solid align-middle" data-bs-toggle="tooltip" title="Pinterest">
+              <i class="ci-pinterest"></i>
+            </a>
+          </div>
+
+          <!-- Payment -->
+          <div class="pb-3 text-nowrap" data-simplebar data-simplebar-auto-hide="false">
+            <a href="#" class="d-inline-block mb-3 me-xl-4 me-3">
+              <img src="../assets/img/ecommerce/shop/single/cards/visa.jpg" alt="Visa" class="border rounded">
+            </a>
+            <a href="#" class="d-inline-block mb-3 me-xl-4 me-3">
+              <img src="../assets/img/ecommerce/shop/single/cards/master-card.jpg" alt="Mastercard"
+                class="border rounded">
+            </a>
+            <a href="#" class="d-inline-block mb-3">
+              <img src="../assets/img/ecommerce/shop/single/cards/pay-pal.jpg" alt="PayPal" class="border rounded">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Product details -->
+    <div class="tab-pane fade pt-3" id="details" role="tabpanel">
+      <div class="row">
+        <div class="col-lg-7 col-md-8 mb-md-0 mb-4" [innerHTML]="producto.descripcion">
+        </div>
+        <div class="col-md-4 offset-lg-1">
+
+          <!-- Product card carousel -->
+          <!-- <div class="card card-product">
+                      <div class="card-product-img">
+                        <div class="tns-carousel-wrapper tns-controls-onhover">
+                          <a class="tns-carousel-inner" href="#" data-carousel-options=     "{
+                            &quot;nav&quot;: false,
+                            &quot;controlsText&quot;: [
+                              &quot;&lt;i class='ci-angle-left'&gt;&lt;/i&gt;&quot;,
+                              &quot;&lt;i class='ci-angle-right'&gt;&lt;/i&gt;&quot;
+                            ]
+                          }">
+
+                            <div><img class="card-img-top" src="../assets/img/ecommerce/shop/single/product/01.jpg" alt="Product image"></div>
+                            <div><img class="card-img-top" src="../assets/img/ecommerce/shop/single/product/02.jpg" alt="Product image"></div>
+                            <div><img class="card-img-top" src="../assets/img/ecommerce/shop/single/product/03.jpg" alt="Product image"></div>
+                          </a>
+                        </div>
+                        <div class="card-product-widgets-top">
+                          <div class="ms-auto star-rating">
+                            <i class="sr-star ci-star-filled active"></i>
+                            <i class="sr-star ci-star-filled active"></i>
+                            <i class="sr-star ci-star-filled active"></i>
+                            <i class="sr-star ci-star-filled active"></i>
+                            <i class="sr-star ci-star"></i>
+                          </div>
+                        </div>
+                        <div class="card-product-widgets-bottom">
+                          <a class="btn-wishlist ms-auto" href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"></a>
+                        </div>
+                      </div>
+                      <div class="card-body pb-2">
+                        <h3 class="card-product-title text-truncate mb-2">
+                          <a href="#" class="nav-link">{{producto.titulo}}XXXXX</a>
+                        </h3>
+                        <div class="d-flex align-items-center">
+                          <span class="h5 d-inline-block text-danger mb-0">{{producto.precio}}</span>
+                          <del class="d-inline-block ms-2 ps-1 text-muted">$31.00</del>
+                        </div>
+                      </div>
+                      <div class="card-footer">
+                        <div class="d-flex align-items-center mb-2 pb-1">
+                          <div class="mt-n2">
+                            <div class="form-check form-option form-option-sm form-option-size form-check-inline">
+                              <input type="radio" class="form-check-input" name="size-01" id="l-1" checked>
+                              <label for="l-1" class="form-option-label">L</label>
+                            </div>
+                            <div class="form-check form-option form-option-sm form-option-size form-check-inline">
+                              <input type="radio" class="form-check-input" name="size-01" id="m-1">
+                              <label for="m-1" class="form-option-label">M</label>
+                            </div>
+                            <div class="form-check form-option form-option-sm form-option-size form-check-inline">
+                              <input type="radio" class="form-check-input" name="size-01" id="s-1">
+                              <label for="s-1" class="form-option-label">S</label>
+                            </div>
+                          </div>
+                          <div class="ms-auto">
+                            <div class="form-check form-option form-option-sm form-option-color form-check-inline">
+                              <input type="radio" class="form-check-input" name="color-01" id="beige-1" value="Beige" checked>
+                              <label for="beige-1" class="form-option-label">
+                                <span class="form-option-color-indicator rounded-circle" style="background-color: #dead9c;"></span>
+                              </label>
+                            </div>
+                            <div class="form-check form-option form-option-sm form-option-color form-check-inline">
+                              <input type="radio" class="form-check-input" name="color-01" id="blue-1" value="Blue">
+                              <label for="blue-1" class="form-option-label">
+                                <span class="form-option-color-indicator rounded-circle" style="background-color: #7998d1;"></span>
+                              </label>
+                            </div>
+                            <div class="form-check form-option form-option-sm form-option-color form-check-inline">
+                              <input type="radio" class="form-check-input" name="color-01" id="white-1" value="White">
+                              <label for="white-1" class="form-option-label">
+                                <span class="form-option-color-indicator rounded-circle" style="background-color: #f4f4f4;"></span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <button type="button" class="btn btn-primary w-100">
+                          <i class="ci-cart align-middle mt-n1 me-2"></i>
+                          Add to cart
+                        </button>
+                      </div>
+                    </div> -->
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Reviews -->
+    <div class="tab-pane fade pt-3" id="reviews" role="tabpanel">
+      <div class="row">
+        <div class="col-lg-7 col-md-8 mb-md-0 mb-5">
+          <div class="row mb-sm-5 mb-4 pb-2 pb-md-4">
+
+            <!-- Rating -->
+            <div class="col-sm-5 mb-sm-0 mb-4">
+              <h3 class="h2 mb-3 pb-1">12 reviews</h3>
+              <div class="star-rating mb-3 pb-1">
+                <i class="sr-star ci-star-filled active"></i>
+                <i class="sr-star ci-star-filled active"></i>
+                <i class="sr-star ci-star-filled active"></i>
+                <i class="sr-star ci-star-filled active"></i>
+                <i class="sr-star ci-star"></i>
+              </div>
+              <span class="fs-sm text-muted">
+                9 out of 12 (75%) <br>
+                Customers recommended this product
+              </span>
+            </div>
+
+            <!-- Reviews -->
+            <div class="col-sm-7">
+
+              <!-- 5 stars -->
+              <div class="d-flex align-items-center mb-2">
+                <div class="text-nowrap text-muted me-3">
+                  <span class="d-inline-block align-middle">5</span>
+                  <i class="ci-star fs-sm align-middle ms-1"></i>
+                </div>
+                <div class="w-100">
+                  <div class="progress" style="height: 4px;">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 80%;" aria-valuenow="60"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <span class="text-muted ms-3">7</span>
+              </div>
+
+              <!-- 4 stars -->
+              <div class="d-flex align-items-center mb-2">
+                <div class="text-nowrap text-muted me-3">
+                  <span class="d-inline-block align-middle">4</span>
+                  <i class="ci-star fs-sm align-middle ms-1"></i>
+                </div>
+                <div class="w-100">
+                  <div class="progress" style="height: 4px;">
+                    <div class="progress-bar" role="progressbar" style="width: 50%; background-color: #a7e453;"
+                      aria-valuenow="27" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <span class="text-muted ms-3">2</span>
+              </div>
+
+              <!-- 3 stars -->
+              <div class="d-flex align-items-center mb-2">
+                <div class="text-nowrap text-muted me-3">
+                  <span class="d-inline-block align-middle">3</span>
+                  <i class="ci-star fs-sm align-middle ms-1"></i>
+                </div>
+                <div class="w-100">
+                  <div class="progress" style="height: 4px;">
+                    <div class="progress-bar" role="progressbar" style="width: 30%; background-color: #ffda75;"
+                      aria-valuenow="17" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <span class="text-muted ms-3">1</span>
+              </div>
+
+              <!-- 2 stars -->
+              <div class="d-flex align-items-center mb-2">
+                <div class="text-nowrap text-muted me-3">
+                  <span class="d-inline-block align-middle">2</span>
+                  <i class="ci-star fs-sm align-middle ms-1"></i>
+                </div>
+                <div class="w-100">
+                  <div class="progress" style="height: 4px;">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: 30%;" aria-valuenow="9"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <span class="text-muted ms-3">1</span>
+              </div>
+
+              <!-- 1 star -->
+              <div class="d-flex align-items-center">
+                <div class="text-nowrap text-muted me-3">
+                  <span class="d-inline-block align-middle">1</span>
+                  <i class="ci-star fs-sm align-middle ms-1"></i>
+                </div>
+                <div class="w-100">
+                  <div class="progress" style="height: 4px;">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 30%;" aria-valuenow="4"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <span class="text-muted ms-3">1</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Button + sorting -->
+          <div class="d-flex align-items-center justify-content-between mb-4 pb-2 pb-sm-4">
+            <a href="#modal-review" data-bs-toggle="modal" class="btn btn-primary">Leave a review</a>
+            <div class="d-flex align-items-center">
+              <label for="sort-orders" class="d-none d-sm-block flex-shrink-0 fw-bold me-2 pe-1">Sort by</label>
+              <select id="sort-orders" class="form-select">
+                <option>Newest</option>
+                <option>Oldest</option>
+                <option>High rating</option>
+                <option>Low rating</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Review -->
+          <div class="mb-4 pb-4 border-bottom">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 mb-sm-0 mb-3">
+                <h3 class="mb-2 fs-lg">Devon Lane</h3>
+                <span class="d-block mb-3 fs-sm text-muted">3 days ago</span>
+                <div class="mt-n1 star-rating">
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                </div>
+              </div>
+              <div class="col">
+                <p class="mb-3">Vel velit pulvinar montes, sit rhoncus odio molestie. Venenatis nunc fames ut proin
+                  adipiscing sit. Etiam egestas elit varius a, vestibulum bibendum nibh sociis in. Ut facilisis sit eget
+                  cum fringilla. Dapibus mauris viverra est sed risus quam lacinia.</p>
+                <div class="d-flex justify-content-end">
+                  <a class="nav-link me-3 p-0 fs-sm" href="#">
+                    <i class="ci-like me-2 fs-base align-middle mt-n1 text-success"></i>
+                    2
+                  </a>
+                  <a class="nav-link p-0 fs-sm" href="#">
+                    <i class="ci-dislike me-2 fs-base align-middle mt-n1 text-danger"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review -->
+          <div class="mb-4 pb-4 border-bottom">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 mb-sm-0 mb-3">
+                <h3 class="mb-2 fs-lg">Annette Black</h3>
+                <span class="d-block mb-3 fs-sm text-muted">November 29, 2020</span>
+                <div class="mt-n1 star-rating">
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star"></i>
+                </div>
+              </div>
+              <div class="col">
+                <p class="mb-3">Amet ut augue dignissim lorem. Diam volutpat porttitor vel, pulvinar semper. Faucibus
+                  vel accumsan mi diam magna. Nunc diam lorem semper rhoncus in ut. Quis risus viverra bibendum eu.</p>
+                <div class="d-flex justify-content-end">
+                  <a class="nav-link me-3 p-0 fs-sm" href="#">
+                    <i class="ci-like me-2 fs-base align-middle mt-n1 text-success"></i>
+                    5
+                  </a>
+                  <a class="nav-link p-0 fs-sm" href="#">
+                    <i class="ci-dislike me-2 fs-base align-middle mt-n1 text-danger"></i>
+                    1
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review -->
+          <div class="mb-4 pb-4 border-bottom">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 mb-sm-0 mb-3">
+                <h3 class="mb-2 fs-lg">Albert Flores</h3>
+                <span class="d-block mb-3 fs-sm text-muted">November 5, 2020</span>
+                <div class="mt-n1 star-rating">
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star"></i>
+                </div>
+              </div>
+              <div class="col">
+                <p class="mb-3">Et, enim pellentesque ut malesuada interdum. Id odio proin molestie ac tellus ornare
+                  lectus amet semper. Bibendum non nulla leo pharetra, mi ultrices proin rhoncus diam.</p>
+                <div class="d-flex justify-content-end">
+                  <a class="nav-link me-3 p-0 fs-sm" href="#">
+                    <i class="ci-like me-2 fs-base align-middle mt-n1 text-success"></i>
+                    0
+                  </a>
+                  <a class="nav-link p-0 fs-sm" href="#">
+                    <i class="ci-dislike me-2 fs-base align-middle mt-n1 text-danger"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review -->
+          <div class="mb-4 pb-4 border-bottom">
+            <div class="row">
+              <div class="col-md-3 col-sm-4 mb-sm-0 mb-3">
+                <h3 class="mb-2 fs-lg">Marvin McKinney</h3>
+                <span class="d-block mb-3 fs-sm text-muted">October 13, 2020</span>
+                <div class="mt-n1 star-rating">
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                </div>
+              </div>
+              <div class="col">
+                <p class="mb-3">Eu duis ac, faucibus et egestas morbi elementum urna in. Feugiat natoque vestibulum,
+                  augue nisi. Vulputate vitae felis quis mauris morbi massa ut. Dolor in amet volutpat facilisi luctus
+                  duis mauris.</p>
+                <div class="d-flex justify-content-end">
+                  <a class="nav-link me-3 p-0 fs-sm" href="#">
+                    <i class="ci-like me-2 fs-base align-middle mt-n1 text-success"></i>
+                    9
+                  </a>
+                  <a class="nav-link p-0 fs-sm" href="#">
+                    <i class="ci-dislike me-2 fs-base align-middle mt-n1 text-danger"></i>
+                    2
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination: With icons -->
+          <nav class="mt-4 pt-4" aria-label="Reviews pagination">
+            <ul class="pagination justify-content-center mb-0">
+              <li class="page-item d-sm-none">
+                <span class="page-link page-link-static">1 / 4</span>
+              </li>
+              <li class="page-item active d-none d-sm-block" aria-current="page">
+                <span class="page-link">1
+                  <span class="visually-hidden">(current)</span>
+                </span>
+              </li>
+              <li class="page-item d-none d-sm-block">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item d-none d-sm-block">
+                <a class="page-link" href="#">3</a>
+              </li>
+              <li class="page-item d-none d-sm-block">
+                <a class="page-link" href="#">4</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">
+                  <i class="ci-arrow-right"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-md-4 offset-lg-1">
+
+          <!-- Product card carousel -->
+          <div class="card card-product">
+            <div class="card-product-img">
+              <div class="tns-carousel-wrapper tns-controls-onhover">
+                <a class="tns-carousel-inner" href="#" data-carousel-options="{
+                            &quot;nav&quot;: false,
+                            &quot;controlsText&quot;: [
+                              &quot;&lt;i class='ci-angle-left'&gt;&lt;/i&gt;&quot;,
+                              &quot;&lt;i class='ci-angle-right'&gt;&lt;/i&gt;&quot;
+                            ]
+                          }">
+
+                  <div><img class="card-img-top" src="../assets/img/ecommerce/shop/single/product/01.jpg"
+                      alt="Product image"></div>
+                  <div><img class="card-img-top" src="../assets/img/ecommerce/shop/single/product/02.jpg"
+                      alt="Product image"></div>
+                  <div><img class="card-img-top" src="../assets/img/ecommerce/shop/single/product/03.jpg"
+                      alt="Product image"></div>
+                </a>
+              </div>
+              <div class="card-product-widgets-top">
+                <div class="ms-auto star-rating">
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star-filled active"></i>
+                  <i class="sr-star ci-star"></i>
+                </div>
+              </div>
+              <div class="card-product-widgets-bottom">
+                <a class="btn-wishlist ms-auto" href="#" data-bs-toggle="tooltip" data-bs-placement="left"
+                  title="Add to wishlist"></a>
+              </div>
+            </div>
+            <div class="card-body pb-2">
+              <h3 class="card-product-title text-truncate mb-2">
+                <a href="#" class="nav-link">Basic hooded sweatshirt in pink</a>
+              </h3>
+              <div class="d-flex align-items-center">
+                <span class="h5 d-inline-block text-danger mb-0">$15.50</span>
+                <del class="d-inline-block ms-2 ps-1 text-muted">$31.00</del>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="d-flex align-items-center mb-2 pb-1">
+                <div class="mt-n2">
+                  <div class="form-check form-option form-option-sm form-option-size form-check-inline">
+                    <input type="radio" class="form-check-input" name="size-02" id="l-2" checked>
+                    <label for="l-2" class="form-option-label">L</label>
+                  </div>
+                  <div class="form-check form-option form-option-sm form-option-size form-check-inline">
+                    <input type="radio" class="form-check-input" name="size-02" id="m-2">
+                    <label for="m-2" class="form-option-label">M</label>
+                  </div>
+                  <div class="form-check form-option form-option-sm form-option-size form-check-inline">
+                    <input type="radio" class="form-check-input" name="size-02" id="s-2">
+                    <label for="s-2" class="form-option-label">S</label>
+                  </div>
+                </div>
+                <div class="ms-auto">
+                  <div class="form-check form-option form-option-sm form-option-color form-check-inline">
+                    <input type="radio" class="form-check-input" name="color-02" id="beige-2" value="Beige" checked>
+                    <label for="beige-2" class="form-option-label rounded-circle">
+                      <span class="form-option-color-indicator rounded-circle"
+                        style="background-color: #dead9c;"></span>
+                    </label>
+                  </div>
+                  <div class="form-check form-option form-option-sm form-option-color form-check-inline">
+                    <input type="radio" class="form-check-input" name="color-02" id="blue-2" value="Blue">
+                    <label for="blue-2" class="form-option-label rounded-circle">
+                      <span class="form-option-color-indicator rounded-circle"
+                        style="background-color: #7998d1;"></span>
+                    </label>
+                  </div>
+                  <div class="form-check form-option form-option-sm form-option-color form-check-inline">
+                    <input type="radio" class="form-check-input" name="color-02" id="white-2" value="White">
+                    <label for="white-2" class="form-option-label rounded-circle">
+                      <span class="form-option-color-indicator rounded-circle"
+                        style="background-color: #f4f4f4;"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary w-100">
+                <i class="ci-cart align-middle mt-n1 me-2"></i>
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Related products (carousel) -->
+<section class="py-5" style="background-color: #e5e8ed;">
+  <div class="container my-lg-2 py-2 py-md-4">
+    <div class="d-flex align-items-center justify-content-between pb-sm-1 mb-5">
+      <h2 class="h1 pe-3 mb-0">Recomendados</h2>
+      <div class="tns-custom-controls tns-controls-inverse" id="custom-controls-related" tabindex="0">
+        <button type="button" data-controls="prev" tabindex="-1">
+          <i class="ci-arrow-left"></i>
+        </button>
+        <button type="button" data-controls="next" tabindex="-1">
+          <i class="ci-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="tns-carousel-wrapper pb-2">
+      <div class="tns-carousel-inner tns-carousel-inner-two" data-carousel-options='{
+                  "nav": false,
+                  "controlsContainer": "#custom-controls-related",
+                  "responsive": {
+                    "0": {
+                      "items": 1,
+                      "gutter": 20
+                    },
+                    "480": {
+                      "items": 2,
+                      "gutter": 24
+                    },
+                    "700": {
+                      "items": 3,
+                      "gutter": 24
+                    },
+                    "1100": {
+                      "items": 4,
+                      "gutter": 30
+                    }
+                  }
+                }'>
+
+        <!-- Item -->
+        <div *ngFor="let item of productosRecomendados">
+          <div class="card card-product mx-auto">
+            <div class="card-product-img">
+              <a [routerLink]="['/productos/'+item.slug]"  target="_blank" class="card-img-top">
+                <img [src]="item.portada" alt="Product image">
+              </a>
+              <div class="card-product-widgets-bottom">
+                <a [routerLink]="['/productos/'+item.slug]" target="_blank" class="btn-wishlist ms-auto" data-bs-toggle="tooltip" data-bs-placement="left"
+                  title="Add to wishlist"></a>
+              </div>
+            </div>
+            <div class="card-body bg-transparent pb-2">
+              <h3 class="card-product-title text-truncate mb-2">
+                <a [routerLink]="['/productos/'+item.slug]" target="_blank" class="nav-link">{{item.titulo}}</a>
+              </h3>
+              <div class="d-flex align-items-center">
+                <span class="h5 d-inline-block mb-0">{{item.precio |currency:'COP':'$':'3.0'}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

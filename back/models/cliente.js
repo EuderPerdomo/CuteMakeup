@@ -12,6 +12,7 @@ var ClienteSchema = Schema({
     telefono: {type: String, required: true},
     estado:{type:Boolean,default:true},   
     perfil:{type: String, default:'perfil.png', required: true},
+    rol:{type: String, default:'cliente', required: true},
     dni: {type: String, required: false},
     genero:{type: String, required: false},
     fecha_nacimiento:{type: String, required: false},

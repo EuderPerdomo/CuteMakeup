@@ -54,55 +54,26 @@
       <div class="d-flex align-items-center">
         <div class="d-flex align-items-center flex-nowrap me-3 me-xl-5">
           <label for="sorting-top" class="fw-bold text-nowrap me-2 pe-1 d-none d-lg-block">Sort by</label>
-          <select id="sorting-top" class="form-select">
-            <option>Popularity</option>
-            <option>Low - Hight Price</option>
-            <option>High - Low Price</option>
-            <option>Average Rating</option>
-            <option>A - Z Order</option>
-            <option>Z - A Order</option>
+          <select id="sorting-top" class="form-select" name="sort_by" [(ngModel)]="sort_by" (click)="ordenar_por()">
+            <option value="Defecto">Defecto</option> 
+            <option value="Popularidad">Popularidad</option> 
+           <option value="+-precio">Bajo - Alto Precio</option>
+           <option value="-+precio">Alto - Bajo Precio</option>
+           <option value="az">A - Z Orden</option>
+           <option value="za">Z - A Orden</option>
           </select>
         </div>
         <div class="d-flex align-items-center flex-nowrap d-none d-sm-flex me-3 me-xl-5">
           <label for="pager-top" class="fw-bold text-nowrap me-2 pe-1 d-none d-lg-block">Show</label>
-          <select id="pager-top" class="form-select">
-            <option>12</option>
-            <option>24</option>
-            <option>48</option>
-            <option>72</option>
-            <option>96</option>
+          <select id="pager-top" class="form-select" name="pageSize" [(ngModel)]="pageSize">
+            <option value="15">15</option>
+            <option value="21">21</option>
+            <option value="28">28</option>
           </select>
           <span class="fs-sm text-muted text-nowrap ms-2 d-none d-lg-block">products per page</span>
         </div>
-        <nav class="ms-auto" aria-label="Pagination">
-          <ul class="pagination mb-0">
-            <li class="page-item d-sm-none">
-              <span class="page-link page-link-static">1 / 5</span>
-            </li>
-            <li class="page-item active d-none d-sm-block" aria-current="page">
-              <span class="page-link">1
-                <span class="visually-hidden">(current)</span>
-              </span>
-            </li>
-            <li class="page-item d-none d-sm-block">
-              <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item d-none d-sm-block">
-              <a class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item d-none d-sm-block">
-              <a class="page-link" href="#">4</a>
-            </li>
-            <li class="page-item d-none d-sm-block">
-              <a class="page-link" href="#">5</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">
-                <i class="ci-arrow-right"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
+
+        <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="productos.length"></ngb-pagination>
       </div>
     </div>
   </div>
@@ -172,12 +143,10 @@
                     <ul class="filter-list list-unstyled pe-3" style="height: 12rem;" data-simplebar
                       data-simplebar-auto-hide="false">
 
-                      <li class="filter-item" >
+                      <li class="filter-item">
                         <div class="form-check">
-                          <input type="radio" name="group1" class="form-check-input" id="categorias-todos" 
-                          value="todos" 
-                          [(ngModel)]="filtro_categoria_producto"
-                          (change)="buscar_por_categoria()">
+                          <input type="radio" name="group1" class="form-check-input" id="categorias-todos" value="todos"
+                            [(ngModel)]="filtro_categoria_producto" (change)="buscar_por_categoria()">
 
                           <label for="categorias-todos" class="form-check-label">
                             <span class="filter-item-text">Todos</span>
@@ -188,10 +157,9 @@
 
                       <li class="filter-item" *ngFor="let item of categorias; let indice=index">
                         <div class="form-check">
-                          <input type="radio" name="group1" class="form-check-input" id="categorias-{{indice}}" 
-                          value="{{item.titulo}}" 
-                          [(ngModel)]="filtro_categoria_producto"
-                          (change)="buscar_por_categoria()">
+                          <input type="radio" name="group1" class="form-check-input" id="categorias-{{indice}}"
+                            value="{{item.titulo}}" [(ngModel)]="filtro_categoria_producto"
+                            (change)="buscar_por_categoria()">
                           <label for="categorias-{{indice}}" class="form-check-label">
                             <span class="filter-item-text">{{item.titulo}} </span>
                             <!-- <span class="ps-1 text-muted">(235)</span> -->
@@ -763,139 +731,123 @@
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3" data-filters-columns *ngIf="!load_data">
 
-        <!-- Item -->
-        <div class="col pb-sm-2 mb-grid-gutter" *ngFor="let item of productos">
-          <div class="card card-product mx-auto">
-            <div class="card-product-img">
-              <a href="shop-single.html" class="card-img-top">
-                <img [src]="item.portada" alt="">
+        <ng-container *ngIf="productos.length ==0">
+          <div class="col-1g-12 col-md-5">
+            <h3 class="h6 mb-2 text-uppercase"> "¡Oops! No encontramos nada!, ¿y si intentas con otro término?....</h3>
+            <!-- <h2 class="h1 pb-lg-3"> ¿Quieres intentar con otra palabra?"</h2> -->
+            <a style="clip-rule: pointer;" class="btn btn-gradient btn-hover-shadow" (click)="reset_productos()">Mostrar
+              Todos</a>
 
-              </a>
-              <div class="card-product-widgets-top">
-                <div class="star-rating ms-auto">
-                  <i class="sr-star ci-star-filled active"></i>
-                  <i class="sr-star ci-star-filled active"></i>
-                  <i class="sr-star ci-star-filled active"></i>
-                  <i class="sr-star ci-star-filled active"></i>
-                  <i class="sr-star ci-star-filled active"></i>
-                </div>
-              </div>
-              <div class="card-product-widgets-bottom">
-                <a href="#" class="btn-wishlist ms-auto" data-bs-toggle="tooltip" data-bs-placement="left"
-                  title="Add to wishlist"></a>
-              </div>
-            </div>
-            <div class="card-body pb-2">
-              <h3 class="card-product-title text-truncate mb-2">
-                <a href="shop-single.html" class="nav-link">{{item.titulo}}</a>
-              </h3>
-              <div class="d-flex align-items-center">
-                <span class="h5 d-inline-block mb-0">{{item.precio |currency:'COP':'$':'3.0'}}</span>
-              </div>
-            </div>
-            <div class="card-footer">
-              <div class="d-flex align-items-center mb-2 pb-1">
-                <div class="mt-n2">
-                  <div class="form-check form-option form-option-sm form-option-size form-check-inline">
-                    <input type="radio" class="form-check-input" name="size-1" id="l-1">
-                    <label for="l-1" class="form-option-label">L</label>
-                  </div>
-                  <div class="form-check form-option form-option-sm form-option-size form-check-inline">
-                    <input type="radio" class="form-check-input" name="size-1" id="m-1" checked>
-                    <label for="m-1" class="form-option-label">M</label>
-                  </div>
-                  <div class="form-check form-option form-option-sm form-option-size form-check-inline">
-                    <input type="radio" class="form-check-input" name="size-1" id="s-1">
-                    <label for="s-1" class="form-option-label">S</label>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="productos.length >=1">
+          
+          <!-- Item -->
+          <div class="col pb-sm-2 mb-grid-gutter" *ngFor="let item of productos | slice: (page-1)*pageSize : (page-1) * pageSize + pageSize">
+            <div class="card card-product mx-auto">
+              <div class="card-product-img">
+                <a [routerLink]="['/productos/'+item.slug]" class="card-img-top">
+                  <img [src]="item.portada" alt="">
+
+                </a>
+                <div class="card-product-widgets-top">
+                  <div class="star-rating ms-auto">
+                    <i class="sr-star ci-star-filled active"></i>
+                    <i class="sr-star ci-star-filled active"></i>
+                    <i class="sr-star ci-star-filled active"></i>
+                    <i class="sr-star ci-star-filled active"></i>
+                    <i class="sr-star ci-star-filled active"></i>
                   </div>
                 </div>
-                <div class="ms-auto">
-                  <div class="form-check form-option form-option-sm form-option-color form-check-inline">
-                    <input type="radio" class="form-check-input" name="color-1" id="blue-1" value="Blue" checked>
-                    <label for="blue-1" class="form-option-label rounded-circle">
-                      <span class="form-option-color-indicator rounded-circle"
-                        style="background-color: #6a9bf4;"></span>
-                    </label>
-                  </div>
-                  <div class="form-check form-option form-option-sm form-option-color form-check-inline">
-                    <input type="radio" class="form-check-input" name="color-1" id="orange-1" value="Orange">
-                    <label for="orange-1" class="form-option-label rounded-circle">
-                      <span class="form-option-color-indicator rounded-circle"
-                        style="background-color: #ff9d50;"></span>
-                    </label>
-                  </div>
-                  <div class="form-check form-option form-option-sm form-option-color form-check-inline">
-                    <input type="radio" class="form-check-input" name="color-1" id="green-1" value="Green">
-                    <label for="green-1" class="form-option-label rounded-circle">
-                      <span class="form-option-color-indicator rounded-circle"
-                        style="background-color: #16c995;"></span>
-                    </label>
-                  </div>
+                <div class="card-product-widgets-bottom">
+                  <a href="#" class="btn-wishlist ms-auto" data-bs-toggle="tooltip" data-bs-placement="left"
+                    title="Add to wishlist"></a>
                 </div>
               </div>
-              <button type="button" class="btn btn-primary w-100">
-                <i class="ci-cart align-middle mt-n1 me-2"></i>
-                Add to cart
-              </button>
+              <div class="card-body pb-2">
+                <h3 class="card-product-title text-truncate mb-2">
+                  <a [routerLink]="['/productos/'+item.slug]" class="nav-link">{{item.titulo}}</a>
+                </h3>
+                <div class="d-flex align-items-center">
+                  <span class="h5 d-inline-block mb-0">{{item.precio |currency:'COP':'$':'3.0'}}</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="d-flex align-items-center mb-2 pb-1">
+                  <div class="mt-n2">
+                    <div class="form-check form-option form-option-sm form-option-size form-check-inline">
+                      <input type="radio" class="form-check-input" name="size-1" id="l-1">
+                      <label for="l-1" class="form-option-label">L</label>
+                    </div>
+                    <div class="form-check form-option form-option-sm form-option-size form-check-inline">
+                      <input type="radio" class="form-check-input" name="size-1" id="m-1" checked>
+                      <label for="m-1" class="form-option-label">M</label>
+                    </div>
+                    <div class="form-check form-option form-option-sm form-option-size form-check-inline">
+                      <input type="radio" class="form-check-input" name="size-1" id="s-1">
+                      <label for="s-1" class="form-option-label">S</label>
+                    </div>
+                  </div>
+                  <div class="ms-auto">
+                    <div class="form-check form-option form-option-sm form-option-color form-check-inline">
+                      <input type="radio" class="form-check-input" name="color-1" id="blue-1" value="Blue" checked>
+                      <label for="blue-1" class="form-option-label rounded-circle">
+                        <span class="form-option-color-indicator rounded-circle"
+                          style="background-color: #6a9bf4;"></span>
+                      </label>
+                    </div>
+                    <div class="form-check form-option form-option-sm form-option-color form-check-inline">
+                      <input type="radio" class="form-check-input" name="color-1" id="orange-1" value="Orange">
+                      <label for="orange-1" class="form-option-label rounded-circle">
+                        <span class="form-option-color-indicator rounded-circle"
+                          style="background-color: #ff9d50;"></span>
+                      </label>
+                    </div>
+                    <div class="form-check form-option form-option-sm form-option-color form-check-inline">
+                      <input type="radio" class="form-check-input" name="color-1" id="green-1" value="Green">
+                      <label for="green-1" class="form-option-label rounded-circle">
+                        <span class="form-option-color-indicator rounded-circle"
+                          style="background-color: #16c995;"></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-primary w-100">
+                  <i class="ci-cart align-middle mt-n1 me-2"></i>
+                  Add to cart
+                </button>
+              </div>
             </div>
           </div>
-        </div>
+        </ng-container>
 
       </div>
 
       <!-- Toolbar + Pagination -->
       <div class="d-flex align-items-center pt-md-4">
         <div class="d-flex align-items-center flex-nowrap me-3 me-xl-5 pt-1">
-          <label for="sorting-bottom" class="fw-bold text-nowrap me-2 pe-1 d-none d-md-block">Sort by</label>
-          <select id="sorting-bottom" class="form-select">
-            <option>Popularity</option>
-            <option>Low - Hight Price</option>
-            <option>High - Low Price</option>
-            <option>Average Rating</option>
-            <option>A - Z Order</option>
-            <option>Z - A Order</option>
+          <label for="sorting-bottom" class="fw-bold text-nowrap me-2 pe-1 d-none d-md-block">Ordenar Por</label>
+          <select id="sorting-bottom" class="form-select" name="sort_by" [(ngModel)]="sort_by" (click)="ordenar_por()">
+            <option value="Defecto">Defecto</option> 
+             <option value="Popularidad">Popularidad</option> 
+            <option value="+-precio">Bajo - Alto Precio</option>
+            <option value="-+precio">Alto - Bajo Precio</option>
+            <option value="az">A - Z Orden</option>
+            <option value="za">Z - A Orden</option>
           </select>
         </div>
         <div class="d-flex align-items-center flex-nowrap d-none d-sm-flex me-3 me-xl-5 pt-1">
-          <label for="pager-bottom" class="fw-bold text-nowrap me-2 pe-1 d-none d-md-block">Show</label>
-          <select id="pager-bottom" class="form-select">
-            <option>12</option>
-            <option>24</option>
-            <option>48</option>
-            <option>72</option>
-            <option>96</option>
+          <label for="pager-bottom" class="fw-bold text-nowrap me-2 pe-1 d-none d-md-block">Mostrar</label>
+          <select id="pager-bottom" class="form-select" name="pageSize" [(ngModel)]="pageSize">
+            <option value="15">15</option>
+            <option value="21">21</option>
+            <option value="28">28</option>
           </select>
-          <span class="fs-sm text-muted text-nowrap ms-2 d-none d-md-block">products per page</span>
+          <span class="fs-sm text-muted text-nowrap ms-2 d-none d-md-block">Productos Por Pagina</span>
         </div>
-        <nav class="pt-1 ms-auto" aria-label="Pagination">
-          <ul class="pagination mb-0">
-            <li class="page-item d-sm-none">
-              <span class="page-link page-link-static">1 / 5</span>
-            </li>
-            <li class="page-item active d-none d-sm-block" aria-current="page">
-              <span class="page-link">1
-                <span class="visually-hidden">(current)</span>
-              </span>
-            </li>
-            <li class="page-item d-none d-sm-block">
-              <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item d-none d-sm-block">
-              <a class="page-link" href="#">3</a>
-            </li>
-            <li class="page-item d-none d-sm-block">
-              <a class="page-link" href="#">4</a>
-            </li>
-            <li class="page-item d-none d-sm-block">
-              <a class="page-link" href="#">5</a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">
-                <i class="ci-arrow-right"></i>
-              </a>
-            </li>
-          </ul>
-        </nav>
+   
+         <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="productos.length"></ngb-pagination> 
+
       </div>
     </div>
   </div>
