@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { io } from 'socket.io-client';
 
 declare var jQuery: any;
 declare var iziToast: { show: (arg0: { title: string; class: string; titleColor: string; position: string; message: string; }) => void; };
@@ -16,7 +17,7 @@ declare var noUiSlider: any
 @Component({
   selector: 'app-index-producto',
   standalone: true,
-  imports: [NavComponent, FooterComponent, CommonModule, FormsModule, NgbPaginationModule,RouterModule],
+  imports: [NavComponent, FooterComponent, CommonModule, FormsModule, NgbPaginationModule, RouterModule],
   templateUrl: './index-producto.component.html',
   styleUrl: './index-producto.component.css'
 })
@@ -28,6 +29,8 @@ export class IndexProductoComponent implements OnInit {
   public filtro_producto = ''
 
   public filtro_categoria_producto = 'todos'
+  public token: any
+  public socket=io('http://localhost:4201')
 
 
   //Precargador
@@ -43,10 +46,20 @@ export class IndexProductoComponent implements OnInit {
   public sort_by = 'Defecto'
 
 
+  //Agregar al carrito
+  public carrito_data: any = {
+    variedad: '',
+    cantidad: 1
+  }
+  public btn_cart = false
+
+
   constructor(
     private _clienteService: ClienteService,
     private _route: ActivatedRoute,
   ) {
+
+    this.token = localStorage.getItem('token')
 
     this._route.params.subscribe(
       params => {
@@ -228,8 +241,8 @@ export class IndexProductoComponent implements OnInit {
       })
     }
 
-     //Precio -+
-     else if (this.sort_by == '-+precio') {
+    //Precio -+
+    else if (this.sort_by == '-+precio') {
       this.productos.sort(function (a, b) {
         if (a.precio < b.precio) {
           return 1
@@ -241,34 +254,80 @@ export class IndexProductoComponent implements OnInit {
       })
     }
 
-  //Titulo AZ
-  else if (this.sort_by == 'az') {
-    this.productos.sort(function (a, b) {
-      if (a.titulo > b.titulo) {
-        return 1
-      }
-      if (a.titulo < b.titulo) {
-        return -1
-      }
-      return 0
-    })
+    //Titulo AZ
+    else if (this.sort_by == 'az') {
+      this.productos.sort(function (a, b) {
+        if (a.titulo > b.titulo) {
+          return 1
+        }
+        if (a.titulo < b.titulo) {
+          return -1
+        }
+        return 0
+      })
+    }
+
+    //Titulo ZA
+    else if (this.sort_by == 'za') {
+      this.productos.sort(function (a, b) {
+        if (a.titulo < b.titulo) {
+          return 1
+        }
+        if (a.titulo > b.titulo) {
+          return -1
+        }
+        return 0
+      })
+    }
+
+
   }
 
-   //Titulo ZA
-   else if (this.sort_by == 'za') {
-    this.productos.sort(function (a, b) {
-      if (a.titulo < b.titulo) {
-        return 1
-      }
-      if (a.titulo > b.titulo) {
-        return -1
-      }
-      return 0
-    })
-  } 
 
+  //Productos al carrito
+  agregar_producto(producto: any) {
+    console.log(producto,producto.variedades[0]._id)
+
+    let data = {
+      producto: producto._id,
+      cliente: localStorage.getItem('identity'),
+      cantidad: 1,
+      variedad: producto.variedades[0]._id
+
+    }
+    this.btn_cart = true
+
+    this._clienteService.agregar_carrito_cliente(data, this.token).subscribe(
+      response => {
+
+        if (response.data == undefined) {
+
+          iziToast.show({
+            title: 'ERROR',
+            titleColor: '#FF0000',
+            class: 'text-danger',
+            position: 'topRight',
+            message: 'El producto ya se encuentra en el carrito'
+
+          });
+          this.btn_cart = false
+        } else {
+          iziToast.show({
+            title: ' ¡Genial! ',
+            titleColor: 'green',
+            class: 'text-success',
+            position: 'topRight',
+            message: 'producto Agregado al carrito'
+          });
+          this.socket.emit('add-carrito-add',{data:true})
+          this.btn_cart = false
+          
+
+        }
+      }
+    )
 
   }
 
-  
+
 }

@@ -812,10 +812,18 @@
                     </div>
                   </div>
                 </div>
-                <button type="button" class="btn btn-primary w-100">
+                <button *ngIf="!btn_cart" type="button" class="btn btn-primary w-100" (click)="agregar_producto(item)">
                   <i class="ci-cart align-middle mt-n1 me-2"></i>
-                  Add to cart
+                  Al Carrito..
                 </button>
+
+                 <!-- Button with growing spinner and text -->
+              <button *ngIf="btn_cart" type="button" class="btn btn-primary" disabled>
+                <span class="spinner-grow spinner-grow-sm me-2" role="status" aria-hidden="true"></span>
+                Agregando....
+              </button>
+
+
               </div>
             </div>
           </div>

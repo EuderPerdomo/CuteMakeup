@@ -1,0 +1,137 @@
+body {
+    background: #333;
+    color: white;
+ }
+ h1 {
+   margin: 0 auto;
+   text-align: center;
+   font-size: 2rem;
+   color: #4CAF50;
+   text-decoration: underline;
+ }
+ /** filters:init **/
+ .slider-filters {
+     width: 100%;
+     margin: 0 auto;
+ }
+ .slider-filters ul {
+     margin: 0;
+     padding: 0;
+     list-style-type: none;
+     display: flex;
+     justify-content: center;
+ }
+ .slider-filters ul li {
+     margin: .5rem;
+ }
+ .slider-filters button{
+     background-color: #4CAF50; 
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+     
+ }
+ /** filters:end **/
+ .slider-container {    
+     max-width: 1000px;
+     padding: 2rem 3rem;
+     background: #e6e6e6;
+     margin: 2rem auto 0 auto;
+     overflow: hidden;
+     border-radius: 5px;    
+     position:relative;
+     &:before {
+         content: '.slider-container';
+         position: absolute;
+         left: 0;
+         top: 0;
+         color: blue;
+     }
+ }
+ 
+ img {
+     display: inline-block;
+     vertical-align: top;
+     max-width: 100%;
+ }
+ 
+ .my-slider {
+     position: relative;    
+ }
+ 
+ .slider-item {
+     background: grey;
+     border-right: 2px solid #333;
+     padding: 1.5rem .75rem;
+     position: relative;
+     &:before {
+         content: '.slider-item';
+         position: absolute;
+         left: 0;
+         top: 0;
+         color: blue;
+     }
+     
+     &:hover {
+         cursor: pointer;
+     }
+ }
+ 
+ .controls {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     position: absolute;
+     left: 0;    
+     background: #333;
+     width: 100%;    
+     top: 50%;
+     transform: translatey(-50%);
+     display: flex;
+     align-items: center;    
+     justify-content: space-between;
+     &:focus {
+         outline: none;
+     }
+ 
+     li:hover {
+         cursor: pointer;        
+     }
+ }
+ 
+ .card {
+     text-align: center;    
+     margin: 0 auto;
+     max-width: 200px;       
+     color: #333;
+     background: white;
+     border-radius: 5px;
+     padding-bottom: .75rem;
+     font-family: sans-serif;
+     overflow: hidden;
+     box-shadow: 2px 2px rgba(black, .3);
+     position: relative;
+     &:before {
+         content: '.card';
+         position: absolute;
+         bottom: 0;
+         color: blue;
+     }
+     img {
+         margin-bottom: .25rem;
+     }
+     
+     h2 {
+         font-size: 1.2rem;
+         margin: 0 0 .25rem;
+     }
+     p {
+         margin: 0;
+         padding: 0 .5rem;
+         font-size:0.8rem;
+     }
+ }

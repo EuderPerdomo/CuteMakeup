@@ -58,30 +58,64 @@
           <!-- Mi propia galeria -->
 
           <div class="tns-carousel-wrapper gallery product-gallery mx-auto" data-video="true" style="max-width: 570px;">
-            <div class="tns-carousel-inner cs-carousel-inner" data-carousel-options='{
-    "gutter": 15,
-    "navContainer": "#tns-thumbnails",
-    "navAsThumbnails": true
-  }'>
+            <div class="tns-carousel-inner cs-carousel-inner carruselPrincipal" 
+            data-carousel-options='{
+                                      "gutter": 15,
+                                      "navContainer": "#tns-thumbnails",
+                                      "navAsThumbnails": true
+                                    }'>
 
               <!-- Product gallery item -->
-              <a class="gallery-item cs-gallery-item" *ngFor="let item of galeria" href="{{item.imagen}}"
-                data-sub-html='<h6 class="text-light">Gallery image caption #1</h6>'>
+              <a class="gallery-item cs-gallery-item" *ngFor="let item of carrusel2" 
+              [attr.data-type]="item.variedad" >
                 <img class="rounded" [src]="item.imagen" alt="Carousel image">
-                <span class="gallery-caption">Gallery image caption #1</span>
               </a>
-
             </div>
 
             <!-- Product gallery thumbnails -->
             <div class="tns-thumbnails" id="tns-thumbnails">
-              <button type="button" [attr.data-nav]="indice" *ngFor="let item of galeria; let indice =index">
+              <button type="button" [attr.data-nav]="indice" *ngFor="let item of carrusel2; let indice =index">
                 <img [src]="item.imagen" alt="Thumbnail">
               </button>
             </div>
           </div>
-
           <!-- Finaliza mi propia galeria -->
+
+
+          <!-- Inicia segunda galeria -->
+
+          <div class="tns-carousel-wrapper gallery product-gallery mx-auto" data-video="true" style="max-width: 570px;">
+            <div class="tns-carousel-inner cs-carousel-inner my-slider" 
+            data-carousel-options='{
+                                      "gutter": 15,
+                                      "navContainer": "#tns-thumbnails2",
+                                      "navAsThumbnails": true
+                                    }'>
+
+              <!-- Product gallery item -->
+               <a class="gallery-item cs-gallery-item" *ngFor="let item of carrusel2" 
+              [attr.data-type]="item.variedad" >
+                <img class="rounded" [src]="item.imagen" alt="Carousel image"> 
+              </a>
+
+              <!-- <div class="slider-item" data-type="nature">
+                <div class="card"><img src="https://picsum.photos/200/150?random=1" alt=""/>
+                  <h2>Nature 2</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas!</p>
+                </div>
+              </div> -->
+
+            </div>
+
+            <!-- Product gallery thumbnails -->
+             <div class="tns-thumbnails" id="tns-thumbnails2">
+              <button type="button" [attr.data-nav]="indice" *ngFor="let item of carrusel2; let indice =index">
+                <img [src]="item.imagen" alt="Thumbnail">
+              </button>
+            </div> 
+          </div>
+
+          <!-- Finaliza segunda galeria -->
 
 
         </div>
@@ -146,7 +180,7 @@
               <div class="mb-4">
                 <label for="size" class="form-label-lg">Variedades</label>
                 <select class="form-control form-select" id="size" name="variedad_seleccionada"
-                  [(ngModel)]="variedad_seleccionada" (change)="cambioVariedad()">
+                  [(ngModel)]="variedad_seleccionada" (change)="filter()">
                   <!-- <option value="" selected disabled>Seleccione....</option> -->
                   <option value="{{item._id}}" *ngFor="let item of producto.variedades">{{item.titulo}}</option>
                 </select>
@@ -163,24 +197,36 @@
 
             <div class="col-lg-2 col-4 order-lg-3 order-3">
               <div class="mb-4">
-                <select class="form-control form-select pe-3" id="select-input">
+                <select class="form-control form-select pe-3" id="select-input" name="cantidad"
+                  [(ngModel)]="carrito_data.cantidad">
                   <option value="1" selected>1</option>
                   <option value="2">2</option>
+
                 </select>
               </div>
             </div>
 
             <div class="col-lg-6 order-lg-4 order-4">
-              <button class="btn d-block w-100 btn-primary">
+              <button *ngIf="!btn_cart" class="btn d-block w-100 btn-primary" (click)="agregar_producto()">
                 <i class="ci-cart me-2"></i>
                 Al carrito
               </button>
+
+              <!-- Button with growing spinner and text -->
+              <button *ngIf="btn_cart" type="button" class="btn btn-primary" disabled>
+                <span class="spinner-grow spinner-grow-sm me-2" role="status" aria-hidden="true"></span>
+                Agregando....
+              </button>
+
             </div>
             <div class="col-lg-4 col-8 order-lg-5 order-2">
               <button class="btn d-block w-100 btn-outline-primary px-lg-4">
                 <i class="ci-heart me-2"></i>
                 Deseos
               </button>
+
+
+
             </div>
           </form>
 
@@ -793,12 +839,12 @@
         <div *ngFor="let item of productosRecomendados">
           <div class="card card-product mx-auto">
             <div class="card-product-img">
-              <a [routerLink]="['/productos/'+item.slug]"  target="_blank" class="card-img-top">
+              <a [routerLink]="['/productos/'+item.slug]" target="_blank" class="card-img-top">
                 <img [src]="item.portada" alt="Product image">
               </a>
               <div class="card-product-widgets-bottom">
-                <a [routerLink]="['/productos/'+item.slug]" target="_blank" class="btn-wishlist ms-auto" data-bs-toggle="tooltip" data-bs-placement="left"
-                  title="Add to wishlist"></a>
+                <a [routerLink]="['/productos/'+item.slug]" target="_blank" class="btn-wishlist ms-auto"
+                  data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"></a>
               </div>
             </div>
             <div class="card-body bg-transparent pb-2">

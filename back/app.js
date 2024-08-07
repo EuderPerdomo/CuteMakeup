@@ -7,7 +7,8 @@ var port = process.env.PORT || 4201;
 var app = express();
 
 var server = require('http').createServer(app);
-/*
+
+//Todas las peticiones sean desde cualquier URL se pone *
 var io = require('socket.io')(server,{
     cors: {origin : '*'}
 });
@@ -27,11 +28,12 @@ io.on('connection',function(socket){
     
 });
 
-*/
+
 var cliente_routes = require('./routes/cliente');
 var admin_routes = require('./routes/admin');
 var config_routes = require('./routes/config');
 var producto_routes = require('./routes/producto');
+var carrito_routes = require('./routes/carrito');
 
 const connectDB = async () => {
     try {
@@ -47,7 +49,7 @@ const connectDB = async () => {
   };
   
   connectDB().then(() => {
-    app.listen(port, () => {
+    server.listen(port, () => { // app.listen(port, () => {
       console.log(`Servidor corriendo en el puerto ${port}`);
     });
   });
@@ -68,5 +70,6 @@ app.use('/api',cliente_routes);
 app.use('/api',admin_routes);
 app.use('/api',config_routes)
 app.use('/api',producto_routes);
+app.use('/api',carrito_routes);
 
 module.exports = app;

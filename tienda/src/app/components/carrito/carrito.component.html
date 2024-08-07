@@ -12,6 +12,114 @@
         </div>
       </nav>
 
+
+<!-- 
+      INicia Prueba -->
+  
+      <!-- Finaliza Prueba -->
+
+
+    <!-- Inicia valor original -->
+    <h1>Tiny slider with filters! example</h1>
+    <div class="slider-filters">
+      <ul>
+        <li><button (click)="filter('all')">All</button></li>
+    <li><button (click)="filter('nature')">Nature</button></li>
+    <li><button (click)="filter('people')">People</button></li>
+    <li><button (click)="filter('tech')">Tech</button></li>
+
+      </ul>
+    </div>
+    <div class="slider-container">
+      <ul class="controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+        <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1"><i class="fas fa-angle-left fa-5x"></i></li>
+        <li class="next" data-controls="next" aria-controls="customize" tabindex="-1"><i class="fas fa-angle-right fa-5x"></i></li>
+      </ul>
+      <div class="my-slider">
+        <div class="slider-item" data-type="nature">
+          <div class="card"><img src="https://picsum.photos/200/150?random=1" alt=""/>
+            <h2>Nature 1</h2>
+            <p class="card_description">Loresm ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas!</p>
+          </div>
+        </div>
+        <div class="slider-item" data-type="nature">
+          <div class="card"><img src="https://picsum.photos/200/150?random=1" alt=""/>
+            <h2>Nature 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas!</p>
+          </div>
+        </div>
+        <div class="slider-item" data-type="people">
+          <div class="card"><img src="https://picsum.photos/200/150?random=2" alt=""/>
+            <h2>People 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas!</p>
+          </div>
+        </div>
+        <div class="slider-item" data-type="tech">
+          <div class="card"><img src="https://picsum.photos/200/150?random=3" alt=""/>
+            <h2>Tech 1</h2>
+            <p>Lorem ipsum</p>
+          </div>
+        </div>
+        <div class="slider-item" data-type="nature">
+          <div class="card"><img src="https://picsum.photos/200/150?random=1" alt=""/>
+            <h2>Nature 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.!</p>
+          </div>
+        </div>
+        <div class="slider-item" data-type="people">
+          <div class="card"><img src="https://picsum.photos/200/150?random=2" alt=""/>
+            <h2>People 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, voluptas!</p>
+          </div>
+        </div>
+        <div class="slider-item" data-type="tech">
+          <div class="card"><img src="https://picsum.photos/200/150?random=3" alt=""/>
+            <h2>Tech 2</h2>
+            <p>Lorem ipsum</p>
+          </div>
+        </div>
+        <div class="slider-item" data-type="nature">
+          <div class="card"><img src="https://picsum.photos/200/150?random=1" alt=""/>
+            <h2>Nature 4</h2>
+            <p>Lorem ipsum</p>
+          </div>
+        </div>
+        <div class="slider-item" data-type="nature">
+          <div class="card"><img src="https://picsum.photos/200/150?random=1" alt=""/>
+            <h2>Nature 5</h2>
+            <p>Lorem ipsum</p>
+          </div>
+        </div>
+        <div class="slider-item" data-type="people">
+          <div class="card"><img src="https://picsum.photos/200/150?random=2" alt=""/>
+            <h2>people 3</h2>
+            <p>Lorem ipsum</p>
+          </div>
+        </div>
+        <div class="slider-item" data-type="people">
+          <div class="card"><img src="https://picsum.photos/200/150?random=2" alt=""/>
+            <h2>people 4</h2>
+            <p>Lorem ipsum</p>
+          </div>
+        </div>
+        <div class="slider-item" data-type="people">
+          <div class="card"><img src="https://picsum.photos/200/150?random=2" alt=""/>
+            <h2>people 5</h2>
+            <p>Lorem ipsum</p>
+          </div>
+        </div>
+        <div class="slider-item" data-type="people">
+          <div class="card"><img src="https://picsum.photos/200/150?random=2" alt=""/>
+            <h2>people 6</h2>
+            <p>Lorem ipsum</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Finaliza valor original -->
+
+
+
 <!-- Page content -->
  <section class="container pt-3 pt-md-4 pb-3 pb-sm-4 pb-lg-5 mb-4">
     <div class="row">
@@ -20,7 +128,7 @@
       <div class="col-lg-8 pe-lg-6">
         <div class="d-flex align-items-center justify-content-between pb-2 mb-4">
           <h1 class="mb-0">Checkout</h1>
-          <a href="shop-catalog.html"><strong>Back to shopping</strong></a>
+          <a [routerLink]="['/productos']"><strong>Regresar a la tienda</strong></a>
         </div>
 
         <!-- Alert -->
@@ -36,125 +144,44 @@
         <hr class="border-top-0 border-bottom mb-4">
 
         <!-- Order review -->
-        <h2 class="h4 mb-4">1. Order Review</h2>
+        <h2 class="h4 mb-4">1. Detalle de orden</h2>
         <div class="bg-secondary rounded mb-5">
           <!-- Item -->
-          <div class="d-flex align-items-start px-2 px-sm-4 py-4 border-bottom">
-            <a href="shop-single.html" style="min-width: 80px;">
-              <img src="../assets/img/ecommerce/cart/01.png" width="80" alt="Product thumb">
+          <div class="d-flex align-items-start px-2 px-sm-4 py-4 border-bottom" *ngFor="let item of carrito_arr">
+            <a [routerLink]="['/productos/',item.producto.slug]" style="min-width: 80px;">
+              <img [src]="item.producto.portada" width="80" alt="Product thumb">
             </a>
             <div class="w-100 ps-3">
               <div class="d-sm-flex">
                 <div class="pe-sm-3 w-100" style="max-width: 16rem;">
                   <h3 class="fs-sm mb-3">
-                    <a href="shop-single.html" class="nav-link fw-bold">Basic hooded sweatshirt in pink</a>
+                    <a [routerLink]="['/productos/',item.producto.slug]" class="nav-link fw-bold">{{item.producto.titulo}}</a>
                   </h3>
                   <ul class="list-unstyled fs-xs mt-n2 mb-2">
-                    <li class="mb-0"><span class="text-muted">Color:</span> Pink</li>
-                    <li class="mb-0"><span class="text-muted">Size:</span> S</li>
+                    <!-- <li class="mb-0"><span class="text-muted">Color:</span> Pink</li>
+                    <li class="mb-0"><span class="text-muted">Size:</span> S</li> -->
                   </ul>
                 </div>
                 <div class="d-flex align-items-start pe-sm-3">
                   <input type="number" class="form-control form-control-sm bg-light me-3" min="1" style="width: 4.5rem;" value="1">
-                  <div class="text-nowrap pt-2"><strong class="text-danger">$15.00</strong> <s class="fs-xs text-muted">$31.00</s></div>
+                  <div class="text-nowrap pt-2">
+                    <!-- <strong class="text-danger">$15.00</strong> -->
+                    <span class="fs-xs text-muted" style="font-size: 1.1rem !important;">{{item.producto.precio |currency:'COP':'$':'3.0'}}</span>
+                    </div>
                 </div>
                 <div class="d-flex align-items-center flex-sm-column text-sm-center ms-sm-auto pt-3 pt-sm-0">
-                  <button class="btn btn-outline-primary btn-sm me-2 me-sm-0">Delete</button>
+                  <button class="btn btn-outline-primary btn-sm me-2 me-sm-0" (click)="eliminar_item(item._id)">Eliminar</button>
                   <button class="btn btn-link btn-sm text-decoration-none pt-0 pt-sm-2 px-0 pb-0 mt-0 mt-sm-1">
-                    Move to
+                    A lista de deseos
                     <i class="ci-heart ms-1"></i>
                   </button>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Item -->
-          <div class="d-flex align-items-start px-2 px-sm-4 py-4 border-bottom">
-            <a href="shop-single.html" style="min-width: 80px;">
-              <img src="../assets/img/ecommerce/cart/02.png" width="80" alt="Product thumb">
-            </a>
-            <div class="w-100 ps-3">
-              <div class="d-sm-flex">
-                <div class="pe-sm-3 w-100" style="max-width: 16rem;">
-                  <h3 class="fs-sm mb-3">
-                    <a href="shop-single.html" class="nav-link fw-bold">Black and white sport cap</a>
-                  </h3>
-                </div>
-                <div class="d-flex align-items-start pe-sm-3">
-                  <input type="number" class="form-control form-control-sm bg-light me-3" min="1" style="width: 4.5rem;" value="1">
-                  <div class="text-nowrap pt-2"><strong>$18.15</strong></div>
-                </div>
-                <div class="d-flex align-items-center flex-sm-column text-sm-center ms-sm-auto pt-3 pt-sm-0">
-                  <button class="btn btn-outline-primary btn-sm me-2 me-sm-0">Delete</button>
-                  <button class="btn btn-link btn-sm text-decoration-none pt-0 pt-sm-2 px-0 pb-0 mt-0 mt-sm-1">
-                    Move to
-                    <i class="ci-heart ms-1"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Item -->
-          <div class="d-flex align-items-start px-2 px-sm-4 py-4 border-bottom">
-            <a href="shop-single.html" style="min-width: 80px;">
-              <img src="../assets/img/ecommerce/cart/03.png" width="80" alt="Product thumb">
-            </a>
-            <div class="w-100 ps-3">
-              <div class="d-sm-flex">
-                <div class="pe-sm-3 w-100" style="max-width: 16rem;">
-                  <h3 class="fs-sm mb-3">
-                    <a href="shop-single.html" class="nav-link fw-bold">Mid-rise slim cropped fit jeans</a>
-                  </h3>
-                  <ul class="list-unstyled fs-xs mt-n2 mb-2">
-                    <li class="mb-0"><span class="text-muted">Size:</span> M</li>
-                  </ul>
-                </div>
-                <div class="d-flex align-items-start pe-sm-3">
-                  <input type="number" class="form-control form-control-sm bg-light me-3" min="1" style="width: 4.5rem;" value="1">
-                  <div class="text-nowrap pt-2"><strong>$76.00</strong></div>
-                </div>
-                <div class="d-flex align-items-center flex-sm-column text-sm-center ms-sm-auto pt-3 pt-sm-0">
-                  <button class="btn btn-outline-primary btn-sm me-2 me-sm-0">Delete</button>
-                  <button class="btn btn-link btn-sm text-decoration-none pt-0 pt-sm-2 px-0 pb-0 mt-0 mt-sm-1">
-                    Move to
-                    <i class="ci-heart ms-1"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Item -->
-          <div class="d-flex align-items-start px-2 px-sm-4 py-4 border-bottom">
-            <a href="shop-single.html" style="min-width: 80px;">
-              <img src="../assets/img/ecommerce/cart/04.png" width="80" alt="Product thumb">
-            </a>
-            <div class="w-100 ps-3">
-              <div class="d-sm-flex">
-                <div class="pe-sm-3 w-100" style="max-width: 16rem;">
-                  <h3 class="fs-sm mb-3">
-                    <a href="shop-single.html" class="nav-link fw-bold">Men fashion gray shoes</a>
-                  </h3>
-                  <ul class="list-unstyled fs-xs mt-n2 mb-2">
-                    <li class="mb-0"><span class="text-muted">Color:</span> Gray</li>
-                    <li class="mb-0"><span class="text-muted">Size:</span> 10.5</li>
-                  </ul>
-                </div>
-                <div class="d-flex align-items-start pe-sm-3">
-                  <input type="number" class="form-control form-control-sm bg-light me-3" min="1" style="width: 4.5rem;" value="1">
-                  <div class="text-nowrap pt-2"><strong>$84.00</strong></div>
-                </div>
-                <div class="d-flex align-items-center flex-sm-column text-sm-center ms-sm-auto pt-3 pt-sm-0">
-                  <button class="btn btn-outline-primary btn-sm me-2 me-sm-0">Delete</button>
-                  <button class="btn btn-link btn-sm text-decoration-none pt-0 pt-sm-2 px-0 pb-0 mt-0 mt-sm-1">
-                    Move to
-                    <i class="ci-heart ms-1"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+        
           <div class="px-3 px-sm-4 py-4 text-end">
-            <span class="text-muted">Subtotal:<strong class="text-dark fs-lg ms-2">$198.65</strong></span>
+            <span class="text-muted">Subtotal:<strong class="text-dark fs-lg ms-2">{{subtotal |currency:'COP':'$':'3.0'}}</strong></span>
           </div>
         </div>
 
@@ -222,7 +249,7 @@
         <hr class="mb-4">
 
         <!-- Shipping -->
-        <h2 class="h4 mb-4">3. Shipping Method</h2>
+        <h2 class="h4 mb-4">3. Metodo de Envio</h2>
         <div class="form-check mb-3">
           <input type="radio" class="form-check-input" id="courier" name="shipping" checked>
           <label for="courier" class="form-check-label d-flex align-items-center">
@@ -392,27 +419,24 @@
             <ul class="list-unstyled border-bottom mb-0 p-4">
               <li class="d-flex justify-content-between mb-2">
                 <span class="fw-bold">Subtotal:</span>
-                <span class="fw-bold">$198.65</span>
+                <span class="fw-bold">{{subtotal |currency:'COP':'$':'3.0'}}</span>
               </li>
               <li class="d-flex justify-content-between mb-2">
-                <span>Shipping costs:</span>
+                <span>Envio:</span>
                 <span>$25.00</span>
               </li>
               <li class="d-flex justify-content-between mb-2">
-                <span>Discount:</span>
+                <span>Descuento:</span>
                 <span>&mdash;</span>
               </li>
-              <li class="d-flex justify-content-between">
-                <span>Estimated sales tax:</span>
-                <span>$6.35</span>
-              </li>
+         
             </ul>
             <div class="d-flex justify-content-between p-4">
-              <span class="h5 mb-0">Order total:</span>
-              <span class="h5 mb-0">$230.00</span>
+              <span class="h5 mb-0">Orden Total:</span>
+              <span class="h5 mb-0">{{total_pagar |currency:'COP':'$':'3.0'}}</span>
             </div>
           </div>
-          <button type="button" class="btn btn-primary btn-lg w-100">Complete order</button>
+          <button type="button" class="btn btn-primary btn-lg w-100">Completar orden</button>
         </div>
       </aside>
     </div>

@@ -74,5 +74,33 @@ export class ClienteService {
   }
   
 
+  //Carito de comptras
+
+  agregar_carrito_cliente(data: any, token: any): Observable<any> {
+
+    let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token })
+    return this._http.post(this.url + 'agregar_carrito_cliente', data, { headers: headers })
+  }
+
+
+  obtener_carrito_cliente(id: any, token: any): Observable<any> {
+    console.log(id,'Id en el servicio')
+    let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token })
+    return this._http.get(this.url + 'obtener_carrito_cliente/'+ id, { headers: headers })
+  }
+
+  eliminar_carrito_cliente(id: any, token: any): Observable<any> {
+    let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token })
+    return this._http.delete(this.url + 'eliminar_carrito_cliente/'+ id, { headers: headers })
+  }
+
+
+//Direcciones
+
+
+registro_direccion_cliente(data: any, token: any): Observable<any> {
+  let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token })
+  return this._http.post(this.url + 'registro_direccion_cliente', data, { headers: headers })
+}
 
 }

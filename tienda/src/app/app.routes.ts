@@ -7,6 +7,8 @@ import { IndexProductoComponent } from './components/productos/index-producto/in
 import { ShowProductoComponent } from './components/productos/show-producto/show-producto.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { AuthGuard } from './guards/auth.guard';
+import { DireccionesComponent } from './components/usuario/direcciones/direcciones.component';
+import { PerfilComponent } from './components/usuario/perfil/perfil.component';
 
 export const routes: Routes = [
   {
@@ -19,7 +21,6 @@ export const routes: Routes = [
   //{path:'',redirectTo:'',pathMatch:'full'},
 
   { path: 'login', component:LoginComponent },
-  { path: 'perfil/cuenta', component:CuentaComponent },
   { path: 'contactenos', component:ContactoComponent },
 
   { path: 'productos', component:IndexProductoComponent },
@@ -30,6 +31,13 @@ export const routes: Routes = [
 
 { path: 'carrito', component:CarritoComponent,canActivate:[AuthGuard] },
 //{ path: 'carrito', component:CarritoComponent},
+
+
+//Rutas para Usuario
+{ path: 'cuenta/direcciones', component:DireccionesComponent},
+//{ path: 'perfil/cuenta', component:CuentaComponent },
+{ path: 'cuenta/perfil', component:PerfilComponent },
+
 
   //Ruta comodin Para cuando no encuentre ninguna ruta coincidente
   {

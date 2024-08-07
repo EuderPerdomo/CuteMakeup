@@ -12,4 +12,9 @@ api.get('/obtener_cliente_guest/:id',auth.auth,clienteController.obtener_cliente
 //api.post('/registro_instalador_guest',clienteController.registro_instalador_guest);
 //api.post('/registro_cliente_empresa_guest',clienteController.registro_cliente_empresa_guest);
 
+
+//Direcciones
+api.post('/registro_direccion_cliente',clienteController.registro_direccion_cliente);
+
+
 module.exports= api;
