@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { LoginComponent } from './components/login/login.component';
-import { CuentaComponent } from './components/perfil/cuenta/cuenta.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { IndexProductoComponent } from './components/productos/index-producto/index-producto.component';
 import { ShowProductoComponent } from './components/productos/show-producto/show-producto.component';

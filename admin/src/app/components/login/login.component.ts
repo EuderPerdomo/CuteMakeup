@@ -65,6 +65,7 @@ console.log(email,password)
               localStorage.setItem('token',response.token);
               localStorage.setItem('identity',response.data._id);
               localStorage.setItem('user_data',JSON.stringify(response.data));
+              console.log('Navego a ruta')
               this._router.navigate(['']);
             }else{
               iziToast.show({

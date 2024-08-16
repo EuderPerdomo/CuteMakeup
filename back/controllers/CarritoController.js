@@ -17,8 +17,10 @@ const agregar_carrito_cliente = async function (req, res) {
 
     if (req.user) {
         let data = req.body
+        console.log('data recibida crear carrito',data)
 
-        let carrito_cliente = await Carrito.find({ cliente: data.cliente, producto: data.producto })
+        let carrito_cliente = await Carrito.find({ cliente: data.cliente, producto: data.producto ,variedad:data.variedad,subvariedad:data.subvariedad})
+
         if (carrito_cliente.length == 0) {
             let reg = await Carrito.create(data)
             res.status(200).send({ data: reg })
@@ -35,8 +37,10 @@ const agregar_carrito_cliente = async function (req, res) {
 
 
 const obtener_carrito_cliente = async function (req, res) {
+    console.log('obtener carrito del cliente',req.user)
     if (req.user) {
         let id = req.params['id']
+        console.log('buscando carrito',id)
         let carrito_cliente = await Carrito.find({ cliente: id }).populate('producto')
         res.status(200).send({ data: carrito_cliente })
 
@@ -45,6 +49,8 @@ const obtener_carrito_cliente = async function (req, res) {
     }
 
 }
+
+
 
 const eliminar_carrito_cliente = async function(req,res){
     if (req.user) {

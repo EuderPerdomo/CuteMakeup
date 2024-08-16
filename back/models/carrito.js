@@ -6,9 +6,10 @@ var Schema=mongoose.Schema
 var CarritoSchema=Schema({
     producto: {type: Schema.ObjectId, ref: 'producto', required: true},
     cliente: {type: Schema.ObjectId, ref: 'cliente', required: true},
-    //precio:{type:Number, required:true},
+    precio:{type:Number, required:true},
     cantidad:{type:Number, required:true},
     variedad:{type:String, required:true},
+    subvariedad:{type:String, required:true},
     createdAt:{type:Date,default:Date.now,required:true}
 
 })

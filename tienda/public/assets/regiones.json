@@ -1,0 +1,26 @@
+[
+    {
+        "REGION": "Región Eje Cafetero - Antioquia",
+        "ID": 1
+    },
+    {
+        "REGION": "Región Centro Oriente",
+        "ID": 2
+    },
+    {
+        "REGION": "Región Caribe",
+        "ID": 3
+    },
+    {
+        "REGION": "Región Pacífico",
+        "ID": 4
+    },
+    {
+        "REGION": "Región Llano",
+        "ID": 5
+    },
+    {
+        "REGION": "Región Centro Sur",
+        "ID": 6
+    }
+]

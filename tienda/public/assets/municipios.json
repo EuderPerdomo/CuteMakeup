@@ -1,0 +1,7863 @@
+[
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.001,
+        "MUNICIPIO": "Medellín",
+        "ID": 1,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.002,
+        "MUNICIPIO": "Abejorral",
+        "ID": 2,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.004,
+        "MUNICIPIO": "Abriaquí",
+        "ID": 3,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.021,
+        "MUNICIPIO": "Alejandría",
+        "ID": 4,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.03,
+        "MUNICIPIO": "Amagá",
+        "ID": 5,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.031,
+        "MUNICIPIO": "Amalfi",
+        "ID": 6,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.034,
+        "MUNICIPIO": "Andes",
+        "ID": 7,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.036,
+        "MUNICIPIO": "Angelópolis",
+        "ID": 8,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.038,
+        "MUNICIPIO": "Angostura",
+        "ID": 9,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.04,
+        "MUNICIPIO": "Anorí",
+        "ID": 10,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.832,
+        "MUNICIPIO": "Tununguá",
+        "ID": 11,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.044,
+        "MUNICIPIO": "Anza",
+        "ID": 12,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.045,
+        "MUNICIPIO": "Apartadó",
+        "ID": 13,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.051,
+        "MUNICIPIO": "Arboletes",
+        "ID": 14,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.055,
+        "MUNICIPIO": "Argelia",
+        "ID": 15,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.059,
+        "MUNICIPIO": "Armenia",
+        "ID": 16,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.079,
+        "MUNICIPIO": "Barbosa",
+        "ID": 17,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.088,
+        "MUNICIPIO": "Bello",
+        "ID": 18,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.091,
+        "MUNICIPIO": "Betania",
+        "ID": 19,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.093,
+        "MUNICIPIO": "Betulia",
+        "ID": 20,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.101,
+        "MUNICIPIO": "Ciudad Bolívar",
+        "ID": 21,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.107,
+        "MUNICIPIO": "Briceño",
+        "ID": 22,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.113,
+        "MUNICIPIO": "Buriticá",
+        "ID": 23,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.12,
+        "MUNICIPIO": "Cáceres",
+        "ID": 24,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.125,
+        "MUNICIPIO": "Caicedo",
+        "ID": 25,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.129,
+        "MUNICIPIO": "Caldas",
+        "ID": 26,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.134,
+        "MUNICIPIO": "Campamento",
+        "ID": 27,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.138,
+        "MUNICIPIO": "Cañasgordas",
+        "ID": 28,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.142,
+        "MUNICIPIO": "Caracolí",
+        "ID": 29,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.145,
+        "MUNICIPIO": "Caramanta",
+        "ID": 30,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.147,
+        "MUNICIPIO": "Carepa",
+        "ID": 31,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.476,
+        "MUNICIPIO": "Motavita",
+        "ID": 32,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.15,
+        "MUNICIPIO": "Carolina",
+        "ID": 33,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.154,
+        "MUNICIPIO": "Caucasia",
+        "ID": 34,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.172,
+        "MUNICIPIO": "Chigorodó",
+        "ID": 35,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.19,
+        "MUNICIPIO": "Cisneros",
+        "ID": 36,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.197,
+        "MUNICIPIO": "Cocorná",
+        "ID": 37,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.206,
+        "MUNICIPIO": "Concepción",
+        "ID": 38,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.209,
+        "MUNICIPIO": "Concordia",
+        "ID": 39,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.212,
+        "MUNICIPIO": "Copacabana",
+        "ID": 40,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.234,
+        "MUNICIPIO": "Dabeiba",
+        "ID": 41,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.237,
+        "MUNICIPIO": "Don Matías",
+        "ID": 42,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.24,
+        "MUNICIPIO": "Ebéjico",
+        "ID": 43,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.25,
+        "MUNICIPIO": "El Bagre",
+        "ID": 44,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.264,
+        "MUNICIPIO": "Entrerrios",
+        "ID": 45,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.266,
+        "MUNICIPIO": "Envigado",
+        "ID": 46,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.282,
+        "MUNICIPIO": "Fredonia",
+        "ID": 47,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.675,
+        "MUNICIPIO": "San Bernardo del Viento",
+        "ID": 48,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.306,
+        "MUNICIPIO": "Giraldo",
+        "ID": 49,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.308,
+        "MUNICIPIO": "Girardota",
+        "ID": 50,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.31,
+        "MUNICIPIO": "Gómez Plata",
+        "ID": 51,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.361,
+        "MUNICIPIO": "Istmina",
+        "ID": 52,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.315,
+        "MUNICIPIO": "Guadalupe",
+        "ID": 53,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.318,
+        "MUNICIPIO": "Guarne",
+        "ID": 54,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.321,
+        "MUNICIPIO": "Guatapé",
+        "ID": 55,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.347,
+        "MUNICIPIO": "Heliconia",
+        "ID": 56,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.353,
+        "MUNICIPIO": "Hispania",
+        "ID": 57,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.36,
+        "MUNICIPIO": "Itagui",
+        "ID": 58,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.361,
+        "MUNICIPIO": "Ituango",
+        "ID": 59,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.086,
+        "MUNICIPIO": "Belmira",
+        "ID": 60,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.368,
+        "MUNICIPIO": "Jericó",
+        "ID": 61,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.376,
+        "MUNICIPIO": "La Ceja",
+        "ID": 62,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.38,
+        "MUNICIPIO": "La Estrella",
+        "ID": 63,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.39,
+        "MUNICIPIO": "La Pintada",
+        "ID": 64,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.4,
+        "MUNICIPIO": "La Unión",
+        "ID": 65,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.411,
+        "MUNICIPIO": "Liborina",
+        "ID": 66,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.425,
+        "MUNICIPIO": "Maceo",
+        "ID": 67,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.44,
+        "MUNICIPIO": "Marinilla",
+        "ID": 68,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.467,
+        "MUNICIPIO": "Montebello",
+        "ID": 69,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.475,
+        "MUNICIPIO": "Murindó",
+        "ID": 70,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.48,
+        "MUNICIPIO": "Mutatá",
+        "ID": 71,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.483,
+        "MUNICIPIO": "Nariño",
+        "ID": 72,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.49,
+        "MUNICIPIO": "Necoclí",
+        "ID": 73,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.495,
+        "MUNICIPIO": "Nechí",
+        "ID": 74,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.501,
+        "MUNICIPIO": "Olaya",
+        "ID": 75,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.541,
+        "MUNICIPIO": "Peñol",
+        "ID": 76,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.543,
+        "MUNICIPIO": "Peque",
+        "ID": 77,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.576,
+        "MUNICIPIO": "Pueblorrico",
+        "ID": 78,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.579,
+        "MUNICIPIO": "Puerto Berrío",
+        "ID": 79,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.585,
+        "MUNICIPIO": "Puerto Nare",
+        "ID": 80,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.591,
+        "MUNICIPIO": "Puerto Triunfo",
+        "ID": 81,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.604,
+        "MUNICIPIO": "Remedios",
+        "ID": 82,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.607,
+        "MUNICIPIO": "Retiro",
+        "ID": 83,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.615,
+        "MUNICIPIO": "Rionegro",
+        "ID": 84,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.628,
+        "MUNICIPIO": "Sabanalarga",
+        "ID": 85,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.631,
+        "MUNICIPIO": "Sabaneta",
+        "ID": 86,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.642,
+        "MUNICIPIO": "Salgar",
+        "ID": 87,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.189,
+        "MUNICIPIO": "Ciénega",
+        "ID": 88,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.699,
+        "MUNICIPIO": "Santacruz",
+        "ID": 89,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.652,
+        "MUNICIPIO": "San Francisco",
+        "ID": 90,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.656,
+        "MUNICIPIO": "San Jerónimo",
+        "ID": 91,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.575,
+        "MUNICIPIO": "Puerto Wilches",
+        "ID": 92,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.573,
+        "MUNICIPIO": "Puerto Parra",
+        "ID": 93,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.66,
+        "MUNICIPIO": "San Luis",
+        "ID": 94,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.664,
+        "MUNICIPIO": "San Pedro",
+        "ID": 95,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.667,
+        "MUNICIPIO": "San Rafael",
+        "ID": 96,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.67,
+        "MUNICIPIO": "San Roque",
+        "ID": 97,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.674,
+        "MUNICIPIO": "San Vicente",
+        "ID": 98,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.679,
+        "MUNICIPIO": "Santa Bárbara",
+        "ID": 99,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.69,
+        "MUNICIPIO": "Santo Domingo",
+        "ID": 100,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.697,
+        "MUNICIPIO": "El Santuario",
+        "ID": 101,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.736,
+        "MUNICIPIO": "Segovia",
+        "ID": 102,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.761,
+        "MUNICIPIO": "Sopetrán",
+        "ID": 103,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.37,
+        "MUNICIPIO": "Uribe",
+        "ID": 104,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.789,
+        "MUNICIPIO": "Támesis",
+        "ID": 105,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.79,
+        "MUNICIPIO": "Tarazá",
+        "ID": 106,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.792,
+        "MUNICIPIO": "Tarso",
+        "ID": 107,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.809,
+        "MUNICIPIO": "Titiribí",
+        "ID": 108,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.819,
+        "MUNICIPIO": "Toledo",
+        "ID": 109,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.837,
+        "MUNICIPIO": "Turbo",
+        "ID": 110,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.842,
+        "MUNICIPIO": "Uramita",
+        "ID": 111,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.847,
+        "MUNICIPIO": "Urrao",
+        "ID": 112,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.854,
+        "MUNICIPIO": "Valdivia",
+        "ID": 113,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.856,
+        "MUNICIPIO": "Valparaíso",
+        "ID": 114,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.858,
+        "MUNICIPIO": "Vegachí",
+        "ID": 115,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.861,
+        "MUNICIPIO": "Venecia",
+        "ID": 116,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.885,
+        "MUNICIPIO": "Yalí",
+        "ID": 117,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.887,
+        "MUNICIPIO": "Yarumal",
+        "ID": 118,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.89,
+        "MUNICIPIO": "Yolombó",
+        "ID": 119,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.893,
+        "MUNICIPIO": "Yondó",
+        "ID": 120,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.895,
+        "MUNICIPIO": "Zaragoza",
+        "ID": 121,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.001,
+        "MUNICIPIO": "Barranquilla",
+        "ID": 122,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.078,
+        "MUNICIPIO": "Baranoa",
+        "ID": 123,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.141,
+        "MUNICIPIO": "Candelaria",
+        "ID": 124,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.296,
+        "MUNICIPIO": "Galapa",
+        "ID": 125,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.421,
+        "MUNICIPIO": "Luruaco",
+        "ID": 126,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.433,
+        "MUNICIPIO": "Malambo",
+        "ID": 127,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.436,
+        "MUNICIPIO": "Manatí",
+        "ID": 128,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.549,
+        "MUNICIPIO": "Piojó",
+        "ID": 129,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.558,
+        "MUNICIPIO": "Polonuevo",
+        "ID": 130,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.634,
+        "MUNICIPIO": "Sabanagrande",
+        "ID": 131,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.638,
+        "MUNICIPIO": "Sabanalarga",
+        "ID": 132,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.675,
+        "MUNICIPIO": "Santa Lucía",
+        "ID": 133,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.685,
+        "MUNICIPIO": "Santo Tomás",
+        "ID": 134,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.758,
+        "MUNICIPIO": "Soledad",
+        "ID": 135,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.77,
+        "MUNICIPIO": "Suan",
+        "ID": 136,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.832,
+        "MUNICIPIO": "Tubará",
+        "ID": 137,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.849,
+        "MUNICIPIO": "Usiacurí",
+        "ID": 138,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.006,
+        "MUNICIPIO": "Achí",
+        "ID": 139,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.042,
+        "MUNICIPIO": "Arenal",
+        "ID": 140,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.052,
+        "MUNICIPIO": "Arjona",
+        "ID": 141,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.062,
+        "MUNICIPIO": "Arroyohondo",
+        "ID": 142,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.14,
+        "MUNICIPIO": "Calamar",
+        "ID": 143,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.16,
+        "MUNICIPIO": "Cantagallo",
+        "ID": 144,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.188,
+        "MUNICIPIO": "Cicuco",
+        "ID": 145,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.212,
+        "MUNICIPIO": "Córdoba",
+        "ID": 146,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.222,
+        "MUNICIPIO": "Clemencia",
+        "ID": 147,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.248,
+        "MUNICIPIO": "El Guamo",
+        "ID": 148,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.43,
+        "MUNICIPIO": "Magangué",
+        "ID": 149,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.433,
+        "MUNICIPIO": "Mahates",
+        "ID": 150,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.44,
+        "MUNICIPIO": "Margarita",
+        "ID": 151,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.458,
+        "MUNICIPIO": "Montecristo",
+        "ID": 152,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.468,
+        "MUNICIPIO": "Mompós",
+        "ID": 153,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.473,
+        "MUNICIPIO": "Morales",
+        "ID": 154,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.49,
+        "MUNICIPIO": "Norosí",
+        "ID": 155,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.549,
+        "MUNICIPIO": "Pinillos",
+        "ID": 156,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.58,
+        "MUNICIPIO": "Regidor",
+        "ID": 157,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.6,
+        "MUNICIPIO": "Río Viejo",
+        "ID": 158,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.647,
+        "MUNICIPIO": "San Estanislao",
+        "ID": 159,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.65,
+        "MUNICIPIO": "San Fernando",
+        "ID": 160,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.657,
+        "MUNICIPIO": "San Juan Nepomuceno",
+        "ID": 161,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.673,
+        "MUNICIPIO": "Santa Catalina",
+        "ID": 162,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.683,
+        "MUNICIPIO": "Santa Rosa",
+        "ID": 163,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.744,
+        "MUNICIPIO": "Simití",
+        "ID": 164,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.76,
+        "MUNICIPIO": "Soplaviento",
+        "ID": 165,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.78,
+        "MUNICIPIO": "Talaigua Nuevo",
+        "ID": 166,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.81,
+        "MUNICIPIO": "Tiquisio",
+        "ID": 167,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.836,
+        "MUNICIPIO": "Turbaco",
+        "ID": 168,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.838,
+        "MUNICIPIO": "Turbaná",
+        "ID": 169,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.873,
+        "MUNICIPIO": "Villanueva",
+        "ID": 170,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.001,
+        "MUNICIPIO": "Tunja",
+        "ID": 171,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.022,
+        "MUNICIPIO": "Almeida",
+        "ID": 172,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.047,
+        "MUNICIPIO": "Aquitania",
+        "ID": 173,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.051,
+        "MUNICIPIO": "Arcabuco",
+        "ID": 174,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.09,
+        "MUNICIPIO": "Berbeo",
+        "ID": 175,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.092,
+        "MUNICIPIO": "Betéitiva",
+        "ID": 176,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.097,
+        "MUNICIPIO": "Boavita",
+        "ID": 177,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.104,
+        "MUNICIPIO": "Boyacá",
+        "ID": 178,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.106,
+        "MUNICIPIO": "Briceño",
+        "ID": 179,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.109,
+        "MUNICIPIO": "Buena Vista",
+        "ID": 180,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.114,
+        "MUNICIPIO": "Busbanzá",
+        "ID": 181,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.131,
+        "MUNICIPIO": "Caldas",
+        "ID": 182,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.135,
+        "MUNICIPIO": "Campohermoso",
+        "ID": 183,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.162,
+        "MUNICIPIO": "Cerinza",
+        "ID": 184,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.172,
+        "MUNICIPIO": "Chinavita",
+        "ID": 185,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.176,
+        "MUNICIPIO": "Chiquinquirá",
+        "ID": 186,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.18,
+        "MUNICIPIO": "Chiscas",
+        "ID": 187,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.183,
+        "MUNICIPIO": "Chita",
+        "ID": 188,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.185,
+        "MUNICIPIO": "Chitaraque",
+        "ID": 189,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.187,
+        "MUNICIPIO": "Chivatá",
+        "ID": 190,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.204,
+        "MUNICIPIO": "Cómbita",
+        "ID": 191,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.212,
+        "MUNICIPIO": "Coper",
+        "ID": 192,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.215,
+        "MUNICIPIO": "Corrales",
+        "ID": 193,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.218,
+        "MUNICIPIO": "Covarachía",
+        "ID": 194,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.223,
+        "MUNICIPIO": "Cubará",
+        "ID": 195,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.224,
+        "MUNICIPIO": "Cucaita",
+        "ID": 196,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.226,
+        "MUNICIPIO": "Cuítiva",
+        "ID": 197,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.232,
+        "MUNICIPIO": "Chíquiza",
+        "ID": 198,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.236,
+        "MUNICIPIO": "Chivor",
+        "ID": 199,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.238,
+        "MUNICIPIO": "Duitama",
+        "ID": 200,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.244,
+        "MUNICIPIO": "El Cocuy",
+        "ID": 201,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.248,
+        "MUNICIPIO": "El Espino",
+        "ID": 202,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.272,
+        "MUNICIPIO": "Firavitoba",
+        "ID": 203,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.276,
+        "MUNICIPIO": "Floresta",
+        "ID": 204,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.293,
+        "MUNICIPIO": "Gachantivá",
+        "ID": 205,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.296,
+        "MUNICIPIO": "Gameza",
+        "ID": 206,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.299,
+        "MUNICIPIO": "Garagoa",
+        "ID": 207,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.317,
+        "MUNICIPIO": "Guacamayas",
+        "ID": 208,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.322,
+        "MUNICIPIO": "Guateque",
+        "ID": 209,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.325,
+        "MUNICIPIO": "Guayatá",
+        "ID": 210,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.332,
+        "MUNICIPIO": "Güicán",
+        "ID": 211,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.362,
+        "MUNICIPIO": "Iza",
+        "ID": 212,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.367,
+        "MUNICIPIO": "Jenesano",
+        "ID": 213,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.368,
+        "MUNICIPIO": "Jericó",
+        "ID": 214,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.377,
+        "MUNICIPIO": "Labranzagrande",
+        "ID": 215,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.38,
+        "MUNICIPIO": "La Capilla",
+        "ID": 216,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.401,
+        "MUNICIPIO": "La Victoria",
+        "ID": 217,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.425,
+        "MUNICIPIO": "Macanal",
+        "ID": 218,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.442,
+        "MUNICIPIO": "Maripí",
+        "ID": 219,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.455,
+        "MUNICIPIO": "Miraflores",
+        "ID": 220,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.464,
+        "MUNICIPIO": "Mongua",
+        "ID": 221,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.466,
+        "MUNICIPIO": "Monguí",
+        "ID": 222,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.469,
+        "MUNICIPIO": "Moniquirá",
+        "ID": 223,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.48,
+        "MUNICIPIO": "Muzo",
+        "ID": 224,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.491,
+        "MUNICIPIO": "Nobsa",
+        "ID": 225,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.494,
+        "MUNICIPIO": "Nuevo Colón",
+        "ID": 226,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.5,
+        "MUNICIPIO": "Oicatá",
+        "ID": 227,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.507,
+        "MUNICIPIO": "Otanche",
+        "ID": 228,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.511,
+        "MUNICIPIO": "Pachavita",
+        "ID": 229,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.514,
+        "MUNICIPIO": "Páez",
+        "ID": 230,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.516,
+        "MUNICIPIO": "Paipa",
+        "ID": 231,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.518,
+        "MUNICIPIO": "Pajarito",
+        "ID": 232,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.522,
+        "MUNICIPIO": "Panqueba",
+        "ID": 233,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.531,
+        "MUNICIPIO": "Pauna",
+        "ID": 234,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.533,
+        "MUNICIPIO": "Paya",
+        "ID": 235,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.542,
+        "MUNICIPIO": "Pesca",
+        "ID": 236,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.55,
+        "MUNICIPIO": "Pisba",
+        "ID": 237,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.572,
+        "MUNICIPIO": "Puerto Boyacá",
+        "ID": 238,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.58,
+        "MUNICIPIO": "Quípama",
+        "ID": 239,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.599,
+        "MUNICIPIO": "Ramiriquí",
+        "ID": 240,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.6,
+        "MUNICIPIO": "Ráquira",
+        "ID": 241,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.621,
+        "MUNICIPIO": "Rondón",
+        "ID": 242,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.632,
+        "MUNICIPIO": "Saboyá",
+        "ID": 243,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.638,
+        "MUNICIPIO": "Sáchica",
+        "ID": 244,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.646,
+        "MUNICIPIO": "Samacá",
+        "ID": 245,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.66,
+        "MUNICIPIO": "San Eduardo",
+        "ID": 246,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.673,
+        "MUNICIPIO": "San Mateo",
+        "ID": 247,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.686,
+        "MUNICIPIO": "Santana",
+        "ID": 248,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.69,
+        "MUNICIPIO": "Santa María",
+        "ID": 249,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.696,
+        "MUNICIPIO": "Santa Sofía",
+        "ID": 250,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.72,
+        "MUNICIPIO": "Sativanorte",
+        "ID": 251,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.723,
+        "MUNICIPIO": "Sativasur",
+        "ID": 252,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.74,
+        "MUNICIPIO": "Siachoque",
+        "ID": 253,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.753,
+        "MUNICIPIO": "Soatá",
+        "ID": 254,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.755,
+        "MUNICIPIO": "Socotá",
+        "ID": 255,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.757,
+        "MUNICIPIO": "Socha",
+        "ID": 256,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.759,
+        "MUNICIPIO": "Sogamoso",
+        "ID": 257,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.761,
+        "MUNICIPIO": "Somondoco",
+        "ID": 258,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.762,
+        "MUNICIPIO": "Sora",
+        "ID": 259,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.763,
+        "MUNICIPIO": "Sotaquirá",
+        "ID": 260,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.764,
+        "MUNICIPIO": "Soracá",
+        "ID": 261,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.774,
+        "MUNICIPIO": "Susacón",
+        "ID": 262,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.776,
+        "MUNICIPIO": "Sutamarchán",
+        "ID": 263,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.778,
+        "MUNICIPIO": "Sutatenza",
+        "ID": 264,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.79,
+        "MUNICIPIO": "Tasco",
+        "ID": 265,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.798,
+        "MUNICIPIO": "Tenza",
+        "ID": 266,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.804,
+        "MUNICIPIO": "Tibaná",
+        "ID": 267,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.808,
+        "MUNICIPIO": "Tinjacá",
+        "ID": 268,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.81,
+        "MUNICIPIO": "Tipacoque",
+        "ID": 269,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.814,
+        "MUNICIPIO": "Toca",
+        "ID": 270,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.82,
+        "MUNICIPIO": "Tópaga",
+        "ID": 271,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.822,
+        "MUNICIPIO": "Tota",
+        "ID": 272,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.835,
+        "MUNICIPIO": "Turmequé",
+        "ID": 273,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.839,
+        "MUNICIPIO": "Tutazá",
+        "ID": 274,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.842,
+        "MUNICIPIO": "Umbita",
+        "ID": 275,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.861,
+        "MUNICIPIO": "Ventaquemada",
+        "ID": 276,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.879,
+        "MUNICIPIO": "Viracachá",
+        "ID": 277,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.897,
+        "MUNICIPIO": "Zetaquira",
+        "ID": 278,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.001,
+        "MUNICIPIO": "Manizales",
+        "ID": 279,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.013,
+        "MUNICIPIO": "Aguadas",
+        "ID": 280,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.042,
+        "MUNICIPIO": "Anserma",
+        "ID": 281,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.05,
+        "MUNICIPIO": "Aranzazu",
+        "ID": 282,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.088,
+        "MUNICIPIO": "Belalcázar",
+        "ID": 283,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.174,
+        "MUNICIPIO": "Chinchiná",
+        "ID": 284,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.272,
+        "MUNICIPIO": "Filadelfia",
+        "ID": 285,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.38,
+        "MUNICIPIO": "La Dorada",
+        "ID": 286,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.388,
+        "MUNICIPIO": "La Merced",
+        "ID": 287,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.433,
+        "MUNICIPIO": "Manzanares",
+        "ID": 288,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.442,
+        "MUNICIPIO": "Marmato",
+        "ID": 289,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.446,
+        "MUNICIPIO": "Marulanda",
+        "ID": 290,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.486,
+        "MUNICIPIO": "Neira",
+        "ID": 291,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.495,
+        "MUNICIPIO": "Norcasia",
+        "ID": 292,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.513,
+        "MUNICIPIO": "Pácora",
+        "ID": 293,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.524,
+        "MUNICIPIO": "Palestina",
+        "ID": 294,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.541,
+        "MUNICIPIO": "Pensilvania",
+        "ID": 295,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.614,
+        "MUNICIPIO": "Riosucio",
+        "ID": 296,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.616,
+        "MUNICIPIO": "Risaralda",
+        "ID": 297,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.653,
+        "MUNICIPIO": "Salamina",
+        "ID": 298,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.662,
+        "MUNICIPIO": "Samaná",
+        "ID": 299,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.665,
+        "MUNICIPIO": "San José",
+        "ID": 300,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.777,
+        "MUNICIPIO": "Supía",
+        "ID": 301,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.867,
+        "MUNICIPIO": "Victoria",
+        "ID": 302,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.873,
+        "MUNICIPIO": "Villamaría",
+        "ID": 303,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.877,
+        "MUNICIPIO": "Viterbo",
+        "ID": 304,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 18.001,
+        "MUNICIPIO": "Florencia",
+        "ID": 305,
+        "ID_DEPARTAMENTO": 11,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 18.029,
+        "MUNICIPIO": "Albania",
+        "ID": 306,
+        "ID_DEPARTAMENTO": 11,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 18.205,
+        "MUNICIPIO": "Curillo",
+        "ID": 307,
+        "ID_DEPARTAMENTO": 11,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 18.247,
+        "MUNICIPIO": "El Doncello",
+        "ID": 308,
+        "ID_DEPARTAMENTO": 11,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 18.256,
+        "MUNICIPIO": "El Paujil",
+        "ID": 309,
+        "ID_DEPARTAMENTO": 11,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 18.479,
+        "MUNICIPIO": "Morelia",
+        "ID": 310,
+        "ID_DEPARTAMENTO": 11,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 18.592,
+        "MUNICIPIO": "Puerto Rico",
+        "ID": 311,
+        "ID_DEPARTAMENTO": 11,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 18.756,
+        "MUNICIPIO": "Solano",
+        "ID": 312,
+        "ID_DEPARTAMENTO": 11,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 18.785,
+        "MUNICIPIO": "Solita",
+        "ID": 313,
+        "ID_DEPARTAMENTO": 11,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 18.86,
+        "MUNICIPIO": "Valparaíso",
+        "ID": 314,
+        "ID_DEPARTAMENTO": 11,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.001,
+        "MUNICIPIO": "Popayán",
+        "ID": 315,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.022,
+        "MUNICIPIO": "Almaguer",
+        "ID": 316,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.05,
+        "MUNICIPIO": "Argelia",
+        "ID": 317,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.075,
+        "MUNICIPIO": "Balboa",
+        "ID": 318,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.1,
+        "MUNICIPIO": "Bolívar",
+        "ID": 319,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.11,
+        "MUNICIPIO": "Buenos Aires",
+        "ID": 320,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.13,
+        "MUNICIPIO": "Cajibío",
+        "ID": 321,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.137,
+        "MUNICIPIO": "Caldono",
+        "ID": 322,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.142,
+        "MUNICIPIO": "Caloto",
+        "ID": 323,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.212,
+        "MUNICIPIO": "Corinto",
+        "ID": 324,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.256,
+        "MUNICIPIO": "El Tambo",
+        "ID": 325,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.29,
+        "MUNICIPIO": "Florencia",
+        "ID": 326,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.3,
+        "MUNICIPIO": "Guachené",
+        "ID": 327,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.318,
+        "MUNICIPIO": "Guapi",
+        "ID": 328,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.355,
+        "MUNICIPIO": "Inzá",
+        "ID": 329,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.364,
+        "MUNICIPIO": "Jambaló",
+        "ID": 330,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.392,
+        "MUNICIPIO": "La Sierra",
+        "ID": 331,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.397,
+        "MUNICIPIO": "La Vega",
+        "ID": 332,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.418,
+        "MUNICIPIO": "López",
+        "ID": 333,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.45,
+        "MUNICIPIO": "Mercaderes",
+        "ID": 334,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.455,
+        "MUNICIPIO": "Miranda",
+        "ID": 335,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.473,
+        "MUNICIPIO": "Morales",
+        "ID": 336,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.513,
+        "MUNICIPIO": "Padilla",
+        "ID": 337,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.532,
+        "MUNICIPIO": "Patía",
+        "ID": 338,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.533,
+        "MUNICIPIO": "Piamonte",
+        "ID": 339,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.548,
+        "MUNICIPIO": "Piendamó",
+        "ID": 340,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.573,
+        "MUNICIPIO": "Puerto Tejada",
+        "ID": 341,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.585,
+        "MUNICIPIO": "Puracé",
+        "ID": 342,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.622,
+        "MUNICIPIO": "Rosas",
+        "ID": 343,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.701,
+        "MUNICIPIO": "Santa Rosa",
+        "ID": 344,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.743,
+        "MUNICIPIO": "Silvia",
+        "ID": 345,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.76,
+        "MUNICIPIO": "Sotara",
+        "ID": 346,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.78,
+        "MUNICIPIO": "Suárez",
+        "ID": 347,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.785,
+        "MUNICIPIO": "Sucre",
+        "ID": 348,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.807,
+        "MUNICIPIO": "Timbío",
+        "ID": 349,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.809,
+        "MUNICIPIO": "Timbiquí",
+        "ID": 350,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.821,
+        "MUNICIPIO": "Toribio",
+        "ID": 351,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.824,
+        "MUNICIPIO": "Totoró",
+        "ID": 352,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.845,
+        "MUNICIPIO": "Villa Rica",
+        "ID": 353,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.001,
+        "MUNICIPIO": "Valledupar",
+        "ID": 354,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.011,
+        "MUNICIPIO": "Aguachica",
+        "ID": 355,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.013,
+        "MUNICIPIO": "Agustín Codazzi",
+        "ID": 356,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.032,
+        "MUNICIPIO": "Astrea",
+        "ID": 357,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.045,
+        "MUNICIPIO": "Becerril",
+        "ID": 358,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.06,
+        "MUNICIPIO": "Bosconia",
+        "ID": 359,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.175,
+        "MUNICIPIO": "Chimichagua",
+        "ID": 360,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.178,
+        "MUNICIPIO": "Chiriguaná",
+        "ID": 361,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.228,
+        "MUNICIPIO": "Curumaní",
+        "ID": 362,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.238,
+        "MUNICIPIO": "El Copey",
+        "ID": 363,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.25,
+        "MUNICIPIO": "El Paso",
+        "ID": 364,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.295,
+        "MUNICIPIO": "Gamarra",
+        "ID": 365,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.31,
+        "MUNICIPIO": "González",
+        "ID": 366,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.383,
+        "MUNICIPIO": "La Gloria",
+        "ID": 367,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.443,
+        "MUNICIPIO": "Manaure",
+        "ID": 368,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.517,
+        "MUNICIPIO": "Pailitas",
+        "ID": 369,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.55,
+        "MUNICIPIO": "Pelaya",
+        "ID": 370,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.57,
+        "MUNICIPIO": "Pueblo Bello",
+        "ID": 371,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.621,
+        "MUNICIPIO": "La Paz",
+        "ID": 372,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.71,
+        "MUNICIPIO": "San Alberto",
+        "ID": 373,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.75,
+        "MUNICIPIO": "San Diego",
+        "ID": 374,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.77,
+        "MUNICIPIO": "San Martín",
+        "ID": 375,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.787,
+        "MUNICIPIO": "Tamalameque",
+        "ID": 376,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.001,
+        "MUNICIPIO": "Montería",
+        "ID": 377,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.068,
+        "MUNICIPIO": "Ayapel",
+        "ID": 378,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.079,
+        "MUNICIPIO": "Buenavista",
+        "ID": 379,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.09,
+        "MUNICIPIO": "Canalete",
+        "ID": 380,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.162,
+        "MUNICIPIO": "Cereté",
+        "ID": 381,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.168,
+        "MUNICIPIO": "Chimá",
+        "ID": 382,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.182,
+        "MUNICIPIO": "Chinú",
+        "ID": 383,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.3,
+        "MUNICIPIO": "Cotorra",
+        "ID": 384,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.417,
+        "MUNICIPIO": "Lorica",
+        "ID": 385,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.419,
+        "MUNICIPIO": "Los Córdobas",
+        "ID": 386,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.464,
+        "MUNICIPIO": "Momil",
+        "ID": 387,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.5,
+        "MUNICIPIO": "Moñitos",
+        "ID": 388,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.555,
+        "MUNICIPIO": "Planeta Rica",
+        "ID": 389,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.57,
+        "MUNICIPIO": "Pueblo Nuevo",
+        "ID": 390,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.574,
+        "MUNICIPIO": "Puerto Escondido",
+        "ID": 391,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.586,
+        "MUNICIPIO": "Purísima",
+        "ID": 392,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.66,
+        "MUNICIPIO": "Sahagún",
+        "ID": 393,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.67,
+        "MUNICIPIO": "San Andrés Sotavento",
+        "ID": 394,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.672,
+        "MUNICIPIO": "San Antero",
+        "ID": 395,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.686,
+        "MUNICIPIO": "San Pelayo",
+        "ID": 396,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.807,
+        "MUNICIPIO": "Tierralta",
+        "ID": 397,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.815,
+        "MUNICIPIO": "Tuchín",
+        "ID": 398,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.855,
+        "MUNICIPIO": "Valencia",
+        "ID": 399,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.035,
+        "MUNICIPIO": "Anapoima",
+        "ID": 400,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.053,
+        "MUNICIPIO": "Arbeláez",
+        "ID": 401,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.086,
+        "MUNICIPIO": "Beltrán",
+        "ID": 402,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.095,
+        "MUNICIPIO": "Bituima",
+        "ID": 403,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.099,
+        "MUNICIPIO": "Bojacá",
+        "ID": 404,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.12,
+        "MUNICIPIO": "Cabrera",
+        "ID": 405,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.123,
+        "MUNICIPIO": "Cachipay",
+        "ID": 406,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.126,
+        "MUNICIPIO": "Cajicá",
+        "ID": 407,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.148,
+        "MUNICIPIO": "Caparrapí",
+        "ID": 408,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.151,
+        "MUNICIPIO": "Caqueza",
+        "ID": 409,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.168,
+        "MUNICIPIO": "Chaguaní",
+        "ID": 410,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.178,
+        "MUNICIPIO": "Chipaque",
+        "ID": 411,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.181,
+        "MUNICIPIO": "Choachí",
+        "ID": 412,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.183,
+        "MUNICIPIO": "Chocontá",
+        "ID": 413,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.2,
+        "MUNICIPIO": "Cogua",
+        "ID": 414,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.214,
+        "MUNICIPIO": "Cota",
+        "ID": 415,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.224,
+        "MUNICIPIO": "Cucunubá",
+        "ID": 416,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.245,
+        "MUNICIPIO": "El Colegio",
+        "ID": 417,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.26,
+        "MUNICIPIO": "El Rosal",
+        "ID": 418,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.279,
+        "MUNICIPIO": "Fomeque",
+        "ID": 419,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.281,
+        "MUNICIPIO": "Fosca",
+        "ID": 420,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.286,
+        "MUNICIPIO": "Funza",
+        "ID": 421,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.288,
+        "MUNICIPIO": "Fúquene",
+        "ID": 422,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.293,
+        "MUNICIPIO": "Gachala",
+        "ID": 423,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.295,
+        "MUNICIPIO": "Gachancipá",
+        "ID": 424,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.297,
+        "MUNICIPIO": "Gachetá",
+        "ID": 425,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.307,
+        "MUNICIPIO": "Girardot",
+        "ID": 426,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.312,
+        "MUNICIPIO": "Granada",
+        "ID": 427,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.317,
+        "MUNICIPIO": "Guachetá",
+        "ID": 428,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.32,
+        "MUNICIPIO": "Guaduas",
+        "ID": 429,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.322,
+        "MUNICIPIO": "Guasca",
+        "ID": 430,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.324,
+        "MUNICIPIO": "Guataquí",
+        "ID": 431,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.326,
+        "MUNICIPIO": "Guatavita",
+        "ID": 432,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.335,
+        "MUNICIPIO": "Guayabetal",
+        "ID": 433,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.339,
+        "MUNICIPIO": "Gutiérrez",
+        "ID": 434,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.368,
+        "MUNICIPIO": "Jerusalén",
+        "ID": 435,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.372,
+        "MUNICIPIO": "Junín",
+        "ID": 436,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.377,
+        "MUNICIPIO": "La Calera",
+        "ID": 437,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.386,
+        "MUNICIPIO": "La Mesa",
+        "ID": 438,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.394,
+        "MUNICIPIO": "La Palma",
+        "ID": 439,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.398,
+        "MUNICIPIO": "La Peña",
+        "ID": 440,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.402,
+        "MUNICIPIO": "La Vega",
+        "ID": 441,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.407,
+        "MUNICIPIO": "Lenguazaque",
+        "ID": 442,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.426,
+        "MUNICIPIO": "Macheta",
+        "ID": 443,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.43,
+        "MUNICIPIO": "Madrid",
+        "ID": 444,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.436,
+        "MUNICIPIO": "Manta",
+        "ID": 445,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.438,
+        "MUNICIPIO": "Medina",
+        "ID": 446,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.473,
+        "MUNICIPIO": "Mosquera",
+        "ID": 447,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.483,
+        "MUNICIPIO": "Nariño",
+        "ID": 448,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.486,
+        "MUNICIPIO": "Nemocón",
+        "ID": 449,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.488,
+        "MUNICIPIO": "Nilo",
+        "ID": 450,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.489,
+        "MUNICIPIO": "Nimaima",
+        "ID": 451,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.491,
+        "MUNICIPIO": "Nocaima",
+        "ID": 452,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.506,
+        "MUNICIPIO": "Venecia",
+        "ID": 453,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.513,
+        "MUNICIPIO": "Pacho",
+        "ID": 454,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.518,
+        "MUNICIPIO": "Paime",
+        "ID": 455,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.524,
+        "MUNICIPIO": "Pandi",
+        "ID": 456,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.53,
+        "MUNICIPIO": "Paratebueno",
+        "ID": 457,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.535,
+        "MUNICIPIO": "Pasca",
+        "ID": 458,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.572,
+        "MUNICIPIO": "Puerto Salgar",
+        "ID": 459,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.58,
+        "MUNICIPIO": "Pulí",
+        "ID": 460,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.592,
+        "MUNICIPIO": "Quebradanegra",
+        "ID": 461,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.594,
+        "MUNICIPIO": "Quetame",
+        "ID": 462,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.596,
+        "MUNICIPIO": "Quipile",
+        "ID": 463,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.599,
+        "MUNICIPIO": "Apulo",
+        "ID": 464,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.612,
+        "MUNICIPIO": "Ricaurte",
+        "ID": 465,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.649,
+        "MUNICIPIO": "San Bernardo",
+        "ID": 466,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.653,
+        "MUNICIPIO": "San Cayetano",
+        "ID": 467,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.658,
+        "MUNICIPIO": "San Francisco",
+        "ID": 468,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.736,
+        "MUNICIPIO": "Sesquilé",
+        "ID": 469,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.74,
+        "MUNICIPIO": "Sibaté",
+        "ID": 470,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.743,
+        "MUNICIPIO": "Silvania",
+        "ID": 471,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.745,
+        "MUNICIPIO": "Simijaca",
+        "ID": 472,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.754,
+        "MUNICIPIO": "Soacha",
+        "ID": 473,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.769,
+        "MUNICIPIO": "Subachoque",
+        "ID": 474,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.772,
+        "MUNICIPIO": "Suesca",
+        "ID": 475,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.777,
+        "MUNICIPIO": "Supatá",
+        "ID": 476,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.779,
+        "MUNICIPIO": "Susa",
+        "ID": 477,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.781,
+        "MUNICIPIO": "Sutatausa",
+        "ID": 478,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.785,
+        "MUNICIPIO": "Tabio",
+        "ID": 479,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.793,
+        "MUNICIPIO": "Tausa",
+        "ID": 480,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.797,
+        "MUNICIPIO": "Tena",
+        "ID": 481,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.799,
+        "MUNICIPIO": "Tenjo",
+        "ID": 482,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.805,
+        "MUNICIPIO": "Tibacuy",
+        "ID": 483,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.807,
+        "MUNICIPIO": "Tibirita",
+        "ID": 484,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.815,
+        "MUNICIPIO": "Tocaima",
+        "ID": 485,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.817,
+        "MUNICIPIO": "Tocancipá",
+        "ID": 486,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.823,
+        "MUNICIPIO": "Topaipí",
+        "ID": 487,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.839,
+        "MUNICIPIO": "Ubalá",
+        "ID": 488,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.841,
+        "MUNICIPIO": "Ubaque",
+        "ID": 489,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.845,
+        "MUNICIPIO": "Une",
+        "ID": 490,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.851,
+        "MUNICIPIO": "Útica",
+        "ID": 491,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.867,
+        "MUNICIPIO": "Vianí",
+        "ID": 492,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.871,
+        "MUNICIPIO": "Villagómez",
+        "ID": 493,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.873,
+        "MUNICIPIO": "Villapinzón",
+        "ID": 494,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.875,
+        "MUNICIPIO": "Villeta",
+        "ID": 495,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.878,
+        "MUNICIPIO": "Viotá",
+        "ID": 496,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.898,
+        "MUNICIPIO": "Zipacón",
+        "ID": 497,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.001,
+        "MUNICIPIO": "Quibdó",
+        "ID": 498,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.006,
+        "MUNICIPIO": "Acandí",
+        "ID": 499,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.025,
+        "MUNICIPIO": "Alto Baudo",
+        "ID": 500,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.05,
+        "MUNICIPIO": "Atrato",
+        "ID": 501,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.073,
+        "MUNICIPIO": "Bagadó",
+        "ID": 502,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.075,
+        "MUNICIPIO": "Bahía Solano",
+        "ID": 503,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.077,
+        "MUNICIPIO": "Bajo Baudó",
+        "ID": 504,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.099,
+        "MUNICIPIO": "Bojaya",
+        "ID": 505,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.16,
+        "MUNICIPIO": "Cértegui",
+        "ID": 506,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.205,
+        "MUNICIPIO": "Condoto",
+        "ID": 507,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.372,
+        "MUNICIPIO": "Juradó",
+        "ID": 508,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.413,
+        "MUNICIPIO": "Lloró",
+        "ID": 509,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.425,
+        "MUNICIPIO": "Medio Atrato",
+        "ID": 510,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.43,
+        "MUNICIPIO": "Medio Baudó",
+        "ID": 511,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.45,
+        "MUNICIPIO": "Medio San Juan",
+        "ID": 512,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.491,
+        "MUNICIPIO": "Nóvita",
+        "ID": 513,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.495,
+        "MUNICIPIO": "Nuquí",
+        "ID": 514,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.58,
+        "MUNICIPIO": "Río Iro",
+        "ID": 515,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.6,
+        "MUNICIPIO": "Río Quito",
+        "ID": 516,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.615,
+        "MUNICIPIO": "Riosucio",
+        "ID": 517,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.745,
+        "MUNICIPIO": "Sipí",
+        "ID": 518,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.8,
+        "MUNICIPIO": "Unguía",
+        "ID": 519,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.001,
+        "MUNICIPIO": "Neiva",
+        "ID": 520,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.006,
+        "MUNICIPIO": "Acevedo",
+        "ID": 521,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.013,
+        "MUNICIPIO": "Agrado",
+        "ID": 522,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.016,
+        "MUNICIPIO": "Aipe",
+        "ID": 523,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.02,
+        "MUNICIPIO": "Algeciras",
+        "ID": 524,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.026,
+        "MUNICIPIO": "Altamira",
+        "ID": 525,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.078,
+        "MUNICIPIO": "Baraya",
+        "ID": 526,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.132,
+        "MUNICIPIO": "Campoalegre",
+        "ID": 527,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.206,
+        "MUNICIPIO": "Colombia",
+        "ID": 528,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.244,
+        "MUNICIPIO": "Elías",
+        "ID": 529,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.298,
+        "MUNICIPIO": "Garzón",
+        "ID": 530,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.306,
+        "MUNICIPIO": "Gigante",
+        "ID": 531,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.319,
+        "MUNICIPIO": "Guadalupe",
+        "ID": 532,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.349,
+        "MUNICIPIO": "Hobo",
+        "ID": 533,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.357,
+        "MUNICIPIO": "Iquira",
+        "ID": 534,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.359,
+        "MUNICIPIO": "Isnos",
+        "ID": 535,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.378,
+        "MUNICIPIO": "La Argentina",
+        "ID": 536,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.396,
+        "MUNICIPIO": "La Plata",
+        "ID": 537,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.483,
+        "MUNICIPIO": "Nátaga",
+        "ID": 538,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.503,
+        "MUNICIPIO": "Oporapa",
+        "ID": 539,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.518,
+        "MUNICIPIO": "Paicol",
+        "ID": 540,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.524,
+        "MUNICIPIO": "Palermo",
+        "ID": 541,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.53,
+        "MUNICIPIO": "Palestina",
+        "ID": 542,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.548,
+        "MUNICIPIO": "Pital",
+        "ID": 543,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.551,
+        "MUNICIPIO": "Pitalito",
+        "ID": 544,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.615,
+        "MUNICIPIO": "Rivera",
+        "ID": 545,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.66,
+        "MUNICIPIO": "Saladoblanco",
+        "ID": 546,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.676,
+        "MUNICIPIO": "Santa María",
+        "ID": 547,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.77,
+        "MUNICIPIO": "Suaza",
+        "ID": 548,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.791,
+        "MUNICIPIO": "Tarqui",
+        "ID": 549,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.797,
+        "MUNICIPIO": "Tesalia",
+        "ID": 550,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.799,
+        "MUNICIPIO": "Tello",
+        "ID": 551,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.801,
+        "MUNICIPIO": "Teruel",
+        "ID": 552,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.807,
+        "MUNICIPIO": "Timaná",
+        "ID": 553,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.872,
+        "MUNICIPIO": "Villavieja",
+        "ID": 554,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.885,
+        "MUNICIPIO": "Yaguará",
+        "ID": 555,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 44.001,
+        "MUNICIPIO": "Riohacha",
+        "ID": 556,
+        "ID_DEPARTAMENTO": 16,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 44.035,
+        "MUNICIPIO": "Albania",
+        "ID": 557,
+        "ID_DEPARTAMENTO": 16,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 44.078,
+        "MUNICIPIO": "Barrancas",
+        "ID": 558,
+        "ID_DEPARTAMENTO": 16,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 44.09,
+        "MUNICIPIO": "Dibula",
+        "ID": 559,
+        "ID_DEPARTAMENTO": 16,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 44.098,
+        "MUNICIPIO": "Distracción",
+        "ID": 560,
+        "ID_DEPARTAMENTO": 16,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 44.11,
+        "MUNICIPIO": "El Molino",
+        "ID": 561,
+        "ID_DEPARTAMENTO": 16,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 44.279,
+        "MUNICIPIO": "Fonseca",
+        "ID": 562,
+        "ID_DEPARTAMENTO": 16,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 44.378,
+        "MUNICIPIO": "Hatonuevo",
+        "ID": 563,
+        "ID_DEPARTAMENTO": 16,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 44.43,
+        "MUNICIPIO": "Maicao",
+        "ID": 564,
+        "ID_DEPARTAMENTO": 16,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 44.56,
+        "MUNICIPIO": "Manaure",
+        "ID": 565,
+        "ID_DEPARTAMENTO": 16,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 44.847,
+        "MUNICIPIO": "Uribia",
+        "ID": 566,
+        "ID_DEPARTAMENTO": 16,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 44.855,
+        "MUNICIPIO": "Urumita",
+        "ID": 567,
+        "ID_DEPARTAMENTO": 16,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 44.874,
+        "MUNICIPIO": "Villanueva",
+        "ID": 568,
+        "ID_DEPARTAMENTO": 16,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.001,
+        "MUNICIPIO": "Santa Marta",
+        "ID": 569,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.03,
+        "MUNICIPIO": "Algarrobo",
+        "ID": 570,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.053,
+        "MUNICIPIO": "Aracataca",
+        "ID": 571,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.058,
+        "MUNICIPIO": "Ariguaní",
+        "ID": 572,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.161,
+        "MUNICIPIO": "Cerro San Antonio",
+        "ID": 573,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.17,
+        "MUNICIPIO": "Chivolo",
+        "ID": 574,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.205,
+        "MUNICIPIO": "Concordia",
+        "ID": 575,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.245,
+        "MUNICIPIO": "El Banco",
+        "ID": 576,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.258,
+        "MUNICIPIO": "El Piñon",
+        "ID": 577,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.268,
+        "MUNICIPIO": "El Retén",
+        "ID": 578,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.288,
+        "MUNICIPIO": "Fundación",
+        "ID": 579,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.318,
+        "MUNICIPIO": "Guamal",
+        "ID": 580,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.46,
+        "MUNICIPIO": "Nueva Granada",
+        "ID": 581,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.541,
+        "MUNICIPIO": "Pedraza",
+        "ID": 582,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.551,
+        "MUNICIPIO": "Pivijay",
+        "ID": 583,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.555,
+        "MUNICIPIO": "Plato",
+        "ID": 584,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.605,
+        "MUNICIPIO": "Remolino",
+        "ID": 585,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.675,
+        "MUNICIPIO": "Salamina",
+        "ID": 586,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.703,
+        "MUNICIPIO": "San Zenón",
+        "ID": 587,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.707,
+        "MUNICIPIO": "Santa Ana",
+        "ID": 588,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.745,
+        "MUNICIPIO": "Sitionuevo",
+        "ID": 589,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.798,
+        "MUNICIPIO": "Tenerife",
+        "ID": 590,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.96,
+        "MUNICIPIO": "Zapayán",
+        "ID": 591,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.98,
+        "MUNICIPIO": "Zona Bananera",
+        "ID": 592,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.001,
+        "MUNICIPIO": "Villavicencio",
+        "ID": 593,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.006,
+        "MUNICIPIO": "Acacias",
+        "ID": 594,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.124,
+        "MUNICIPIO": "Cabuyaro",
+        "ID": 595,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.223,
+        "MUNICIPIO": "Cubarral",
+        "ID": 596,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.226,
+        "MUNICIPIO": "Cumaral",
+        "ID": 597,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.245,
+        "MUNICIPIO": "El Calvario",
+        "ID": 598,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.251,
+        "MUNICIPIO": "El Castillo",
+        "ID": 599,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.27,
+        "MUNICIPIO": "El Dorado",
+        "ID": 600,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.313,
+        "MUNICIPIO": "Granada",
+        "ID": 601,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.318,
+        "MUNICIPIO": "Guamal",
+        "ID": 602,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.325,
+        "MUNICIPIO": "Mapiripán",
+        "ID": 603,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.33,
+        "MUNICIPIO": "Mesetas",
+        "ID": 604,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.35,
+        "MUNICIPIO": "La Macarena",
+        "ID": 605,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.4,
+        "MUNICIPIO": "Lejanías",
+        "ID": 606,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.45,
+        "MUNICIPIO": "Puerto Concordia",
+        "ID": 607,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.568,
+        "MUNICIPIO": "Puerto Gaitán",
+        "ID": 608,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.573,
+        "MUNICIPIO": "Puerto López",
+        "ID": 609,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.577,
+        "MUNICIPIO": "Puerto Lleras",
+        "ID": 610,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.59,
+        "MUNICIPIO": "Puerto Rico",
+        "ID": 611,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.606,
+        "MUNICIPIO": "Restrepo",
+        "ID": 612,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.686,
+        "MUNICIPIO": "San Juanito",
+        "ID": 613,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.689,
+        "MUNICIPIO": "San Martín",
+        "ID": 614,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.711,
+        "MUNICIPIO": "Vista Hermosa",
+        "ID": 615,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.001,
+        "MUNICIPIO": "Pasto",
+        "ID": 616,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.019,
+        "MUNICIPIO": "Albán",
+        "ID": 617,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.022,
+        "MUNICIPIO": "Aldana",
+        "ID": 618,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.036,
+        "MUNICIPIO": "Ancuyá",
+        "ID": 619,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.079,
+        "MUNICIPIO": "Barbacoas",
+        "ID": 620,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.203,
+        "MUNICIPIO": "Colón",
+        "ID": 621,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.207,
+        "MUNICIPIO": "Consaca",
+        "ID": 622,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.21,
+        "MUNICIPIO": "Contadero",
+        "ID": 623,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.215,
+        "MUNICIPIO": "Córdoba",
+        "ID": 624,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.224,
+        "MUNICIPIO": "Cuaspud",
+        "ID": 625,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.227,
+        "MUNICIPIO": "Cumbal",
+        "ID": 626,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.233,
+        "MUNICIPIO": "Cumbitara",
+        "ID": 627,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.25,
+        "MUNICIPIO": "El Charco",
+        "ID": 628,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.254,
+        "MUNICIPIO": "El Peñol",
+        "ID": 629,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.256,
+        "MUNICIPIO": "El Rosario",
+        "ID": 630,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.26,
+        "MUNICIPIO": "El Tambo",
+        "ID": 631,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.287,
+        "MUNICIPIO": "Funes",
+        "ID": 632,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.317,
+        "MUNICIPIO": "Guachucal",
+        "ID": 633,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.32,
+        "MUNICIPIO": "Guaitarilla",
+        "ID": 634,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.323,
+        "MUNICIPIO": "Gualmatán",
+        "ID": 635,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.352,
+        "MUNICIPIO": "Iles",
+        "ID": 636,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.354,
+        "MUNICIPIO": "Imués",
+        "ID": 637,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.356,
+        "MUNICIPIO": "Ipiales",
+        "ID": 638,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.378,
+        "MUNICIPIO": "La Cruz",
+        "ID": 639,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.381,
+        "MUNICIPIO": "La Florida",
+        "ID": 640,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.385,
+        "MUNICIPIO": "La Llanada",
+        "ID": 641,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.39,
+        "MUNICIPIO": "La Tola",
+        "ID": 642,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.399,
+        "MUNICIPIO": "La Unión",
+        "ID": 643,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.405,
+        "MUNICIPIO": "Leiva",
+        "ID": 644,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.411,
+        "MUNICIPIO": "Linares",
+        "ID": 645,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.418,
+        "MUNICIPIO": "Los Andes",
+        "ID": 646,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.427,
+        "MUNICIPIO": "Magüí",
+        "ID": 647,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.435,
+        "MUNICIPIO": "Mallama",
+        "ID": 648,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.473,
+        "MUNICIPIO": "Mosquera",
+        "ID": 649,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.48,
+        "MUNICIPIO": "Nariño",
+        "ID": 650,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.49,
+        "MUNICIPIO": "Olaya Herrera",
+        "ID": 651,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.506,
+        "MUNICIPIO": "Ospina",
+        "ID": 652,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.52,
+        "MUNICIPIO": "Francisco Pizarro",
+        "ID": 653,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.54,
+        "MUNICIPIO": "Policarpa",
+        "ID": 654,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.56,
+        "MUNICIPIO": "Potosí",
+        "ID": 655,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.565,
+        "MUNICIPIO": "Providencia",
+        "ID": 656,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.573,
+        "MUNICIPIO": "Puerres",
+        "ID": 657,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.585,
+        "MUNICIPIO": "Pupiales",
+        "ID": 658,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.612,
+        "MUNICIPIO": "Ricaurte",
+        "ID": 659,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.621,
+        "MUNICIPIO": "Roberto Payán",
+        "ID": 660,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.678,
+        "MUNICIPIO": "Samaniego",
+        "ID": 661,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.683,
+        "MUNICIPIO": "Sandoná",
+        "ID": 662,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.685,
+        "MUNICIPIO": "San Bernardo",
+        "ID": 663,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.687,
+        "MUNICIPIO": "San Lorenzo",
+        "ID": 664,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.693,
+        "MUNICIPIO": "San Pablo",
+        "ID": 665,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.696,
+        "MUNICIPIO": "Santa Bárbara",
+        "ID": 666,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.72,
+        "MUNICIPIO": "Sapuyes",
+        "ID": 667,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.786,
+        "MUNICIPIO": "Taminango",
+        "ID": 668,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.788,
+        "MUNICIPIO": "Tangua",
+        "ID": 669,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.838,
+        "MUNICIPIO": "Túquerres",
+        "ID": 670,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.885,
+        "MUNICIPIO": "Yacuanquer",
+        "ID": 671,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 63.001,
+        "MUNICIPIO": "Armenia",
+        "ID": 672,
+        "ID_DEPARTAMENTO": 18,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 63.111,
+        "MUNICIPIO": "Buenavista",
+        "ID": 673,
+        "ID_DEPARTAMENTO": 18,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 63.19,
+        "MUNICIPIO": "Circasia",
+        "ID": 674,
+        "ID_DEPARTAMENTO": 18,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 63.212,
+        "MUNICIPIO": "Córdoba",
+        "ID": 675,
+        "ID_DEPARTAMENTO": 18,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 63.272,
+        "MUNICIPIO": "Filandia",
+        "ID": 676,
+        "ID_DEPARTAMENTO": 18,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 63.401,
+        "MUNICIPIO": "La Tebaida",
+        "ID": 677,
+        "ID_DEPARTAMENTO": 18,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 63.47,
+        "MUNICIPIO": "Montenegro",
+        "ID": 678,
+        "ID_DEPARTAMENTO": 18,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 63.548,
+        "MUNICIPIO": "Pijao",
+        "ID": 679,
+        "ID_DEPARTAMENTO": 18,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 63.594,
+        "MUNICIPIO": "Quimbaya",
+        "ID": 680,
+        "ID_DEPARTAMENTO": 18,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 63.69,
+        "MUNICIPIO": "Salento",
+        "ID": 681,
+        "ID_DEPARTAMENTO": 18,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 66.001,
+        "MUNICIPIO": "Pereira",
+        "ID": 682,
+        "ID_DEPARTAMENTO": 19,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 66.045,
+        "MUNICIPIO": "Apía",
+        "ID": 683,
+        "ID_DEPARTAMENTO": 19,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 66.075,
+        "MUNICIPIO": "Balboa",
+        "ID": 684,
+        "ID_DEPARTAMENTO": 19,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 66.17,
+        "MUNICIPIO": "Dosquebradas",
+        "ID": 685,
+        "ID_DEPARTAMENTO": 19,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 66.318,
+        "MUNICIPIO": "Guática",
+        "ID": 686,
+        "ID_DEPARTAMENTO": 19,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 66.383,
+        "MUNICIPIO": "La Celia",
+        "ID": 687,
+        "ID_DEPARTAMENTO": 19,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 66.4,
+        "MUNICIPIO": "La Virginia",
+        "ID": 688,
+        "ID_DEPARTAMENTO": 19,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 66.44,
+        "MUNICIPIO": "Marsella",
+        "ID": 689,
+        "ID_DEPARTAMENTO": 19,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 66.456,
+        "MUNICIPIO": "Mistrató",
+        "ID": 690,
+        "ID_DEPARTAMENTO": 19,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 66.572,
+        "MUNICIPIO": "Pueblo Rico",
+        "ID": 691,
+        "ID_DEPARTAMENTO": 19,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 66.594,
+        "MUNICIPIO": "Quinchía",
+        "ID": 692,
+        "ID_DEPARTAMENTO": 19,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 66.687,
+        "MUNICIPIO": "Santuario",
+        "ID": 693,
+        "ID_DEPARTAMENTO": 19,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.001,
+        "MUNICIPIO": "Bucaramanga",
+        "ID": 694,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.013,
+        "MUNICIPIO": "Aguada",
+        "ID": 695,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.02,
+        "MUNICIPIO": "Albania",
+        "ID": 696,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.051,
+        "MUNICIPIO": "Aratoca",
+        "ID": 697,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.077,
+        "MUNICIPIO": "Barbosa",
+        "ID": 698,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.079,
+        "MUNICIPIO": "Barichara",
+        "ID": 699,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.081,
+        "MUNICIPIO": "Barrancabermeja",
+        "ID": 700,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.092,
+        "MUNICIPIO": "Betulia",
+        "ID": 701,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.101,
+        "MUNICIPIO": "Bolívar",
+        "ID": 702,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.121,
+        "MUNICIPIO": "Cabrera",
+        "ID": 703,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.132,
+        "MUNICIPIO": "California",
+        "ID": 704,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.152,
+        "MUNICIPIO": "Carcasí",
+        "ID": 705,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.16,
+        "MUNICIPIO": "Cepitá",
+        "ID": 706,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.162,
+        "MUNICIPIO": "Cerrito",
+        "ID": 707,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.167,
+        "MUNICIPIO": "Charalá",
+        "ID": 708,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.169,
+        "MUNICIPIO": "Charta",
+        "ID": 709,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.179,
+        "MUNICIPIO": "Chipatá",
+        "ID": 710,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.19,
+        "MUNICIPIO": "Cimitarra",
+        "ID": 711,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.207,
+        "MUNICIPIO": "Concepción",
+        "ID": 712,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.209,
+        "MUNICIPIO": "Confines",
+        "ID": 713,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.211,
+        "MUNICIPIO": "Contratación",
+        "ID": 714,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.217,
+        "MUNICIPIO": "Coromoro",
+        "ID": 715,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.229,
+        "MUNICIPIO": "Curití",
+        "ID": 716,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.245,
+        "MUNICIPIO": "El Guacamayo",
+        "ID": 717,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.255,
+        "MUNICIPIO": "El Playón",
+        "ID": 718,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.264,
+        "MUNICIPIO": "Encino",
+        "ID": 719,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.266,
+        "MUNICIPIO": "Enciso",
+        "ID": 720,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.271,
+        "MUNICIPIO": "Florián",
+        "ID": 721,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.276,
+        "MUNICIPIO": "Floridablanca",
+        "ID": 722,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.296,
+        "MUNICIPIO": "Galán",
+        "ID": 723,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.298,
+        "MUNICIPIO": "Gambita",
+        "ID": 724,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.307,
+        "MUNICIPIO": "Girón",
+        "ID": 725,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.318,
+        "MUNICIPIO": "Guaca",
+        "ID": 726,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.32,
+        "MUNICIPIO": "Guadalupe",
+        "ID": 727,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.322,
+        "MUNICIPIO": "Guapotá",
+        "ID": 728,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.324,
+        "MUNICIPIO": "Guavatá",
+        "ID": 729,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.327,
+        "MUNICIPIO": "Güepsa",
+        "ID": 730,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.368,
+        "MUNICIPIO": "Jesús María",
+        "ID": 731,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.37,
+        "MUNICIPIO": "Jordán",
+        "ID": 732,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.377,
+        "MUNICIPIO": "La Belleza",
+        "ID": 733,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.385,
+        "MUNICIPIO": "Landázuri",
+        "ID": 734,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.397,
+        "MUNICIPIO": "La Paz",
+        "ID": 735,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.406,
+        "MUNICIPIO": "Lebríja",
+        "ID": 736,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.418,
+        "MUNICIPIO": "Los Santos",
+        "ID": 737,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.425,
+        "MUNICIPIO": "Macaravita",
+        "ID": 738,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.432,
+        "MUNICIPIO": "Málaga",
+        "ID": 739,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.444,
+        "MUNICIPIO": "Matanza",
+        "ID": 740,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.464,
+        "MUNICIPIO": "Mogotes",
+        "ID": 741,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.468,
+        "MUNICIPIO": "Molagavita",
+        "ID": 742,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.498,
+        "MUNICIPIO": "Ocamonte",
+        "ID": 743,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.5,
+        "MUNICIPIO": "Oiba",
+        "ID": 744,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.502,
+        "MUNICIPIO": "Onzaga",
+        "ID": 745,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.522,
+        "MUNICIPIO": "Palmar",
+        "ID": 746,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.533,
+        "MUNICIPIO": "Páramo",
+        "ID": 747,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.547,
+        "MUNICIPIO": "Piedecuesta",
+        "ID": 748,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.549,
+        "MUNICIPIO": "Pinchote",
+        "ID": 749,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.572,
+        "MUNICIPIO": "Puente Nacional",
+        "ID": 750,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.615,
+        "MUNICIPIO": "Rionegro",
+        "ID": 751,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.669,
+        "MUNICIPIO": "San Andrés",
+        "ID": 752,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.679,
+        "MUNICIPIO": "San Gil",
+        "ID": 753,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.682,
+        "MUNICIPIO": "San Joaquín",
+        "ID": 754,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.686,
+        "MUNICIPIO": "San Miguel",
+        "ID": 755,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.705,
+        "MUNICIPIO": "Santa Bárbara",
+        "ID": 756,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.745,
+        "MUNICIPIO": "Simacota",
+        "ID": 757,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.755,
+        "MUNICIPIO": "Socorro",
+        "ID": 758,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.77,
+        "MUNICIPIO": "Suaita",
+        "ID": 759,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.773,
+        "MUNICIPIO": "Sucre",
+        "ID": 760,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.78,
+        "MUNICIPIO": "Suratá",
+        "ID": 761,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.82,
+        "MUNICIPIO": "Tona",
+        "ID": 762,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.861,
+        "MUNICIPIO": "Vélez",
+        "ID": 763,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.867,
+        "MUNICIPIO": "Vetas",
+        "ID": 764,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.872,
+        "MUNICIPIO": "Villanueva",
+        "ID": 765,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.895,
+        "MUNICIPIO": "Zapatoca",
+        "ID": 766,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.001,
+        "MUNICIPIO": "Sincelejo",
+        "ID": 767,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.11,
+        "MUNICIPIO": "Buenavista",
+        "ID": 768,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.124,
+        "MUNICIPIO": "Caimito",
+        "ID": 769,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.204,
+        "MUNICIPIO": "Coloso",
+        "ID": 770,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.221,
+        "MUNICIPIO": "Coveñas",
+        "ID": 771,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.23,
+        "MUNICIPIO": "Chalán",
+        "ID": 772,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.233,
+        "MUNICIPIO": "El Roble",
+        "ID": 773,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.235,
+        "MUNICIPIO": "Galeras",
+        "ID": 774,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.265,
+        "MUNICIPIO": "Guaranda",
+        "ID": 775,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.4,
+        "MUNICIPIO": "La Unión",
+        "ID": 776,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.418,
+        "MUNICIPIO": "Los Palmitos",
+        "ID": 777,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.429,
+        "MUNICIPIO": "Majagual",
+        "ID": 778,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.473,
+        "MUNICIPIO": "Morroa",
+        "ID": 779,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.508,
+        "MUNICIPIO": "Ovejas",
+        "ID": 780,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.523,
+        "MUNICIPIO": "Palmito",
+        "ID": 781,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.678,
+        "MUNICIPIO": "San Benito Abad",
+        "ID": 782,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.708,
+        "MUNICIPIO": "San Marcos",
+        "ID": 783,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.713,
+        "MUNICIPIO": "San Onofre",
+        "ID": 784,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.717,
+        "MUNICIPIO": "San Pedro",
+        "ID": 785,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.771,
+        "MUNICIPIO": "Sucre",
+        "ID": 786,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.823,
+        "MUNICIPIO": "Tolú Viejo",
+        "ID": 787,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.024,
+        "MUNICIPIO": "Alpujarra",
+        "ID": 788,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.026,
+        "MUNICIPIO": "Alvarado",
+        "ID": 789,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.03,
+        "MUNICIPIO": "Ambalema",
+        "ID": 790,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.055,
+        "MUNICIPIO": "Armero",
+        "ID": 791,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.067,
+        "MUNICIPIO": "Ataco",
+        "ID": 792,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.124,
+        "MUNICIPIO": "Cajamarca",
+        "ID": 793,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.168,
+        "MUNICIPIO": "Chaparral",
+        "ID": 794,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.2,
+        "MUNICIPIO": "Coello",
+        "ID": 795,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.217,
+        "MUNICIPIO": "Coyaima",
+        "ID": 796,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.226,
+        "MUNICIPIO": "Cunday",
+        "ID": 797,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.236,
+        "MUNICIPIO": "Dolores",
+        "ID": 798,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.268,
+        "MUNICIPIO": "Espinal",
+        "ID": 799,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.27,
+        "MUNICIPIO": "Falan",
+        "ID": 800,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.275,
+        "MUNICIPIO": "Flandes",
+        "ID": 801,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.283,
+        "MUNICIPIO": "Fresno",
+        "ID": 802,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.319,
+        "MUNICIPIO": "Guamo",
+        "ID": 803,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.347,
+        "MUNICIPIO": "Herveo",
+        "ID": 804,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.349,
+        "MUNICIPIO": "Honda",
+        "ID": 805,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.352,
+        "MUNICIPIO": "Icononzo",
+        "ID": 806,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.443,
+        "MUNICIPIO": "Mariquita",
+        "ID": 807,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.449,
+        "MUNICIPIO": "Melgar",
+        "ID": 808,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.461,
+        "MUNICIPIO": "Murillo",
+        "ID": 809,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.483,
+        "MUNICIPIO": "Natagaima",
+        "ID": 810,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.504,
+        "MUNICIPIO": "Ortega",
+        "ID": 811,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.52,
+        "MUNICIPIO": "Palocabildo",
+        "ID": 812,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.547,
+        "MUNICIPIO": "Piedras",
+        "ID": 813,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.555,
+        "MUNICIPIO": "Planadas",
+        "ID": 814,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.563,
+        "MUNICIPIO": "Prado",
+        "ID": 815,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.585,
+        "MUNICIPIO": "Purificación",
+        "ID": 816,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.616,
+        "MUNICIPIO": "Rio Blanco",
+        "ID": 817,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.622,
+        "MUNICIPIO": "Roncesvalles",
+        "ID": 818,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.624,
+        "MUNICIPIO": "Rovira",
+        "ID": 819,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.671,
+        "MUNICIPIO": "Saldaña",
+        "ID": 820,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.686,
+        "MUNICIPIO": "Santa Isabel",
+        "ID": 821,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.861,
+        "MUNICIPIO": "Venadillo",
+        "ID": 822,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.87,
+        "MUNICIPIO": "Villahermosa",
+        "ID": 823,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.873,
+        "MUNICIPIO": "Villarrica",
+        "ID": 824,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 81.065,
+        "MUNICIPIO": "Arauquita",
+        "ID": 825,
+        "ID_DEPARTAMENTO": 22,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 81.22,
+        "MUNICIPIO": "Cravo Norte",
+        "ID": 826,
+        "ID_DEPARTAMENTO": 22,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 81.3,
+        "MUNICIPIO": "Fortul",
+        "ID": 827,
+        "ID_DEPARTAMENTO": 22,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 81.591,
+        "MUNICIPIO": "Puerto Rondón",
+        "ID": 828,
+        "ID_DEPARTAMENTO": 22,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 81.736,
+        "MUNICIPIO": "Saravena",
+        "ID": 829,
+        "ID_DEPARTAMENTO": 22,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 81.794,
+        "MUNICIPIO": "Tame",
+        "ID": 830,
+        "ID_DEPARTAMENTO": 22,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 81.001,
+        "MUNICIPIO": "Arauca",
+        "ID": 831,
+        "ID_DEPARTAMENTO": 22,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.001,
+        "MUNICIPIO": "Yopal",
+        "ID": 832,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.01,
+        "MUNICIPIO": "Aguazul",
+        "ID": 833,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.015,
+        "MUNICIPIO": "Chámeza",
+        "ID": 834,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.125,
+        "MUNICIPIO": "Hato Corozal",
+        "ID": 835,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.136,
+        "MUNICIPIO": "La Salina",
+        "ID": 836,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.162,
+        "MUNICIPIO": "Monterrey",
+        "ID": 837,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.263,
+        "MUNICIPIO": "Pore",
+        "ID": 838,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.279,
+        "MUNICIPIO": "Recetor",
+        "ID": 839,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.3,
+        "MUNICIPIO": "Sabanalarga",
+        "ID": 840,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.315,
+        "MUNICIPIO": "Sácama",
+        "ID": 841,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.41,
+        "MUNICIPIO": "Tauramena",
+        "ID": 842,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.43,
+        "MUNICIPIO": "Trinidad",
+        "ID": 843,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.44,
+        "MUNICIPIO": "Villanueva",
+        "ID": 844,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 86.001,
+        "MUNICIPIO": "Mocoa",
+        "ID": 845,
+        "ID_DEPARTAMENTO": 24,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 86.219,
+        "MUNICIPIO": "Colón",
+        "ID": 846,
+        "ID_DEPARTAMENTO": 24,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 86.32,
+        "MUNICIPIO": "Orito",
+        "ID": 847,
+        "ID_DEPARTAMENTO": 24,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 86.569,
+        "MUNICIPIO": "Puerto Caicedo",
+        "ID": 848,
+        "ID_DEPARTAMENTO": 24,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 86.571,
+        "MUNICIPIO": "Puerto Guzmán",
+        "ID": 849,
+        "ID_DEPARTAMENTO": 24,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 86.573,
+        "MUNICIPIO": "Leguízamo",
+        "ID": 850,
+        "ID_DEPARTAMENTO": 24,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 86.749,
+        "MUNICIPIO": "Sibundoy",
+        "ID": 851,
+        "ID_DEPARTAMENTO": 24,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 86.755,
+        "MUNICIPIO": "San Francisco",
+        "ID": 852,
+        "ID_DEPARTAMENTO": 24,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 86.757,
+        "MUNICIPIO": "San Miguel",
+        "ID": 853,
+        "ID_DEPARTAMENTO": 24,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 86.76,
+        "MUNICIPIO": "Santiago",
+        "ID": 854,
+        "ID_DEPARTAMENTO": 24,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 91.001,
+        "MUNICIPIO": "Leticia",
+        "ID": 855,
+        "ID_DEPARTAMENTO": 25,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 91.263,
+        "MUNICIPIO": "El Encanto",
+        "ID": 856,
+        "ID_DEPARTAMENTO": 25,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 91.405,
+        "MUNICIPIO": "La Chorrera",
+        "ID": 857,
+        "ID_DEPARTAMENTO": 25,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 91.407,
+        "MUNICIPIO": "La Pedrera",
+        "ID": 858,
+        "ID_DEPARTAMENTO": 25,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 91.43,
+        "MUNICIPIO": "La Victoria",
+        "ID": 859,
+        "ID_DEPARTAMENTO": 25,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 91.536,
+        "MUNICIPIO": "Puerto Arica",
+        "ID": 860,
+        "ID_DEPARTAMENTO": 25,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 91.54,
+        "MUNICIPIO": "Puerto Nariño",
+        "ID": 861,
+        "ID_DEPARTAMENTO": 25,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 91.669,
+        "MUNICIPIO": "Puerto Santander",
+        "ID": 862,
+        "ID_DEPARTAMENTO": 25,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 91.798,
+        "MUNICIPIO": "Tarapacá",
+        "ID": 863,
+        "ID_DEPARTAMENTO": 25,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 94.001,
+        "MUNICIPIO": "Inírida",
+        "ID": 864,
+        "ID_DEPARTAMENTO": 26,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 94.343,
+        "MUNICIPIO": "Barranco Minas",
+        "ID": 865,
+        "ID_DEPARTAMENTO": 26,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 94.663,
+        "MUNICIPIO": "Mapiripana",
+        "ID": 866,
+        "ID_DEPARTAMENTO": 26,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 94.883,
+        "MUNICIPIO": "San Felipe",
+        "ID": 867,
+        "ID_DEPARTAMENTO": 26,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 94.884,
+        "MUNICIPIO": "Puerto Colombia",
+        "ID": 868,
+        "ID_DEPARTAMENTO": 26,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 94.885,
+        "MUNICIPIO": "La Guadalupe",
+        "ID": 869,
+        "ID_DEPARTAMENTO": 26,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 94.886,
+        "MUNICIPIO": "Cacahual",
+        "ID": 870,
+        "ID_DEPARTAMENTO": 26,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 94.887,
+        "MUNICIPIO": "Pana Pana",
+        "ID": 871,
+        "ID_DEPARTAMENTO": 26,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 97.001,
+        "MUNICIPIO": "Mitú",
+        "ID": 872,
+        "ID_DEPARTAMENTO": 27,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 97.161,
+        "MUNICIPIO": "Carurú",
+        "ID": 873,
+        "ID_DEPARTAMENTO": 27,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 97.666,
+        "MUNICIPIO": "Taraira",
+        "ID": 874,
+        "ID_DEPARTAMENTO": 27,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 97.777,
+        "MUNICIPIO": "Papunahua",
+        "ID": 875,
+        "ID_DEPARTAMENTO": 27,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 97.889,
+        "MUNICIPIO": "Yavaraté",
+        "ID": 876,
+        "ID_DEPARTAMENTO": 27,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 97.511,
+        "MUNICIPIO": "Pacoa",
+        "ID": 877,
+        "ID_DEPARTAMENTO": 27,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 94.888,
+        "MUNICIPIO": "Morichal",
+        "ID": 878,
+        "ID_DEPARTAMENTO": 26,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 99.001,
+        "MUNICIPIO": "Puerto Carreño",
+        "ID": 879,
+        "ID_DEPARTAMENTO": 28,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 99.524,
+        "MUNICIPIO": "La Primavera",
+        "ID": 880,
+        "ID_DEPARTAMENTO": 28,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 99.624,
+        "MUNICIPIO": "Santa Rosalía",
+        "ID": 881,
+        "ID_DEPARTAMENTO": 28,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 99.773,
+        "MUNICIPIO": "Cumaribo",
+        "ID": 882,
+        "ID_DEPARTAMENTO": 28,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 18.61,
+        "MUNICIPIO": "San José del Fragua",
+        "ID": 883,
+        "ID_DEPARTAMENTO": 11,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.11,
+        "MUNICIPIO": "Barranca de Upía",
+        "ID": 884,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.524,
+        "MUNICIPIO": "Palmas del Socorro",
+        "ID": 885,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.662,
+        "MUNICIPIO": "San Juan de Río Seco",
+        "ID": 886,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.372,
+        "MUNICIPIO": "Juan de Acosta",
+        "ID": 887,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.287,
+        "MUNICIPIO": "Fuente de Oro",
+        "ID": 888,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.325,
+        "MUNICIPIO": "San Luis de Gaceno",
+        "ID": 889,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.25,
+        "MUNICIPIO": "El Litoral del San Juan",
+        "ID": 890,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.843,
+        "MUNICIPIO": "Villa de San Diego de Ubate",
+        "ID": 891,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.074,
+        "MUNICIPIO": "Barranco de Loba",
+        "ID": 892,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.816,
+        "MUNICIPIO": "Togüí",
+        "ID": 893,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.688,
+        "MUNICIPIO": "Santa Rosa del Sur",
+        "ID": 894,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.135,
+        "MUNICIPIO": "El Cantón del San Pablo",
+        "ID": 895,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.407,
+        "MUNICIPIO": "Villa de Leyva",
+        "ID": 896,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.692,
+        "MUNICIPIO": "San Sebastián de Buenavista",
+        "ID": 897,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.537,
+        "MUNICIPIO": "Paz de Río",
+        "ID": 898,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.3,
+        "MUNICIPIO": "Hatillo de Loba",
+        "ID": 899,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.66,
+        "MUNICIPIO": "Sabanas de San Angel",
+        "ID": 900,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 95.015,
+        "MUNICIPIO": "Calamar",
+        "ID": 901,
+        "ID_DEPARTAMENTO": 29,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.614,
+        "MUNICIPIO": "Río de Oro",
+        "ID": 902,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.665,
+        "MUNICIPIO": "San Pedro de Uraba",
+        "ID": 903,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 95.001,
+        "MUNICIPIO": "San José del Guaviare",
+        "ID": 904,
+        "ID_DEPARTAMENTO": 29,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.693,
+        "MUNICIPIO": "Santa Rosa de Viterbo",
+        "ID": 905,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.698,
+        "MUNICIPIO": "Santander de Quilichao",
+        "ID": 906,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 95.2,
+        "MUNICIPIO": "Miraflores",
+        "ID": 907,
+        "ID_DEPARTAMENTO": 29,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.042,
+        "MUNICIPIO": "Santafé de Antioquia",
+        "ID": 908,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.68,
+        "MUNICIPIO": "San Carlos de Guaroa",
+        "ID": 909,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.52,
+        "MUNICIPIO": "Palmar de Varela",
+        "ID": 910,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.686,
+        "MUNICIPIO": "Santa Rosa de Osos",
+        "ID": 911,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.647,
+        "MUNICIPIO": "San Andrés de Cuerquía",
+        "ID": 912,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.854,
+        "MUNICIPIO": "Valle de San Juan",
+        "ID": 913,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.689,
+        "MUNICIPIO": "San Vicente de Chucurí",
+        "ID": 914,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.684,
+        "MUNICIPIO": "San José de Miranda",
+        "ID": 915,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 88.564,
+        "MUNICIPIO": "Providencia",
+        "ID": 916,
+        "ID_DEPARTAMENTO": 30,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 66.682,
+        "MUNICIPIO": "Santa Rosa de Cabal",
+        "ID": 917,
+        "ID_DEPARTAMENTO": 19,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.328,
+        "MUNICIPIO": "Guayabal de Siquima",
+        "ID": 918,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 18.094,
+        "MUNICIPIO": "Belén de Los Andaquies",
+        "ID": 919,
+        "ID_DEPARTAMENTO": 11,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.25,
+        "MUNICIPIO": "Paz de Ariporo",
+        "ID": 920,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.72,
+        "MUNICIPIO": "Santa Helena del Opón",
+        "ID": 921,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.681,
+        "MUNICIPIO": "San Pablo de Borbur",
+        "ID": 922,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 44.42,
+        "MUNICIPIO": "La Jagua del Pilar",
+        "ID": 923,
+        "ID_DEPARTAMENTO": 16,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 20.4,
+        "MUNICIPIO": "La Jagua de Ibirico",
+        "ID": 924,
+        "ID_DEPARTAMENTO": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.742,
+        "MUNICIPIO": "San Luis de Sincé",
+        "ID": 925,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.667,
+        "MUNICIPIO": "San Luis de Gaceno",
+        "ID": 926,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.244,
+        "MUNICIPIO": "El Carmen de Bolívar",
+        "ID": 927,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.245,
+        "MUNICIPIO": "El Carmen de Atrato",
+        "ID": 928,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.702,
+        "MUNICIPIO": "San Juan de Betulia",
+        "ID": 929,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.545,
+        "MUNICIPIO": "Pijiño del Carmen",
+        "ID": 930,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.873,
+        "MUNICIPIO": "Vigía del Fuerte",
+        "ID": 931,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.667,
+        "MUNICIPIO": "San Martín de Loba",
+        "ID": 932,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.03,
+        "MUNICIPIO": "Altos del Rosario",
+        "ID": 933,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.148,
+        "MUNICIPIO": "Carmen de Apicala",
+        "ID": 934,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.645,
+        "MUNICIPIO": "San Antonio del Tequendama",
+        "ID": 935,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.655,
+        "MUNICIPIO": "Sabana de Torres",
+        "ID": 936,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 95.025,
+        "MUNICIPIO": "El Retorno",
+        "ID": 937,
+        "ID_DEPARTAMENTO": 29,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.682,
+        "MUNICIPIO": "San José de Uré",
+        "ID": 938,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.694,
+        "MUNICIPIO": "San Pedro de Cartago",
+        "ID": 939,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.137,
+        "MUNICIPIO": "Campo de La Cruz",
+        "ID": 940,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.683,
+        "MUNICIPIO": "San Juan de Arama",
+        "ID": 941,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.658,
+        "MUNICIPIO": "San José de La Montaña",
+        "ID": 942,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 18.15,
+        "MUNICIPIO": "Cartagena del Chairá",
+        "ID": 943,
+        "ID_DEPARTAMENTO": 11,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.66,
+        "MUNICIPIO": "San José del Palmar",
+        "ID": 944,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.001,
+        "MUNICIPIO": "Agua de Dios",
+        "ID": 945,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.655,
+        "MUNICIPIO": "San Jacinto del Cauca",
+        "ID": 946,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 41.668,
+        "MUNICIPIO": "San Agustín",
+        "ID": 947,
+        "ID_DEPARTAMENTO": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.258,
+        "MUNICIPIO": "El Tablón de Gómez",
+        "ID": 948,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 88.001,
+        "MUNICIPIO": "San Andrés",
+        "ID": 949,
+        "ID_DEPARTAMENTO": 30,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.664,
+        "MUNICIPIO": "San José de Pare",
+        "ID": 950,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 86.865,
+        "MUNICIPIO": "Valle de Guamez",
+        "ID": 951,
+        "ID_DEPARTAMENTO": 24,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.67,
+        "MUNICIPIO": "San Pablo de Borbur",
+        "ID": 952,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.82,
+        "MUNICIPIO": "Santiago de Tolú",
+        "ID": 953,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 11.001,
+        "MUNICIPIO": "Bogotá D.C.",
+        "ID": 954,
+        "ID_DEPARTAMENTO": 31,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.154,
+        "MUNICIPIO": "Carmen de Carupa",
+        "ID": 955,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.189,
+        "MUNICIPIO": "Ciénaga de Oro",
+        "ID": 956,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.659,
+        "MUNICIPIO": "San Juan de Urabá",
+        "ID": 957,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 44.65,
+        "MUNICIPIO": "San Juan del Cesar",
+        "ID": 958,
+        "ID_DEPARTAMENTO": 16,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.235,
+        "MUNICIPIO": "El Carmen de Chucurí",
+        "ID": 959,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.148,
+        "MUNICIPIO": "El Carmen de Viboral",
+        "ID": 960,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 66.088,
+        "MUNICIPIO": "Belén de Umbría",
+        "ID": 961,
+        "ID_DEPARTAMENTO": 19,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.086,
+        "MUNICIPIO": "Belén de Bajira",
+        "ID": 962,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.855,
+        "MUNICIPIO": "Valle de San José",
+        "ID": 963,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.678,
+        "MUNICIPIO": "San Luis",
+        "ID": 964,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.676,
+        "MUNICIPIO": "San Miguel de Sema",
+        "ID": 965,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.675,
+        "MUNICIPIO": "San Antonio",
+        "ID": 966,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.673,
+        "MUNICIPIO": "San Benito",
+        "ID": 967,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.862,
+        "MUNICIPIO": "Vergara",
+        "ID": 968,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.678,
+        "MUNICIPIO": "San Carlos",
+        "ID": 969,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 91.53,
+        "MUNICIPIO": "Puerto Alegría",
+        "ID": 970,
+        "ID_DEPARTAMENTO": 25,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.344,
+        "MUNICIPIO": "Hato",
+        "ID": 971,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.654,
+        "MUNICIPIO": "San Jacinto",
+        "ID": 972,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.693,
+        "MUNICIPIO": "San Sebastián",
+        "ID": 973,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.649,
+        "MUNICIPIO": "San Carlos",
+        "ID": 974,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.837,
+        "MUNICIPIO": "Tuta",
+        "ID": 975,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.743,
+        "MUNICIPIO": "Silos",
+        "ID": 976,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.125,
+        "MUNICIPIO": "Cácota",
+        "ID": 977,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.25,
+        "MUNICIPIO": "El Dovio",
+        "ID": 978,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.82,
+        "MUNICIPIO": "Toledo",
+        "ID": 979,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.622,
+        "MUNICIPIO": "Roldanillo",
+        "ID": 980,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.48,
+        "MUNICIPIO": "Mutiscua",
+        "ID": 981,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.054,
+        "MUNICIPIO": "Argelia",
+        "ID": 982,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.261,
+        "MUNICIPIO": "El Zulia",
+        "ID": 983,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.66,
+        "MUNICIPIO": "Salazar",
+        "ID": 984,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.736,
+        "MUNICIPIO": "Sevilla",
+        "ID": 985,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.895,
+        "MUNICIPIO": "Zarzal",
+        "ID": 986,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.223,
+        "MUNICIPIO": "Cucutilla",
+        "ID": 987,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.248,
+        "MUNICIPIO": "El Cerrito",
+        "ID": 988,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.147,
+        "MUNICIPIO": "Cartago",
+        "ID": 989,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.122,
+        "MUNICIPIO": "Caicedonia",
+        "ID": 990,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.553,
+        "MUNICIPIO": "Puerto Santander",
+        "ID": 991,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.313,
+        "MUNICIPIO": "Gramalote",
+        "ID": 992,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.246,
+        "MUNICIPIO": "El Cairo",
+        "ID": 993,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.25,
+        "MUNICIPIO": "El Tarra",
+        "ID": 994,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.4,
+        "MUNICIPIO": "La Unión",
+        "ID": 995,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.606,
+        "MUNICIPIO": "Restrepo",
+        "ID": 996,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.8,
+        "MUNICIPIO": "Teorama",
+        "ID": 997,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.233,
+        "MUNICIPIO": "Dagua",
+        "ID": 998,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.051,
+        "MUNICIPIO": "Arboledas",
+        "ID": 999,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.318,
+        "MUNICIPIO": "Guacarí",
+        "ID": 1000,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.418,
+        "MUNICIPIO": "Lourdes",
+        "ID": 1001,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.041,
+        "MUNICIPIO": "Ansermanuevo",
+        "ID": 1002,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.099,
+        "MUNICIPIO": "Bochalema",
+        "ID": 1003,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.113,
+        "MUNICIPIO": "Bugalagrande",
+        "ID": 1004,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.206,
+        "MUNICIPIO": "Convención",
+        "ID": 1005,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.344,
+        "MUNICIPIO": "Hacarí",
+        "ID": 1006,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.403,
+        "MUNICIPIO": "La Victoria",
+        "ID": 1007,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.347,
+        "MUNICIPIO": "Herrán",
+        "ID": 1008,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.306,
+        "MUNICIPIO": "Ginebra",
+        "ID": 1009,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.892,
+        "MUNICIPIO": "Yumbo",
+        "ID": 1010,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.497,
+        "MUNICIPIO": "Obando",
+        "ID": 1011,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.81,
+        "MUNICIPIO": "Tibú",
+        "ID": 1012,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.673,
+        "MUNICIPIO": "San Cayetano",
+        "ID": 1013,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.67,
+        "MUNICIPIO": "San Calixto",
+        "ID": 1014,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.1,
+        "MUNICIPIO": "Bolívar",
+        "ID": 1015,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.398,
+        "MUNICIPIO": "La Playa",
+        "ID": 1016,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.001,
+        "MUNICIPIO": "Cali",
+        "ID": 1017,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.67,
+        "MUNICIPIO": "San Pedro",
+        "ID": 1018,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.111,
+        "MUNICIPIO": "Guadalajara de Buga",
+        "ID": 1019,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.172,
+        "MUNICIPIO": "Chinácota",
+        "ID": 1020,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.599,
+        "MUNICIPIO": "Ragonvalia",
+        "ID": 1021,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.385,
+        "MUNICIPIO": "La Esperanza",
+        "ID": 1022,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.874,
+        "MUNICIPIO": "Villa del Rosario",
+        "ID": 1023,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.174,
+        "MUNICIPIO": "Chitagá",
+        "ID": 1024,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.126,
+        "MUNICIPIO": "Calima",
+        "ID": 1025,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.72,
+        "MUNICIPIO": "Sardinata",
+        "ID": 1026,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.036,
+        "MUNICIPIO": "Andalucía",
+        "ID": 1027,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.563,
+        "MUNICIPIO": "Pradera",
+        "ID": 1028,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.003,
+        "MUNICIPIO": "Abrego",
+        "ID": 1029,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.405,
+        "MUNICIPIO": "Los Patios",
+        "ID": 1030,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.498,
+        "MUNICIPIO": "Ocaña",
+        "ID": 1031,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.109,
+        "MUNICIPIO": "Bucarasica",
+        "ID": 1032,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.89,
+        "MUNICIPIO": "Yotoco",
+        "ID": 1033,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.52,
+        "MUNICIPIO": "Palmira",
+        "ID": 1034,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.616,
+        "MUNICIPIO": "Riofrío",
+        "ID": 1035,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.68,
+        "MUNICIPIO": "Santiago",
+        "ID": 1036,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.02,
+        "MUNICIPIO": "Alcalá",
+        "ID": 1037,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.863,
+        "MUNICIPIO": "Versalles",
+        "ID": 1038,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.377,
+        "MUNICIPIO": "Labateca",
+        "ID": 1039,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.128,
+        "MUNICIPIO": "Cachirá",
+        "ID": 1040,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.871,
+        "MUNICIPIO": "Villa Caro",
+        "ID": 1041,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.239,
+        "MUNICIPIO": "Durania",
+        "ID": 1042,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.243,
+        "MUNICIPIO": "El Águila",
+        "ID": 1043,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.823,
+        "MUNICIPIO": "Toro",
+        "ID": 1044,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.13,
+        "MUNICIPIO": "Candelaria",
+        "ID": 1045,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.377,
+        "MUNICIPIO": "La Cumbre",
+        "ID": 1046,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.845,
+        "MUNICIPIO": "Ulloa",
+        "ID": 1047,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.828,
+        "MUNICIPIO": "Trujillo",
+        "ID": 1048,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.869,
+        "MUNICIPIO": "Vijes",
+        "ID": 1049,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.176,
+        "MUNICIPIO": "Chimá",
+        "ID": 1050,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.67,
+        "MUNICIPIO": "Sampués",
+        "ID": 1051,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.225,
+        "MUNICIPIO": "Nunchía",
+        "ID": 1052,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.518,
+        "MUNICIPIO": "Pamplona",
+        "ID": 1053,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.019,
+        "MUNICIPIO": "Albán",
+        "ID": 1054,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.466,
+        "MUNICIPIO": "Montelíbano",
+        "ID": 1055,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 86.568,
+        "MUNICIPIO": "Puerto Asís",
+        "ID": 1056,
+        "ID_DEPARTAMENTO": 24,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 70.215,
+        "MUNICIPIO": "Corozal",
+        "ID": 1057,
+        "ID_DEPARTAMENTO": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.11,
+        "MUNICIPIO": "Buesaco",
+        "ID": 1058,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.139,
+        "MUNICIPIO": "Maní",
+        "ID": 1059,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.268,
+        "MUNICIPIO": "El Peñón",
+        "ID": 1060,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.834,
+        "MUNICIPIO": "Tuluá",
+        "ID": 1061,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.152,
+        "MUNICIPIO": "Casabianca",
+        "ID": 1062,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.04,
+        "MUNICIPIO": "Anolaima",
+        "ID": 1063,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.175,
+        "MUNICIPIO": "Chía",
+        "ID": 1064,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.835,
+        "MUNICIPIO": "San Andrés de Tumaco",
+        "ID": 1065,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 18.46,
+        "MUNICIPIO": "Milán",
+        "ID": 1066,
+        "ID_DEPARTAMENTO": 11,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.147,
+        "MUNICIPIO": "Capitanejo",
+        "ID": 1067,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.043,
+        "MUNICIPIO": "Anzoátegui",
+        "ID": 1068,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.275,
+        "MUNICIPIO": "Florida",
+        "ID": 1069,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.606,
+        "MUNICIPIO": "Repelón",
+        "ID": 1070,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.284,
+        "MUNICIPIO": "Frontino",
+        "ID": 1071,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.258,
+        "MUNICIPIO": "El Peñón",
+        "ID": 1072,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.52,
+        "MUNICIPIO": "Pamplonita",
+        "ID": 1073,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 91.46,
+        "MUNICIPIO": "Miriti Paraná",
+        "ID": 1074,
+        "ID_DEPARTAMENTO": 25,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.4,
+        "MUNICIPIO": "Támara",
+        "ID": 1075,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.806,
+        "MUNICIPIO": "Tibasosa",
+        "ID": 1076,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 19.517,
+        "MUNICIPIO": "Páez",
+        "ID": 1077,
+        "ID_DEPARTAMENTO": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.001,
+        "MUNICIPIO": "Ibagué",
+        "ID": 1078,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.573,
+        "MUNICIPIO": "Puerto Colombia",
+        "ID": 1079,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.083,
+        "MUNICIPIO": "Belén",
+        "ID": 1080,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.758,
+        "MUNICIPIO": "Sopó",
+        "ID": 1081,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.15,
+        "MUNICIPIO": "Carmen del Darien",
+        "ID": 1082,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.299,
+        "MUNICIPIO": "Gama",
+        "ID": 1083,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.718,
+        "MUNICIPIO": "Sasaima",
+        "ID": 1084,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.24,
+        "MUNICIPIO": "Chachagüí",
+        "ID": 1085,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.001,
+        "MUNICIPIO": "Cúcuta",
+        "ID": 1086,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.001,
+        "MUNICIPIO": "Cartagena",
+        "ID": 1087,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.313,
+        "MUNICIPIO": "Granada",
+        "ID": 1088,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.72,
+        "MUNICIPIO": "Santa Bárbara de Pinto",
+        "ID": 1089,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.442,
+        "MUNICIPIO": "María la Baja",
+        "ID": 1090,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 18.41,
+        "MUNICIPIO": "La Montañita",
+        "ID": 1091,
+        "ID_DEPARTAMENTO": 11,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 18.753,
+        "MUNICIPIO": "San Vicente del Caguán",
+        "ID": 1092,
+        "ID_DEPARTAMENTO": 11,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 68.25,
+        "MUNICIPIO": "El Peñón",
+        "ID": 1093,
+        "ID_DEPARTAMENTO": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.364,
+        "MUNICIPIO": "Jardín",
+        "ID": 1094,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.364,
+        "MUNICIPIO": "Jamundí",
+        "ID": 1095,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.787,
+        "MUNICIPIO": "Tadó",
+        "ID": 1096,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 85.23,
+        "MUNICIPIO": "Orocué",
+        "ID": 1097,
+        "ID_DEPARTAMENTO": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.411,
+        "MUNICIPIO": "Líbano",
+        "ID": 1098,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.885,
+        "MUNICIPIO": "Yacopí",
+        "ID": 1099,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 63.13,
+        "MUNICIPIO": "Calarcá",
+        "ID": 1100,
+        "ID_DEPARTAMENTO": 18,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 5.756,
+        "MUNICIPIO": "Sonsón",
+        "ID": 1101,
+        "ID_DEPARTAMENTO": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 54.245,
+        "MUNICIPIO": "El Carmen",
+        "ID": 1102,
+        "ID_DEPARTAMENTO": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.408,
+        "MUNICIPIO": "Lérida",
+        "ID": 1103,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.35,
+        "MUNICIPIO": "La Apartada",
+        "ID": 1104,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.62,
+        "MUNICIPIO": "San Cristóbal",
+        "ID": 1105,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.29,
+        "MUNICIPIO": "Fusagasugá",
+        "ID": 1106,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 13.894,
+        "MUNICIPIO": "Zambrano",
+        "ID": 1107,
+        "ID_DEPARTAMENTO": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.403,
+        "MUNICIPIO": "La Uvita",
+        "ID": 1108,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.899,
+        "MUNICIPIO": "Zipaquirá",
+        "ID": 1109,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 63.302,
+        "MUNICIPIO": "Génova",
+        "ID": 1110,
+        "ID_DEPARTAMENTO": 18,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 73.77,
+        "MUNICIPIO": "Suárez",
+        "ID": 1111,
+        "ID_DEPARTAMENTO": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 50.15,
+        "MUNICIPIO": "Castilla la Nueva",
+        "ID": 1112,
+        "ID_DEPARTAMENTO": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 15.087,
+        "MUNICIPIO": "Belén",
+        "ID": 1113,
+        "ID_DEPARTAMENTO": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 27.81,
+        "MUNICIPIO": "Unión Panamericana",
+        "ID": 1114,
+        "ID_DEPARTAMENTO": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.57,
+        "MUNICIPIO": "Pueblo Viejo",
+        "ID": 1115,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 86.885,
+        "MUNICIPIO": "Villagarzón",
+        "ID": 1116,
+        "ID_DEPARTAMENTO": 24,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 25.269,
+        "MUNICIPIO": "Facatativá",
+        "ID": 1117,
+        "ID_DEPARTAMENTO": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 23.58,
+        "MUNICIPIO": "Puerto Libertador",
+        "ID": 1118,
+        "ID_DEPARTAMENTO": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 17.444,
+        "MUNICIPIO": "Marquetalia",
+        "ID": 1119,
+        "ID_DEPARTAMENTO": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 52.051,
+        "MUNICIPIO": "Arboleda",
+        "ID": 1120,
+        "ID_DEPARTAMENTO": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 76.109,
+        "MUNICIPIO": "Buenaventura",
+        "ID": 1121,
+        "ID_DEPARTAMENTO": 33,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 47.189,
+        "MUNICIPIO": "Ciénaga",
+        "ID": 1122,
+        "ID_DEPARTAMENTO": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_MUNICIPIO": 8.56,
+        "MUNICIPIO": "Ponedera",
+        "ID": 1123,
+        "ID_DEPARTAMENTO": 8,
+        "ID_REGION": 3
+    }
+]

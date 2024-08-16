@@ -30,7 +30,25 @@ export class GuestService {
     return this._http.get(this.url + 'listar_productos_recomendado_public/'+categoria, { headers: headers });
   }
   
+  get_regiones():Observable<any>{
+    return this._http.get('./assets/regiones.json');
+  }
 
+  get_departamentos():Observable<any>{
+    return this._http.get('./assets/departamentos.json');
+  }
+
+  get_municipios():Observable<any>{
+    return this._http.get('./assets/municipios.json');
+  }
+
+
+  //Contactenos
+
+  enviar_mensaje_contacto(data:any):Observable<any>{
+    let headers = new HttpHeaders({'Content-Type':'application/json'});
+    return this._http.post(this.url + 'enviar_mensaje_contacto',data,{headers:headers});
+  }
 }
 
 

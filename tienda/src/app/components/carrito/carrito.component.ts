@@ -22,9 +22,6 @@ export class CarritoComponent {
 
   public socket = io('http://localhost:4201')
 
-  public slider: any;
-  public sliderSelector: string = '.my-slider';
-  public cachedSlider: any;
   public token: any
   public id_cliente: any
   public carrito_arr: Array<any> = []
@@ -39,101 +36,46 @@ export class CarritoComponent {
     this.token = localStorage.getItem('token')
     this.id_cliente = localStorage.getItem('identity')
 
+this.obtener_carrito_cliente()
+
+  }
+  obtener_carrito_cliente() {
     this._clienteService.obtener_carrito_cliente(this.id_cliente, this.token).subscribe(
       response => {
         this.carrito_arr = response.data
-        console.log(this.carrito_arr)
+
+        //Consultar nombre de la variedad y Nombre de la subvariedad para mostrar en el carrito
+
+        this.carrito_arr.forEach(item => {
+          const selectedVariety = item.producto.variedades.find((v: { _id: any; }) => v._id === item.variedad);
+
+          if (selectedVariety) {
+            item.nombre_variedad = selectedVariety.titulo;
+
+            const selectedSubvariety = selectedVariety.tamano_disponibilidad.find((sub: { _id: any; }) => sub._id === item.subvariedad);
+
+            if (selectedSubvariety) {
+              item.nombre_subvariedad = `${selectedSubvariety.tamano} ${selectedSubvariety.unidad_medida}`;
+            }
+          }
+        });
+
+console.log('Carro en chekout',this.carrito_arr)
         this.calcular_carrito()
       }
       //Acomodar datos de acuerdo a la variedad
-
     )
-
   }
 
+
   calcular_carrito() {
+    this.subtotal=0
     this.carrito_arr.forEach(element => {
-      this.subtotal = this.subtotal + parseInt(element.producto.precio)
+      this.subtotal = this.subtotal + parseInt(element.precio)
     }
     )
     this.total_pagar = this.subtotal
   }
-
-
-
-  ngOnInit(): void {
-    // Inicializa el cache
-    this.initCache();
-  }
-
-  ngAfterViewInit(): void {
-    // Inicializa el slider
-    this.initSlider();
-  }
-
-  ngOnDestroy(): void {
-    // Destruye el slider al destruir el componente
-    if (this.slider) {
-      this.slider.destroy();
-    }
-  }
-
-  initCache() {
-    const $body = $('body');
-    this.cachedSlider = $body.find(this.sliderSelector)[0].cloneNode(true);
-    console.log('el cache slider',this.cachedSlider)
-  }
-
-  initSlider() {
-    this.slider = tns({
-      container: this.sliderSelector,
-      loop: true,
-      items: 1,
-      slideBy: 'page',
-      nav: false,
-      autoplay: false,
-      speed: 800,
-      autoplayButtonOutput: false,
-      mouseDrag: true,
-      lazyload: true,
-      controlsContainer: "#customize-controls",
-      responsive: {
-        640: {
-          items: 2
-        },
-        768: {
-          items: 3
-        }
-      }
-    });
-
-    console.log('slider inicializado', this.slider.getInfo().slideItems)
-    this.initCache();
-
-  }
-
-  filter(filterValue: string) {
-    if (this.slider) {
-      console.log('slider', this.slider.getInfo().slideItems)
-      this.slider.destroy();
-    }
-
-    const $sliderContainer = $(this.sliderSelector);
-    $sliderContainer.html(this.cachedSlider.innerHTML);
-
-    const sliderElemente = document.querySelector('.my-slider');
-console.log('como es su estado original',sliderElemente)
-
-    if (filterValue !== 'all') {
-      console.log('difierente de all', filterValue)
-      $sliderContainer.find('[data-type]').not(`[data-type*=${filterValue}]`).remove();
-
-    }
-
-    this.initSlider();
-    this.cdr.detectChanges();
-  }
-
 
   eliminar_item(item_id: any) {
     this._clienteService.eliminar_carrito_cliente(item_id, this.token).subscribe(

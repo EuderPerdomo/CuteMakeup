@@ -3,10 +3,10 @@ export interface Producto {
     slug:'',
     galeria:[],
     portada:'',
-    precio:'',
+    precio:any,
     descripcion:'',
     contenido:'',
-    stock:'',
+    stock:any,
     nventas:'',
     npuntos:'',
     variedades:Variedades[],
@@ -19,7 +19,7 @@ _id:String,
 
 export interface Variedades {
     titulo: '';
-    tamano_disponibilidad: '';
+    tamano_disponibilidad:Tamano_Disponibilidad[] ;
     galeria:Galeria[],
     _id: String | undefined; // O el tipo correcto para _id
   }
@@ -34,4 +34,12 @@ export interface Variedades {
   export interface Galeria {
     imagen: string;
     id: string;
+  }
+  
+  export interface Tamano_Disponibilidad {
+    tamano: string,
+    unidad_medida: string, 
+    disponibilidad: string, 
+    precio: string, 
+    _id: string
   }

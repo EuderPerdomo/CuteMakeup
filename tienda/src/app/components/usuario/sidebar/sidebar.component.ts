@@ -4,15 +4,16 @@ import { FooterComponent } from '../../footer/footer.component';
 import {Cliente} from '../../../../app/cliente'
 import { CommonModule } from '@angular/common';
 import { ClienteService } from '../../../service/cliente.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-cuenta',
+  selector: 'app-sidebar',
   standalone: true,
-  imports: [NavComponent,FooterComponent,CommonModule],
-  templateUrl: './cuenta.component.html',
-  styleUrl: './cuenta.component.css'
+  imports: [CommonModule,RouterModule],
+  templateUrl: './sidebar.component.html',
+  styleUrl: './sidebar.component.css'
 })
-export class CuentaComponent {
+export class SidebarComponent {
 
   public token: any = '';
   public user_login: Cliente | undefined;
@@ -40,7 +41,4 @@ constructor(
 
   }
 
-}
-
-
-}
+}}

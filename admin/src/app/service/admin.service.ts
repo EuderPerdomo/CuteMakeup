@@ -192,24 +192,30 @@ listar_etiquetas_admin(token: any): Observable<any> {
 
     try {
       const decodedToken = this.jwtHelper.decodeToken(token);
+      console.log('Token decode',decodedToken)
       if (this.jwtHelper.isTokenExpired(token)) {
         localStorage.clear();
+        console.log('Expirado')
         return of(false);
       }
 
       if (!decodedToken) {
         localStorage.removeItem('token');
+        console.log('No decodifica')
         return of(false);
       }
 
       // Token exists and is valid, check roles
-      if (allowedRoles.includes(decodedToken['rol'])) {
+      if (allowedRoles.includes(decodedToken['role'])) { //Antes era rol ahora es role
+        console.log('autenticado')
         return of(true);
       } else {
+        console.log('No rol')
         return of(false);
       }
     } catch (error) {
       localStorage.removeItem('token');
+      console.log('Error')
       return of(false);
     }
   }

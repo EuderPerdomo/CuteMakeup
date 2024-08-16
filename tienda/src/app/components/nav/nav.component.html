@@ -387,14 +387,19 @@
                 <a [routerLink]="['/productos/',item.producto.slug]" target="_blank" class="nav-link fw-bold">{{item.producto.titulo}}</a>
               </h3>
               <ul class="list-unstyled fs-xs mt-n2 mb-2">
-                <li class="mb-0"><span class="text-muted">{{item.producto.titulo}}</span> Pink</li>   
+                <li class="mb-0">Variedad:<span class="text-muted">{{item.nombre_variedad}}</span></li>   
+                <li>
+                  <ul>
+                    <li class="mb-0"><span class="text-muted">{{item.nombre_subvariedad}}</span></li> 
+                  </ul>
+                </li>
               </ul>
               <div class="d-flex align-items-center">
                 <input type="number" class="form-control form-control-sm bg-light me-3" min="1" readonly style="width: 4.5rem;" value="{{item.cantidad}}">
                  <div class="text-nowrap">
                   <!--
                   <strong class="text-danger">$15.00</strong>  -->
-                  <span class="fs-xs text-muted" style="font-size: 1.1rem !important;">{{item.producto.precio |currency:'COP':'$':'3.0'}}</span>
+                  <span class="fs-xs text-muted" style="font-size: 1.1rem !important;">{{item.precio |currency:'COP':'$':'3.0'}}</span>
                 </div>
               </div>
               <button class="btn btn-link btn-sm text-decoration-none px-0 pb-0">

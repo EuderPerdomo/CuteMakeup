@@ -1,18 +1,19 @@
-import { AfterViewInit, Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ChangeDetectorRef, ElementRef } from '@angular/core';
 import { NavComponent } from '../../nav/nav.component';
 import { FooterComponent } from '../../footer/footer.component';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { GuestService } from '../../../service/guest.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Producto, Galeria } from '../../../producto';
+import { Producto, Galeria, Tamano_Disponibilidad } from '../../../producto';
 import { ClienteService } from '../../../service/cliente.service';
 
-import {io} from 'socket.io-client'
+import { io } from 'socket.io-client'
+
 
 declare var tns: any
 declare var lightGallery: any
-declare var iziToast:any
+declare var iziToast: any
 declare var $: any
 
 @Component({
@@ -39,25 +40,30 @@ export class ShowProductoComponent implements AfterViewInit {
     nventas: '',
     npuntos: '',
     variedades: [],
-    categoria: { titulo: '', slug: '',_id:'' },
+    categoria: { titulo: '', slug: '', _id: '' },
     titulo_variedad: '',
     estado: '',
     _id: ''
   }
 
-  public token:any
+  public token: any
 
   public galeria: Galeria[] = [];
   public galeria2: Galeria[] = [];
 
-  public variedad_seleccionada: any
+  //public variedad_seleccionada: any
+  public variedad_seleccionada: any = '';//Inicialmente all public variedad_seleccionada: string = 'all';
+  public subvariedad_seleccionada:any[] = [] //Representa el arreglo con las caracteristicas de la subvariedad actual
+  public subvariedad: string = ''; //Representa el Id de la Subvariedad
+
   public galeria_seleccionada: any
+  public tamano_disponibilidad: Tamano_Disponibilidad[] = [];
 
   public carrusel: any;
   public slider: any;
   public carrusel2: any[] = []
 
-  public socket=io('http://localhost:4201')
+  public socket = io('http://localhost:4201')
 
   //recomendados
   public productosRecomendados: Array<any> = []
@@ -66,14 +72,23 @@ export class ShowProductoComponent implements AfterViewInit {
   public sliderSelector: string = '.my-slider';
   public cachedSlider: any;
 
+  public lightGallerySelector:string = '.gallery-item';
+
+  public ThumbnailsSelector: string = '.thumbnails_remove';
+  public cachedSliderThumbnails: any
 
 
-//Agregar al carrito
-public carrito_data:any={
-  variedad:'',
-  cantidad:1
-}
-public btn_cart=false
+  //LightGalery
+public migaleria:any
+//Finaliza LightGalery
+
+  //Agregar al carrito
+  public carrito_data: any = {
+    variedad: '',
+    cantidad: 1,
+    subvariedad:''
+  }
+  public btn_cart = false
 
   constructor(
     private _route: ActivatedRoute,
@@ -81,56 +96,61 @@ public btn_cart=false
     private cdr: ChangeDetectorRef,
     private _clienteService: ClienteService,
   ) {
-
-this.token=localStorage.getItem('token')
+    this.token = localStorage.getItem('token')
 
     this._route.params.subscribe(
       params => {
         this.slug = params['slug']
         this._guestService.obtener_producto_public(this.slug).subscribe(
           response => {
-            console.log(response.data)
-
             this.producto = response.data
+            //Subvariedad_seleccionada representa el arreglo de subvariedades
 
-//Asignar todas las Imagenes a galeria2
-//tomando en cuenta su variedad mediante el id y la url de la imagen
-//Recorro  cada una de las variedades e ingreso a su atributo galeria y agrego la imagen con los detalles al arreglo
-
-for (let index = 0; index < this.producto.variedades.length; index++) {
-  const element = this.producto.variedades[index];
-  console.log('elementos',element._id)
-
-  for (let j = 0; j < element.galeria.length; j++) {
-    const elemento = element.galeria[j];
-    console.log('elementos internos',elemento.imagen,'id_variedad',element._id)
-    var agregar={
-      imagen:elemento.imagen,
-      variedad:element._id
-    }
-    this.carrusel2.push(agregar)
-  }
-  
-}
-
-console.log('Segundo carrusel',this.carrusel2)
+            for (let i = 0; i < this.producto.variedades[0].tamano_disponibilidad.length; i++) {
+              const elemento = this.producto.variedades[0].tamano_disponibilidad[i];
+              var tamano = {
+                tamano: elemento.tamano,
+                 unidad_medida: elemento.unidad_medida, 
+                 disponibilidad: elemento.disponibilidad, 
+                 precio: elemento.precio, 
+                 _id: elemento._id
+              }
+              this.subvariedad_seleccionada.push(tamano)
+            }
 
 
-            this.variedad_seleccionada = this.producto.variedades[0]
-            console.log('variedad', this.variedad_seleccionada)
-
-            this.galeria_seleccionada = this.variedad_seleccionada.galeria
-            console.log('Galeria', this.galeria_seleccionada)
-            this.galeria = this.galeria_seleccionada
-
-
-
+            if (this.producto.variedades && this.producto.variedades.length > 0) {
+              // Seleccionar la primera variedad y su primera subvariedad
+              const primeraVariedad = this.producto.variedades[0];
+              const primeraSubvariedad = primeraVariedad.tamano_disponibilidad[0];
+    
+              // Asignar los valores iniciales
+              this.producto.precio = primeraSubvariedad.precio;
+              this.producto.stock=primeraSubvariedad.disponibilidad
+              this.variedad_seleccionada = primeraVariedad._id;
+              this.subvariedad = primeraSubvariedad._id;
+    
+              // Inicializar subvariedad_seleccionada con el primer tamaño y disponibilidad
+              //this.subvariedad_seleccionada.push(primeraSubvariedad);
+    
+              // Llenar el carrusel con las imágenes de las variedades
+              for (let variedad of this.producto.variedades) {
+                for (let galeriaItem of variedad.galeria) {
+                  this.carrusel2.push({
+                    imagen: galeriaItem.imagen,
+                    variedad: variedad._id
+                  });
+                }
+              }
+            }
             this._guestService.listar_productos_recomendado_public(this.producto.categoria._id).subscribe(
               response => {
                 this.productosRecomendados = response.data
-        
+
               }
             )
+
+            
 
           }
 
@@ -141,41 +161,15 @@ console.log('Segundo carrusel',this.carrusel2)
     )
   }
 
+
+
+
+
+
   //Galeria del producto
   ngAfterViewInit(): void {
-
-  
-    //this.iniciarCarrusel()
-
-    setTimeout(() => {
-      console.log('Galeri actual, primera vez',this.galeria)
-      this.carrusel = tns({
-        container: '.tns-carousel-inner',
-        controlsText: ['<i class="ci-arrow-left"></i>', '<i class="ci-arrow-right"></i>'],
-        navPosition: "top",
-        controlsPosition: "top",
-        mouseDrag: !0,
-        speed: 600,
-        autoplayHoverPause: !0,
-        autoplayButtonOutput: !1,
-        navContainer: "#tns-thumbnails",
-        navAsThumbnails: true,
-        gutter: 15,
-      });
-
-
-      console.log('Carrusel Inicial ',this.carrusel.getInfo())
-
-      //Galeria del Producto en pestaña aparte
-      var e = document.querySelectorAll(".gallery");
-      if (e.length) {
-        for (var t = 0; t < e.length; t++) {
-          lightGallery(e[t], { selector: ".gallery-item", download: !1, videojs: !0, youtubePlayerParams: { modestbranding: 1, showinfo: 0, rel: 0 }, vimeoPlayerParams: { byline: 0, portrait: 0 } });
-        }
-      }
-
-      //Productos recomendados
-
+    setTimeout(() => { 
+//Productos recomendados
       tns({
         container: '.tns-carousel-inner-two',
         controlsText: ['<i class="ci-arrow-left"></i>', '<i class="ci-arrow-right"></i>'],
@@ -207,319 +201,206 @@ console.log('Segundo carrusel',this.carrusel2)
         }
       });
 
-      console.log('inicia el slider despues de iniciado el primero')
+      this.iniciarLightGalery()
       this.initSlider(); //Inicia mi tercer carrusel
       this.initCache();
-
+      
     }, 500)
 
-
-  }
-
-  iniciarCarrusel(): void {
-    console.log('Carrusel actual ',this.carrusel)
-    if (this.carrusel) {
-      console.log('destruyo el carrusel')
-      this.carrusel.destroy();
-     //this.carrusel = this.carrusel.rebuild()
-    }
-    console.log('Carrusel despues de destruido ',this.carrusel)
-
-    console.log('Galeri despues de destruir ',this.galeria)
-
-    this.carrusel = tns({
-      container: '.tns-carousel-inner',
-      controlsText: ['<i class="ci-arrow-left"></i>', '<i class="ci-arrow-right"></i>'],
-      navPosition: "top",
-      controlsPosition: "top",
-      mouseDrag: !0,
-      speed: 600,
-      autoplayHoverPause: !0,
-      autoplayButtonOutput: !1,
-      navContainer: "#tns-thumbnails",
-      navAsThumbnails: true,
-      gutter: 15,
-    });
-
-    console.log('Carrusel Reconstruido ',this.carrusel.getInfo())
-  }
-
-  cambioVariedad() {
-
-    const variedadSeleccionada = this.producto.variedades.find(variedad => variedad._id === this.variedad_seleccionada);
-
-    if (variedadSeleccionada) {
-      this.galeria_seleccionada = variedadSeleccionada.galeria
-      this.galeria = variedadSeleccionada.galeria
-
-
-      this.cdr.detectChanges();
-      setTimeout(() => {
-        this.iniciarCarrusel();
-        console.log(this.galeria_seleccionada);
-      }, 0);
-
-      //this.iniciarCarrusel()
-      //console.log(this.galeria_seleccionada)
-    }
-
-    //this.galeria_seleccionada=this.variedad_seleccionada.galeria
-    //this.variedad_seleccionada = this.variedad_seleccionada.filter(item => item.galeria._id == this.filtro_categoria_producto)
-  }
-
-
-  cambioVariedad2() {
-console.log('Variedad que selecciono el usuario', this.variedad_seleccionada)
-
-    if (this.carrusel) {
-      console.log('en cambio variedad',this.carrusel)
-     // console.log('slider',this.carrusel.getInfo().slideItems)
-      this.carrusel.destroy();
-    }
     
-
-    const variedadSeleccionada = this.producto.variedades.find(variedad => variedad._id === this.variedad_seleccionada);
-    console.log('variedadSeleccionada', variedadSeleccionada)
-
-    console.log('Variedad que selecciono',this.variedad_seleccionada)
-    if (variedadSeleccionada) {
-      this.galeria_seleccionada = variedadSeleccionada.galeria
-      this.galeria = variedadSeleccionada.galeria
-      this.cdr.detectChanges();
-      setTimeout(() => {
-        this.iniciarCarrusel();
-        console.log(this.galeria_seleccionada);
-      }, 0);
-
-    }
-
   }
 
-agregar_producto(){
 
-  this.carrito_data.variedad=this.variedad_seleccionada
+  agregar_producto_carrito() {
 
-  if(this.carrito_data.variedad != ''){
+    this.carrito_data.variedad = this.variedad_seleccionada
+    this.carrito_data.subvariedad = this.subvariedad
 
-    if(this.carrito_data.cantidad <= this.producto.stock){
-let data={
-  producto:this.producto._id,
-  cliente:localStorage.getItem('identity'),
-  cantidad:this.carrito_data.cantidad,
-  variedad:this.variedad_seleccionada
-  
-}
-this.btn_cart=true
+    if (this.carrito_data.variedad != '' && this.carrito_data.variedad != 'all' && this.carrito_data.subvariedad !='') {
+/*
+      //Disponibilidad de la variedad seleccionada
+      let variedadSeleccionada = this.producto.variedades.find(variedad => variedad._id === this.variedad_seleccionada);
+      if(variedadSeleccionada){
+        //let stockVariedad = variedadSeleccionada.tamano_disponibilidad.reduce((acc, item) => acc + item.disponibilidad, 0);
+      }
+      */
 
-this._clienteService.agregar_carrito_cliente(data,this.token).subscribe(
-response=>{
+      if (this.carrito_data.cantidad <= this.producto.stock) {
+        let data = {
+          producto: this.producto._id,
+          cliente: localStorage.getItem('identity'),
+          cantidad: this.carrito_data.cantidad,
+          variedad: this.variedad_seleccionada,
+          subvariedad: this.subvariedad,
+          precio:this.producto.precio
+        }
+        this.btn_cart = true
 
-if(response.data==undefined){
+        this._clienteService.agregar_carrito_cliente(data, this.token).subscribe(
+          response => {
 
-  iziToast.show({
-    title: 'ERROR',
-    titleColor: '#FF0000',
-    color: '#FFF',
-    class: 'text-danger',
-    position: 'topRight',
-    message: 'El producto ya se encuentra en el carrito'
-    
-  });
-  this.btn_cart=false
-}else{
-  iziToast.show({
-    title: ' ¡Genial! ',
-    titleColor: 'green',
-    color: '#FFF',
-    class: 'text-success',
-    position: 'topRight',
-    message: 'producto Agregado al carrito'
-  });
-  this.socket.emit('add-carrito-add',{data:true})
-  this.btn_cart=false
+            if (response.data == undefined) {
 
-}
-}
-)
+              iziToast.show({
+                title: 'ERROR',
+                titleColor: '#FF0000',
+                color: '#FFF',
+                class: 'text-danger',
+                position: 'topRight',
+                message: 'El producto ya se encuentra en el carrito'
 
-    }else{
+              });
+              this.btn_cart = false
+            } else {
+              iziToast.show({
+                title: ' ¡Genial! ',
+                titleColor: 'green',
+                color: '#FFF',
+                class: 'text-success',
+                position: 'topRight',
+                message: 'producto Agregado al carrito'
+              });
+              this.socket.emit('add-carrito-add', { data: true })
+              this.btn_cart = false
+
+            }
+          }
+        )
+
+      } else {
+        iziToast.show({
+          title: 'ERROR',
+          titleColor: '#FF0000',
+          color: '#FFF',
+          class: 'text-danger',
+          position: 'topRight',
+          message: 'La cantidad seleccionada excede el Stock Disponible' + this.producto.stock
+        });
+      }
+
+
+
+    } else {
       iziToast.show({
         title: 'ERROR',
         titleColor: '#FF0000',
         color: '#FFF',
         class: 'text-danger',
         position: 'topRight',
-        message: 'La cantidad seleccionada excede el Stock Disponible'+this.producto.stock
+        message: 'Seleccione una variedad'
       });
     }
 
-
-
-  }else{
-    iziToast.show({
-      title: 'ERROR',
-      titleColor: '#FF0000',
-      color: '#FFF',
-      class: 'text-danger',
-      position: 'topRight',
-      message: 'Seleccione una variedad'
-    });
   }
 
-}
 
-
-
-///Iniciamos tercer carrusel
-
-ngOnInit(): void {
-  // Inicializa el cache
-  //this.initCache();
-}
-
-
-
-ngOnDestroy(): void {
-  // Destruye el slider al destruir el componente
-  if (this.slider) {
-    this.slider.destroy();
+  ngOnDestroy(): void {
+    // Destruye el slider al destruir el componente
+    if (this.slider) {
+      this.slider.destroy();
+    }
   }
-}
 
-initCache() {
-  console.log('selector de slider',this.sliderSelector)
-  const $body = $('body');
-  this.cachedSlider = $body.find(this.sliderSelector)[0].cloneNode(true);
-  console.log('cache slider',this.cachedSlider)
-}
+  initCache() {
 
-initSlider() {
-  const sliderElement = document.querySelector('.my-slider');
-console.log('existe o no, antes de inicializarlo',sliderElement)
+    const $body = $('body');
+    this.cachedSlider = $body.find(this.sliderSelector)[0].cloneNode(true);
 
-this.slider= tns({
-  container: this.sliderSelector,
-  controlsText: ['<i class="ci-arrow-left"></i>', '<i class="ci-arrow-right"></i>'],
-  navPosition: "top",
-  controlsPosition: "top",
-  mouseDrag: !0,
-  speed: 600,
-  autoplayHoverPause: !0,
-  autoplayButtonOutput: !1,
-  navContainer: "#tns-thumbnails2",
-  navAsThumbnails: true,
-  gutter: 15,
-});
+    this.cachedSliderThumbnails = $body.find(this.ThumbnailsSelector)[0].cloneNode(true);
 
-    console.log('slider inicializado', this.slider,'selector', this.sliderSelector)
-    const sliderElemente = document.querySelector('.my-slider');
-    console.log('despues de inicializado',sliderElemente)
+  }
 
- 
+  initSlider() {
+   
+      this.slider = tns({
+        container: this.sliderSelector,
+        controlsText: ['<i class="ci-arrow-left"></i>', '<i class="ci-arrow-right"></i>'],
+        navPosition: "top",
+        controlsPosition: "top",
+        mouseDrag: !0,
+        speed: 600,
+        autoplayHoverPause: !0,
+        autoplayButtonOutput: !1,
+        navContainer: "#tns-thumbnails2",
+        navAsThumbnails: true,
+        gutter: 15,
+      });
+    
+  }
 
-  //console.log('slider inicializado', this.slider.getInfo().slideItems)
+  iniciarLightGalery() {
+    var e = document.querySelectorAll(".gallery");
+    if (e.length) {
+      for (var t = 0; t < e.length; t++) {
+        lightGallery(e[t], {
+          selector: this.lightGallerySelector,
+          download: false,
+        });    
+      }
+    } else {
+      console.log('No se encontraron elementos con la clase .gallery');
+    }
+    
+  }
   
+
+
+  filter() {
+    var filterValue = this.variedad_seleccionada
+//Llenar arreglo de subvariedades de acuerdo a la variedad seleccionada
+
+const selectedVariety = this.producto.variedades.find(v => v._id === this.variedad_seleccionada);
+
+
+if (selectedVariety) {
+  this.subvariedad_seleccionada = selectedVariety.tamano_disponibilidad;
+  this.subvariedad=selectedVariety.tamano_disponibilidad[0]._id
+  this.producto.precio = selectedVariety.tamano_disponibilidad[0].precio
+  this.producto.stock = selectedVariety.tamano_disponibilidad[0].disponibilidad
+
+} else {
+  this.subvariedad_seleccionada = [];
 }
 
-filterOriginal(filterValue: string) {
-  if (this.slider) {
-    console.log('slider', this.slider.getInfo().slideItems)
-    this.slider.destroy();
+    if (this.slider) {
+      this.slider.destroy();
+    }
+
+    const $sliderContainer = $(this.sliderSelector);
+    const $thumbnailsContainer = $(this.ThumbnailsSelector)
+
+    $sliderContainer.html(this.cachedSlider.innerHTML);
+    $thumbnailsContainer.html(this.cachedSliderThumbnails.innerHTML);
+
+    if (filterValue !== 'all') {
+
+      $sliderContainer.find('[data-type]').not(`[data-type*=${filterValue}]`).remove();
+      $thumbnailsContainer.find('[data-type]').not(`[data-type*=${filterValue}]`).remove();
+
+    }
+    
+    this.initSlider();
+    this.iniciarLightGalery()
+    this.cdr.detectChanges();
+   
   }
 
-  const $sliderContainer = $(this.sliderSelector);
-  $sliderContainer.html(this.cachedSlider.innerHTML);
 
-  if (filterValue !== 'all') {
-    console.log('difierente de all', filterValue)
-    $sliderContainer.find('[data-type]').not(`[data-type*=${filterValue}]`).remove();
 
-  }
+  filter_subvariedad(subvariedad:any){
 
-  this.initSlider();
-  this.cdr.detectChanges();
+const subvariedadSeleccionada = this.subvariedad_seleccionada.find(s => s._id === subvariedad);
+
+if (subvariedadSeleccionada) {
+  this.producto.precio = subvariedadSeleccionada.precio;
+  this.producto.stock = subvariedadSeleccionada.disponibilidad
+} else {
+  // En caso de que no se encuentre la subvariedad, puedes asignar un valor por defecto o manejarlo como prefieras
+  this.producto.precio = ''; // O algún valor por defecto
 }
 
-filtersdsd() {
-  var filterValue=this.variedad_seleccionada
-  console.log('variedad que selecciono',filterValue)
-
-  if (this.slider) {
-    console.log('slider a destruir', this.slider.getInfo().slideItems)
-    this.slider.destroy();
   }
 
-  const sliderElement = document.querySelector('.my-slider');
-console.log('Antes de estado original',sliderElement)
-
-
-  const $sliderContainer = $(this.sliderSelector);
-  $sliderContainer.html(this.cachedSlider.innerHTML);
-
-  const sliderElement2 = document.querySelector('.my-slider');
-  console.log('ahora en estado original original',this.cachedSlider,'despues',sliderElement2)
-
-  if (filterValue !== 'all') {
-    console.log('difierente de all', filterValue)
-    const elementsToKeep = $sliderContainer.find(`[data-type*=${filterValue}]`);
-    console.log('conserva',elementsToKeep)
-
-
-    const elementsToRemove = $sliderContainer.find('[data-type]').not(`[data-type*=${filterValue}]`);
-console.log('Elements to remove:', elementsToRemove);
-
-
-    $sliderContainer.find('[data-type]').not(`[data-type*=${filterValue}]`).remove();
-
-  }
-
-  this.initSlider();
-  this.cdr.detectChanges();
-}
-
-
-filter() {
-  var filterValue = this.variedad_seleccionada;
-  console.log('variedad que selecciono', filterValue);
-
-  if (this.slider) {
-    console.log('slider a destruir', this.slider.getInfo().slideItems);
-    this.slider.destroy();
-  }
-
-  const $sliderContainer = $(this.sliderSelector);
-  $sliderContainer.html(this.cachedSlider.innerHTML);
-
-  console.log('Estado original', this.cachedSlider);
-
-  if (filterValue !== 'all') {
-    console.log('diferente de all', filterValue);
-
-    // Selecciona los elementos que se deben mantener
-    const elementsToKeep = $sliderContainer.find(`[data-type*=${filterValue}]`);
-    console.log('conserva', elementsToKeep);
-
-    // Selecciona los elementos que se deben eliminar
-    const elementsToRemove = $sliderContainer.find('[data-type]').not(`[data-type*=${filterValue}]`);
-    console.log('Elements to remove:', elementsToRemove);
-
-    // Asegúrate de que solo se eliminan los elementos correctos
-    elementsToRemove.each(() => {
-      console.log('Eliminando elemento', $(this));
-      $(this).remove();
-    });
-  }
-
-  this.initSlider();
-  this.cdr.detectChanges();
-}
-
-
-
-
-
-///Finalizamos 3 Carrusel
-
-
+  ///Finalizamos 3 Carrusel
 
 }

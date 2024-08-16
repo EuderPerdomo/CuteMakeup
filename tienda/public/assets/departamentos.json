@@ -1,0 +1,200 @@
+[
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 5,
+        "DEPARTAMENTO": "Antioquia",
+        "ID": 1,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 15,
+        "DEPARTAMENTO": "Boyacá",
+        "ID": 2,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 23,
+        "DEPARTAMENTO": "Córdoba",
+        "ID": 3,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 27,
+        "DEPARTAMENTO": "Chocó",
+        "ID": 4,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 52,
+        "DEPARTAMENTO": "Nariño",
+        "ID": 5,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 68,
+        "DEPARTAMENTO": "Santander",
+        "ID": 6,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 50,
+        "DEPARTAMENTO": "Meta",
+        "ID": 7,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 8,
+        "DEPARTAMENTO": "Atlántico",
+        "ID": 8,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 13,
+        "DEPARTAMENTO": "Bolívar",
+        "ID": 9,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 17,
+        "DEPARTAMENTO": "Caldas",
+        "ID": 10,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 18,
+        "DEPARTAMENTO": "Caquetá",
+        "ID": 11,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 19,
+        "DEPARTAMENTO": "Cauca",
+        "ID": 12,
+        "ID_REGION": 4
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 20,
+        "DEPARTAMENTO": "Cesar",
+        "ID": 13,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 25,
+        "DEPARTAMENTO": "Cundinamarca",
+        "ID": 14,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 41,
+        "DEPARTAMENTO": "Huila",
+        "ID": 15,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 44,
+        "DEPARTAMENTO": "La Guajira",
+        "ID": 16,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 47,
+        "DEPARTAMENTO": "Magdalena",
+        "ID": 17,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 63,
+        "DEPARTAMENTO": "Quindío",
+        "ID": 18,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 66,
+        "DEPARTAMENTO": "Risaralda",
+        "ID": 19,
+        "ID_REGION": 1
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 70,
+        "DEPARTAMENTO": "Sucre",
+        "ID": 20,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 73,
+        "DEPARTAMENTO": "Tolima",
+        "ID": 21,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 81,
+        "DEPARTAMENTO": "Arauca",
+        "ID": 22,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 85,
+        "DEPARTAMENTO": "Casanare",
+        "ID": 23,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 86,
+        "DEPARTAMENTO": "Putumayo",
+        "ID": 24,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 91,
+        "DEPARTAMENTO": "Amazonas",
+        "ID": 25,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 94,
+        "DEPARTAMENTO": "Guainía",
+        "ID": 26,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 97,
+        "DEPARTAMENTO": "Vaupés",
+        "ID": 27,
+        "ID_REGION": 6
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 99,
+        "DEPARTAMENTO": "Vichada",
+        "ID": 28,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 95,
+        "DEPARTAMENTO": "Guaviare",
+        "ID": 29,
+        "ID_REGION": 5
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 88,
+        "DEPARTAMENTO": "Archipiélago de San Andrés, Providencia y Santa Catalina",
+        "ID": 30,
+        "ID_REGION": 3
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 11,
+        "DEPARTAMENTO": "Bogotá D.C.",
+        "ID": 31,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 54,
+        "DEPARTAMENTO": "Norte de Santander",
+        "ID": 32,
+        "ID_REGION": 2
+    },
+    {
+        "CODIGO_DANE_DEL_DEPARTAMENTO": 76,
+        "DEPARTAMENTO": "Valle del Cauca",
+        "ID": 33,
+        "ID_REGION": 4
+    }
+]
