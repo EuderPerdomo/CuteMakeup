@@ -5,8 +5,10 @@ var jwt = require('../helpers/jwt')
 var Cliente = require('../models/cliente')
 var Producto = require('../models/producto')
 var Categoria = require('../models/categoria')
-var Etiqueta = require('../models/etiqueta')
-var ProductoEtiqueta = require('../models/producto_etiqueta')
+var ProductoEtiqueta = require('../models/productoEtiqueta')
+var ProductoEtiquetaRelacion = require('../models/productoEtiquetaRelacion')
+var Contacto =require('../models/contacto')
+
 var path = require('path');
 var fs = require('fs')
 var mongoose = require('mongoose');
@@ -451,66 +453,7 @@ const get_categorias_admin = async function (req, res) {
     }
 }
 
-const listar_etiquetas_admin = async function (req, res) {
-    if (req.user) {
-        var reg = await Etiqueta.find();
-        res.status(200).send({ data: reg });
-    } else {
-        res.status(500).send({ message: 'NoAccess' });
-    }
-}
 
-const listar_etiquetas_producto_admin = async function (req, res) {
-    if (req.user) {
-        var id = req.params['id'];
-        var etiquetas = await ProductoEtiqueta.find({ producto: id }).populate('etiqueta');
-        console.log("Etiquetas consultadas", etiquetas, id)
-        res.status(200).send({ data: etiquetas });
-    } else {
-        res.status(500).send({ message: 'NoAccess' });
-    }
-}
-
-const agregar_etiqueta_producto_admin = async function (req, res) {
-    if (req.user) {
-        let data = req.body;
-        console.log('Datos recibidos etiqueta:', data);
-
-        try {
-            // Verifica si la etiqueta ya está asociada con el producto
-            let etiquetaExistente = await ProductoEtiqueta.findOne({
-                producto: data.producto,
-                etiqueta: data.etiqueta
-            });
-
-            if (etiquetaExistente) {
-                // Si ya existe, envía un mensaje indicando que la etiqueta ya está agregada
-                res.status(200).send({ message: 'La etiqueta ya está agregada a este producto.' });
-            } else {
-                // Si no existe, crea una nueva asociación
-                var reg = await ProductoEtiqueta.create(data);
-                res.status(201).send({ data: reg });
-            }
-        } catch (error) {
-            console.error('Error al agregar la etiqueta:', error);
-            res.status(500).send({ message: 'Error en el servidor', error });
-        }
-    } else {
-        res.status(401).send({ message: 'Sin acceso' });
-    }
-};
-
-const eliminar_etiqueta_producto_admin = async function (req, res) {
-    if (req.user) {
-        var id = req.params['id'];
-        console.log(id);
-        let reg = await ProductoEtiqueta.findByIdAndDelete(({ _id: id }));
-        res.status(200).send({ data: reg });
-
-    } else {
-        res.status(500).send({ message: 'NoAccess' });
-    }
-}
 //Finalizan Rutas de categorias
 
 //Inician rutas variedad
@@ -710,6 +653,36 @@ const eliminar_imagen_variedad_admin = async function (req, res) {
 
 //Finalizan rutas galerias
 
+
+
+/* Inician Mensajes*/
+
+
+const obtener_mensajes_admin = async function (req, res) {
+    if (req.user) {
+        let data = req.body
+        let reg = await Contacto.find().sort({ createdAt: -1 })
+        res.status(200).send({ data: reg })
+    } else {
+        res.status(500).send({ message: 'No Acces' })
+    }
+}
+
+const cerrar_mensaje_admin = async function (req, res) {
+    if (req.user) {
+        let data = req.body
+            let id = req.params['id']
+            let reg = await Contacto.findByIdAndUpdate({ _id: id }, { estado: 'Cerrado' })
+            res.status(200).send({ data: reg })
+    } else {
+        res.status(500).send({ message: 'No Acces' })
+    }
+}
+
+
+/*Finaliza mensajes */
+
+
 module.exports = {
     login_admin,
     registro_admin,
@@ -727,15 +700,20 @@ module.exports = {
     obtener_producto_admin,
     actualizar_producto_admin,
     get_categorias_admin,
-    listar_etiquetas_admin,
-    listar_etiquetas_producto_admin,
-    agregar_etiqueta_producto_admin,
-    eliminar_etiqueta_producto_admin,
+
+    //Etiquetas deproducto
+    //listar_etiquetas_admin,
+    //listar_etiquetas_producto_admin,
+    //agregar_etiqueta_producto_admin,
+   // eliminar_etiqueta_producto_admin,
 
     //Variedades
     agregar_variedad_producto_admin,
     agregar_imagen_variedad_admin,
     eliminar_imagen_variedad_admin,
 
+    //Mensajes
+    obtener_mensajes_admin,
+    cerrar_mensaje_admin,
 
 }

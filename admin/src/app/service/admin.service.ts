@@ -87,14 +87,19 @@ eliminar_etiqueta_admin(id:any,token:any):Observable<any>{
   let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
   return this._http.delete(this.url + 'eliminar_etiqueta_admin/'+id,{headers:headers});
 }
-agregar_etiqueta_admin(data:any,token:any):Observable<any>{
+crear_etiqueta_producto_global_admin(data:any,token:any):Observable<any>{
   let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
-  return this._http.post(this.url+'agregar_etiqueta_admin',data,{headers:headers});
+  return this._http.post(this.url+'crear_etiqueta_producto_global_admin',data,{headers:headers});
 }
 
 cambiar_vs_producto_admin(id:any,estado:any,token:any):Observable<any>{
   let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
   return this._http.get(this.url+'cambiar_vs_producto_admin/'+id+'/'+estado,{headers:headers});
+}
+
+listar_etiquetas_producto_global_admin(token:any):Observable<any>{
+  let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+  return this._http.get(this.url + 'listar_etiquetas_producto_global_admin',{headers:headers});
 }
 
 listar_etiquetas_producto_admin(id:any,token:any):Observable<any>{
@@ -105,6 +110,11 @@ listar_etiquetas_producto_admin(id:any,token:any):Observable<any>{
 eliminar_etiqueta_producto_admin(id:any,token:any):Observable<any>{
   let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
   return this._http.delete(this.url + 'eliminar_etiqueta_producto_admin/'+id,{headers:headers});
+}
+
+eliminar_etiqueta_producto_global_admin(id:any,token:any):Observable<any>{
+  let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+  return this._http.delete(this.url + 'eliminar_etiqueta_producto_global_admin/'+id,{headers:headers});
 }
 
 agregar_etiqueta_producto_admin(data:any,token:any):Observable<any>{
@@ -176,10 +186,6 @@ get_categorias(token: any): Observable<any> {
   return this._http.get(this.url + 'get_categorias', { headers: headers });
 }
 
-listar_etiquetas_admin(token: any): Observable<any> {
-  let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token });
-  return this._http.get(this.url + 'listar_etiquetas_admin', { headers: headers });
-}
 //Finalizan Categorias
 
   //Funcion que Valida autenticaci´´on
@@ -220,5 +226,75 @@ listar_etiquetas_admin(token: any): Observable<any> {
     }
   }
 
+/* Mensajes*/
+obtener_mensajes_admin(token: any): Observable<any> {
+  let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token })
+  return this._http.get(this.url + 'obtener_mensajes_admin', { headers: headers })
+}
+
+cerrar_mensaje_admin(id: any, data: any, token: any): Observable<any> {
+  let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token })
+  return this._http.put(this.url + 'cerrar_mensaje_admin/' + id, data, { headers: headers })
+}
+/* Finaliza Mensajes*/
+
+//Inicia Blog
+registro_blog_admin(data: any, file: any, token: any): Observable<any> {
+  let headers = new HttpHeaders({ 'Authorization': token });
+  const fd = new FormData();
+  fd.append('titulo', data.titulo);
+  fd.append('etiquetas', JSON.stringify(data.etiquetas));
+  fd.append('descripcion', data.descripcion);
+  fd.append('contenido', data.contenido);
+  fd.append('categoria', data.categoria);
+  fd.append('visibilidad', data.visibilidad);
+  fd.append('portada', file);
+
+  return this._http.post(this.url + 'registro_blog_admin', fd, { headers: headers });
+}
+
+listar_etiquetas_post_global_admin(token: any): Observable<any> {
+  let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token });
+  return this._http.get(this.url + 'listar_etiquetas_post_global_admin', { headers: headers });
+}
+
+crear_etiqueta_post_global_admin(data:any,token:any):Observable<any>{
+  let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+  return this._http.post(this.url+'crear_etiqueta_post_global_admin',data,{headers:headers});
+}
+
+eliminar_etiqueta_post_global_admin(id:any,token:any):Observable<any>{
+  let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+  return this._http.delete(this.url + 'eliminar_etiqueta_post_global_admin/'+id,{headers:headers});
+}
+
+
+listar_etiquetas_post_admin(token: any): Observable<any> {
+  let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token });
+  return this._http.get(this.url + 'listar_etiquetas_post_admin', { headers: headers });
+}
+
+eliminar_etiqueta_post_admin(id:any,token:any):Observable<any>{
+  let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+  return this._http.delete(this.url + 'eliminar_etiqueta_post_admin/'+id,{headers:headers});
+}
+
+crear_etiqueta_post_admin(data:any,token:any):Observable<any>{
+  let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+  return this._http.post(this.url+'crear_etiqueta_post_admin',data,{headers:headers});
+}
+
+
+listar_blog_admin(token:any):Observable<any>{
+  let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+  return this._http.get(this.url + 'listar_blog_admin',{headers:headers});
+}
+
+obtener_blog_admin(id:any,token:any):Observable<any>{
+  let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+  return this._http.get(this.url + 'obtener_blog_admin/'+id,{headers:headers});
+}
+
+//Finalizan Blog
 
 }

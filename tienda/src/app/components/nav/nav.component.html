@@ -130,16 +130,23 @@
         <!-- Menu -->
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a [routerLink]="'inicio'" class="nav-link">Home</a>
+            <a [routerLink]="'/'" class="nav-link">Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a [routerLink]="'productos'" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tienda</a>
+            <a [routerLink]="'/productos'" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tienda</a>
             <ul class="dropdown-menu">
               <li *ngFor="let item of categorias">
                 <a [routerLink]="['/productos/categoria/',item.titulo]" class="dropdown-item">{{item.titulo}}</a></li>
             </ul>
           </li>
-          <li class="nav-item dropdown mega-dropdown">
+
+          <li class="nav-item">
+            <a [routerLink]="['/blog']" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/contactenos']" class="nav-link">Contactenos</a>
+          </li>
+          <!-- <li class="nav-item dropdown mega-dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Megamenu</a>
             <div class="dropdown-menu">
               <div class="container pt-lg-1 pb-lg-3">
@@ -214,8 +221,8 @@
                 </div>
               </div>
             </div>
-          </li>
-          <li class="nav-item dropdown">
+          </li> -->
+          <!-- <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Account</a>
             <ul class="dropdown-menu">
               <li><a href="account-profile.html" class="dropdown-item">Profile</a></li>
@@ -224,12 +231,12 @@
               <li><a href="account-recently-viewed.html" class="dropdown-item">Recently Viewed</a></li>
               <li><a href="account-reviews.html" class="dropdown-item">My Reviews</a></li>
             </ul>
-          </li>
-          <li class="nav-item dropdown">
+          </li> -->
+          <!-- <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
             <ul class="dropdown-menu">
-              <li><a href="blog.html" class="dropdown-item">Blog List</a></li>
-              <li><a href="blog-single.html" class="dropdown-item">Single Post</a></li>
+              <li><a [routerLink]="['/blog']" class="dropdown-item">Blog</a></li>
+              <li><a [routerLink]="['/blog']" class="dropdown-item">Single Post</a></li>
               <li><a [routerLink]="['/contactenos']" class="dropdown-item">Contactenos</a></li>
               <li><a href="order-tracking.html" class="dropdown-item">Order Tracking</a></li>
             </ul>
@@ -239,7 +246,7 @@
               <i class="ci-profile fs-base align-middle me-1"></i>
               Annette Black
             </a>
-          </li>
+          </li> -->
         </ul>
       </nav>
     </div>

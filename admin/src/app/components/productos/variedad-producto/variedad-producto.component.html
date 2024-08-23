@@ -66,7 +66,8 @@
               <ng-container *ngIf="producto.variedades.length>=1">
                 <tbody *ngFor="let item of producto.variedades ; let indice=index">
                   <tr>
-                    <td> <input [(ngModel)]="item.titulo" />
+                    <td> <input [(ngModel)]="item.titulo" class="titulo_variedad"
+                      [ngClass]="{'highlight': variedad_en_edicion == indice}" />
                       <div class="row">
                         <div class="col-12">
                           <ng-container *ngIf="variedad_en_edicion==indice">
@@ -110,12 +111,12 @@
 
                         <tbody>
 
-                          <ng-container *ngFor="let tallas of item.tamano_disponibilidad ; let indice2=index">
+                          <ng-container *ngFor="let medida of item.tamano_disponibilidad ; let indice2=index">
                             <tr *ngIf="editar_variedad_carcateristica != (indice.toString() +'_'+ indice2.toString())">
-                              <td>{{tallas.unidad_medida}}</td>
-                              <td>{{tallas.tamano}}</td>
-                              <td>{{tallas.disponibilidad}}</td>
-                              <td>{{tallas.precio}}</td>
+                              <td>{{medida.unidad_medida}}</td>
+                              <td>{{medida.tamano}}</td>
+                              <td>{{medida.disponibilidad}}</td>
+                              <td>{{medida.precio |currency:'COP':'$':'3.0'}}</td>
                               <td>
                                 <span (click)="deleteCharacteristic(item, indice2)">
                                   <i class="fa-regular fa-trash-can " style="color: red; cursor: pointer;"></i>
@@ -126,25 +127,27 @@
                               </td>
                             </tr>
 
-                            <tr *ngIf="editar_variedad_carcateristica==(indice.toString() +'_'+ indice2.toString())">
+                            <tr *ngIf="editar_variedad_carcateristica==(indice.toString() +'_'+ indice2.toString())" [attr.id]="indice.toString() +'_'+ indice2.toString()">
                               <td>
-                                <select id="idd" name="idd" required [(ngModel)]="tallas.unidad_medida"
+                                <select id="idd" name="idd" required [(ngModel)]="medida.unidad_medida"
+                                [ngClass]="{'highlight': editar_variedad_carcateristica == (indice.toString() + '_' + indice2.toString())}"
                                   #unidad="ngModel">
                                   <option *ngFor="let unit of unidadesMedida" [value]="unit.titulo">{{ unit.titulo }}
                                   </option>
                                 </select>
                               </td>
-                              <td><input [(ngModel)]="tallas.tamano" /></td>
-                              <td><input type="number" [(ngModel)]="tallas.disponibilidad" /></td>
-                              <td><input type="number" [(ngModel)]="tallas.precio" /></td>
+                              <td><input [(ngModel)]="medida.tamano" 
+                                [ngClass]="{'highlight': editar_variedad_carcateristica == (indice.toString() + '_' + indice2.toString())}" /></td>
+                              <td><input type="number" [(ngModel)]="medida.disponibilidad"
+                                [ngClass]="{'highlight': editar_variedad_carcateristica == (indice.toString() + '_' + indice2.toString())}" /></td>
+                              <td><input type="number" [(ngModel)]="medida.precio" 
+                                [ngClass]="{'highlight': editar_variedad_carcateristica == (indice.toString() + '_' + indice2.toString())}"/></td>
 
                               <td>
-                                <span (click)="deleteCharacteristic(item, indice2)">
-                                  <i class="fa-regular fa-trash-can " style="color: red; cursor: pointer;"></i>
+                                <span (click)="cancelarEditarCaracteristica(indice, indice2)">
+                                  <i class="fa-solid fa-xmark" style="color: red; cursor: pointer;"></i>
                                 </span>
-                                <span (click)="editarCaracteristica(indice, indice2)">
-                                  <i class="fa-regular fa-pen-to-square" style="color: #24d14a; cursor: pointer;"></i>
-                                </span>
+
                               </td>
                             </tr>
                           </ng-container>
@@ -162,34 +165,29 @@
                         Galeria
                       </button>
 
-                      <!-- Inicia Modal -->
-
-
-
+                    
                       <!-- Inicia Modal -->
                       <div class="modal fade" id="delete-{{indice}}" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document" style="min-width: 70%;">
                           <div class="modal-content">
                             <div class="modal-card card" data-list="{&quot;valueNames&quot;: [&quot;name&quot;]}">
                               <div class="card-body">
-                                <h4 class="card-header-title" id="exampleModalCenterTitle" (click)="prueba()">
-                                  Galería
-                                </h4>
-                                <h5>{{producto.titulo}}</h5>
-                                <h6>Variedad de Producto: {{producto.variedades[indice].titulo}}</h6>
-                                <h6>Variedad de Producto: {{producto.variedades[indice]._id}}</h6>
+                                <h4 class="modal-title font-weight-bold" id="exampleModalCenterTitle">Galería de Imágenes</h4>
+                                <h5 class="mb-2">{{producto.titulo}}</h5>
+                                <h6 class="text-muted" >Variedad de Producto: {{producto.variedades[indice].titulo}}</h6>
+                             
 
                                 <!-- Nueva Imagen -->
-                                <ng-container>
-                                  <div class="mb-3">
+                                <ng-container *ngIf="producto.variedades[indice].galeria.length <4 ">
+                                  <div class="mb-3" >
                                     <label class="col-form-label font-weight-medium" for="text-input">Nueva
-                                      Imagen</label>
+                                      Imagen </label>
                                     <div class="input-group">
                                       <input class="form-control" id="input_img" (change)="fileChangeEvent($event)"
                                         type="file">
                                       <div class="input-group-append">
                                         <ng-container *ngIf="file != undefined">
-                                          <button class="btn btn-primary" type="button"
+                                          <button *ngIf="!load_btn" class="btn btn-primary" type="button"
                                             (click)="subir_imagen(producto.variedades[indice]._id)">Subir</button>
                                           <button *ngIf="load_btn" type="button" class="btn btn-primary">
                                             <span class="spinner-grow spinner-grow-sm me-2" role="status"
@@ -209,6 +207,13 @@
                                       *ngIf="imgSelect">
                                   </div>
                                 </ng-container>
+                                <ng-container *ngIf="producto.variedades[indice].galeria.length >= 4">
+                                  <div class="alert alert-warning">
+                                    <h4 class="alert-heading">¡Oh, oh! 📸</h4>
+                                    <p>Parece que has alcanzado el límite de imágenes. Esta galería ya contiene 4 imágenes, ¡así que no se pueden agregar más! 🎨</p>
+                                  </div>
+                                </ng-container>
+                                
 
                                 <!-- Galería de Imágenes -->
 

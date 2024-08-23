@@ -71,20 +71,20 @@
 
             <div class="col-md-12 form-group">
               <div class="row">
-                  <div class="col-lg-6">
+                  <div class="col-lg-6" *ngIf="!load_data_etiqueta">
                       <label for=""><b>Etiquetas</b></label>
                       <select class="form-control custom-select" name="new_etiqueta" [(ngModel)]="new_etiqueta" (change)="agregar_etiqueta()">
                           <option value="" selected disabled>Seleccionar</option>
                           <option value="{{item._id}}" *ngFor="let item of etiquetas">{{item.titulo}}</option>
                       </select>
                   </div>
-                  <div class="col-12">
-                      <div class="ms-auto py-2">
-                          <ng-container *ngFor="let item of arr_etiquetas; let indice = index">
-                              <span class="badge badge-pill badge-success mr-1" style="cursor: pointer;" (click)="eliminar_etiqueta(indice)">{{item.etiqueta.titulo}}</span>
+                   <div class="col-12">
+                      <div class="ms-auto py-2"  >
+                          <ng-container *ngIf="!load_etiquetas">
+                              <span *ngFor="let item of arr_etiquetas; let indice = index" class="badge badge-pill badge-success mr-1" style="cursor: pointer;" (click)="eliminar_etiqueta(indice)">{{item.etiqueta.titulo}}</span>
                             </ng-container>
                       </div>
-                  </div>
+                  </div> 
               </div>
           </div>
   

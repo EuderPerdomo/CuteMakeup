@@ -87,7 +87,7 @@ ngOnInit(): void {
     }
   );
 
-  this._adminService.listar_etiquetas_admin(this.token).subscribe(
+  this._adminService.listar_etiquetas_producto_global_admin(this.token).subscribe(
     response=>{
       this.etiquetas = response.data;
       console.log('ETIQUETAS',response);
@@ -223,7 +223,6 @@ console.log('Producto',this.producto)
     
   }
 }
-
   
 agregar_etiqueta(){
   let arr_label = this.new_etiqueta.split('_');

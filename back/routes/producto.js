@@ -5,6 +5,18 @@ var configController=require('../controllers/ConfigController')
 var productoController=require('../controllers/ProductoController')
 var api=express.Router()
 
+//Mtodos Privados
+
+api.post('/crear_etiqueta_producto_global_admin',auth.auth,productoController.crear_etiqueta_producto_global_admin);
+api.delete('/eliminar_etiqueta_producto_global_admin/:id',auth.auth,productoController.eliminar_etiqueta_producto_global_admin);
+api.get('/listar_etiquetas_producto_global_admin',auth.auth,productoController.listar_etiquetas_producto_global_admin);
+
+api.get('/listar_etiquetas_producto_admin/:id',auth.auth,productoController.listar_etiquetas_producto_admin);
+api.delete('/eliminar_etiqueta_producto_admin/:id',auth.auth,productoController.eliminar_etiqueta_producto_admin);
+api.post('/agregar_etiqueta_producto_admin',auth.auth,productoController.agregar_etiqueta_producto_admin);
+        //Locales a acada producto
+  
+
 //Metodos Publicos
 api.get('/listar_productos_public/:filtro?',productoController.listar_productos_public)
 api.get('/obtener_producto_public/:slug',productoController.obtener_producto_public)

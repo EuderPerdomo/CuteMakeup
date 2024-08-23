@@ -1,0 +1,121 @@
+<app-sidebar></app-sidebar>
+
+<div class="border-bottom pt-1 mt-2 mb-2">
+  <h2 class="mt-2 mt-md-4 mb-3 pt-5">Blog</h2>
+  <div class="d-flex flex-wrap flex-md-nowrap justify-content-between">
+    <p class="text-muted">Modulo Crear Post</p>
+  </div>
+</div>
+
+
+
+  <div class="card box-shadow-sm">
+    <div class="card-header">
+      <h5 style="margin-bottom: 0px;">Registro de Post</h5>
+    </div>
+    <div class="card-body">
+      <form #blogForm="ngForm" appUnambiguousRole (ngSubmit)="registro(blogForm)">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="row">
+            <div class=" col-md-12  form-group">
+              <label for="titulo" class="form-label">Titulo</label>
+              <input type="text" id="titulo" name="titulo" class="form-control" required minlength="4"
+                [(ngModel)]="blog.titulo" #titulo="ngModel">
+  
+              <div *ngIf="titulo.invalid && (titulo.dirty || titulo.touched)" class="invalido">
+                <div *ngIf="titulo.hasError('required')">
+                  El titulo es Requerido.
+                </div>
+                <div *ngIf="titulo.hasError('minlength')">
+                  Debe ser superior a 4 caracteres.
+                </div>
+              </div>
+            </div>
+  
+
+            <div class=" col-md-6  form-group">
+              <label for="categoria">Categoria</label>
+              <select id="categoria" name="categoria" required [(ngModel)]="blog.categoria" #categoria="ngModel">
+                <option *ngFor="let categoria of categorias" [value]="categoria._id">{{ categoria.titulo }}</option>
+              </select>
+              <div *ngIf="categoria.errors && categoria.touched" class="invalido">
+                <div *ngIf="categoria.errors['required']">Indique una categoria </div>
+              </div>
+            </div>
+
+            <div class=" col-md-6  form-group">
+                <label for=""><b>Etiquetas</b></label>
+                <select class="form-control custom-select" name="new_etiqueta" [(ngModel)]="new_etiqueta" (change)="agregar_etiqueta()">
+                    <option value="" selected disabled>Seleccionar</option>
+                    <option value="{{item._id}}_{{item.titulo}}" *ngFor="let item of etiquetas">{{item.titulo}}</option>
+                </select>
+              </div>
+
+
+            <div class="col-md-6 form-group">
+              <div class="row">
+               
+                  <div class="col-12">
+                      <div class="ms-auto py-2">
+                          <ng-container *ngFor="let item of arr_etiquetas; let indice = index">
+                              <!-- <a class="badge badge-secondary text-white mr-3" style="cursor: pointer;" (click)="eliminar_etiqueta(indice)">
+                                  {{item.titulo}}
+                              </a> --> 
+                              <span class="badge badge-pill badge-success mr-1" style="cursor: pointer;" (click)="eliminar_etiqueta(indice)">{{item.titulo}}</span>
+                            </ng-container>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-lg-12 form-group">
+            <label for="">Descripción (Descrpción corta) </label>
+            <tinymce [config]="configCorta" name="descripcion" [(ngModel)]="blog.descripcion"></tinymce>
+          </div>
+  
+            <div class="col-lg-12 form-group">
+              <label for="contenido">Contenido </label>
+              <tinymce [config]="config" name="contenido" [(ngModel)]="blog.contenido" id="contenido" #contenido="ngModel"></tinymce>
+              <div *ngIf="contenido.invalid && (contenido.dirty || contenido.touched)" class="invalido">
+                <div *ngIf="contenido.hasError('required')">
+                  El Contenido es Requerido.
+                </div>
+              </div>
+            </div>
+  
+         
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="row">
+  
+            <div class="col-lg-12 form-group">	
+              <label for="">Portada (*)</label>
+              <div class="custom-file">
+                  <input class="custom-file-input" type="file" id="file-input" (change)="fileChangeEvent($event)">
+                  <label class="custom-file-label" id="input-portada" for="file-input" style="white-space:nowrap;overflow:hidden">Seleccionar imagen</label>
+              </div>
+          </div>
+          <div class="col-lg-12">
+              <img [src]="imgSelect" class="img-thumbnail" alt="Rounded image">
+          </div>
+          </div>
+        </div>
+        <div class="card-footer">
+
+          <a class="btn btn-warning btn-shadow mr-3" [routerLink]="['/productos']" routerLinkActive="router-link-active" >Regresar</a>
+          <button *ngIf="!load_btn" class="btn btn-primary btn-shadow" type="submit">Crear</button>
+                          
+          <button disabled *ngIf="load_btn" type="button" class="btn btn-primary btn-shadow">
+              <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+              Creando...
+          </button>
+    
+      </div>
+      </div>
+    </form>
+    </div>
+
+  </div>
+

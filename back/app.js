@@ -34,6 +34,7 @@ var admin_routes = require('./routes/admin');
 var config_routes = require('./routes/config');
 var producto_routes = require('./routes/producto');
 var carrito_routes = require('./routes/carrito');
+var blog_routes = require('./routes/blog');
 
 const connectDB = async () => {
     try {
@@ -71,5 +72,6 @@ app.use('/api',admin_routes);
 app.use('/api',config_routes)
 app.use('/api',producto_routes);
 app.use('/api',carrito_routes);
+app.use('/api',blog_routes);
 
 module.exports = app;

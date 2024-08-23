@@ -137,7 +137,7 @@ productoForm!:FormGroup
 
   listar_etiquetas() {
     this.load_data_etiqueta = true;
-    this._adminService.listar_etiquetas_admin(this.token).subscribe(
+    this._adminService.listar_etiquetas_producto_global_admin(this.token).subscribe(
       response => {
         this.etiquetas = response.data;
         console.log(response);
@@ -145,6 +145,8 @@ productoForm!:FormGroup
       }
     );
   }
+
+
 
   listar_etiquetas_producto() {
     this.load_etiquetas = true;

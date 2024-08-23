@@ -29,10 +29,10 @@ api.get('/listar_productos_admin',auth.auth,adminController.listar_productos_adm
 // api.get('/listar_variedades_productos_admin',auth.auth,AdminController.listar_variedades_productos_admin);
 
 api.get('/obtener_producto_admin/:id',auth.auth,adminController.obtener_producto_admin);
-api.get('/listar_etiquetas_producto_admin/:id',auth.auth,adminController.listar_etiquetas_producto_admin);
 
-api.delete('/eliminar_etiqueta_producto_admin/:id',auth.auth,adminController.eliminar_etiqueta_producto_admin);
-api.post('/agregar_etiqueta_producto_admin',auth.auth,adminController.agregar_etiqueta_producto_admin);
+
+
+//api.post('/agregar_etiqueta_producto_admin',auth.auth,adminController.agregar_etiqueta_producto_admin);
 api.put('/actualizar_producto_admin/:id',[auth.auth,path],adminController.actualizar_producto_admin);
 // api.get('/listar_variedades_admin/:id',auth.auth,AdminController.listar_variedades_admin);
 // api.put('/actualizar_producto_variedades_admin/:id',auth.auth,AdminController.actualizar_producto_variedades_admin);
@@ -46,7 +46,16 @@ api.delete('/eliminar_imagen_variedad_admin/:id_producto/:id_variedad/:id_imagen
 
 //Inician rutas Administarcion de Categorias
 api.get('/get_categorias',auth.auth,adminController.get_categorias_admin);
-api.get('/listar_etiquetas_admin',auth.auth,adminController.listar_etiquetas_admin);
+//api.get('/listar_etiquetas_admin',auth.auth,adminController.listar_etiquetas_admin);
 //Finalizan Rutas Administracion de Categorias
+
+
+//Inician Mensajes
+api.get('/obtener_mensajes_admin',auth.auth,adminController.obtener_mensajes_admin)
+api.put('/cerrar_mensaje_admin/:id',auth.auth,adminController.cerrar_mensaje_admin)
+//Finalizan Mensajes
+
+
+
 
 module.exports= api;

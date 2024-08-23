@@ -8,6 +8,8 @@ import { CarritoComponent } from './components/carrito/carrito.component';
 import { AuthGuard } from './guards/auth.guard';
 import { DireccionesComponent } from './components/usuario/direcciones/direcciones.component';
 import { PerfilComponent } from './components/usuario/perfil/perfil.component';
+import { BlogListComponent } from './components/blog/blog-list/blog-list.component';
+import { SingleBlogComponent } from './components/blog/single-blog/single-blog.component';
 
 export const routes: Routes = [
   {
@@ -37,6 +39,12 @@ export const routes: Routes = [
 //{ path: 'perfil/cuenta', component:CuentaComponent },
 { path: 'cuenta/perfil', component:PerfilComponent },
 
+
+//Rutas del Blog
+
+{ path: 'blog', component:BlogListComponent },
+{ path: 'blog/categoria/:categoria', component:BlogListComponent},
+{ path: 'blog/:slug', component:SingleBlogComponent },
 
   //Ruta comodin Para cuando no encuentre ninguna ruta coincidente
   {

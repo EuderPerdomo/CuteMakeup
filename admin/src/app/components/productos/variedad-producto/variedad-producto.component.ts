@@ -26,7 +26,7 @@ export class VariedadProductoComponent implements OnInit {
   public imgSelect: any | ArrayBuffer = 'assets/img/components/noimagen/noimg.PNG';
   public editar_variedad_carcateristica = ''
   //public variedad_en_edicion = undefined
-  public variedad_en_edicion: number | undefined = 0;
+  public variedad_en_edicion: number | undefined = 100; //Inicialmente era 0
 
   public unidad: any
   public file: any = undefined;
@@ -36,7 +36,7 @@ export class VariedadProductoComponent implements OnInit {
     _id: '1'
   },
   {
-    titulo: 'talla',
+    titulo: 'Talla',
     _id: '2'
   },
   {
@@ -47,6 +47,10 @@ export class VariedadProductoComponent implements OnInit {
     titulo: 'Miligramos',
     _id: '4'
   },
+  {
+    titulo:'Mililitro',
+    _id:'5'
+  }
   ]
 
   
@@ -200,6 +204,7 @@ export class VariedadProductoComponent implements OnInit {
 
   addCharacteristic(variety: any, variedad_editando: any) {
     console.log('añadir caracteristica apra:', variedad_editando, variety.tamano_disponibilidad.length)
+    console.log('Primero guarde la vriedads', this.variedad_en_edicion, '///////',this,variedad_editando)
     if (this.variedad_en_edicion == undefined || variedad_editando == this.variedad_en_edicion) {//Como comparo si le dio editar otra variedad
       //Se actualiza a la nueva variedad en edicion
       this.variedad_en_edicion = variedad_editando //Envia el id de la variedad que se esta editando
@@ -210,7 +215,7 @@ export class VariedadProductoComponent implements OnInit {
       console.log('Carcteristica', newCharacteristic, this.editar_variedad_carcateristica)
 
     } else {
-      console.log('Primero guarde la vriedads')
+      console.log('Primero guarde la vriedads', this.variedad_en_edicion, '///////',this,variedad_editando)
     }
 
 
@@ -227,15 +232,24 @@ export class VariedadProductoComponent implements OnInit {
   }
 
   editarCaracteristica(variedad: any, caracteristica: any) {
-
     if (this.editar_variedad_carcateristica == '') {
       this.editar_variedad_carcateristica = variedad.toString() + '_' + caracteristica.toString()
       console.log('Editando la variedad', variedad, ' en su caracteristica', caracteristica, 'Validador', this.editar_variedad_carcateristica)
       this.variedad_en_edicion = variedad
     } else {
-      console.log('Primero debe guardar los cambios en otras variedades')
+      iziToast.show({
+        title: '¡Atención!',
+        titleColor: '#ff0000',
+        class: 'text-warning',
+        position: 'topRight',
+        message: '🔧 Por favor, guarda los cambios en la variedad actual antes de pasar a otra. ¡La precisión es clave! 💾✨'
+    });
     }
+  }
 
+  cancelarEditarCaracteristica(variedad: any, caracteristica: any){
+this.editar_variedad_carcateristica = ''
+this.variedad_en_edicion=100
   }
 
   guardarVariedad(variety: any) {
@@ -261,13 +275,21 @@ export class VariedadProductoComponent implements OnInit {
 
 
     if (!isValid) {
-      alert('Por favor completa todas las características antes de guardar.');
+
+      iziToast.show({
+        title: '¡Ups!',
+        titleColor: 'red',
+        class: 'text-danger',
+        position: 'topRight',
+        message: '🤔 Aún faltan detalles por completar, No olvides completar todas las características antes de guardar tu trabajo.'
+      })
+
       return;
     }
 
     this.variedad_en_edicion = undefined
     this.editar_variedad_carcateristica = ''
-    console.log('Cuando guarde la variedad debe quedar variedad editando en undefined', this.variedad_en_edicion)
+
 
     // Guardar variedad
     this._adminService.agregar_variedad_producto_admin(this.producto.variedades[variety], this.token, this.id).subscribe(
@@ -351,13 +373,11 @@ export class VariedadProductoComponent implements OnInit {
         id_variedad: id_variedad
         //_id:uuidv4()
       }
-      console.log(data)
+      this.load_btn=true
       this._adminService.agregar_imagen_variedad_admin(this.id, data, this.token).subscribe(//antegrior era: agregar_imagen_galeria_admin
         response => {
           //this.init_data()
-
           const nuevaImagen = response.data.imagen;
-
           // Encuentra la variedad y añade la nueva imagen
           const variedad = this.producto.variedades.find(v => v._id === id_variedad);
           if (variedad) {
@@ -371,6 +391,7 @@ export class VariedadProductoComponent implements OnInit {
           this.file = undefined;
           //this.imgSelect='assets/img/components/noimagen/noimg.PNG'
           $('#input_img').val('')
+          this.load_btn=false
         }
       )
     } else {
@@ -386,7 +407,7 @@ export class VariedadProductoComponent implements OnInit {
 
 
   eliminarImagen(id_imagen:any,id_variedad:any){
-console.log('Elimianr,',id_imagen,id_variedad)
+console.log('Eliminar,',id_imagen,id_variedad)
 
 this._adminService.eliminar_imagen_variedad_admin(this.id,id_variedad,id_imagen,this.token).subscribe(
   response=>{

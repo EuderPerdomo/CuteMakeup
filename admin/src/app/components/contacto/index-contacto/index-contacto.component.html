@@ -1,0 +1,91 @@
+<app-sidebar></app-sidebar>
+<div class="border-bottom pt-1 mt-2 mb-2">
+    <h2 class="mt-2 mt-md-4 mb-3 pt-5">Contacto</h2>
+    <div class="d-flex flex-wrap flex-md-nowrap justify-content-between">
+        <p class="text-muted">Este módulo lista Mensajes de Contacto</p>
+    </div>
+</div>
+
+<div class="card box-shadow-sm">
+    <div class="card-header">
+        <div class="row">
+            <div class="col">
+                <!-- <div class="input-group input-group-merge ">
+                    <input type="text" class="form-control form-control-appended" placeholder="Buscar cliente"
+                        name="filtro" [(ngModel)]="filtro">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" (click)="filtrar_cliente()">
+                            Buscar
+                        </button>
+                    </div>
+                </div> -->
+            </div>
+            <div class="col">
+                <!-- <a class="btn btn-primary" [routerLink]="['/panel/clientes/create']" routerLinkActive="router-link-active"
+                    style="cursor: pointer;">Nuevo Cliente</a> -->
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+
+        <!-- Product review -->
+    <div class="mb-4 pb-4 border-bottom" *ngFor="let item of mensajes | slice:(page-1)*pageSize : (page-1)*pageSize+pageSize">
+        <div class="row">
+          <div class="col-md-3 col-sm-4 mb-sm-0 mb-3">
+            <h3 class="mb-2 fs-lg">{{item.cliente}}</h3>
+            <span class="d-block mb-3 fs-sm text-muted">{{item.createdAt |date}}</span>
+            <span class="badge badge-primary" *ngIf="item.estado=='Abierto'">{{item.estado}}</span>
+            <span class="badge badge-danger" *ngIf="item.estado=='Cerrado'">{{item.estado}}</span>
+          </div>
+          <div class="col">
+            <p class="mb-3">
+
+              <span class="badge badge-pill badge-info">{{item.email}}</span>
+              <span class="badge badge-pill badge-info">{{item.telefono}}</span>
+              {{item.mensaje}}
+            </p>
+            <div class="d-flex justify-content-between">
+
+              <a class="btn btn-danger btn-sm" data-toggle="modal" [attr.data-target]="'#estadoModal-'+item._id"  
+              style="cursor: pointer;"
+              *ngIf="item.estado=='Abierto'">
+                Cerrar Mensaje
+              </a>
+
+    
+              <div class="modal fade" id="estadoModal-{{item._id}}" tabindex="-1" style="display: none;" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Cerrar</h4>
+                      <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+                    </div>
+                    <div class="modal-body">
+                      <p class="fs-sm">¿Esta seguro de Cerrar este Mensaje?</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-secondary btn-sm" type="button" data-dismiss="modal">Cancelar</button>
+                     <button *ngIf="!load_btn" class="btn btn-primary btn-shadow btn-sm" type="button" (click)="cerrar(item._id)">Si, Cerrar</button>
+                    
+                    <!-- Button with growing spinner and text -->
+                      <button *ngIf="load_btn" type="button" class="btn btn-secondary">
+                        <span class="spinner-grow spinner-grow-sm me-2" role="status" aria-hidden="true"></span>
+                        Cerrando...
+                      </button>
+    
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="card-footer">
+        <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="mensajes.length"></ngb-pagination>
+    </div>
+</div>

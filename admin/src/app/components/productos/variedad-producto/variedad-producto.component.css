@@ -32,3 +32,19 @@ table{
 }
 
 /* finaliza boton elimiando de imagenes*/
+
+/*Carcateristicas de resaltado de campos*/
+/* Estilo para resaltar los campos en edición */
+.highlight {
+  border: 2px solid #24d14a; /* Borde verde para destacar el campo */
+  background-color: #f0f8f0; /* Fondo ligeramente verde para el campo */
+}
+
+/* Opcional: Estilo para el `tr` en modo edición */
+.edit-mode {
+  background-color: #eaffea; /* Fondo verde claro para la fila en edición */
+}
+
+.titulo_variedad{
+  font-size: small;
+}

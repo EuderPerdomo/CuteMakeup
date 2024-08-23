@@ -10,6 +10,9 @@ import { CreateProductoComponent } from './components/productos/create-producto/
 import { EditProductoComponent } from './components/productos/edit-producto/edit-producto.component';
 import { VariedadProductoComponent } from './components/productos/variedad-producto/variedad-producto.component';
 import { GaleriaProductoComponent } from './components/productos/galeria-producto/galeria-producto.component';
+import { IndexContactoComponent } from './components/contacto/index-contacto/index-contacto.component';
+import { IndexBlogComponent } from './components/blog/index-blog/index-blog.component';
+import { CreateBlogComponent } from './components/blog/create-blog/create-blog.component';
 
 export const routes: Routes = [
   {
@@ -83,6 +86,33 @@ export const routes: Routes = [
         data: { allowedRoles: ['user', 'admin'] }
       },
       //Finalizan Rutas Variedades
+
+
+      //Inician Rutas Contacto
+
+      {
+        path: 'contacto',
+        component: IndexContactoComponent,
+        canActivate: [adminGuard],
+        data: { allowedRoles: ['admin'] }
+      },
+
+      //Inician Rutas Blog
+
+      {
+        path:'blog',
+        component:IndexBlogComponent,
+        canActivate:[adminGuard],
+        data:{allowedRoles:['admin']}
+      },
+      {
+        path: 'blog/create',
+        component: CreateBlogComponent,
+        canActivate: [adminGuard],
+        data: { allowedRoles: ['admin'] }
+      },
+
+
     ]
   },
 

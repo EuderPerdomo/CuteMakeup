@@ -114,4 +114,11 @@ eliminar_direccion_cliente(id:any,token:any):Observable<any>{
   return this._http.get(this.url+'eliminar_direccion_cliente/'+id,{headers:headers});
 }
 
+//Inicia blogs
+listar_posts_public(filtro:any): Observable<any> {
+  let headers = new HttpHeaders().set('Content-Type','application/json');
+  return this._http.get(this.url + 'listar_posts_public/'+filtro, { headers: headers });
+}
+//Finaliza blogs
+
 }

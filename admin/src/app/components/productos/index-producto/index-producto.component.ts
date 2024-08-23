@@ -60,6 +60,21 @@ init_data(){
       response=>{
         this.productos_const = response.data;
         this.productos= this.productos_const;
+
+
+///
+this.productos.forEach(producto => {
+  let stockTotal = 0;
+  producto.variedades.forEach((variedad: { tamano_disponibilidad: any[]; }) => {
+    variedad.tamano_disponibilidad.forEach(tamanoDisponibilidad => {
+      stockTotal += tamanoDisponibilidad.disponibilidad;
+    });
+  });
+  // Agregar el stock total al producto
+  producto.stock = stockTotal;
+});
+
+////
         console.log(this.productos)
         this.load = false;
       }
@@ -68,7 +83,7 @@ init_data(){
 
 listar_etiquetas(){
   this.load_data_etiqueta = true;
-  this._adminService.listar_etiquetas_admin(this.token).subscribe(
+  this._adminService.listar_etiquetas_producto_global_admin(this.token).subscribe(
     response=>{
       this.etiquetas = response.data;
       this.load_data_etiqueta = false;
@@ -78,7 +93,7 @@ listar_etiquetas(){
 
 eliminar_etiqueta(id:any){
   this.load_del_etiqueta = true;
-  this._adminService.eliminar_etiqueta_admin(id,this.token).subscribe(
+  this._adminService.eliminar_etiqueta_producto_global_admin(id,this.token).subscribe(
     response=>{
       iziToast.show({
           title: 'SUCCESS',
@@ -111,7 +126,7 @@ agregar_etiqueta(){
     let data = {
       titulo: this.nueva_etiqueta,
     }
-    this._adminService.agregar_etiqueta_admin(data,this.token).subscribe(
+    this._adminService.crear_etiqueta_producto_global_admin(data,this.token).subscribe(
       response=>{
         if(response.data != undefined){
           iziToast.show({
