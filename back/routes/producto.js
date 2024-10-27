@@ -15,7 +15,10 @@ api.get('/listar_etiquetas_producto_admin/:id',auth.auth,productoController.list
 api.delete('/eliminar_etiqueta_producto_admin/:id',auth.auth,productoController.eliminar_etiqueta_producto_admin);
 api.post('/agregar_etiqueta_producto_admin',auth.auth,productoController.agregar_etiqueta_producto_admin);
         //Locales a acada producto
-  
+
+
+//Rutas Inventario de Productos
+api.get('/inventario_productos_admin',auth.auth,productoController.inventario_productos_admin)
 
 //Metodos Publicos
 api.get('/listar_productos_public/:filtro?',productoController.listar_productos_public)

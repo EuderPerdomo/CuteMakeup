@@ -36,6 +36,8 @@ export class NavComponent implements OnInit {
   public subtotal = 0
   public socket = io('http://localhost:4201')
 
+  public id_usuario: any
+
   /*
     public user_login: Cliente = {
       apellidos: "",
@@ -60,9 +62,15 @@ export class NavComponent implements OnInit {
     if (this.token) {
       let obj_lc: any = localStorage.getItem('user_data');
       this.user_login = JSON.parse(obj_lc);
+      this.id_usuario = localStorage.getItem('identity');
       //this.obtener_carrito();
       this.obtener_carrito_cliente()
-
+    }
+    else {
+      this.id_usuario = localStorage.getItem('cartID');
+      if (this.id_usuario) {
+        this.obtener_carrito_cliente()
+      }
     }
 
 
@@ -71,12 +79,11 @@ export class NavComponent implements OnInit {
         this.categorias = response.data;
       }
     );
-
-
   }
 
   obtener_carrito_cliente() {
-    this._clienteService.obtener_carrito_cliente(this.user_login?._id, this.token).subscribe(
+    console.log('obteniendo el carrito del cliente',this.id_usuario,this.token)
+    this._clienteService.obtener_carrito_cliente(this.id_usuario, this.token).subscribe(
       response => {
         this.carrito_arr = response.data
 
@@ -96,7 +103,6 @@ export class NavComponent implements OnInit {
           }
         });
 
-
         this.calcular_carrito()
       }
       //Acomodar datos de acuerdo a la variedad
@@ -115,51 +121,68 @@ export class NavComponent implements OnInit {
     }.bind(this))
   }
 
+
   login(loginForm: any) {
-
     if (loginForm.valid) {
-      let email = loginForm.value.email;
-      let password = loginForm.value.password;
-      if (email == '' && password == '') {
-        iziToast.show({
-          title: 'ERROR DATA',
-          class: 'iziToast-danger',
-          position: 'topRight',
-          message: 'Todos los campos son requeridos, vuelva a intentar.'
-        });
-      } else {
-        this._clienteService.login_cliente({ email, password }).subscribe(
-          response => {
-            
+      const { email, password } = loginForm.value;
 
-            if (response.data != null) {
-              this.token = response.jwt;
-              localStorage.setItem('token', response.token);
-              localStorage.setItem('identity', response.data._id);
-              localStorage.setItem('user_data', JSON.stringify(response.data));
-              //this._router.navigate(['']);
-              $('#modal-signin').modal('hide');
-              this.user_login = response.data
+      this._clienteService.login_cliente({ email, password }).subscribe(
+        response => {
+          if (response.data) {
+            // Guardar token e identidad
+            this.token = response.jwt;
+            localStorage.setItem('token', response.token);
+            localStorage.setItem('identity', response.data._id);
+            localStorage.setItem('user_data', JSON.stringify(response.data));
+            $('#modal-signin').modal('hide');
+
+            this.id_usuario=response.data._id
+            this.token=response.token
+
+            this.user_login = response.data;
+
+            // Verificar si hay carrito temporal
+            const cartID = localStorage.getItem('cartID');
+            if (!cartID) {
+              // Si no hay carrito temporal, obtener el carrito del cliente autenticado
+              this.obtener_carrito_cliente();
             } else {
-              iziToast.show({
-                title: 'ERROR USER',
-                class: 'iziToast-danger',
-                position: 'topRight',
-                message: response.message
-              });
+              // Si hay carrito temporal, intentar fusionar
+              this._clienteService.fusionar_carrito_cliente(cartID, response.data._id, response.token).subscribe(
+                res => {
+                  // Eliminar cartID después de la fusión y actualizar carrito
+                  localStorage.removeItem('cartID');
+                  this.obtener_carrito_cliente(); // Actualiza el carrito tras la fusión
+                },
+                error => {
+                  console.error("Error al fusionar carritos:", error);
+                  iziToast.show({
+                    title: 'ERROR CARRITO',
+                    class: 'iziToast-danger',
+                    position: 'topRight',
+                    message: 'No se pudo fusionar el carrito.'
+                  });
+                }
+              );
             }
-
-          },
-          error => {
+          } else {
             iziToast.show({
-              title: 'ERROR SERVER',
+              title: 'ERROR USER',
               class: 'iziToast-danger',
               position: 'topRight',
-              message: 'Ocurrió un error en el servidor, intente mas nuevamente.'
+              message: response.message
             });
           }
-        );
-      }
+        },
+        error => {
+          iziToast.show({
+            title: 'ERROR SERVER',
+            class: 'iziToast-danger',
+            position: 'topRight',
+            message: 'Ocurrió un error en el servidor, intente nuevamente.'
+          });
+        }
+      );
     } else {
       iziToast.show({
         title: 'ERROR DATA',
@@ -196,9 +219,10 @@ export class NavComponent implements OnInit {
 
 
   calcular_carrito() {
-    this.subtotal=0
+    this.subtotal = 0
     this.carrito_arr.forEach(element => {
-      this.subtotal = this.subtotal + parseInt(element.precio) //element.producto.precio
+      console.log(element)
+      this.subtotal = this.subtotal + parseInt(element.precio)* parseInt(element.cantidad) //element.producto.precio
     }
     )
   }

@@ -34,7 +34,15 @@ export class CarritoComponent {
     private _clienteService: ClienteService
   ) {
     this.token = localStorage.getItem('token')
-    this.id_cliente = localStorage.getItem('identity')
+
+if(this.token){
+  this.id_cliente = localStorage.getItem('identity')
+}
+else{
+  this.id_cliente=localStorage.getItem('cartID')
+}
+
+    
 
 this.obtener_carrito_cliente()
 
@@ -71,7 +79,7 @@ console.log('Carro en chekout',this.carrito_arr)
   calcular_carrito() {
     this.subtotal=0
     this.carrito_arr.forEach(element => {
-      this.subtotal = this.subtotal + parseInt(element.precio)
+      this.subtotal = this.subtotal + parseInt(element.precio)*parseInt(element.cantidad)
     }
     )
     this.total_pagar = this.subtotal

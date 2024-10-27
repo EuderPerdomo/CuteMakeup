@@ -44,7 +44,8 @@ export interface Variedad {
     tamano_disponibilidad: TamanoDisponibilidad[];
     _id: string | undefined; // O el tipo correcto para _id
   }
-  
+
+
   export interface Imagen {
     imagen: string;
     _id: string;

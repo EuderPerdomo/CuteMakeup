@@ -1,5 +1,11 @@
 <app-nav></app-nav>
 
+<!-- <section>
+
+<spline-viewer url="https://prod.spline.design/NOVySJytRo2aADmt/scene.splinecode"></spline-viewer>
+
+</section> -->
+
       <!-- Hero slider -->
       <section class="tns-carousel-wrapper tns-controls-onhover">
         <div class="tns-carousel-inner" data-carousel-options='{
@@ -116,20 +122,21 @@
             }
           }'>
             <!-- Category -->
-            <a href="shop-catalog.html" class="d-block image-scale heading-highlight text-center">
+            <a *ngFor="let item of categorias | slice: 0:6" href="shop-catalog.html" class="d-block image-scale heading-highlight text-center">
               <div class="image-inner mb-3 rounded">
-                <img src="../assets/img/ecommerce/home/categories/01.jpg" alt="Women’s">
+                <img src="../assets/img/ecommerce/home/categories/01.jpg" alt="{{item.titulo}}">
               </div>
-              <h3 class="h5 mb-1">Women’s</h3>
+              <h3 class="h5 mb-1">{{item.titulo}}</h3>
             </a>
-            <!-- Category -->
+            
+<!-- 
             <a href="shop-catalog.html" class="d-block image-scale heading-highlight text-center">
               <div class="image-inner mb-3 rounded">
                 <img src="../assets/img/ecommerce/home/categories/02.jpg" alt="Men’s">
               </div>
               <h3 class="h5 mb-1">Men’s</h3>
             </a>
-            <!-- Category -->
+      
             <a href="shop-catalog.html" class="d-block image-scale heading-highlight text-center">
               <div class="image-inner mb-3 rounded">
                 <img src="../assets/img/ecommerce/home/categories/03.jpg" alt="Kids'">
@@ -142,7 +149,7 @@
                 <img src="../assets/img/ecommerce/home/categories/03.jpg" alt="Kids'">
               </div>
               <h3 class="h5 mb-1">Kids'</h3>
-            </a>
+            </a> -->
 
           </div>
         </div>

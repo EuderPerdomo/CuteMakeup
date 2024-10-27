@@ -67,7 +67,7 @@
                 <tbody *ngFor="let item of producto.variedades ; let indice=index">
                   <tr>
                     <td> <input [(ngModel)]="item.titulo" class="titulo_variedad"
-                      [ngClass]="{'highlight': variedad_en_edicion == indice}" />
+                        [ngClass]="{'highlight': variedad_en_edicion == indice}" />
                       <div class="row">
                         <div class="col-12">
                           <ng-container *ngIf="variedad_en_edicion==indice">
@@ -88,7 +88,7 @@
 
                       <div class="row">
                         <div class="col-3" *ngFor="let img of item.galeria ; let indice=index">
-                          <img  [src]="img.imagen" class="img-thumbnail w-100" alt="Imagen no encontrada">
+                          <img [src]="img.imagen" class="img-thumbnail w-100" alt="Imagen no encontrada">
                         </div>
                       </div>
 
@@ -105,6 +105,7 @@
                             <th>Caracteristica</th>
                             <th>Disponibilidad</th>
                             <th>Precio</th>
+                            <th>Opciones</th>
 
                           </tr>
                         </thead>
@@ -121,32 +122,50 @@
                                 <span (click)="deleteCharacteristic(item, indice2)">
                                   <i class="fa-regular fa-trash-can " style="color: red; cursor: pointer;"></i>
                                 </span>
-                                <span (click)="editarCaracteristica(indice, indice2)">
+                                <span (click)="editarCaracteristica(indice, indice2)" class="m-3">
                                   <i class="fa-regular fa-pen-to-square" style="color: #24d14a; cursor: pointer;"></i>
                                 </span>
                               </td>
                             </tr>
 
-                            <tr *ngIf="editar_variedad_carcateristica==(indice.toString() +'_'+ indice2.toString())" [attr.id]="indice.toString() +'_'+ indice2.toString()">
+                            <tr *ngIf="editar_variedad_carcateristica==(indice.toString() +'_'+ indice2.toString())"
+                              [attr.id]="indice.toString() +'_'+ indice2.toString()">
                               <td>
                                 <select id="idd" name="idd" required [(ngModel)]="medida.unidad_medida"
-                                [ngClass]="{'highlight': editar_variedad_carcateristica == (indice.toString() + '_' + indice2.toString())}"
+                                  [ngClass]="{'highlight': editar_variedad_carcateristica == (indice.toString() + '_' + indice2.toString())}"
                                   #unidad="ngModel">
                                   <option *ngFor="let unit of unidadesMedida" [value]="unit.titulo">{{ unit.titulo }}
                                   </option>
                                 </select>
                               </td>
-                              <td><input [(ngModel)]="medida.tamano" 
-                                [ngClass]="{'highlight': editar_variedad_carcateristica == (indice.toString() + '_' + indice2.toString())}" /></td>
+                              <td><input [(ngModel)]="medida.tamano"
+                                  [ngClass]="{'highlight': editar_variedad_carcateristica == (indice.toString() + '_' + indice2.toString())}" />
+                              </td>
                               <td><input type="number" [(ngModel)]="medida.disponibilidad"
-                                [ngClass]="{'highlight': editar_variedad_carcateristica == (indice.toString() + '_' + indice2.toString())}" /></td>
-                              <td><input type="number" [(ngModel)]="medida.precio" 
-                                [ngClass]="{'highlight': editar_variedad_carcateristica == (indice.toString() + '_' + indice2.toString())}"/></td>
+                                  [ngClass]="{'highlight': editar_variedad_carcateristica == (indice.toString() + '_' + indice2.toString())}" />
+                              </td>
+                              <td><input type="number" [(ngModel)]="medida.precio"
+                                  [ngClass]="{'highlight': editar_variedad_carcateristica == (indice.toString() + '_' + indice2.toString())}" />
+                              </td>
 
                               <td>
                                 <span (click)="cancelarEditarCaracteristica(indice, indice2)">
-                                  <i class="fa-solid fa-xmark" style="color: red; cursor: pointer;"></i>
+                                  <i class="fa-solid fa-xmark m-2" style="color: red; cursor: pointer;"></i>
                                 </span>
+
+                              <ng-container *ngIf="accion=='editar'">
+                                <span (click)="guardarEditarCaracteristica(indice, indice2,medida,item)">
+                                  <i class="fa-solid fa-floppy-disk m-2" style="color: green; cursor: pointer;"></i>
+                                </span>
+                              </ng-container>
+
+                               <ng-container *ngIf="accion=='nuevo'">
+                                <span (click)="guardarNuevaCaracteristica(indice, indice2,item)">
+                                  <i class="fa-solid fa-floppy-disk m-2" style="color: blue; cursor: pointer;"></i>
+                                </span>
+                               </ng-container>
+
+                            
 
                               </td>
                             </tr>
@@ -156,8 +175,12 @@
 
                         </tbody>
                       </table>
-                      <button type="button" class="btn btn-outline-success btn-icon mr-1 btn-sm"
+                      <!-- <button type="button" class="btn btn-outline-success btn-icon mr-1 btn-sm"
                         style="cursor: pointer;" (click)="addCharacteristic(item,indice)">
+                        Añadir Caracteristica
+                      </button> -->
+                      <button type="button" class="btn btn-outline-success btn-icon mr-1 btn-sm"
+                        style="cursor: pointer;" (click)="addCaracteristica(item,indice)">
                         Añadir Caracteristica
                       </button>
                       <button type="button" class="btn btn-outline-primary btn-icon mr-1 btn-sm"
@@ -165,21 +188,22 @@
                         Galeria
                       </button>
 
-                    
-                      <!-- Inicia Modal -->
+
+                      <!-- Inicia Modal Galeria-->
                       <div class="modal fade" id="delete-{{indice}}" tabindex="-1" role="dialog" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document" style="min-width: 70%;">
                           <div class="modal-content">
                             <div class="modal-card card" data-list="{&quot;valueNames&quot;: [&quot;name&quot;]}">
                               <div class="card-body">
-                                <h4 class="modal-title font-weight-bold" id="exampleModalCenterTitle">Galería de Imágenes</h4>
+                                <h4 class="modal-title font-weight-bold" id="exampleModalCenterTitle">Galería de
+                                  Imágenes</h4>
                                 <h5 class="mb-2">{{producto.titulo}}</h5>
-                                <h6 class="text-muted" >Variedad de Producto: {{producto.variedades[indice].titulo}}</h6>
-                             
+                                <h6 class="text-muted">Variedad de Producto: {{producto.variedades[indice].titulo}}</h6>
+
 
                                 <!-- Nueva Imagen -->
                                 <ng-container *ngIf="producto.variedades[indice].galeria.length <4 ">
-                                  <div class="mb-3" >
+                                  <div class="mb-3">
                                     <label class="col-form-label font-weight-medium" for="text-input">Nueva
                                       Imagen </label>
                                     <div class="input-group">
@@ -210,10 +234,11 @@
                                 <ng-container *ngIf="producto.variedades[indice].galeria.length >= 4">
                                   <div class="alert alert-warning">
                                     <h4 class="alert-heading">¡Oh, oh! 📸</h4>
-                                    <p>Parece que has alcanzado el límite de imágenes. Esta galería ya contiene 4 imágenes, ¡así que no se pueden agregar más! 🎨</p>
+                                    <p>Parece que has alcanzado el límite de imágenes. Esta galería ya contiene 4
+                                      imágenes, ¡así que no se pueden agregar más! 🎨</p>
                                   </div>
                                 </ng-container>
-                                
+
 
                                 <!-- Galería de Imágenes -->
 
@@ -236,7 +261,7 @@
                           </div>
                         </div>
                       </div>
-                      <!-- Finaliza Modal -->
+                      <!-- Finaliza Modal Galeria-->
 
                     </td>
 
@@ -253,10 +278,17 @@
         </div>
 
         <div class="col-md-2 mt-2">
-          <button type="button" class="btn btn-outline-success btn-icon mr-1 btn-sm" style="cursor: pointer;"
+
+          <!-- <button type="button" class="btn btn-outline-success btn-icon mr-1 btn-sm" style="cursor: pointer;"
             (click)="addVariety()">
             Añadir Variedad
+          </button> -->
+
+          <button type="button" class="btn btn-outline-primary btn-icon mr-1 btn-sm" style="cursor: pointer;"
+            data-toggle="modal" [attr.data-target]="'#anadirVariedad'">
+            Añadir Variedad
           </button>
+
         </div>
 
       </div>
@@ -264,7 +296,7 @@
 
   </div>
   <div class="card-footer">
-    <button *ngIf="!load_btn" class="btn btn-primary mr-3" type="button" (click)="actualizar()">Guardar cambios</button>
+    <!-- <button *ngIf="!load_btn" class="btn btn-primary mr-3" type="button" (click)="actualizar()">Guardar cambios</button> -->
     <!-- Button with growing spinner and text -->
     <button *ngIf="load_btn" type="button" class="btn btn-secondary">
       <span class="spinner-grow spinner-grow-sm me-2" role="status" aria-hidden="true"></span>
@@ -272,3 +304,119 @@
     </button>
   </div>
 </div>
+
+
+
+
+<!-- Inicia Modal anadir Variedad -->
+<div class="modal fade" id="anadirVariedad" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="min-width: 70%;">
+    <div class="modal-content">
+      <div class="modal-card card" data-list="{&quot;valueNames&quot;: [&quot;name&quot;]}">
+        <div class="card-body">
+          <h5 class="mb-2"> Nueva Variedad De Producto: {{producto.titulo}}</h5>
+
+          <input type="text" id="titulo" name="titulo" class="form-control" required minlength="4" [(ngModel)]="titulo"
+            placeholder="Nombre Variedad" [ngModelOptions]="{standalone: true}">
+
+          <form #variedadNuevaForm="ngForm" (ngSubmit)="variedadNueva(variedadNuevaForm)">
+            <div class="row">
+              <div class="col-md-3  form-group">
+                <label for="">Unidad de Medida</label>
+                <select class="form-control custom-select" id="select-tension" required name="panel"
+                  [(ngModel)]="unidad_medida0">
+                  <option value="{{item.titulo}}" selected *ngFor="let item of unidadesMedida"> {{item.titulo}}</option>
+                </select>
+              </div>
+
+              <div class=" col-md-3  form-group">
+                <label for="tamano" class="form-label">Caracteristica</label>
+                <input type="text" id="tamano" name="tamano" class="form-control" required [(ngModel)]="tamano0"
+                  #tamano="ngModel">
+
+                <div *ngIf="tamano.invalid && (tamano.dirty || tamano.touched)" class="invalido">
+                  <div *ngIf="tamano.hasError('required')">
+                    Debe Ingresar Carcteristica.
+                  </div>
+                </div>
+              </div>
+
+              <div class=" col-md-3  form-group">
+                <label for="disponibilidad" class="form-label">Stock</label>
+                <input type="number" id="disponibilidad" name="disponibilidad" class="form-control" required
+                  minlength="4" [(ngModel)]="disponibilidad0" #disponibilidad="ngModel" [min]="1">
+
+                <div *ngIf="disponibilidad?.invalid && (disponibilidad?.dirty || disponibilidad?.touched)">
+                  <div *ngIf="disponibilidad?.errors?.['required']">El disponibilidad es requerido</div>
+                  <div *ngIf="disponibilidad?.errors?.['min'] || disponibilidad?.errors?.['max']">El minimo
+                    disponibilidad es 1</div>
+                </div>
+              </div>
+
+              <div class=" col-md-3 form-group">
+                <label for="precio" class="form-label">precio</label>
+                <input type="number" id="precio" name="precio" class="form-control" required minlength="4"
+                  [(ngModel)]="precio0" #precio="ngModel" [min]="1">
+
+                <div *ngIf="precio?.invalid && (precio?.dirty || precio?.touched)">
+                  <div *ngIf="precio?.errors?.['required']">El precio es requerido</div>
+                  <div *ngIf="precio?.errors?.['min'] || precio?.errors?.['max']">El minimo Precio es 1</div>
+                </div>
+
+
+
+                <button [disabled]="variedadNuevaForm.invalid" name="agregar" *ngIf="!editando"
+                  class="btn btn-primary btn-shadow" type="submit" (click)="addCampo()">Agregar</button>
+
+                <button [disabled]="variedadNuevaForm.invalid" *ngIf="editando" class="btn btn-primary btn-shadow"
+                  type="submit" (click)="guardarEditarCampo()">Guardar</button>
+
+              </div>
+            </div>
+          </form>
+
+
+          <table class="table">
+            <thead class="text-center">
+              <tr>
+
+                <th>Medida</th>
+                <th>Caracteristica</th>
+                <th>Disponibilidad</th>
+                <th>Precio</th>
+                <th>Opciones</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <ng-container>
+                <tr *ngFor="let item of tamano_disponibilidad">
+                  <td>{{item.unidad_medida}}</td>
+                  <td>{{item.tamano}}</td>
+                  <td>{{item.disponibilidad}}</td>
+                  <td>{{item.precio |currency:'COP':'$':'3.0'}}</td>
+                  <td>
+
+                    <button class="btn btn-primary btn-shadow" (click)="editarFila(item)">Editar</button>
+                    <button class="btn btn-danger btn-shadow" (click)="borrar(item.codigo)">Eliminar</button>
+                  </td>
+                </tr>
+              </ng-container>
+            </tbody>
+          </table>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" (click)="guardarNuevaVariedad()">CREAR VARIEDAD</button>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Finaliza Modal Anadir Variedad-->

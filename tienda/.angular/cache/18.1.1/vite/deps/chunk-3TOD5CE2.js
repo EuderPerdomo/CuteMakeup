@@ -1,6 +1,6 @@
 import {
   withHttpTransferCache
-} from "./chunk-67REL66J.js";
+} from "./chunk-6PLNW6ZX.js";
 import {
   CommonModule,
   DOCUMENT,
@@ -11,7 +11,7 @@ import {
   isPlatformServer,
   parseCookieValue,
   setRootDomAdapter
-} from "./chunk-U6T465MX.js";
+} from "./chunk-PCCQS5MW.js";
 import {
   APP_ID,
   ApplicationModule,
@@ -20,6 +20,7 @@ import {
   Console,
   ENVIRONMENT_INITIALIZER,
   ErrorHandler,
+  GLOBAL_EVENT_DELEGATION,
   INJECTOR_SCOPE,
   Inject,
   Injectable,
@@ -67,11 +68,11 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-26IGLY6R.js";
+} from "./chunk-F5UO367H.js";
 import {
   __spreadProps,
   __spreadValues
-} from "./chunk-R7GQRDZ6.js";
+} from "./chunk-XWLXMCJQ.js";
 
 // node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs
 var GenericBrowserDomAdapter = class extends DomAdapter {
@@ -841,6 +842,42 @@ var DomEventsPlugin = _DomEventsPlugin;
     }]
   }], null);
 })();
+var _EventDelegationPlugin = class _EventDelegationPlugin extends EventManagerPlugin {
+  constructor(doc) {
+    super(doc);
+    this.delegate = inject(GLOBAL_EVENT_DELEGATION, {
+      optional: true
+    });
+  }
+  supports(eventName) {
+    return this.delegate ? this.delegate.supports(eventName) : false;
+  }
+  addEventListener(element, eventName, handler) {
+    return this.delegate.addEventListener(element, eventName, handler);
+  }
+  removeEventListener(element, eventName, callback) {
+    return this.delegate.removeEventListener(element, eventName, callback);
+  }
+};
+_EventDelegationPlugin.ɵfac = function EventDelegationPlugin_Factory(t) {
+  return new (t || _EventDelegationPlugin)(ɵɵinject(DOCUMENT));
+};
+_EventDelegationPlugin.ɵprov = ɵɵdefineInjectable({
+  token: _EventDelegationPlugin,
+  factory: _EventDelegationPlugin.ɵfac
+});
+var EventDelegationPlugin = _EventDelegationPlugin;
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(EventDelegationPlugin, [{
+    type: Injectable
+  }], () => [{
+    type: void 0,
+    decorators: [{
+      type: Inject,
+      args: [DOCUMENT]
+    }]
+  }], null);
+})();
 var MODIFIER_KEYS = ["alt", "control", "meta", "shift"];
 var _keyMap = {
   "\b": "Backspace",
@@ -949,8 +986,7 @@ var _KeyEventsPlugin = class _KeyEventsPlugin extends EventManagerPlugin {
       keycode = event.code;
       key = "code.";
     }
-    if (keycode == null || !keycode)
-      return false;
+    if (keycode == null || !keycode) return false;
     keycode = keycode.toLowerCase();
     if (keycode === " ") {
       keycode = "space";
@@ -1078,6 +1114,10 @@ var BROWSER_MODULE_PROVIDERS = [{
   useClass: KeyEventsPlugin,
   multi: true,
   deps: [DOCUMENT]
+}, {
+  provide: EVENT_MANAGER_PLUGINS,
+  useClass: EventDelegationPlugin,
+  multi: true
 }, DomRendererFactory2, SharedStylesHost, EventManager, {
   provide: RendererFactory2,
   useExisting: DomRendererFactory2
@@ -1162,8 +1202,7 @@ var _Meta = class _Meta {
    * the new element if no match is found, or `null` if the tag parameter is not defined.
    */
   addTag(tag, forceCreation = false) {
-    if (!tag)
-      return null;
+    if (!tag) return null;
     return this._getOrCreateElement(tag, forceCreation);
   }
   /**
@@ -1175,8 +1214,7 @@ var _Meta = class _Meta {
    * @returns The matching elements if found, or the new elements.
    */
   addTags(tags, forceCreation = false) {
-    if (!tags)
-      return [];
+    if (!tags) return [];
     return tags.reduce((result, tag) => {
       if (tag) {
         result.push(this._getOrCreateElement(tag, forceCreation));
@@ -1191,8 +1229,7 @@ var _Meta = class _Meta {
    * @returns The matching element, if any.
    */
   getTag(attrSelector) {
-    if (!attrSelector)
-      return null;
+    if (!attrSelector) return null;
     return this._doc.querySelector(`meta[${attrSelector}]`) || null;
   }
   /**
@@ -1202,8 +1239,7 @@ var _Meta = class _Meta {
    * @returns The matching elements, if any.
    */
   getTags(attrSelector) {
-    if (!attrSelector)
-      return [];
+    if (!attrSelector) return [];
     const list = this._doc.querySelectorAll(`meta[${attrSelector}]`);
     return list ? [].slice.call(list) : [];
   }
@@ -1217,8 +1253,7 @@ var _Meta = class _Meta {
    * @return The modified element.
    */
   updateTag(tag, selector) {
-    if (!tag)
-      return null;
+    if (!tag) return null;
     selector = selector || this._parseSelector(tag);
     const meta = this.getTag(selector);
     if (meta) {
@@ -1247,8 +1282,7 @@ var _Meta = class _Meta {
     if (!forceCreation) {
       const selector = this._parseSelector(meta);
       const elem = this.getTags(selector).filter((elem2) => this._containsAttributes(meta, elem2))[0];
-      if (elem !== void 0)
-        return elem;
+      if (elem !== void 0) return elem;
     }
     const element = this._dom.createElement("meta");
     this._setMetaElementAttributes(meta, element);
@@ -1701,8 +1735,7 @@ var _DomSanitizerImpl = class _DomSanitizerImpl extends DomSanitizer {
     this._doc = _doc;
   }
   sanitize(ctx, value) {
-    if (value == null)
-      return null;
+    if (value == null) return null;
     switch (ctx) {
       case SecurityContext.NONE:
         return value;
@@ -1851,7 +1884,7 @@ function provideClientHydration(...features) {
   }
   return makeEnvironmentProviders([typeof ngDevMode !== "undefined" && ngDevMode ? provideZoneJsCompatibilityDetector() : [], withDomHydration(), featuresKind.has(HydrationFeatureKind.NoHttpTransferCache) || hasHttpTransferCacheOptions ? [] : withHttpTransferCache({}), providers]);
 }
-var VERSION = new Version("18.0.2");
+var VERSION = new Version("18.0.6");
 
 export {
   BrowserDomAdapter,
@@ -1895,9 +1928,9 @@ export {
 
 @angular/platform-browser/fesm2022/platform-browser.mjs:
   (**
-   * @license Angular v18.0.2
+   * @license Angular v18.0.6
    * (c) 2010-2024 Google LLC. https://angular.io/
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-4SSEDJMB.js.map
+//# sourceMappingURL=chunk-3TOD5CE2.js.map

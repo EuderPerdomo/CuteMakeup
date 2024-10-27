@@ -29,7 +29,7 @@
           <div class="d-flex align-items-center">
             <i class="ci-profile lead me-3"></i>
             <div>
-              Already have an account?&nbsp;&nbsp;<a href="#modal-signin" class="alert-link" data-bs-toggle="modal" data-view="#modal-signin-view">Sign in</a>&nbsp;&nbsp;for faster checkout experience.
+              ¿Ya tienes una Cuenta?&nbsp;&nbsp;<a href="#modal-signin" class="alert-link" data-bs-toggle="modal" data-view="#modal-signin-view">Inicia</a>&nbsp;&nbsp; Para una experiencia mas rapida.
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@
                   </ul>
                 </div>
                 <div class="d-flex align-items-start pe-sm-3">
-                  <input type="number" class="form-control form-control-sm bg-light me-3" min="1" style="width: 4.5rem;" value="1">
+                  <input type="number" class="form-control form-control-sm bg-light me-3" min="1" style="width: 4.5rem;" value="{{item.cantidad}}">
                   <div class="text-nowrap pt-2">
                     <!-- <strong class="text-danger">$15.00</strong> -->
                     <span class="fs-xs text-muted" style="font-size: 1.1rem !important;">{{item.precio |currency:'COP':'$':'3.0'}}</span>
@@ -299,15 +299,15 @@
       <aside class="col-lg-4" style="margin-top: -120px;">
         <div class="position-sticky top-0">
           <div class="mb-4" style="padding-top: 120px;">
-            <label for="promo-code" class="form-label-lg">Apply a promo code</label>
+            <label for="promo-code" class="form-label-lg">Codigo Promocional</label>
             <div class="input-group input-group-lg">
-              <input type="text" id="promo-code" class="form-control" placeholder="Enter promo code">
-              <button type="button" class="btn btn-primary px-4">&nbsp;&nbsp;Apply&nbsp;&nbsp;</button>
+              <input type="text" id="promo-code" class="form-control" placeholder="Ingrese Codigo Promocional">
+              <button type="button" class="btn btn-primary px-4">&nbsp;&nbsp;Aplicar&nbsp;&nbsp;</button>
             </div>
           </div>
           <div class="bg-secondary rounded mb-4">
             <div class="border-bottom p-4">
-              <h2 class="h4 mb-0">Order totals</h2>
+              <h2 class="h4 mb-0">Orden Total</h2>
             </div>
             <ul class="list-unstyled border-bottom mb-0 p-4">
               <li class="d-flex justify-content-between mb-2">

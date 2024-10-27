@@ -29,15 +29,15 @@ export const routes: Routes = [
   { path: 'productos/:slug', component:ShowProductoComponent },
 
 //Ruta Carrito de Compras
-
-{ path: 'carrito', component:CarritoComponent,canActivate:[AuthGuard] },
+//{ path: 'carrito', component:CarritoComponent,canActivate:[AuthGuard] },
+{ path: 'carrito', component:CarritoComponent },
 //{ path: 'carrito', component:CarritoComponent},
 
 
 //Rutas para Usuario
-{ path: 'cuenta/direcciones', component:DireccionesComponent},
+{ path: 'cuenta/direcciones', component:DireccionesComponent,canActivate:[AuthGuard]},
 //{ path: 'perfil/cuenta', component:CuentaComponent },
-{ path: 'cuenta/perfil', component:PerfilComponent },
+{ path: 'cuenta/perfil', component:PerfilComponent,canActivate:[AuthGuard] },
 
 
 //Rutas del Blog

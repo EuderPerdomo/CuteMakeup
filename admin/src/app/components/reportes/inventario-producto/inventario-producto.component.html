@@ -1,0 +1,204 @@
+<app-sidebar></app-sidebar>
+
+<div class="border-bottom pt-1 mt-2 mb-2">
+    <h2 class="mt-2 mt-md-4 mb-3 pt-5">Productos</h2>
+    <div class="d-flex flex-wrap flex-md-nowrap justify-content-between">
+        <p class="text-muted">Inventario</p>
+    </div>
+</div>
+
+<div class="card box-shadow-sm">
+
+    <div class="card-header">
+        <div class="row">
+
+            <!-- Inicioooooooo -->
+
+            <div class="accordion custom-accordion" id="accordionExample">
+                <div class="row">
+                    <div class="col-4">
+                        <!-- Filtro por Categoría -->
+                        <div class="card custom-card">
+                            <div class="card-header custom-card-header" id="headingCategoria">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block btn-sm text-left custom-button" type="button"
+                                        data-toggle="collapse" data-target="#collapseCategoria" aria-expanded="true"
+                                        aria-controls="collapseCategoria">
+                                        <i class="fas fa-tags"></i> Filtrar por Categoría
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseCategoria" class="collapse show" aria-labelledby="headingCategoria"
+                                data-parent="#accordionExample">
+                                <div class="card-body custom-card-body">
+                                    <ul>
+                                        <li class="filter-item">
+                                            <div class="form-check">
+                                                <input type="radio" name="groupCategoria" class="form-check-input"
+                                                    id="categorias-todos" value="Todos"
+                                                    [(ngModel)]="filtro_categoria_producto"
+                                                    (change)="buscar_por_categoria()">
+                                                <label for="categorias-todos" class="form-check-label">
+                                                    <span class="filter-item-text">Todos</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="filter-item" *ngFor="let item of categorias; let indice = index">
+                                            <div class="form-check">
+                                                <input type="radio" name="groupCategoria" class="form-check-input"
+                                                    id="categorias-{{indice}}" value="{{item.titulo}}"
+                                                    [(ngModel)]="filtro_categoria_producto"
+                                                    (change)="buscar_por_categoria()">
+                                                <label for="categorias-{{indice}}" class="form-check-label">
+                                                    <span class="filter-item-text">{{item.titulo}}</span>
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <!-- Filtro por Precio -->
+                        <div class="card custom-card">
+                            <div class="card-header custom-card-header" id="headingPrecio">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block btn-sm text-left collapsed custom-button"
+                                        type="button" data-toggle="collapse" data-target="#collapsePrecio"
+                                        aria-expanded="false" aria-controls="collapsePrecio">
+                                        <i class="fas fa-dollar-sign"></i> Filtrar por Rango de Precio
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapsePrecio" class="collapse" aria-labelledby="headingPrecio"
+                                data-parent="#accordionExample">
+                                <div class="card-body custom-card-body">
+                                    <!-- <div class="form-group">
+              <label for="minPrecio">Precio Mínimo</label>
+              <input type="number" id="minPrecio" [(ngModel)]="precio_min" class="form-control custom-input" placeholder="Min">
+            </div>
+            <div class="form-group">
+              <label for="maxPrecio">Precio Máximo</label>
+              <input type="number" id="maxPrecio" [(ngModel)]="precio_max" class="form-control custom-input" placeholder="Max">
+            </div>
+            <button class="btn btn-primary custom-btn" (click)="buscar_por_precio()">Aplicar</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <!-- Filtro por Disponibilidad -->
+                        <div class="card custom-card">
+                            <div class="card-header custom-card-header" id="headingDisponibilidad">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link btn-block btn-sm text-left collapsed custom-button"
+                                        type="button" data-toggle="collapse" data-target="#collapseDisponibilidad"
+                                        aria-expanded="false" aria-controls="collapseDisponibilidad">
+                                        <i class="fas fa-boxes"></i> Filtrar por Disponibilidad
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseDisponibilidad" class="collapse" aria-labelledby="headingDisponibilidad"
+                                data-parent="#accordionExample">
+                                <div class="card-body custom-card-body">
+                                    <!-- <div class="form-check">
+              <input type="radio" name="groupDisponibilidad" class="form-check-input" id="disponibilidad-todos" value="Todos"
+                [(ngModel)]="filtro_disponibilidad" (change)="buscar_por_disponibilidad()">
+              <label for="disponibilidad-todos" class="form-check-label">Todos</label>
+            </div> 
+            <div class="form-check">
+              <input type="radio" name="groupDisponibilidad" class="form-check-input" id="disponibilidad-disponibles" value="Disponibles"
+                [(ngModel)]="filtro_disponibilidad" (change)="buscar_por_disponibilidad()">
+              <label for="disponibilidad-disponibles" class="form-check-label">Disponibles</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" name="groupDisponibilidad" class="form-check-input" id="disponibilidad-no_disponibles" value="No Disponibles"
+                [(ngModel)]="filtro_disponibilidad" (change)="buscar_por_disponibilidad()">
+              <label for="disponibilidad-no_disponibles" class="form-check-label">No Disponibles</label>
+            </div>
+            -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Finnnnnnn -->
+
+        </div>
+        <div class="row">
+            <h2 class="mb-0">
+                <button class="btn btn-link btn-block btn-sm text-left collapsed custom-button" type="button"
+                    aria-expanded="false" (click)="descargarReporte()">
+                    <i class="fa-solid fa-download"></i> Descargar Inventario (Excel)
+
+                </button>
+            </h2>
+        </div>
+    </div>
+
+    <div class="card-body">
+
+        <ng-container>
+            <table class="table table-bordered table-sm">
+                <thead class="text-center">
+                    <tr>
+                        <th>Nombre Producto</th>
+                        <th>Categoría</th>
+                        <th>Variedad</th>
+                        <th>Unidad de Medida</th>
+                        <th>Tamaño</th>
+                        <th>Stock</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container>
+                        <tr *ngFor="let item of inventario">
+                            <td>{{item.titulo}}</td>
+                            <td>{{item.categoria}}</td>
+                            <td>{{item.variedad}}</td>
+                            <td>{{item.unidad_medida}}</td>
+                            <td>{{item.tamano}}</td>
+                            <td>{{item.disponibilidad}}</td>
+                            <td>{{item.precio|currency:'COP':'$':'3.0'}}</td>
+
+
+                            <!-- 
+{
+    "_id": "6674473713db7413f9fecca3",
+    "titulo": "Brillo Labial",
+    "categoria": [
+        {
+            "_id": "667352d75da944b13b870e2d",
+            "titulo": "Maquillaje",
+            "slug": "Maquillaje"
+        }
+    ],
+    "variedad": "Bronze",
+    "unidad_medida": "Gramos",
+    "tamano": "10",
+    "disponibilidad": 17,
+    "precio": 25000
+}        
+-->
+
+
+                        </tr>
+                    </ng-container>
+
+
+                </tbody>
+            </table>
+        </ng-container>
+
+    </div>
+
+    <div class="card-footer"></div>
+
+
+</div>

@@ -48,3 +48,9 @@ table{
 .titulo_variedad{
   font-size: small;
 }
+
+
+
+.invalid-field input {
+  border-color: #f44336; 
+}

@@ -171,19 +171,54 @@ agregar_variedad_producto_admin(data:any,token:any,id:any):Observable<any>{
   return this._http.post(this.url+'agregar_variedad_producto_admin/'+id,data,{headers:headers});
 }
 
+agregar_nueva_variedad_producto_admin(data:any,token:any,id:any):Observable<any>{
+  let headers = new HttpHeaders({'Content-Type':'application/json','Authorization':token});
+  return this._http.post(this.url+'agregar_nueva_variedad_producto_admin/'+id,data,{headers:headers});
+}
+
 eliminar_imagen_variedad_admin(id_producto:any,id_variedad:any,id_imagen: any, token: any): Observable<any> {
   let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token });
   return this._http.delete(this.url + 'eliminar_imagen_variedad_admin/' + id_producto+'/'+id_variedad+'/'+id_imagen, { headers: headers });
 }
 
 
+agregar_nueva_caracteristica_variedad_admin(id_producto:any,id_variedad:any,data: any, token: any): Observable<any> {
+  console.log(id_producto,id_variedad,data)
+  let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token });
+  return this._http.post(this.url + 'agregar_nueva_caracteristica_variedad_admin/' + id_producto+'/'+id_variedad,data, { headers: headers });
+}
+
+editar_caracteristica_variedad_admin(id_producto:any,id_variedad:any,id_carcateristica:any,data: any, token: any): Observable<any> {
+  console.log('En servicio',id_producto,id_variedad,id_carcateristica,data)
+  let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token });
+  return this._http.put(this.url + 'editar_caracteristica_variedad_admin/' + id_producto+'/'+id_variedad+'/'+id_carcateristica,data, { headers: headers });
+}
+
+
+
 //Finalizan Productos
+
+      //Inventarios de Productos
+      inventario_productos_admin(token:any):Observable<any>{
+        let headers=new HttpHeaders({'Content-Type':'application/json','Authorization':token})
+        return this._http.get(this.url+'inventario_productos_admin',{headers:headers})
+      }
+
+
 
 //Inician Categorias
 
 get_categorias(token: any): Observable<any> {
   let headers = new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': token });
   return this._http.get(this.url + 'get_categorias', { headers: headers });
+}
+
+registro_categoria_admin(data: any, file: any, token: any): Observable<any> {
+  let headers = new HttpHeaders({ 'Authorization': token });
+  const fd = new FormData();
+  fd.append('titulo', data.titulo);
+  fd.append('portada', file);
+  return this._http.post(this.url + 'registro_categoria_admin', fd, { headers: headers });
 }
 
 //Finalizan Categorias

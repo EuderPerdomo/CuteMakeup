@@ -467,15 +467,20 @@ const agregar_variedad_producto_admin = async function (req, res) {
             let producto = await Producto.findOne({
                 _id: id_producto,
             });
+           
 
             //2 Busco si tienen Variedades
 
             if (!producto.variedades || producto.variedades.length === 0) {//Si no tiene ninguna Agrego data de la variedad
+                console.log('No tiene variedades',data)
                 let reg = await Producto.findByIdAndUpdate({ _id: id_producto }, {
                     $push: {
                         variedades: data
                     }
                 }, { useFindAndModify: false });
+
+                console.log('No tiene variedades',reg)
+
                 res.status(200).send({ data: reg });
 
             } else {// Si tiene Variedades
@@ -510,6 +515,7 @@ const agregar_variedad_producto_admin = async function (req, res) {
             }
 
         } catch (error) {
+            console.log(error)
             res.status(500).send({
                 message: 'Server Error',
                 error: error.message,
@@ -524,6 +530,181 @@ const agregar_variedad_producto_admin = async function (req, res) {
     //res.status(200).send({message:"Ingreso"});
 }
 
+const agregar_nueva_variedad_producto_admin = async function(req,res){
+
+    if (req.user) {
+        let data = req.body;
+        let id_producto = req.params['id'];
+        try {
+
+            //1 Busco Producto
+            let producto = await Producto.findOne({
+                _id: id_producto,
+            });
+           
+
+            let reg = await Producto.findByIdAndUpdate({ _id: id_producto }, {
+                $push: {
+                    variedades: data
+                }
+            }, { useFindAndModify: false });
+
+            res.status(200).send({ data: reg });
+            
+
+            //2 Busco si tienen Variedades
+/*
+            if (!producto.variedades || producto.variedades.length === 0) {//Si no tiene ninguna Agrego data de la variedad
+                console.log('No tiene variedades',data)
+                let reg = await Producto.findByIdAndUpdate({ _id: id_producto }, {
+                    $push: {
+                        variedades: data
+                    }
+                }, { useFindAndModify: false });
+
+                console.log('No tiene variedades',reg)
+
+                res.status(200).send({ data: reg });
+
+            } else {// Si tiene Variedades
+                //Verificar que la variedad que esta agregando no exista
+                let variedad = producto.variedades.id(data._id);
+                // Añadir la nueva variedad a la lista existente
+
+                if (variedad) {
+                    //si ya existe la actualizo
+                    const query = { _id: id_producto };
+                    const updateDocument = {
+                        $set: { "variedades.$[v]": data }
+                    };
+                    const options = {
+                        arrayFilters: [
+                            { "v._id": new mongoose.Types.ObjectId(data._id) }
+                        ]
+                    };
+                    let reg = await Producto.updateOne(query, updateDocument, options);
+                    res.status(200).send({ data: reg });
+
+                } else {
+
+                    let reg = await Producto.findByIdAndUpdate({ _id: id_producto }, {
+                        $push: {
+                            variedades: data
+                        }
+                    }, { useFindAndModify: false });
+                    res.status(200).send({ data: reg });
+
+                }
+            }
+*/
+        } catch (error) {
+            console.log(error)
+            res.status(500).send({
+                message: 'Server Error',
+                error: error.message,
+                timestamp: new Date().toISOString(),
+                path: req.originalUrl,
+                status: 500
+            });
+        }
+    } else {
+        res.status(401).send({ message: 'Sin acceso' });
+    }
+
+}
+
+
+//Agregar caracteristica de variedad
+
+const agregar_nueva_caracteristica_variedad_admin = async function(req,res){
+    if (req.user) {
+        let data = req.body;
+        let id_producto = req.params['id_producto'];
+        let id_variedad = req.params['id_variedad'];
+       try {
+
+        const registro = await Producto.findOneAndUpdate(
+            { _id: id_producto, 'variedades._id': id_variedad },
+            { $push: { 'variedades.$.tamano_disponibilidad': data } },
+           // { new: true }  // Para devolver el documento actualizado
+          )
+
+            //console.log('Producto actualizado:', updatedProduct);
+            res.status(200).send({ data: registro });
+
+        } catch (error) {
+            console.log(error)
+            res.status(500).send({
+                message: 'Server Error',
+                error: error.message,
+                timestamp: new Date().toISOString(),
+                path: req.originalUrl,
+                status: 500
+            });
+        }
+        
+
+
+    } else {
+        res.status(401).send({ message: 'Sin Acceso' });
+    }
+
+}
+
+const editar_caracteristica_variedad_admin = async function(req,res){
+    if (req.user) {
+        let data = req.body;
+        let id_producto = req.params['id_producto'];
+        let id_variedad = req.params['id_variedad'];
+        let id_caracteristica = req.params['id_caracteristica'];
+        console.log('parametros',id_producto,id_variedad,id_caracteristica,data)
+       try {
+
+        const registro = await Producto.findOneAndUpdate(
+            {
+                _id: id_producto,
+                'variedades._id': id_variedad,
+                'variedades.tamano_disponibilidad._id': id_caracteristica // Asegurarte de buscar la característica específica
+            },
+            {
+                $set: { 
+                    'variedades.$.tamano_disponibilidad.$[elem]': data // Actualizar los datos de la característica específica
+                }
+            },
+            {
+                arrayFilters: [{ 'elem._id': id_caracteristica }], // Filtrar para actualizar solo la característica correcta
+               // new: true // Para devolver el documento actualizado
+            }
+        );
+
+/*
+        const registro = await Producto.findOneAndUpdate(
+            { _id: id_producto, 'variedades._id': id_variedad },
+            { $push: { 'variedades.$.tamano_disponibilidad': data } },
+           // { new: true }  // Para devolver el documento actualizado
+          )
+*/
+            //console.log('Producto actualizado:', updatedProduct);
+            res.status(200).send({ data: registro });
+
+        } catch (error) {
+            console.log(error)
+            res.status(500).send({
+                message: 'Server Error',
+                error: error.message,
+                timestamp: new Date().toISOString(),
+                path: req.originalUrl,
+                status: 500
+            });
+        }
+        
+
+
+    } else {
+        res.status(401).send({ message: 'Sin Acceso' });
+    }
+
+}
 
 
 const agregar_imagen_variedad_admin = async function (req, res) {
@@ -711,6 +892,10 @@ module.exports = {
     agregar_variedad_producto_admin,
     agregar_imagen_variedad_admin,
     eliminar_imagen_variedad_admin,
+    agregar_nueva_variedad_producto_admin,
+            //Carcateristicas de las variedades
+            agregar_nueva_caracteristica_variedad_admin,
+            editar_caracteristica_variedad_admin,
 
     //Mensajes
     obtener_mensajes_admin,

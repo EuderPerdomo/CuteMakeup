@@ -96,20 +96,20 @@
             </a>
           </li>
           <li class="divider-vertical mb-0 d-lg-block d-none"></li>
-
-          <li class="nav-item align-self-center mb-0" *ngIf="user_login != undefined">
+<!-- *ngIf="user_login != undefined" -->
+          <li class="nav-item align-self-center mb-0" >
             <a  style="cursor:pointer;" class="nav-tool pe-lg-0" (click)="op_modal_cart()">
               <i class="ci-cart nav-tool-icon"></i>
               <span class="badge bg-success align-middle mt-n1 ms-2 px-2 py-1 fs-xs">{{carrito_arr.length}}</span>
             </a>
           </li>
 
-          <li class="nav-item align-self-center mb-0" *ngIf="user_login == undefined">
+          <!-- <li class="nav-item align-self-center mb-0" >
             <a  style="cursor:pointer;" class="nav-tool pe-lg-0" [routerLink]="['/login']">
               <i class="ci-cart nav-tool-icon"></i>
               <span class="badge bg-success align-middle mt-n1 ms-2 px-2 py-1 fs-xs">0</span>
             </a>
-          </li>
+          </li> -->
 
           <li class="divider-vertical mb-0 d-lg-none d-block"></li>
           <li class="nav-item mb-0">
@@ -130,7 +130,7 @@
         <!-- Menu -->
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
-            <a [routerLink]="'/'" class="nav-link">Home</a>
+            <a [routerLink]="'/'" class="nav-link">Homes</a>
           </li>
           <li class="nav-item dropdown">
             <a [routerLink]="'/productos'" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tienda</a>

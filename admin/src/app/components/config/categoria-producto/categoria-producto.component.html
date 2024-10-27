@@ -1,0 +1,154 @@
+<app-sidebar></app-sidebar>
+
+<div class="border-bottom pt-1 mt-2 mb-2">
+    <h2 class="mt-2 mt-md-4 mb-3 pt-5">Categorias</h2>
+    <div class="d-flex flex-wrap flex-md-nowrap justify-content-between">
+        <p class="text-muted">Este módulo lista las Categorias de la Tienda</p>
+    </div>
+</div>
+
+<div class="card box-shadow-sm">
+    <div class="card-header">
+        <div class="row">
+            <button type="button" class="btn btn-outline-primary btn-icon mr-1 btn-sm" style="cursor: pointer;"
+                data-toggle="modal" [attr.data-target]="'#anadirCategoria'">
+                Añadir Categoria
+            </button>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-sm table-nowrap card-table">
+                <thead>
+                    <tr>
+                        <th>Categoria</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody class="font-size-base" *ngIf="!load">
+                    <tr *ngFor="let item of categorias | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+
+                        <td>
+                            <div class="d-flex align-items-center">
+
+                                <div class="avatar mr-3">
+                                    <!-- <img class="avatar-img rounded me-3 mr-3" [src]="item.portada" alt="..."> -->
+                                    <img style="width: 70px;" [src]="item.portada" alt="">
+                                </div>
+
+                                <div class="ms-3">
+
+                                    <!-- Heading -->
+                                    <h6 class="fw-normal mb-1">{{item.titulo}}</h6>
+
+                                    <!-- Text -->
+                                    <span class="badge badge-success"
+                                        *ngIf="item.estado == 'Publicado'">{{item.estado}}</span>
+                                    <span class="badge badge-warning"
+                                        *ngIf="item.estado == 'Edicion'">{{item.estado}}</span>
+
+                                </div>
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+                            <button type="button" class="btn btn-outline-success btn-icon mr-1" data-toggle="tooltip"
+                                data-placement="top" title="Editar">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                            <!-- [routerLink]="['/panel/clientes/editar',item._id]" -->
+
+
+                            <button type="button" class="btn btn-outline-primary btn-icon mr-1" data-toggle="tooltip"
+                                data-placement="top" title="Ver">
+                                <i class="fa-regular fa-eye"></i>
+                            </button>
+                            <button type="button" class="btn btn-outline-danger btn-icon mr-1" style="cursor: pointer;"
+                                data-toggle="modal" [attr.data-target]="'#delete-'+item._id">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+
+
+                        </td>
+                    </tr>
+
+                </tbody>
+                <tbody *ngIf="load">
+                    <tr>
+                        <td colspan="5" class="text-center">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden"></span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="categorias.length"></ngb-pagination>
+    </div>
+
+</div>
+
+<!-- Inicia modal crear Categoria -->
+
+<div class="modal fade" id="anadirCategoria" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="min-width: 70%;">
+        <div class="modal-content">
+            <div class="modal-card card" data-list="{&quot;valueNames&quot;: [&quot;name&quot;]}">
+                <div class="card-body">
+                    <h5 class="mb-2"> Nueva Categoria</h5>
+                    <form #categoriaForm="ngForm" appUnambiguousRole (ngSubmit)="guardarNuevaCategoria(categoriaForm)">
+                        <div class="row">
+                            <div class=" col-md-5  form-group">
+                                <label for="title" class="form-label">Titulo de Categoria</label>
+                                <input type="text" id="title" name="title" class="form-control" required
+                                    [(ngModel)]="categoria.titulo" #title="ngModel">
+
+                                <div *ngIf="title.invalid && (title.dirty || title.touched)" class="invalido">
+                                    <div *ngIf="title.hasError('required')">
+                                        Debe Ingresar Un titulo
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-md-7  form-group">
+                                <ng-container >
+                                    <div class="mb-3">
+                                        <label class="col-form-label font-weight-medium" for="text-input">Portada</label>
+                                        <div class="input-group">
+                                            <input class="form-control" id="input_img" (change)="fileChangeEvent($event)"
+                                                type="file">
+                                            <div class="input-group-append">
+                                                <ng-container *ngIf="file == undefined">
+                                                    <button class="btn btn-primary" type="button" disabled>Subir</button>
+                                                </ng-container>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Previsualización de Imagen -->
+                                    <div class="mb-3 text-center" style="max-width: 20%;">
+                                        <img [src]="imgSelect" class="img-thumbnail" alt="Previsualización de imagen"
+                                            *ngIf="imgSelect">
+                                    </div>
+                                </ng-container>
+                            </div>
+                        </div>
+                        <button *ngIf="!load_btn" class="btn btn-primary btn-shadow" type="submit">Crear</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

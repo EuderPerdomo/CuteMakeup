@@ -53,7 +53,7 @@ export class ShowProductoComponent implements AfterViewInit {
 
   //public variedad_seleccionada: any
   public variedad_seleccionada: any = '';//Inicialmente all public variedad_seleccionada: string = 'all';
-  public subvariedad_seleccionada:any[] = [] //Representa el arreglo con las caracteristicas de la subvariedad actual
+  public subvariedad_seleccionada: any[] = [] //Representa el arreglo con las caracteristicas de la subvariedad actual
   public subvariedad: string = ''; //Representa el Id de la Subvariedad
 
   public galeria_seleccionada: any
@@ -72,21 +72,21 @@ export class ShowProductoComponent implements AfterViewInit {
   public sliderSelector: string = '.my-slider';
   public cachedSlider: any;
 
-  public lightGallerySelector:string = '.gallery-item';
+  public lightGallerySelector: string = '.gallery-item';
 
   public ThumbnailsSelector: string = '.thumbnails_remove';
   public cachedSliderThumbnails: any
 
 
   //LightGalery
-public migaleria:any
-//Finaliza LightGalery
+  public migaleria: any
+  //Finaliza LightGalery
 
   //Agregar al carrito
   public carrito_data: any = {
     variedad: '',
     cantidad: 1,
-    subvariedad:''
+    subvariedad: ''
   }
   public btn_cart = false
 
@@ -110,10 +110,10 @@ public migaleria:any
               const elemento = this.producto.variedades[0].tamano_disponibilidad[i];
               var tamano = {
                 tamano: elemento.tamano,
-                 unidad_medida: elemento.unidad_medida, 
-                 disponibilidad: elemento.disponibilidad, 
-                 precio: elemento.precio, 
-                 _id: elemento._id
+                unidad_medida: elemento.unidad_medida,
+                disponibilidad: elemento.disponibilidad,
+                precio: elemento.precio,
+                _id: elemento._id
               }
               this.subvariedad_seleccionada.push(tamano)
             }
@@ -123,16 +123,16 @@ public migaleria:any
               // Seleccionar la primera variedad y su primera subvariedad
               const primeraVariedad = this.producto.variedades[0];
               const primeraSubvariedad = primeraVariedad.tamano_disponibilidad[0];
-    
+
               // Asignar los valores iniciales
               this.producto.precio = primeraSubvariedad.precio;
-              this.producto.stock=primeraSubvariedad.disponibilidad
+              this.producto.stock = primeraSubvariedad.disponibilidad
               this.variedad_seleccionada = primeraVariedad._id;
               this.subvariedad = primeraSubvariedad._id;
-    
+
               // Inicializar subvariedad_seleccionada con el primer tamaño y disponibilidad
               //this.subvariedad_seleccionada.push(primeraSubvariedad);
-    
+
               // Llenar el carrusel con las imágenes de las variedades
               for (let variedad of this.producto.variedades) {
                 for (let galeriaItem of variedad.galeria) {
@@ -150,7 +150,7 @@ public migaleria:any
               }
             )
 
-            
+
 
           }
 
@@ -168,8 +168,8 @@ public migaleria:any
 
   //Galeria del producto
   ngAfterViewInit(): void {
-    setTimeout(() => { 
-//Productos recomendados
+    setTimeout(() => {
+      //Productos recomendados
       tns({
         container: '.tns-carousel-inner-two',
         controlsText: ['<i class="ci-arrow-left"></i>', '<i class="ci-arrow-right"></i>'],
@@ -204,43 +204,71 @@ public migaleria:any
       this.iniciarLightGalery()
       this.initSlider(); //Inicia mi tercer carrusel
       this.initCache();
-      
+
     }, 500)
 
-    
+
   }
 
 
   agregar_producto_carrito() {
 
-    this.carrito_data.variedad = this.variedad_seleccionada
-    this.carrito_data.subvariedad = this.subvariedad
+    this.carrito_data.variedad = this.variedad_seleccionada;
+    this.carrito_data.subvariedad = this.subvariedad;
 
-    if (this.carrito_data.variedad != '' && this.carrito_data.variedad != 'all' && this.carrito_data.subvariedad !='') {
-/*
-      //Disponibilidad de la variedad seleccionada
-      let variedadSeleccionada = this.producto.variedades.find(variedad => variedad._id === this.variedad_seleccionada);
-      if(variedadSeleccionada){
-        //let stockVariedad = variedadSeleccionada.tamano_disponibilidad.reduce((acc, item) => acc + item.disponibilidad, 0);
-      }
-      */
+    if (this.carrito_data.variedad != '' && this.carrito_data.variedad != 'all' && this.carrito_data.subvariedad != '') {
 
       if (this.carrito_data.cantidad <= this.producto.stock) {
-        let data = {
-          producto: this.producto._id,
-          cliente: localStorage.getItem('identity'),
-          cantidad: this.carrito_data.cantidad,
-          variedad: this.variedad_seleccionada,
-          subvariedad: this.subvariedad,
-          precio:this.producto.precio
+
+        let clienteID: any;
+        let token = localStorage.getItem('token');  // Verificamos si hay un token
+
+        var data: any = {}
+
+        if (token) {
+          // Cliente autenticado
+          clienteID = localStorage.getItem('identity');
+
+          data.producto = this.producto._id
+          data.cliente = clienteID,  // Usar clienteID (identity o cartID)
+            data.cantidad = this.carrito_data.cantidad,
+            data.variedad = this.variedad_seleccionada,
+            data.subvariedad = this.subvariedad,
+            data.precio = this.producto.precio
+
+
+        } else {
+          // Cliente no autenticado: Generar un cartID
+          clienteID = localStorage.getItem('cartID'); //Mire si existe un cartID y traelo
+          if (!clienteID) {
+            clienteID = this._clienteService.generateCartID();  // Generar un nuevo cartID si clienteID es null
+            console.log('CarId CREADO', clienteID)
+            localStorage.setItem('cartID', clienteID);
+            console.log('No existia cardID')
+            data.producto = this.producto._id
+            data.cliente_no_autenticado = clienteID,  // Usar clienteID (identity o cartID)
+              data.cantidad = this.carrito_data.cantidad,
+              data.variedad = this.variedad_seleccionada,
+              data.subvariedad = this.subvariedad,
+              data.precio = this.producto.precio
+
+          } else {
+            console.log('ya existe cardID')
+            data.producto = this.producto._id
+            data.cliente_no_autenticado = clienteID,  // Usar clienteID (identity o cartID)
+              data.cantidad = this.carrito_data.cantidad,
+              data.variedad = this.variedad_seleccionada,
+              data.subvariedad = this.subvariedad,
+              data.precio = this.producto.precio
+          }
         }
-        this.btn_cart = true
 
-        this._clienteService.agregar_carrito_cliente(data, this.token).subscribe(
+        console.log('data a enviar', data)
+        this.btn_cart = true;
+
+        this._clienteService.agregar_carrito_cliente(data, token).subscribe(
           response => {
-
             if (response.data == undefined) {
-
               iziToast.show({
                 title: 'ERROR',
                 titleColor: '#FF0000',
@@ -248,9 +276,8 @@ public migaleria:any
                 class: 'text-danger',
                 position: 'topRight',
                 message: 'El producto ya se encuentra en el carrito'
-
               });
-              this.btn_cart = false
+              this.btn_cart = false;
             } else {
               iziToast.show({
                 title: ' ¡Genial! ',
@@ -258,15 +285,13 @@ public migaleria:any
                 color: '#FFF',
                 class: 'text-success',
                 position: 'topRight',
-                message: 'producto Agregado al carrito'
+                message: 'Producto agregado al carrito'
               });
-              this.socket.emit('add-carrito-add', { data: true })
-              this.btn_cart = false
-
+              this.socket.emit('add-carrito-add', { data: true });
+              this.btn_cart = false;
             }
           }
-        )
-
+        );
       } else {
         iziToast.show({
           title: 'ERROR',
@@ -277,9 +302,6 @@ public migaleria:any
           message: 'La cantidad seleccionada excede el Stock Disponible' + this.producto.stock
         });
       }
-
-
-
     } else {
       iziToast.show({
         title: 'ERROR',
@@ -290,7 +312,6 @@ public migaleria:any
         message: 'Seleccione una variedad'
       });
     }
-
   }
 
 
@@ -311,21 +332,21 @@ public migaleria:any
   }
 
   initSlider() {
-   
-      this.slider = tns({
-        container: this.sliderSelector,
-        controlsText: ['<i class="ci-arrow-left"></i>', '<i class="ci-arrow-right"></i>'],
-        navPosition: "top",
-        controlsPosition: "top",
-        mouseDrag: !0,
-        speed: 600,
-        autoplayHoverPause: !0,
-        autoplayButtonOutput: !1,
-        navContainer: "#tns-thumbnails2",
-        navAsThumbnails: true,
-        gutter: 15,
-      });
-    
+
+    this.slider = tns({
+      container: this.sliderSelector,
+      controlsText: ['<i class="ci-arrow-left"></i>', '<i class="ci-arrow-right"></i>'],
+      navPosition: "top",
+      controlsPosition: "top",
+      mouseDrag: !0,
+      speed: 600,
+      autoplayHoverPause: !0,
+      autoplayButtonOutput: !1,
+      navContainer: "#tns-thumbnails2",
+      navAsThumbnails: true,
+      gutter: 15,
+    });
+
   }
 
   iniciarLightGalery() {
@@ -335,32 +356,32 @@ public migaleria:any
         lightGallery(e[t], {
           selector: this.lightGallerySelector,
           download: false,
-        });    
+        });
       }
     } else {
       console.log('No se encontraron elementos con la clase .gallery');
     }
-    
+
   }
-  
+
 
 
   filter() {
     var filterValue = this.variedad_seleccionada
-//Llenar arreglo de subvariedades de acuerdo a la variedad seleccionada
+    //Llenar arreglo de subvariedades de acuerdo a la variedad seleccionada
 
-const selectedVariety = this.producto.variedades.find(v => v._id === this.variedad_seleccionada);
+    const selectedVariety = this.producto.variedades.find(v => v._id === this.variedad_seleccionada);
 
 
-if (selectedVariety) {
-  this.subvariedad_seleccionada = selectedVariety.tamano_disponibilidad;
-  this.subvariedad=selectedVariety.tamano_disponibilidad[0]._id
-  this.producto.precio = selectedVariety.tamano_disponibilidad[0].precio
-  this.producto.stock = selectedVariety.tamano_disponibilidad[0].disponibilidad
+    if (selectedVariety) {
+      this.subvariedad_seleccionada = selectedVariety.tamano_disponibilidad;
+      this.subvariedad = selectedVariety.tamano_disponibilidad[0]._id
+      this.producto.precio = selectedVariety.tamano_disponibilidad[0].precio
+      this.producto.stock = selectedVariety.tamano_disponibilidad[0].disponibilidad
 
-} else {
-  this.subvariedad_seleccionada = [];
-}
+    } else {
+      this.subvariedad_seleccionada = [];
+    }
 
     if (this.slider) {
       this.slider.destroy();
@@ -378,26 +399,26 @@ if (selectedVariety) {
       $thumbnailsContainer.find('[data-type]').not(`[data-type*=${filterValue}]`).remove();
 
     }
-    
+
     this.initSlider();
     this.iniciarLightGalery()
     this.cdr.detectChanges();
-   
+
   }
 
 
 
-  filter_subvariedad(subvariedad:any){
+  filter_subvariedad(subvariedad: any) {
 
-const subvariedadSeleccionada = this.subvariedad_seleccionada.find(s => s._id === subvariedad);
+    const subvariedadSeleccionada = this.subvariedad_seleccionada.find(s => s._id === subvariedad);
 
-if (subvariedadSeleccionada) {
-  this.producto.precio = subvariedadSeleccionada.precio;
-  this.producto.stock = subvariedadSeleccionada.disponibilidad
-} else {
-  // En caso de que no se encuentre la subvariedad, puedes asignar un valor por defecto o manejarlo como prefieras
-  this.producto.precio = ''; // O algún valor por defecto
-}
+    if (subvariedadSeleccionada) {
+      this.producto.precio = subvariedadSeleccionada.precio;
+      this.producto.stock = subvariedadSeleccionada.disponibilidad
+    } else {
+      // En caso de que no se encuentre la subvariedad, puedes asignar un valor por defecto o manejarlo como prefieras
+      this.producto.precio = ''; // O algún valor por defecto
+    }
 
   }
 

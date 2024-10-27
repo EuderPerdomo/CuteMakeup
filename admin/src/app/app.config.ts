@@ -11,7 +11,10 @@ import { ErrorResponseInterceptor } from './guards/error-response-interceptor';
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), 
     provideRouter(routes),
-    provideHttpClient(withInterceptors([ErrorResponseInterceptor])),AdminService, JwtHelperService, { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
+    provideHttpClient(withInterceptors([ErrorResponseInterceptor])),
+    AdminService, 
+    JwtHelperService, 
+    { provide: JWT_OPTIONS, useValue: JWT_OPTIONS },
     ]
 };
 

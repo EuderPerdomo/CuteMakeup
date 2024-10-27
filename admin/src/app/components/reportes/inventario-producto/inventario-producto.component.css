@@ -1,0 +1,52 @@
+ul {
+    list-style: none;
+}
+
+.custom-accordion .custom-card {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+  }
+  
+  .custom-accordion .custom-card-header {
+    background-color: #f8f9fa;
+    padding: 15px;
+  }
+  
+  .custom-accordion .custom-button {
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .custom-accordion .custom-button:hover {
+    background-color: #e9ecef;
+    color: #0056b3;
+    text-decoration: none;
+  }
+  
+  .custom-accordion .custom-card-body {
+    padding: 20px;
+  }
+  
+  .custom-accordion .form-check-label {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .custom-input {
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .custom-btn {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+  }
+  
+  .custom-btn:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
