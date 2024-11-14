@@ -74,8 +74,6 @@ const obtener_carrito_cliente_no_autenticado = async function (req, res) {
         let carrito_cliente = await Carrito.find({ cliente_no_autenticado: id }).populate('producto')
         res.status(200).send({ data: carrito_cliente })
 
-
-
 }
 
 const eliminar_carrito_cliente_no_autenticado = async function (req, res) {

@@ -36,6 +36,7 @@ export interface Variedad {
     descripcion: string;
     portada: string;
     variedades: Variedad[];
+    _id: string | undefined;
   }
   
   export interface Variedad {

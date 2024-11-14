@@ -1,0 +1,19 @@
+/* .titulo{
+    z-index: 1;
+}
+.titulo{
+    opacity: 0;
+} */
+
+.calltoaction{
+    z-index: 1;
+}
+
+.categorias-section{
+    position: relative;
+    margin-top: -50px; /* Ajusta el valor para controlar la superposición */
+    z-index: 10;
+}
+.categorias_slide{
+    
+}

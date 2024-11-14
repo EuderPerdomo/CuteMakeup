@@ -162,4 +162,27 @@ export class ClienteService {
   }
   //Finaliza blogs
 
+//Inicia traer banner
+obtener_banner_public(): Observable<any> {
+  let headers = new HttpHeaders().set('Content-Type', 'application/json');
+  return this._http.get(this.url + 'obtener_banner_public', { headers: headers });
+}
+//Finaliza traer banner
+
+//
+get_datos_configuracion():Observable<any>{
+  return this._http.get('./assets/datos_configuracion.json',{responseType: 'text'});
+}
+
+listar_productos_nuevos_publico():Observable<any>{
+  let headers = new HttpHeaders().set('Content-Type','application/json');
+  return this._http.get(this.url + 'listar_productos_nuevos_publico',{headers:headers});
+}
+
+///Inicia traer Blogs nuevos
+listar_blog_nuevos_publico():Observable<any>{
+  let headers = new HttpHeaders().set('Content-Type','application/json');
+  return this._http.get(this.url + 'listar_blog_nuevos_publico',{headers:headers});
+}
+
 }

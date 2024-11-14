@@ -6,8 +6,36 @@
 
 </section> -->
 
+<!-- Swiper Slider -->
+<section>
+  <swiper-container style="--swiper-navigation-color: #1650f1; --swiper-pagination-color: #fff" class="mySwiper"
+  thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
+  <swiper-slide *ngFor="let item of banners">
+    <div class="tns-carousel-inner">
+      <div class="bg-size-cover py-xl-6" [ngStyle]="{'background-image': 'url(' + item.imagen + ')'}">
+        <div class="container pt-5 pb-6">
+          <div class="row pb-lg-6">
+            <div class="col-lg-6 offset-lg-1 offset-xl-0 pb-4 pb-md-6">
+              <h3 class="fs-lg text-uppercase delay-1 titulo">{{item.subtitulo}}</h3>
+              <h2 class="display-2 mb-lg-5 pb-3 titulo">{{item.titulo}}</h2>
+              <!-- scale-up delay-2 -->
+              <div class="mb-4">
+                <a  [routerLink]="['/productos/',item.enlace]" class="btn btn-outline-primary btn-lg calltoaction">{{item.tituloBoton}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </swiper-slide>
+  </swiper-container>
+</section>
+
+
+
       <!-- Hero slider -->
-      <section class="tns-carousel-wrapper tns-controls-onhover">
+      <!-- <section class="tns-carousel-wrapper tns-controls-onhover">
         <div class="tns-carousel-inner" data-carousel-options='{
           "mode": "gallery",
           "navContainer": "#pager",
@@ -17,7 +45,6 @@
           }
         }'>
 
-          <!-- Slide 1 -->
           <div class="bg-size-cover py-xl-6" style="background-image: url(../assets/img/ecommerce/home/hero-slider/01.jpg);">
             <div class="container pt-5 pb-6">
               <div class="row pb-lg-6">
@@ -32,7 +59,7 @@
             </div>
           </div>
 
-          <!-- Slide 2 -->
+
           <div class="bg-size-cover py-xl-6" style="background-image: url(../assets/img/ecommerce/home/hero-slider/02.jpg);">
             <div class="container pt-5 pb-6">
               <div class="row pb-lg-6">
@@ -47,8 +74,8 @@
             </div>
           </div>
 
-          <!-- Slide 3 -->
-          <div class="bg-size-cover py-xl-6" style="background-image: url(../assets/img/ecommerce/home/hero-slider/03.jpg);">
+   
+          <div class="bg-size-cover py-xl-6" style="background-image: url(../assets/img/ecommerce/home/hero-slider/06.png);">
             <div class="container pt-5 pb-6">
               <div class="row pb-lg-6">
                 <div class="col-lg-6 offset-lg-1 offset-xl-0 pb-4 pb-md-6">
@@ -62,8 +89,7 @@
             </div>
           </div>
 
-          <!-- Slide 4 -->
-          <div class="bg-size-cover py-xl-6" style="background-image: url(../assets/img/ecommerce/home/hero-slider/04.jpg);">
+          <div class="bg-size-cover py-xl-6" style="background-image: url(../assets/img/ecommerce/home/hero-slider/05.jpeg);">
             <div class="container pt-5 pb-6">
               <div class="row pb-lg-6">
                 <div class="col-lg-6 offset-lg-1 offset-xl-0 pb-4 pb-md-6">
@@ -76,9 +102,10 @@
               </div>
             </div>
           </div>
+
         </div>
 
-        <!-- Pager -->
+   
         <div class="container position-relative">
           <div class="row mt-lg-n5">
             <div class="col-lg-7 col-md-8 col-sm-10 offset-lg-1 offset-xl-0">
@@ -93,11 +120,42 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Top categories -->
-      <section class="container pt-5 pt-lg-0">
-        <div class="tns-carousel-wrapper tns-nav-outside">
+
+
+      <section class="container pt-5 pt-lg-0 categorias-section">
+
+        <!-- Inicia categorias con Swiper -->
+<!-- <swiper-container class="mySwiper swiperPrueba" pagination="true" pagination-clickable="true" space-between="30"
+slides-per-view="3" navigation="true" init="false">
+<swiper-slide *ngFor="let item of categorias | slice: 0:6" class="categorias_slide">
+  <a  [routerLink]="['/productos/categoria/',item.titulo]" 
+  class="d-block image-scale heading-highlight text-center">
+    <div class="image-inner mb-3 rounded">
+      <img [src]="item.portada" alt="{{item.titulo}}">
+    </div>
+    <h3 class="h5 mb-1">{{item.titulo}}</h3>
+  </a>
+</swiper-slide>
+</swiper-container> -->
+
+
+<swiper-container init="false" class="swiperPrueba">
+  <swiper-slide *ngFor="let item of categorias | slice: 0:6" class="categorias_slide">
+    <a [routerLink]="['/productos/categoria/',item.titulo]" class="d-block image-scale heading-highlight text-center">
+      <div class="image-inner mb-3 rounded">
+        <img [src]="item.portada" alt="{{item.titulo}}">
+      </div>
+      <h3 class="h5 mb-1">{{item.titulo}}</h3>
+    </a>
+  </swiper-slide>
+</swiper-container>
+
+<!-- Finalizan Categorias con Swiper -->
+
+        <!-- <div class="tns-carousel-wrapper tns-nav-outside">
           <div class="tns-carousel-inner tns-carousel-inner-two"  data-carousel-options='{
             "controls": false,
             "responsive": {
@@ -121,38 +179,17 @@
               }
             }
           }'>
-            <!-- Category -->
-            <a *ngFor="let item of categorias | slice: 0:6" href="shop-catalog.html" class="d-block image-scale heading-highlight text-center">
+            <a *ngFor="let item of categorias | slice: 0:6" [routerLink]="['/productos/categoria/',item.titulo]" 
+            class="d-block image-scale heading-highlight text-center">
               <div class="image-inner mb-3 rounded">
-                <img src="../assets/img/ecommerce/home/categories/01.jpg" alt="{{item.titulo}}">
+                <img [src]="item.portada" alt="{{item.titulo}}">
               </div>
               <h3 class="h5 mb-1">{{item.titulo}}</h3>
             </a>
             
-<!-- 
-            <a href="shop-catalog.html" class="d-block image-scale heading-highlight text-center">
-              <div class="image-inner mb-3 rounded">
-                <img src="../assets/img/ecommerce/home/categories/02.jpg" alt="Men’s">
-              </div>
-              <h3 class="h5 mb-1">Men’s</h3>
-            </a>
-      
-            <a href="shop-catalog.html" class="d-block image-scale heading-highlight text-center">
-              <div class="image-inner mb-3 rounded">
-                <img src="../assets/img/ecommerce/home/categories/03.jpg" alt="Kids'">
-              </div>
-              <h3 class="h5 mb-1">Kids'</h3>
-            </a>
-
-            <a href="shop-catalog.html" class="d-block image-scale heading-highlight text-center">
-              <div class="image-inner mb-3 rounded">
-                <img src="../assets/img/ecommerce/home/categories/03.jpg" alt="Kids'">
-              </div>
-              <h3 class="h5 mb-1">Kids'</h3>
-            </a> -->
 
           </div>
-        </div>
+        </div> -->
       </section>
 
 
@@ -160,13 +197,57 @@
       <!-- New arrivals -->
       <section class="container-fluid px-xl-grid-gutter mt-5 mb-3 mb-sm-4 mt-md-0 mb-lg-5 py-5 py-lg-6">
         <div class="text-center mb-5 pb-2">
-          <h2 class="h1">New arrivals</h2>
-          <p class="fs-lg text-muted mb-1">Check out our latest arrivals for the upcoming season</p>
-          <a href="shop-catalog.html" class="fs-lg">See the collection here</a>
+          <h2 class="h1">Nuevos Productos</h2>
+          <p class="fs-lg text-muted mb-1"> 👁️ Echa un vistazo a los productos mas recientes</p>
+          <!-- <a href="shop-catalog.html" class="fs-lg">Conocelos aqui</a> -->
         </div>
 
+<!-- init="false" -->
+        <swiper-container class="swipernewProducts">
+          <swiper-slide *ngFor="let item of new_productos" class="categorias_slide">
+            <div class="card card-product">
+              <div class="card-product-img">
+                <a  [routerLink]="['/productos/',item.slug]" class="card-img-top">
+                  <!-- <img [src]="item.portada" alt="Product image"> -->
+                  <img [src]="getCloudinaryImageUrl(item.portada, 570, 640, 'fill')" alt="Product image">
+                </a>
+                <div class="card-product-widgets-top">
+                  <div class="star-rating">
+                    <i class="sr-star cxi-star-filled active"></i>
+                    <i class="sr-star cxi-star-filled active"></i>
+                    <i class="sr-star cxi-star-filled active"></i>
+                    <i class="sr-star cxi-star-filled active"></i>
+                    <i class="sr-star cxi-star-filled active"></i>
+                  </div>
+                </div>
+                <div class="card-product-widgets-bottom">
+                  <a href="#" class="btn-wishlist ml-auto" data-toggle="tooltip" data-placement="left" title="Add to wishlist"></a>
+                </div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-product-title text-truncate mb-2">
+                  <a  [routerLink]="['/productos/',item.slug]" class="nav-link">{{item.titulo}}</a>
+                </h3>
+                <div class="d-flex align-items-center">
+                  <span class="h5 d-inline-block mb-0">{{item.variedades[0].tamano_disponibilidad[0].precio |currency:'COP':'$':'3.0'}}</span>
+                </div>
+                <!-- <div class="d-flex align-items-center" *ngIf="descuento_activo == undefined">
+                  <span class="h5 d-inline-block mb-0">${{item.precio}}</span>
+                </div>
+
+                <div class="d-flex align-items-center" *ngIf="descuento_activo != undefined"> 
+                  <span class="h5 d-inline-block text-danger mb-0">${{item.precio | descuento: descuento_activo.descuento}}</span>
+                  <del class="d-inline-block ml-2 pl-1 text-muted">${{item.precio}}</del>
+                </div> -->
+
+              </div>
+            </div>
+          </swiper-slide>
+        </swiper-container>
+
+    
         <!-- Product carousel -->
-        <div class="tns-carousel-wrapper tns-nav-outside">
+        <!-- <div class="tns-carousel-wrapper tns-nav-outside">
           <div class="tns-carousel-inner tns-carousel-inner-three" data-carousel-options='{
             "controls": false,
             "responsive": {
@@ -201,7 +282,7 @@
             }
           }'>
 
-            <!-- Item -->
+     
             <div>
               <div class="card card-product">
                 <div class="card-product-img">
@@ -232,7 +313,7 @@
               </div>
             </div>
 
-            <!-- Item -->
+       
             <div>
               <div class="card card-product">
                 <div class="card-product-img">
@@ -254,7 +335,7 @@
               </div>
             </div>
 
-            <!-- Item -->
+         
             <div>
               <div class="card card-product">
                 <div class="card-product-img">
@@ -285,7 +366,7 @@
               </div>
             </div>
 
-            <!-- Item -->
+           
             <div>
               <div class="card card-product">
                 <div class="card-product-img">
@@ -307,7 +388,7 @@
               </div>
             </div>
 
-            <!-- Item -->
+           
             <div>
               <div class="card card-product">
                 <div class="card-product-img">
@@ -338,7 +419,7 @@
               </div>
             </div>
 
-            <!-- Item -->
+           
             <div>
               <div class="card card-product">
                 <div class="card-product-img">
@@ -360,7 +441,7 @@
               </div>
             </div>
 
-            <!-- Item -->
+         
             <div>
               <div class="card card-product">
                 <div class="card-product-img">
@@ -382,16 +463,16 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
       </section>
 
 
         <!-- Promo banners -->
-        <section class="container-fluid px-xl-grid-gutter">
+        <!-- <section class="container-fluid px-xl-grid-gutter">
           <div class="row mx-n2">
   
-            <!-- Banner -->
+     
             <div class="col-lg-5 px-2 mb-3">
               <div class="d-flex flex-column h-100 bg-size-cover bg-position-center-y rounded py-5 px-md-5 px-4" style="background-image: url(../assets/img/ecommerce/home/banners/01.jpg);">
                 <div class="mt-md-3 mb-md-6 pb-6 px-md-2">
@@ -402,7 +483,7 @@
               </div>
             </div>
   
-            <!-- Banner -->
+      
             <div class="col-lg-7 px-2 mb-3">
               <div class="d-flex flex-column h-100 bg-size-cover bg-position-center-y rounded py-5 px-md-5 px-4" style="background-image: url(../assets/img/ecommerce/home/banners/02.jpg);">
                 <div class="mt-md-3 mb-md-5 pb-5 px-md-2" style="max-width: 22rem;">
@@ -436,7 +517,7 @@
           </div>
           <div class="row mx-n2">
   
-            <!-- Banner -->
+         
             <div class="col-lg-7 px-2 mb-3">
               <div class="d-flex flex-column h-100 bg-size-cover bg-position-center-y rounded py-5 px-md-5 px-4" style="background-image: url(../assets/img/ecommerce/home/banners/03.jpg);">
                 <div class="mt-md-3 mb-md-6 pb-6 px-md-2" style="max-width: 22rem;">
@@ -447,7 +528,7 @@
               </div>
             </div>
   
-            <!-- Banner -->
+          
             <div class="col-lg-5 px-2 mb-3">
               <div class="d-flex flex-column h-100 bg-size-cover bg-position-center-y rounded pt-5 pb-md-5 px-md-5 px-4" style="background-image: url(../assets/img/ecommerce/home/banners/04.jpg);">
                 <div class="mt-md-3 mb-md-5 pb-6 px-md-2" style="max-width: 26rem;">
@@ -465,94 +546,16 @@
               </div>
             </div>
           </div>
-        </section>
+        </section> -->
 
         <!-- Popular categories -->
-      <section class="container mt-1 mb-3 my-sm-4 py-5 py-lg-6">
-        <h2 class="h1 mb-5 pb-3 text-center">Popular categories</h2>
-        <div class="tns-carousel-wrapper tns-nav-outside">
-          <div class="tns-carousel-inner tns-carousel-inner-four" data-carousel-options='{
-            "controls": false,
-            "gutter": 30,
-            "responsive": {
-              "0": { "items": 1 },
-              "380": { "items": 2 },
-              "550": { "items": 3 },
-              "750": { "items": 4 },
-              "1000": { "items": 5 },
-              "1250": { "items": 6 }
-            }
-          }'>
-
-            <!-- Category -->
-            <div class="pb-2">
-              <a href="shop-catalog.html" class="d-block image-scale heading-highlight text-center">
-                <div class="image-inner rounded-circle mx-auto mb-4" style="max-width: 180px;">
-                  <img src="../assets/img/ecommerce/home/categories/04.jpg" alt="Category image">
-                </div>
-                <h3 class="h5 mb-3">Tops</h3>
-              </a>
-            </div>
-
-            <!-- Category -->
-            <div class="pb-2">
-              <a href="shop-catalog.html" class="d-block image-scale heading-highlight text-center">
-                <div class="image-inner rounded-circle mx-auto mb-4" style="max-width: 180px;">
-                  <img src="../assets/img/ecommerce/home/categories/05.jpg" alt="Category image">
-                </div>
-                <h3 class="h5 mb-3">T-shirts</h3>
-              </a>
-            </div>
-
-            <!-- Category -->
-            <div class="pb-2">
-              <a href="shop-catalog.html" class="d-block image-scale heading-highlight text-center">
-                <div class="image-inner rounded-circle mx-auto mb-4" style="max-width: 180px;">
-                  <img src="../assets/img/ecommerce/home/categories/06.jpg" alt="Category image">
-                </div>
-                <h3 class="h5 mb-3">Caps</h3>
-              </a>
-            </div>
-
-            <!-- Category -->
-            <div class="pb-2">
-              <a href="shop-catalog.html" class="d-block image-scale heading-highlight text-center">
-                <div class="image-inner rounded-circle mx-auto mb-4" style="max-width: 180px;">
-                  <img src="../assets/img/ecommerce/home/categories/07.jpg" alt="Category image">
-                </div>
-                <h3 class="h5 mb-3">Sandals</h3>
-              </a>
-            </div>
-
-            <!-- Category -->
-            <div class="pb-2">
-              <a href="shop-catalog.html" class="d-block image-scale heading-highlight text-center">
-                <div class="image-inner rounded-circle mx-auto mb-4" style="max-width: 180px;">
-                  <img src="../assets/img/ecommerce/home/categories/08.jpg" alt="Category image">
-                </div>
-                <h3 class="h5 mb-3">Jackets</h3>
-              </a>
-            </div>
-
-            <!-- Category -->
-            <div class="pb-2">
-              <a href="shop-catalog.html" class="d-block image-scale heading-highlight text-center">
-                <div class="image-inner rounded-circle mx-auto mb-4" style="max-width: 180px;">
-                  <img src="../assets/img/ecommerce/home/categories/09.jpg" alt="Category image">
-                </div>
-                <h3 class="h5 mb-3">Coats</h3>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
 
       <!-- Trending products (carousel) -->
       <section class="py-5" style="background-color: #e5e8ed;">
         <div class="container my-lg-2 py-2 py-md-4">
           <div class="d-flex align-items-center justify-content-between pb-sm-1 mb-5">
-            <h2 class="h1 mb-0">Trending now</h2>
+            <h2 class="h1 mb-0">Productos Mas vendidos</h2>
             <div class="tns-custom-controls tns-controls-inverse" id="custom-controls-trending" tabindex="0">
               <button type="button" data-controls="prev" tabindex="-1">
                 <i class="ci-arrow-left"></i>
@@ -734,7 +737,7 @@
       <!-- Sale products (carousel) -->
       <section class="container my-2 my-md-3 py-5 py-lg-6">
         <div class="d-flex align-items-center justify-content-between pb-sm-1 mb-5">
-          <h2 class="h1 mb-0">Sale up to 70%</h2>
+          <h2 class="h1 mb-0">Descuentos</h2>
           <div class="tns-custom-controls tns-controls-inverse" id="custom-controls-sale" tabindex="0">
             <button type="button" data-controls="prev" tabindex="-1">
               <i class="ci-arrow-left"></i>
@@ -927,7 +930,7 @@
 
 
       <!-- Mobile app CTA -->
-      <section class="bg-dark">
+      <!-- <section class="bg-dark">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-5">
@@ -948,7 +951,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
 
       <!-- Services -->
@@ -956,26 +959,26 @@
         <div class="row g-0 py-3">
           <div class="col-sm-6 col-md-3 text-center mb-md-0 mb-4 pb-md-0 pb-3">
             <img class="mb-4" src="../assets/img/ecommerce/home/services/delivery.svg" width="48" alt="Worldwide Shipping">
-            <h5 class="h5 mb-2">Fast Worldwide Shipping</h5>
-            <p class="mb-0 text-muted">Get free shipping over $250</p>
+            <h5 class="h5 mb-2">Envio rapido a todo el País</h5>
+            <p class="mb-0 text-muted">Obtenga envio gratis por conpras superiores a  {{envio_gratis |currency:'COP':'$':'3.0'}}</p>
           </div>
           <span class="divider-vertical d-sm-block d-none"></span>
           <div class="col-sm-6 col-md-3 text-center mb-md-0 mb-4 pb-md-0 pb-3">
             <img class="mb-4" src="../assets/img/ecommerce/home/services/support.svg" width="48" alt="Customer Support">
-            <h5 class="h5 mb-2">24/7 Customer Support</h5>
-            <p class="mb-0 text-muted">Friendly 24/7 customer support</p>
+            <h5 class="h5 mb-2">Atención al cliente</h5>
+            <p class="mb-0 text-muted">Atención Al cliente 24/7</p>
           </div>
           <span class="divider-vertical d-sm-block d-none"></span>
           <div class="col-sm-6 col-md-3 text-center mb-md-0 mb-4 pb-md-0 pb-3">
             <img class="mb-4" src="../assets/img/ecommerce/home/services/guarantee.svg" width="48" alt="Customer Support">
-            <h5 class="h5 mb-2">Money Back Guarantee</h5>
-            <p class="mb-0 text-muted">We return money within 30 days</p>
+            <h5 class="h5 mb-2">Garantias</h5>
+            <p class="mb-0 text-muted">productos Garantizados</p>
           </div>
           <span class="divider-vertical d-sm-block d-none"></span>
           <div class="col-sm-6 col-md-3 text-center mb-md-0 mb-4 pb-md-0 pb-3">
             <img class="mb-4" src="../assets/img/ecommerce/home/services/payment.svg" width="48" alt="Customer Support">
-            <h5 class="h5 mb-2">Secure Online Payment</h5>
-            <p class="mb-0 text-muted">Accept all major credit cards</p>
+            <h5 class="h5 mb-2">Formas de pago</h5>
+            <p class="mb-0 text-muted">Multiples formas de pago disponibles</p>
           </div>
         </div>
       </section>
@@ -986,11 +989,11 @@
         <div class="container pt-md-4 pb-2 pt-lg-0 pb-lg-0">
           <div class="row">
             <div class="col-md-4 text-center text-md-start pb-2 pb-md-0 mb-4 mb-md-0">
-              <p class="text-dark text-uppercase mb-2">Follow us on Instagram</p>
-              <h2 class="h1 pb-2 pb-md-3">&#64;createx_store</h2>
+              <p class="text-dark text-uppercase mb-2">Siguenos en Instagram</p>
+              <h2 class="h1 pb-2 pb-md-3">&#64;cute_makeup</h2>
               <a href="#" class="btn btn-outline-primary btn-lg">
                 <i class="ci-instagram fs-lg me-1"></i>
-                Follow Instagram
+                Siguir Instagram
               </a>
             </div>
             <div class="col-md-8">
@@ -1027,91 +1030,37 @@
       <!-- Blog -->
       <section class="container mt-2 mt-lg-0 pt-5 pt-lg-6 pb-5 pb-sm-0 pb-md-5">
         <div class="d-flex align-items-center justify-content-between mb-5 pb-sm-2">
-          <h2 class="h1 mb-0">Fashion blog</h2>
-          <a href="blog.html" class="btn btn-outline-primary">View blog</a>
+          <h2 class="h1 mb-0">Nuestro blog</h2>
+          <a [routerLink]="['/blog']" class="btn btn-outline-primary">Ir al Blog</a>
         </div>
-        <div class="tns-carousel-wrapper tns-nav-inverse">
-          <div class="tns-carousel-inner tns-carousel-inner-eight" data-carousel-options='{
-            "controls": false,
-            "gutter": 30,
-            "responsive": {
-              "0": { "items": 1 },
-              "576": { "items": 2 }
-            }
-          }'>
-            <!-- Post -->
+
+
+        <swiper-container class="swipernewBlogs">
+          <swiper-slide *ngFor="let item of new_blogs">
             <article class="pb-5">
               <div class="image-scale card shadow-0 border-0">
-                <a href="blog-single.html" class="image-inner rounded">
-                  <img src="../assets/img/ecommerce/blog/01.jpg" alt="Image">
+                <a [routerLink]="['/blog/'+item.slug]" class="image-inner rounded">
+                  <img [src]="item.portada" alt="Image">
                 </a>
                 <div class="card-body px-0">
                   <h3 class="h5 mb-2 pb-1">
-                    <a href="blog-single.html" class="nav-link">Bag Trends for Summer 2020</a>
+                    <a [routerLink]="['/blog/'+item.slug]" class="nav-link">{{item.titulo}}</a>
                   </h3>
                   <ul class="nav nav-muted mb-2 pb-1">
                     <li class="nav-item me-2">
-                      <a href="#" class="nav-link d-inline-block me-2 p-0 fs-sm fw-normal">
-                        Fashion
+                      <a class="nav-link d-inline-block me-2 p-0 fs-sm fw-normal">
+                        {{item.createdAt | date:'longDate' }}
                       </a>
                       <span class="text-border px-1">|</span>
-                    </li>
-                    <li class="nav-item me-2">
-                      <a href="#" class="nav-link d-inline-block me-2 p-0 fs-sm fw-normal">
-                        November 24, 2020
-                      </a>
-                      <span class="text-border px-1">|</span>
-                    </li>
-                    <li class="nav-item me-2">
-                      <a href="#" class="nav-link d-inline-block me-2 p-0 fs-sm fw-normal">
-                        <i class="ci-chat mt-n1 me-2 fs-base align-middle"></i>
-                        No comments
-                      </a>
                     </li>
                   </ul>
-                  <p class="d-sm-none d-md-block card-text">Ipsum aliquet nisi, hendrerit rhoncus quam tortor, maecenas faucibus. Tincidunt aliquet sit vel, venenatis nulla. Integer bibendum turpis convallis...</p>
+                  <div class="col-lg-12 col-md-12 mb-md-0 mb-4" [innerHTML]="item.descripcion"></div>
                 </div>
               </div>
             </article>
-
-            <!-- Post -->
-            <article class="pb-5">
-              <div class="image-scale card shadow-0 border-0">
-                <a href="blog-single.html" class="image-inner rounded">
-                  <img src="../assets/img/ecommerce/blog/03.jpg" alt="Image">
-                </a>
-                <div class="card-body px-0">
-                  <h3 class="h5 mb-2 pb-1">
-                    <a href="blog-single.html" class="nav-link">Top 10 of This Season’s Hottest Sneakers</a>
-                  </h3>
-                  <ul class="nav nav-muted mb-2 pb-1">
-                    <li class="nav-item me-2">
-                      <a href="#" class="nav-link d-inline-block me-2 p-0 fs-sm fw-normal">
-                        Lifestyle
-                      </a>
-                      <span class="text-border px-1">|</span>
-                    </li>
-                    <li class="nav-item me-2">
-                      <a href="#" class="nav-link d-inline-block me-2 p-0 fs-sm fw-normal">
-                        October 16, 2020
-                      </a>
-                      <span class="text-border px-1">|</span>
-                    </li>
-                    <li class="nav-item me-2">
-                      <a href="#" class="nav-link d-inline-block me-2 p-0 fs-sm fw-normal">
-                        <i class="ci-chat mt-n1 me-2 fs-base align-middle"></i>
-                        4 comments
-                      </a>
-                    </li>
-                  </ul>
-                  <p class="d-sm-none d-md-block card-text">Sollicitudin et nec congue magna quis commodo quis luctus risus. Dolor, dignissim semper faucibus quisque massa ut enim. Turpis viverra mattis semper...</p>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
+          </swiper-slide>
+        </swiper-container>
+</section>
 
       <!-- Brands -->
       <section class="container pb-5 pt-lg-2 mb-3 pb-lg-6">
@@ -1181,7 +1130,7 @@
 
 
       <!-- Subscription CTA -->
-      <section class="bg-secondary py-5">
+      <!-- <section class="bg-secondary py-5">
         <div class="container pt-2 pt-md-3 pb-3">
           <div class="row align-items-center">
             <form class="col-md-6 col-xl-5 needs-validation" novalidate>
@@ -1224,6 +1173,6 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
 <app-footer></app-footer>

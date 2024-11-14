@@ -13,7 +13,7 @@ var api=express.Router()
 //***************************  Metodos Privados    *********************** */
 api.post('/registro_blog_admin',[auth.auth,path],blogController.registro_blog_admin);
 api.get('/listar_blog_admin',auth.auth,blogController.listar_blogs_admin);
-
+api.get('/obtener_blog_admin/:id',auth.auth,blogController.obtener_blog_admin)
 
 //Etiquetas
 //api.delete('/eliminar_etiqueta_post_admin/:id',auth.auth,blogController.eliminar_etiqueta_producto_admin);
@@ -30,6 +30,7 @@ api.post('/agregar_etiqueta_post_admin',auth.auth,blogController.agregar_etiquet
 api.get('/listar_posts_public/:filtro?',blogController.listar_posts_public)
 api.get('/obtener_post_public/:slug',blogController.obtener_post_public)
 api.get('/listar_post_recomendado_public/:categoria/:postId',blogController.listar_post_recomendado_public)
+api.get('/listar_blog_nuevos_publico',blogController.listar_blogs_nuevos_public);
 
 //Etiquetas
 api.get('/listar_etiquetas_post_guest/:id',auth.auth,blogController.listar_etiquetas_post_guest);

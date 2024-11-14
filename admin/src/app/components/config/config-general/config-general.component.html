@@ -1,0 +1,344 @@
+<app-sidebar></app-sidebar>
+
+
+
+<div class="border-bottom pt-1 mt-2 mb-2">
+    <h2 class="mt-2 mt-md-4 mb-3 pt-5">Config General</h2>
+    <div class="d-flex flex-wrap flex-md-nowrap justify-content-between">
+        <p class="text-muted">Configuraciones Generales de la Tienda</p>
+    </div>
+</div>
+
+<div class="card box-shadow-sm">
+    <div class="card-body">
+        <!-- inicio -->
+        <div ngbAccordion #accordion="ngbAccordion">
+            <div ngbAccordionItem="first">
+                <h2 ngbAccordionHeader>
+                    <button ngbAccordionButton>Banner</button>
+                </h2>
+                <div ngbAccordionCollapse>
+                    <div ngbAccordionBody>
+                        <ng-template>
+                            <div *ngIf="banners.length >=1">
+                                <h4>{{banners[0].titulo}}</h4>
+                            </div>
+                            <div class="row">
+                                <button *ngIf="banners.length >=1" type="button"
+                                    class="btn btn-outline-primary btn-icon mr-1 btn-sm" style="cursor: pointer;"
+                                    data-toggle="modal" [attr.data-target]="'#anadirCategoria'">
+                                    Añadir Imagen Banner
+                                </button>
+            
+                                <button *ngIf="banners.length ==0" type="button"
+                                    class="btn btn-outline-primary btn-icon mr-1 btn-sm" style="cursor: pointer;"
+                                    data-toggle="modal" [attr.data-target]="'#anadirBanner'">
+                                    Añadir Banner
+                                </button>
+                            </div>
+            
+                            <div class="row">
+                                <div class="col-12 position-relative" *ngFor="let imagen of banners[0].galeria  ; let indice=index">
+                                    <div class="card card-horizontal mb-1">
+                                        <div class="card-img-top" [ngStyle]="{'background-image': 'url(' + imagen.imagen + ')'}">
+                                        </div>
+                                        <div class="card-body">
+            
+                                            <h5>Titulo| {{imagen.titulo}}</h5>
+                                            <h5>Subtitulo | {{imagen.subtitulo}}</h5>
+                                            <h5>Slug | {{imagen.enlace}}</h5>
+                                            <h5>Boton | {{imagen.tituloBoton}}</h5>
+                                            <button type="button" class="btn btn-sm btn-primary btn-icon mr-1"
+                                                style="cursor: pointer;" data-toggle="modal" (click)="openEditModal(imagen)"
+                                                data-target="#editModal">
+                                                Editar
+                                            </button>
+                                            <button type="button" class="btn btn-sm btn-danger btn-icon mr-1"
+                                            style="cursor: pointer;" (click)="EliminarItemBanner(imagen._id)"
+                                            >
+                                            Eliminar Item
+                                        </button>
+                                            <!-- <a href="#" class="btn btn-sm btn-primary">Editar</a> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+            <div ngbAccordionItem="second">
+                <h2 ngbAccordionHeader>
+                    <button ngbAccordionButton>Otra Configuración</button>
+                </h2>
+                <div ngbAccordionCollapse>
+                    <div ngbAccordionBody>
+                        <ng-template>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. 3 wolf moon
+                            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                            eiusmod. Brunch 3 wolf
+                            moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
+                            shoreditch et. Nihil anim
+                            keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad
+                            vegan excepteur
+                            butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
+                            nesciunt you probably
+                            haven't heard of them accusamus labore sustainable VHS.
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+<!-- 
+        <button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.toggle('first')">Toggle first</button>
+        <button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.toggle('second')">Toggle second</button> -->
+        <button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.expandAll()">Expandir Todo</button>
+        <button class="btn btn-sm btn-outline-primary me-2" (click)="accordion.collapseAll()">Cerrar Todo</button>
+        <!-- fin -->
+
+    </div>
+
+</div>
+
+<!-- Inicia modal crear Item Banner -->
+
+<div class="modal fade" id="anadirCategoria" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="min-width: 70%;">
+        <div class="modal-content">
+            <div class="modal-card card" data-list="{&quot;valueNames&quot;: [&quot;name&quot;]}">
+                <div class="card-body">
+                    <h5 class="mb-2">Banner</h5>
+                    <form #categoriaForm="ngForm" appUnambiguousRole (ngSubmit)="guardarNuevaImagen(categoriaForm)">
+                        <div class="row">
+
+
+                            <div class=" col-md-5">
+
+                                <div class="  form-group">
+                                    <label for="tituloCrear" class="form-label">titulo</label>
+                                    <input type="text" id="tituloCrear" name="tituloCrear" class="form-control" required
+                                        [(ngModel)]="imagen.titulo" #tituloCrear="ngModel">
+
+                                    <div *ngIf="tituloCrear.invalid && (tituloCrear.dirty || tituloCrear.touched)" class="invalido">
+                                        <div *ngIf="tituloCrear.hasError('required')">
+                                            Debe Ingresar Un titulo
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="subtituloCrear" class="form-label">Subtitulo</label>
+                                    <input type="text" id="subtituloCrear" name="subtituloCrear" class="form-control" required
+                                        [(ngModel)]="imagen.subtitulo" #subtituloCrear="ngModel">
+
+                                    <div *ngIf="subtituloCrear.invalid && (subtituloCrear.dirty || subtituloCrear.touched)" class="invalido">
+                                        <div *ngIf="subtituloCrear.hasError('required')">
+                                            Debe Ingresar Un subtitulo
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="tituloBotonCrear" class="form-label">Texto Boton</label>
+                                    <input type="text" id="tituloBotonCrear" name="tituloBotonCrear" class="form-control" required
+                                        [(ngModel)]="imagen.tituloBoton" #tituloBotonCrear="ngModel">
+
+                                    <div *ngIf="tituloBotonCrear.invalid && (tituloBotonCrear.dirty || tituloBotonCrear.touched)" class="invalido">
+                                        <div *ngIf="tituloBotonCrear.hasError('required')">
+                                            Debe Ingresar Un texto
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="enlaceCrear" class="form-label">Enlace</label>
+                                    <input type="text" id="enlaceCrear" name="enlaceCrear" class="form-control" required
+                                        [(ngModel)]="imagen.enlace" #enlaceCrear="ngModel">
+
+                                    <div *ngIf="enlaceCrear.invalid && (enlaceCrear.dirty || enlaceCrear.touched)" class="invalido">
+                                        <div *ngIf="enlaceCrear.hasError('required')">
+                                            Debe Ingresar Un Enlace
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class=" col-md-7  form-group">
+                                <ng-container>
+                                    <div class="mb-3">
+                                        <label class="col-form-label font-weight-medium" for="text-input">Imagen</label>
+                                        <div class="input-group">
+                                            <input class="form-control" id="input_img"
+                                                (change)="fileChangeEvent($event)" type="file">
+                                            <div class="input-group-append">
+                                                <ng-container *ngIf="file == undefined">
+                                                    <button class="btn btn-primary" type="button"
+                                                        disabled>Subir</button>
+                                                </ng-container>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Previsualización de Imagen -->
+                                    <div class="mb-3 text-center" style="max-width: 20%;">
+                                        <img [src]="imgSelect" class="img-thumbnail" alt="Previsualización de imagen"
+                                            *ngIf="imgSelect">
+                                    </div>
+                                </ng-container>
+                            </div>
+                        </div>
+                        <button *ngIf="!load_btn" class="btn btn-primary btn-shadow" type="submit">Crear</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Inicia modal crear Banner -->
+
+<div class="modal fade" id="anadirBanner" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="min-width: 70%;">
+        <div class="modal-content">
+            <div class="modal-card card" data-list="{&quot;valueNames&quot;: [&quot;name&quot;]}">
+                <div class="card-body">
+                    <h5 class="mb-2">Nuevo Banner Banner</h5>
+                    <form #bannerForm="ngForm" appUnambiguousRole (ngSubmit)="crearNuevoBanner(bannerForm)">
+                        <div class="row">
+                            <div class=" col-md-5">
+
+                                <div class="  form-group">
+                                    <label for="title" class="form-label">Titulo</label>
+                                    <input type="text" id="title" name="title" class="form-control" required
+                                        [(ngModel)]="banner.titulo" #title="ngModel">
+
+                                    <div *ngIf="title.invalid && (title.dirty || title.touched)" class="invalido">
+                                        <div *ngIf="title.hasError('required')">
+                                            Debe Ingresar Un titulo
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button *ngIf="!load_btn" class="btn btn-primary btn-shadow" type="submit">Crear</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal editar item Banner-->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Editar Imagen</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+
+                <!-- Init Formulario -->
+                <form #itemBannerForm="ngForm" appUnambiguousRole (ngSubmit)="actualizarItemBanner(itemBannerForm)"
+                    *ngIf="selectedImage">
+                    <div class="row">
+
+
+                        <div class=" col-md-5">
+
+                            <div class="  form-group">
+                                <label for="titulo" class="form-label">Titulo</label>
+                                <input type="text" id="titulo" name="titulo" class="form-control" required
+                                    [(ngModel)]="selectedImage.titulo" #titulo="ngModel">
+                                <div *ngIf="titulo.invalid && (titulo.dirty || titulo.touched)" class="invalido">
+                                    <div *ngIf="titulo.hasError('required')">
+                                        Debe Ingresar Un titulo
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subtitulo" class="form-label">Subtitulo</label>
+                                <input type="text" id="subtitulo" name="subtitulo" class="form-control" required
+                                    [(ngModel)]="selectedImage.subtitulo" #subtitulo="ngModel">
+
+                                <div *ngIf="subtitulo.invalid && (subtitulo.dirty || subtitulo.touched)" class="invalido">
+                                    <div *ngIf="subtitulo.hasError('required')">
+                                        Debe Ingresar Un subtitulo
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tituloBoton" class="form-label">Texto Boton</label>
+                                <input type="text" id="tituloBoton" name="tituloBoton" class="form-control" required
+                                    [(ngModel)]="selectedImage.tituloBoton" #tituloBoton="ngModel">
+
+                                <div *ngIf="tituloBoton.invalid && (tituloBoton.dirty || tituloBoton.touched)" class="invalido">
+                                    <div *ngIf="tituloBoton.hasError('required')">
+                                        Debe Ingresar Un texto
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="enlace" class="form-label">Enlace</label>
+                                <input type="text" id="enlace" name="enlace" class="form-control" required
+                                    [(ngModel)]="selectedImage.enlace" #enlace="ngModel">
+
+                                <div *ngIf="enlace.invalid && (enlace.dirty || enlace.touched)" class="invalido">
+                                    <div *ngIf="enlace.hasError('required')">
+                                        Debe Ingresar Un Enlace
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class=" col-md-7  form-group">
+
+                            <div class="row">
+  
+                                <div class="col-lg-12 form-group">	
+                                  <label for="">Portada (*)</label>
+                                  <div class="custom-file">
+                                      <input class="custom-file-input" type="file" id="file-input" (change)="fileChangeEvent($event)">
+                                      <label class="custom-file-label" id="input-portada" for="file-input" style="white-space:nowrap;overflow:hidden">Seleccionar imagen</label>
+                                  </div>
+                              </div>
+                              <div class="col-lg-12">
+                                  <img [src]="imgSelect" class="img-thumbnail" alt="Rounded image">
+                              </div>
+                              </div>
+                        </div>
+                    </div>
+                    <button *ngIf="!load_btn" class="btn btn-primary btn-shadow" type="submit">Actualizar</button>
+                </form>
+                <!-- FInaliza Formulario -->
+            </div>
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-primary" (click)="saveChanges()">Guardar Cambios</button> -->
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -657,7 +657,6 @@ const editar_caracteristica_variedad_admin = async function(req,res){
         let id_producto = req.params['id_producto'];
         let id_variedad = req.params['id_variedad'];
         let id_caracteristica = req.params['id_caracteristica'];
-        console.log('parametros',id_producto,id_variedad,id_caracteristica,data)
        try {
 
         const registro = await Producto.findOneAndUpdate(
@@ -789,8 +788,6 @@ const eliminar_imagen_variedad_admin = async function (req, res) {
 
     if (req.user) {
         try {
-
-            console.log('Eliminar', req.params)
             var id_producto = req.params['id_producto']
             var id_variedad = req.params['id_variedad']
             var id_imagen = req.params['id_imagen']
@@ -863,6 +860,101 @@ const cerrar_mensaje_admin = async function (req, res) {
 
 /*Finaliza mensajes */
 
+/*Inican rutas eliminacion caracteristicas y variedades de productos */
+const eliminar_variedad_producto_admin = async function (req, res) {
+
+    if (req.user) {
+        try {
+
+            console.log('Eliminar', req.params)
+            var id_producto = req.params['id_producto']
+            var id_variedad = req.params['id_variedad']
+            const productoActualizado = await Producto.findByIdAndUpdate(
+                { _id: id_producto },
+                { $pull: { variedades: { _id: id_variedad } } },
+                { new: true } // Esta opción devuelve el documento actualizado
+            );
+            console.log(productoActualizado)
+            if (!productoActualizado) {
+                return res.status(404).send({ message: 'Producto no encontrado' });
+            }
+
+            res.status(200).send({
+                message: 'Variedad eliminada correctamente',
+                data: productoActualizado
+            });
+
+
+        } catch (error) {
+            console.log('errror al eliminar',error)
+            res.status(500).send({ message: 'Error al eliminar la variedad', error });
+        }
+
+
+
+    } else {
+        res.status(500).send({ message: 'Usuario No Autorizado' });
+    }
+}
+
+
+const eliminar_carcateristica_variedad_producto_admin = async function (req, res) {
+
+    if (req.user) {
+        try {
+
+            var id_caracteristica= req.params['id_carcateristica']
+            var id_producto = req.params['id_producto']
+            var id_variedad = req.params['id_variedad']
+
+            const productoActualizado = await Producto.findByIdAndUpdate(
+                
+                id_producto,
+                {
+                    $pull: {
+                        "variedades.$[v].tamano_disponibilidad": { _id: id_caracteristica }
+                    }
+                },
+                {
+                    new: true, // Devuelve el documento actualizado
+                    arrayFilters: [{ "v._id": id_variedad }],
+                    useFindAndModify: false // Para evitar el uso de métodos obsoletos
+                }
+                /*{
+                    _id: id_producto,
+                    "variedades._id": id_variedad
+                  },
+                  {
+                    $pull: {
+                      "variedades.$.tamano_disponibilidad": { _id: new mongoose.Types.ObjectId(id_caracteristica) }
+                    }
+                  },
+                  { new: true }*/
+            );
+            console.log(productoActualizado)
+            if (!productoActualizado) {
+                return res.status(404).send({ message: 'Producto no encontrado' });
+            }
+
+            res.status(200).send({
+                message: 'Variedad eliminada correctamente',
+                data: productoActualizado
+            });
+
+
+        } catch (error) {
+            console.log('errror al eliminar',error)
+            res.status(500).send({ message: 'Error al eliminar la variedad', error });
+        }
+
+
+
+    } else {
+        res.status(500).send({ message: 'Usuario No Autorizado' });
+    }
+}
+
+
 
 module.exports = {
     login_admin,
@@ -893,6 +985,8 @@ module.exports = {
     agregar_imagen_variedad_admin,
     eliminar_imagen_variedad_admin,
     agregar_nueva_variedad_producto_admin,
+    eliminar_variedad_producto_admin,
+    eliminar_carcateristica_variedad_producto_admin,
             //Carcateristicas de las variedades
             agregar_nueva_caracteristica_variedad_admin,
             editar_caracteristica_variedad_admin,

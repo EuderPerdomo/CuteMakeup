@@ -37,7 +37,8 @@ api.post('/agregar_variedad_producto_admin/:id',auth.auth,adminController.agrega
 api.put('/agregar_imagen_variedad_admin/:id',[auth.auth,path],adminController.agregar_imagen_variedad_admin);
 api.delete('/eliminar_imagen_variedad_admin/:id_producto/:id_variedad/:id_imagen',auth.auth,adminController.eliminar_imagen_variedad_admin)
 api.post('/agregar_nueva_variedad_producto_admin/:id',auth.auth,adminController.agregar_nueva_variedad_producto_admin)
-
+api.delete('/eliminar_variedad_producto_admin/:id_producto/:id_variedad',auth.auth,adminController.eliminar_variedad_producto_admin)
+api.delete('/eliminar_caracteristica_variedad_producto_admin/:id_producto/:id_variedad/:id_carcateristica',auth.auth,adminController.eliminar_carcateristica_variedad_producto_admin)
             //Carcateristicas de las variedades
             api.post('/agregar_nueva_caracteristica_variedad_admin/:id_producto/:id_variedad',auth.auth,adminController.agregar_nueva_caracteristica_variedad_admin)
             api.put('/editar_caracteristica_variedad_admin/:id_producto/:id_variedad/:id_caracteristica',[auth.auth,path],adminController.editar_caracteristica_variedad_admin);

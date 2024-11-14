@@ -24,6 +24,7 @@ api.get('/inventario_productos_admin',auth.auth,productoController.inventario_pr
 api.get('/listar_productos_public/:filtro?',productoController.listar_productos_public)
 api.get('/obtener_producto_public/:slug',productoController.obtener_producto_public)
 api.get('/listar_productos_recomendado_public/:categoria',productoController.listar_productos_recomendado_public)
+api.get('/listar_productos_nuevos_publico',productoController.listar_productos_nuevos_public);
 
 
 

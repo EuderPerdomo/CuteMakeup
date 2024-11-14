@@ -119,7 +119,7 @@
                               <td>{{medida.disponibilidad}}</td>
                               <td>{{medida.precio |currency:'COP':'$':'3.0'}}</td>
                               <td>
-                                <span (click)="deleteCharacteristic(item, indice2)">
+                                <span (click)="deleteCharacteristic(item, indice2,indice)">
                                   <i class="fa-regular fa-trash-can " style="color: red; cursor: pointer;"></i>
                                 </span>
                                 <span (click)="editarCaracteristica(indice, indice2)" class="m-3">

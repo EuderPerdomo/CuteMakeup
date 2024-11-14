@@ -283,50 +283,82 @@ export class IndexProductoComponent implements OnInit {
 
   }
 
-
   //Productos al carrito
   agregar_producto(producto: any) {
-    console.log(producto,producto.variedades[0]._id)
+    let clienteID: any;
+    let token = localStorage.getItem('token');  // Verificamos si hay un token
 
-    let data = {
-      producto: producto._id,
-      cliente: localStorage.getItem('identity'),
-      cantidad: 1,
-      variedad: producto.variedades[0]._id
+    var data: any = {}
 
+    if (token) {
+      // Cliente autenticado
+      clienteID = localStorage.getItem('identity');
+
+      data.producto = producto._id
+      data.cliente = clienteID,  // Usar clienteID (identity o cartID)
+        data.cantidad = 1,
+        data.variedad = producto.variedades[0]._id, //Id
+        data.subvariedad = producto.variedades[0].tamano_disponibilidad[0]._id, //Id
+        data.precio = producto.variedades[0].tamano_disponibilidad[0].precio
+
+
+    } else {
+      // Cliente no autenticado: Generar un cartID
+      clienteID = localStorage.getItem('cartID'); //Mire si existe un cartID y traelo
+      if (!clienteID) {
+        clienteID = this._clienteService.generateCartID();  // Generar un nuevo cartID si clienteID es null
+        localStorage.setItem('cartID', clienteID);
+        data.producto = producto._id
+        data.cliente_no_autenticado = clienteID,  // Usar clienteID (identity o cartID)
+          data.cantidad = this.carrito_data.cantidad,
+          data.variedad = producto.variedades[0]._id, //Id
+          data.subvariedad = producto.variedades[0].tamano_disponibilidad[0]._id, //Id
+          data.precio = producto.variedades[0].tamano_disponibilidad[0].precio
+
+      } else {
+        data.producto = producto._id
+        data.cliente_no_autenticado = clienteID,  // Usar clienteID (identity o cartID)
+          data.cantidad = this.carrito_data.cantidad,
+          data.variedad = producto.variedades[0]._id, //Id
+          data.subvariedad = producto.variedades[0].tamano_disponibilidad[0]._id, //Id
+          data.precio = producto.variedades[0].tamano_disponibilidad[0].precio
+      }
     }
-    this.btn_cart = true
+    this.btn_cart = true;
 
-    this._clienteService.agregar_carrito_cliente(data, this.token).subscribe(
+    this._clienteService.agregar_carrito_cliente(data, token).subscribe(
       response => {
-
         if (response.data == undefined) {
-
           iziToast.show({
             title: 'ERROR',
             titleColor: '#FF0000',
+            //color: '#FFF',
             class: 'text-danger',
             position: 'topRight',
             message: 'El producto ya se encuentra en el carrito'
-
           });
-          this.btn_cart = false
+          this.btn_cart = false;
         } else {
           iziToast.show({
             title: ' ¡Genial! ',
             titleColor: 'green',
+            //color: '#FFF',
             class: 'text-success',
             position: 'topRight',
-            message: 'producto Agregado al carrito'
+            message: 'Producto agregado al carrito'
           });
-          this.socket.emit('add-carrito-add',{data:true})
-          this.btn_cart = false
-          
-
+          this.socket.emit('add-carrito-add', { data: true });
+          this.btn_cart = false;
         }
       }
-    )
+    );
 
+  }
+
+
+  getCloudinaryImageUrl(imageUrl: string, width: number, height: number, crop: string = 'fill'): string {
+    // Verifica que la URL esté configurada para admitir transformaciones de Cloudinary
+    return imageUrl.replace('/upload/', `/upload/c_${crop},w_${width},h_${height}/`);
   }
 
 

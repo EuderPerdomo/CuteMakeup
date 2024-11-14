@@ -168,10 +168,16 @@ const listar_productos_recomendado_public = async function (req, res) {
     res.status(200).send({ data: productos });
 }
 
+const listar_productos_nuevos_public = async function(req,res){
+    let reg = await Producto.find({estado: 'Publicado'}).sort({createdAt:-1}).limit(8);
+    res.status(200).send({data: reg});
+}
+
 module.exports = {
     listar_productos_public,
     obtener_producto_public,
     listar_productos_recomendado_public,
+    listar_productos_nuevos_public,
 
     //Inventario de Productos
     inventario_productos_admin,

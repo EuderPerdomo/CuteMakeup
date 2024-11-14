@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ChangeDetectorRef, ElementRef } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ChangeDetectorRef, ElementRef, CUSTOM_ELEMENTS_SCHEMA,ViewChild } from '@angular/core';
 import { NavComponent } from '../../nav/nav.component';
 import { FooterComponent } from '../../footer/footer.component';
 import { ActivatedRoute, RouterModule } from '@angular/router';
@@ -7,9 +7,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Producto, Galeria, Tamano_Disponibilidad } from '../../../producto';
 import { ClienteService } from '../../../service/cliente.service';
+import { Card } from '../../../interfaces/card';
 
 import { io } from 'socket.io-client'
-
+import { register } from 'swiper/element/bundle';
+// register Swiper custom elements
+register();
 
 declare var tns: any
 declare var lightGallery: any
@@ -20,10 +23,15 @@ declare var $: any
   selector: 'app-show-producto',
   standalone: true,
   imports: [NavComponent, FooterComponent, CommonModule, RouterModule, FormsModule],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './show-producto.component.html',
-  styleUrl: './show-producto.component.css'
+  styleUrl: './show-producto.component.css',
 })
-export class ShowProductoComponent implements AfterViewInit {
+export class ShowProductoComponent implements  OnInit, AfterViewInit {
+
+  pageUrl: string = window.location.href; // URL de la página actual
+  shareText: string = "¡Mira este increíble contenido!";
+  imageUrl: string = "https://example.com/image.jpg";
 
   public slug: any
 
@@ -62,6 +70,7 @@ export class ShowProductoComponent implements AfterViewInit {
   public carrusel: any;
   public slider: any;
   public carrusel2: any[] = []
+  public carrusel_original: any[]=[];
 
   public socket = io('http://localhost:4201')
 
@@ -96,6 +105,9 @@ export class ShowProductoComponent implements AfterViewInit {
     private cdr: ChangeDetectorRef,
     private _clienteService: ClienteService,
   ) {
+    
+    window.scrollTo(0, 0);
+
     this.token = localStorage.getItem('token')
 
     this._route.params.subscribe(
@@ -140,8 +152,18 @@ export class ShowProductoComponent implements AfterViewInit {
                     imagen: galeriaItem.imagen,
                     variedad: variedad._id
                   });
+
+                  this.carrusel_original.push({
+                    imagen: galeriaItem.imagen,
+                    variedad: variedad._id
+                  });
                 }
-              }
+
+                }
+                
+                
+              
+              
             }
             this._guestService.listar_productos_recomendado_public(this.producto.categoria._id).subscribe(
               response => {
@@ -162,14 +184,22 @@ export class ShowProductoComponent implements AfterViewInit {
   }
 
 
-
+ngOnInit(): void {
+  
+}
 
 
 
   //Galeria del producto
   ngAfterViewInit(): void {
+
+    //this.swiper.nativeElement.swiper.activeIndex = this.index;
+    //this.swiperThumbs.nativeElement.swiper.activeIndex = this.index;
+
+
     setTimeout(() => {
       //Productos recomendados
+/* activar para dejar igual
       tns({
         container: '.tns-carousel-inner-two',
         controlsText: ['<i class="ci-arrow-left"></i>', '<i class="ci-arrow-right"></i>'],
@@ -200,10 +230,10 @@ export class ShowProductoComponent implements AfterViewInit {
           }
         }
       });
-
-      this.iniciarLightGalery()
-      this.initSlider(); //Inicia mi tercer carrusel
-      this.initCache();
+*/
+     /// this.iniciarLightGalery()
+     // this.initSlider(); //Inicia mi tercer carrusel
+     // this.initCache();
 
     }, 500)
 
@@ -242,9 +272,9 @@ export class ShowProductoComponent implements AfterViewInit {
           clienteID = localStorage.getItem('cartID'); //Mire si existe un cartID y traelo
           if (!clienteID) {
             clienteID = this._clienteService.generateCartID();  // Generar un nuevo cartID si clienteID es null
-            console.log('CarId CREADO', clienteID)
+          
             localStorage.setItem('cartID', clienteID);
-            console.log('No existia cardID')
+         
             data.producto = this.producto._id
             data.cliente_no_autenticado = clienteID,  // Usar clienteID (identity o cartID)
               data.cantidad = this.carrito_data.cantidad,
@@ -253,7 +283,7 @@ export class ShowProductoComponent implements AfterViewInit {
               data.precio = this.producto.precio
 
           } else {
-            console.log('ya existe cardID')
+   
             data.producto = this.producto._id
             data.cliente_no_autenticado = clienteID,  // Usar clienteID (identity o cartID)
               data.cantidad = this.carrito_data.cantidad,
@@ -263,7 +293,6 @@ export class ShowProductoComponent implements AfterViewInit {
           }
         }
 
-        console.log('data a enviar', data)
         this.btn_cart = true;
 
         this._clienteService.agregar_carrito_cliente(data, token).subscribe(
@@ -326,7 +355,6 @@ export class ShowProductoComponent implements AfterViewInit {
 
     const $body = $('body');
     this.cachedSlider = $body.find(this.sliderSelector)[0].cloneNode(true);
-
     this.cachedSliderThumbnails = $body.find(this.ThumbnailsSelector)[0].cloneNode(true);
 
   }
@@ -359,14 +387,24 @@ export class ShowProductoComponent implements AfterViewInit {
         });
       }
     } else {
-      console.log('No se encontraron elementos con la clase .gallery');
+      //console.log('No se encontraron elementos con la clase .gallery');
     }
 
   }
 
-
-
   filter() {
+    // Reinicia carrusel2 al estado original
+    this.carrusel2 = [...this.carrusel_original]; // Usa un nuevo array para evitar referencias directas
+  
+    // Filtra solo si la variedad seleccionada no es "all"
+    if (this.variedad_seleccionada !== "all") {
+      this.carrusel2 = this.carrusel2.filter(item => item.variedad === this.variedad_seleccionada);
+    }
+  
+    //console.log(this.variedad_seleccionada, this.carrusel2, this.carrusel_original);
+  }
+
+  filter1() {
     var filterValue = this.variedad_seleccionada
     //Llenar arreglo de subvariedades de acuerdo a la variedad seleccionada
 

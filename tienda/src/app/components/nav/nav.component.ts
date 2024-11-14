@@ -35,7 +35,6 @@ export class NavComponent implements OnInit {
   public carrito_arr: Array<any> = []
   public subtotal = 0
   public socket = io('http://localhost:4201')
-
   public id_usuario: any
 
   /*
@@ -64,15 +63,21 @@ export class NavComponent implements OnInit {
       this.user_login = JSON.parse(obj_lc);
       this.id_usuario = localStorage.getItem('identity');
       //this.obtener_carrito();
+      console.log('Recarga TOKEN nAV')
       this.obtener_carrito_cliente()
     }
     else {
       this.id_usuario = localStorage.getItem('cartID');
       if (this.id_usuario) {
+        console.log('Recarga CARTID NAV')
         this.obtener_carrito_cliente()
       }
+      else{
+        console.log('no existe token ni cartid')
+        this.id_usuario = this._clienteService.generateCartID();
+        localStorage.setItem('cartID', this.id_usuario);
+      }
     }
-
 
     this._clienteService.get_categorias_publico().subscribe(
       response => {
@@ -82,7 +87,15 @@ export class NavComponent implements OnInit {
   }
 
   obtener_carrito_cliente() {
-    console.log('obteniendo el carrito del cliente',this.id_usuario,this.token)
+    //To do el siempre debe validar que haya un token o un cartid
+if(this.id_usuario || this.token){
+//Obtengo carrito
+}else{
+  //Miro si
+}
+
+    console.log('No recarga NAV')
+    console.log('obteniendo el carrito del cliente NAV',this.id_usuario,this.token)
     this._clienteService.obtener_carrito_cliente(this.id_usuario, this.token).subscribe(
       response => {
         this.carrito_arr = response.data
@@ -112,11 +125,13 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
 
     this.socket.on('new-carrito', function (this: any, data: any) {
+
       this.obtener_carrito_cliente()
     }.bind(this))
 
 
     this.socket.on('new-carrito-add', function (this: any, data: any) {
+      console.log('se agrego algo al carrito debo buscarlo')
       this.obtener_carrito_cliente()
     }.bind(this))
   }

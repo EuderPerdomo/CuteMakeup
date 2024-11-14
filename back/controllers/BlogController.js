@@ -103,9 +103,8 @@ listar_posts_public = async function (req, res) {
 const obtener_blog_admin = async function (req, res) {
     if (req.user) {
         var id = req.params['id'];
-
         try {
-            var reg = await Producto.findById({ _id: id });
+            var reg = await Blog.findById({ _id: id });
             res.status(200).send({ data: reg });
         } catch (error) {
             res.status(200).send({ data: undefined });
@@ -350,6 +349,13 @@ const obtener_comentarios_post_guest = async function (req, res) {
 
 }
 
+
+const listar_blogs_nuevos_public = async function(req,res){
+    let reg = await Blog.find({estado: 'Publicado'}).sort({createdAt:-1}).limit(8);
+    res.status(200).send({data: reg});
+}
+
+
 module.exports = {
     //Blog
     registro_blog_admin,
@@ -361,6 +367,7 @@ module.exports = {
     listar_posts_public,
     obtener_post_public,
     listar_post_recomendado_public,
+    listar_blogs_nuevos_public,
     
 
     //Etiquetas de Post

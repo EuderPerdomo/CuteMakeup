@@ -34,6 +34,8 @@ export class CategoriaProductoComponent {
 
   }
 
+  selectedCategoria: any = null;
+
   constructor(
     private _adminService: AdminService,
     private _router: Router
@@ -51,6 +53,13 @@ export class CategoriaProductoComponent {
       }
     );
   }
+
+  openEditCategoria(categoria: any) {
+    this.selectedCategoria = categoria;
+    this.imgSelect = this.selectedCategoria.portada;
+    console.log(this.selectedCategoria)
+  }
+  
 
   guardarNuevaCategoria(registro: any) {
 
@@ -114,6 +123,51 @@ export class CategoriaProductoComponent {
       })
     }
 
+  }
+  actualizarCategoria(editarCategoriaForm:any){
+    if(editarCategoriaForm.valid){
+      var data: any = {};
+      const id_categoria=this.selectedCategoria._id
+            if (this.file != undefined) {
+              data.portada = this.file;
+            }
+
+            data.titulo = this.selectedCategoria.titulo;
+
+            this.load_btn = true;
+
+            this._adminService.actualizar_categoria_admin(data, id_categoria, this.token).subscribe(
+              response => {
+                iziToast.show({
+                  title: 'SUCCESS',
+                  titleColor: '#1DC74C',
+                  class: 'text-success',
+                  position: 'topRight',
+                  message: 'Se actualizó correctamente La categoria.'
+                });
+      
+                this.load_btn = false;
+                $('#editCategoriaModal').modal('hide');
+                $('.modal-backdrop').remove();
+                this.initData()
+                //this._router.navigate(['config/general']);
+              },
+              error => {
+                this.load_btn = false;
+              }
+            )
+      
+      
+          }else{
+            iziToast.show({
+              title: 'ERROR',
+              titleColor: '#FF0000',
+              class: 'text-danger',
+              position: 'topRight',
+              message: 'Los datos del formulario no son validos'
+            });
+            this.load_btn = false;
+          }
   }
 
 

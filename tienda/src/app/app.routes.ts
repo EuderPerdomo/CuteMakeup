@@ -11,6 +11,10 @@ import { PerfilComponent } from './components/usuario/perfil/perfil.component';
 import { BlogListComponent } from './components/blog/blog-list/blog-list.component';
 import { SingleBlogComponent } from './components/blog/single-blog/single-blog.component';
 
+//import { RouterModule } from '@angular/router';
+//import { NgModule } from '@angular/core';
+
+
 export const routes: Routes = [
   {
     path: '',

@@ -15,6 +15,8 @@ import { IndexBlogComponent } from './components/blog/index-blog/index-blog.comp
 import { CreateBlogComponent } from './components/blog/create-blog/create-blog.component';
 import { InventarioProductoComponent } from './components/reportes/inventario-producto/inventario-producto.component';
 import { CategoriaProductoComponent } from './components/config/categoria-producto/categoria-producto.component';
+import { ConfigGeneralComponent } from './components/config/config-general/config-general.component';
+import { EditBlogComponent } from './components/blog/edit-blog/edit-blog.component';
 
 export const routes: Routes = [
   {
@@ -114,6 +116,12 @@ export const routes: Routes = [
         data: { allowedRoles: ['admin'] }
       },
 
+      {
+        path: 'blog/edit/:id',
+        component: EditBlogComponent,
+        canActivate: [adminGuard],
+        data: { allowedRoles: ['user', 'admin'] }
+      },
 
       //Inician rutas de reportes
       {
@@ -137,6 +145,14 @@ export const routes: Routes = [
         canActivate: [adminGuard],
         data: { allowedRoles: ['admin'] }
       },
+
+      {
+        path: 'general',
+        component: ConfigGeneralComponent,
+        canActivate: [adminGuard],
+        data: { allowedRoles: ['admin'] }
+      },
+
     ]},
 
   //Ruta comodin Para cuando no encuentre ninguna ruta coincidente

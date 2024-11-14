@@ -122,7 +122,7 @@
                     
                       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonAlias">
                         <li>
-                          <a class="dropdown-item" [routerLink]="['/panel/productos/edit',item._id]">Editar</a>
+                          <a class="dropdown-item" [routerLink]="['/panel/blog/edit',item._id]">Editar</a>
                         </li>
                         <a *ngIf="item.estado == 'Edicion'" class="dropdown-item" style="cursor: pointer;" data-toggle="modal" [attr.data-target]="'#vs-'+item._id">Mostrar Post</a>
                         <a *ngIf="item.estado == 'Publicado'" class="dropdown-item" style="cursor: pointer;" data-toggle="modal" [attr.data-target]="'#vs-'+item._id">Ocultar Post</a>

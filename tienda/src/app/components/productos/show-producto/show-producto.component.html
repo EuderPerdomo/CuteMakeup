@@ -51,32 +51,54 @@
       <div class="row">
         <div class="col-md-6 mb-md-0 mb-4">
 
-          <!-- Inicia segunda galeria -->
 
-          <div class="tns-carousel-wrapper gallery product-gallery mx-auto" style="max-width: 570px;">
-            <div class="tns-carousel-inner cs-carousel-inner my-slider" data-carousel-options='{
-                                      "gutter": 15,
-                                      "navContainer": "#tns-thumbnails2",
-                                      "navAsThumbnails": true
-                                    }'>
+<!-- Inicia segunda galeria -->
 
-              <!-- Product gallery item -->
-              <a class="gallery-item cs-gallery-item" *ngFor="let item of carrusel2" [attr.data-type]="item.variedad"
-                href="{{item.imagen}}">
-                <img class="rounded" [src]="item.imagen" alt="Carousel image">
-              </a>
-            </div>
+<!-- <div class="tns-carousel-wrapper gallery product-gallery mx-auto" style="max-width: 570px;">
+  <div class="tns-carousel-inner cs-carousel-inner my-slider" data-carousel-options='{
+                            "gutter": 15,
+                            "navContainer": "#tns-thumbnails2",
+                            "navAsThumbnails": true
+                          }'>
 
-            <!-- Product gallery thumbnails -->
-            <div class="tns-thumbnails thumbnails_remove" id="tns-thumbnails2">
-              <button type="button" [attr.data-nav]="indice" [attr.data-type]="item.variedad"
-                *ngFor="let item of carrusel2; let indice =index">
-                <img [src]="item.imagen" alt="Thumbnail">
-              </button>
-            </div>
-          </div>
+    <a class="gallery-item cs-gallery-item" *ngFor="let item of carrusel2" [attr.data-type]="item.variedad"
+      href="{{item.imagen}}">
+      <img class="rounded" [src]="item.imagen" alt="Carousel image">
+    </a>
+  </div>
 
-          <!-- Finaliza segunda galeria -->
+  <div class="tns-thumbnails thumbnails_remove" id="tns-thumbnails2">
+    <button type="button" [attr.data-nav]="indice" [attr.data-type]="item.variedad"
+      *ngFor="let item of carrusel2; let indice =index">
+      <img [src]="item.imagen" alt="Thumbnail">
+    </button>
+  </div>
+</div> -->
+<!-- Finaliza segunda galeria -->
+
+
+
+<!--Inicia Swiper  -->
+<div class="mx-auto" style="max-width: 570px;">
+  <swiper-container style="--swiper-navigation-color: #1650f1; --swiper-pagination-color: #fff" class="mySwiper"
+  thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
+  <swiper-slide *ngFor="let item of carrusel2">
+    <div class="ratio ratio-4x3" role="button" [ngStyle]="{background: 'url(' + item.imagen +') center / cover'}"></div>
+  </swiper-slide>
+  </swiper-container>
+  
+  <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
+  watch-slides-progress="true">
+  <swiper-slide *ngFor="let item of carrusel2">
+    <div class="ratio ratio-4x3" role="button" [ngStyle]="{background: 'url(' + item.imagen +') center / cover'}"></div>
+  </swiper-slide>
+  </swiper-container>
+</div>
+
+<!-- Fin swiper -->
+
+
+
 
         </div>
         <div class="col-md-6 ps-xl-5">
@@ -149,13 +171,14 @@
               </div>
 
               <!-- Si tiene Variedades Subvariedad_seleccioanda-->
-              <div class="mb-4"  *ngIf="subvariedad_seleccionada.length">
+              <div class="mb-4" *ngIf="subvariedad_seleccionada.length">
                 <label for="size" class="form-label-lg">Subvariedades</label>
-                <select class="form-control form-select" id="subvariedad" name="subvariedad"
-                  [(ngModel)]="subvariedad" (change)="filter_subvariedad(subvariedad)">
+                <select class="form-control form-select" id="subvariedad" name="subvariedad" [(ngModel)]="subvariedad"
+                  (change)="filter_subvariedad(subvariedad)">
                   <!-- <option value="" selected disabled>Seleccione....</option> -->
                   <!-- <option value="" selected>Seleccione Subvariedad</option> -->
-                  <option value="{{item._id}}" *ngFor="let item of subvariedad_seleccionada">{{item.tamano}}-{{item.unidad_medida}}</option>
+                  <option value="{{item._id}}" *ngFor="let item of subvariedad_seleccionada">
+                    {{item.tamano}}-{{item.unidad_medida}}</option>
                 </select>
               </div>
 
@@ -176,12 +199,8 @@
 
             <div class="col-lg-2 col-4 order-lg-3 order-3">
               <div class="mb-4">
-                <input type="number" class="form-control form-control-sm bg-light me-3" 
-                min="1" 
-                name="cantidad" 
-                style="width: 4.5rem;" 
-                [defaultValue]="1" 
-                [(ngModel)]="carrito_data.cantidad">
+                <input type="number" class="form-control form-control-sm bg-light me-3" min="1" name="cantidad"
+                  style="width: 4.5rem;" [defaultValue]="1" [(ngModel)]="carrito_data.cantidad">
               </div>
             </div>
 
@@ -211,9 +230,9 @@
 
           <!-- Terms -->
           <!-- Accordion -->
-          <div class="accordion accordion-alt mb-4" id="accordion">
+          <!-- <div class="accordion accordion-alt mb-4" id="accordion">
 
-            <!-- Item -->
+          
             <div class="accordion-item">
               <h6 class="accordion-header" id="accordionHeading-1">
                 <button class="accordion-button border-bottom-0" type="button" data-bs-toggle="collapse"
@@ -227,8 +246,7 @@
                     Free standard shipping on orders <strong>over $35</strong> before tax, plus free returns.
                   </p>
 
-                  <!-- Delivery table -->
-                  <div class="table-responsive px-md-3">
+                   <div class="table-responsive px-md-3">
                     <table class="table mb-0" style="min-width: 450px;">
                       <thead class="fs-xs text-uppercase text-muted">
                         <tr>
@@ -255,12 +273,12 @@
                         </tr>
                       </tbody>
                     </table>
-                  </div>
+                  </div> 
                 </div>
               </div>
             </div>
 
-            <!-- Item -->
+          
             <div class="accordion-item">
               <h6 class="accordion-header" id="accordionHeading-2">
                 <button class="accordion-button border-bottom-0 collapsed" type="button" data-bs-toggle="collapse"
@@ -280,11 +298,15 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Share -->
           <div class="mb-5 text-nowrap">
+            
             <h6 class="d-inline-block align-middle me-2 mb-0">Compartir:</h6>
+            <!-- <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fcutemakeup.cloud%2Fproductos&layout&size&width=99&height=20&appId" width="99" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe> -->
+            <!-- <a [href]="'https://www.facebook.com/sharer/sharer.php?u=' + pageUrl"  target="_blank" data-bs-toggle="tooltip" title="Facebook"> <i class="ci-facebook"></i></a>
+
             <a href="#" class="btn-social bs-solid align-middle me-2" data-bs-toggle="tooltip" title="Facebook">
               <i class="ci-facebook"></i>
             </a>
@@ -293,7 +315,7 @@
             </a>
             <a href="#" class="btn-social bs-solid align-middle" data-bs-toggle="tooltip" title="Pinterest">
               <i class="ci-pinterest"></i>
-            </a>
+            </a> -->
           </div>
 
           <!-- Payment -->
@@ -790,7 +812,47 @@
         </button>
       </div>
     </div>
-    <div class="tns-carousel-wrapper pb-2">
+
+
+    <!-- <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
+    watch-slides-progress="true">
+    <swiper-slide *ngFor="let item of productosRecomendados">
+      <div class="ratio ratio-4x3" role="button" [ngStyle]="{background: 'url(' + item.portada +') center / cover'}"></div>
+    </swiper-slide>
+    </swiper-container> -->
+
+    <div class="mx-auto" >
+
+      <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="30"
+      slides-per-view="3" navigation="true">
+      <swiper-slide *ngFor="let item of productosRecomendados">
+        <!-- <div class="ratio ratio-4x3" role="button" [ngStyle]="{background: 'url(' + item.portada +') center / cover'}"></div> -->
+        <div class="card card-product mx-auto">
+          <div class="card-product-img">
+            <a [routerLink]="['/productos/'+item.slug]" target="_blank" class="card-img-top">
+              <img [src]="item.portada" alt="Product image">
+            </a>
+            <div class="card-product-widgets-bottom">
+              <a [routerLink]="['/productos/'+item.slug]" target="_blank" class="btn-wishlist ms-auto"
+                data-bs-toggle="tooltip" data-bs-placement="left" title="Add to wishlist"></a>
+            </div>
+          </div>
+          <div class="card-body bg-transparent pb-2">
+            <h3 class="card-product-title text-truncate mb-2">
+              <a [routerLink]="['/productos/'+item.slug]" target="_blank" class="nav-link">{{item.titulo}}</a>
+            </h3>
+            <div class="d-flex align-items-center">
+              <span class="h5 d-inline-block mb-0">{{item.variedades[0].tamano_disponibilidad[0].precio |currency:'COP':'$':'3.0'}}</span>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+
+    </swiper-container>
+    </div>
+    
+
+    <!-- <div class="tns-carousel-wrapper pb-2">
       <div class="tns-carousel-inner tns-carousel-inner-two" data-carousel-options='{
                   "nav": false,
                   "controlsContainer": "#custom-controls-related",
@@ -814,7 +876,6 @@
                   }
                 }'>
 
-        <!-- Item -->
         <div *ngFor="let item of productosRecomendados">
           <div class="card card-product mx-auto">
             <div class="card-product-img">
@@ -836,10 +897,8 @@
             </div>
           </div>
         </div>
-
-
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 

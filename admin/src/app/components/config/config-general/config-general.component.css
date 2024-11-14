@@ -1,0 +1,7 @@
+.card{
+    flex-direction: row;
+}
+
+.modal-dialog {
+    max-width: 80%; /* Ajusta el porcentaje según lo que necesites */
+}

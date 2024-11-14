@@ -85,7 +85,8 @@ export class VariedadProductoComponent implements OnInit {
         _id: undefined
       }
   */
-    ]
+    ],
+    _id:''
   };
 
   public nuevaVariedad2= {};
@@ -210,12 +211,77 @@ public codigo = 0
 */
 
   deleteVariety(index: number) {
-    this.producto.variedades.splice(index, 1);
+    var id_variedad=this.producto.variedades[index]._id
+    var id_producto =this.producto._id
+    this._adminService.eliminar_variedad_producto_admin(id_producto,id_variedad,this.token).subscribe(
+      response=>{
+        this.producto=response.data
+        iziToast.show({
+          title: '¡Genial!',
+          titleColor: 'green',
+          class: 'text-success',
+          position: 'topRight',
+          message: '👌Variedad eliminada correctamente'
+        });
+      },
+      error=>{
+
+        iziToast.show({
+          title: '¡Ups!',
+          titleColor: '#FF0000',
+          //color: '#FFF',
+          class: 'text-danger',
+          position: 'topRight',
+          message: '😔Ocurrio un error al eliminar variedad '
+        });
+  
+
+      }
+    )
+    //Si la eliminacion de la base de datos retorna ok 
+//    this.producto.variedades.splice(index, 1);
+    
+
   }
 
-  deleteCharacteristic(variety: any, index: number) {
-    variety.tamano_disponibilidad.splice(index, 1);
-  }
+  deleteCharacteristic(variety: any, index_caracteristica: number,index_variedad:number) {
+    console.log('esto es variety',variety)
+    var id_caracteristica=variety.tamano_disponibilidad[index_caracteristica]._id
+   var id_variedad=variety._id
+   // var id_variedad=this.producto.variedades[index_variedad]._id
+    var id_producto =this.producto._id
+
+    console.log('a Eliminar',id_variedad,id_caracteristica,id_producto)
+    this._adminService.eliminar_caracteristica_variedad_producto_admin(id_producto,id_variedad,id_caracteristica,this.token).subscribe(
+      response=>{
+        this.producto=response.data
+        iziToast.show({
+          title: '¡Genial!',
+          titleColor: 'green',
+          class: 'text-success',
+          position: 'topRight',
+          message: '👌Caracteristica eliminada correctamente'
+        });
+      },
+      error=>{
+
+        iziToast.show({
+          title: '¡Ups!',
+          titleColor: '#FF0000',
+          //color: '#FFF',
+          class: 'text-danger',
+          position: 'topRight',
+          message: '😔Ocurrio un error al eliminar la caracteristica'
+        });
+  
+
+      }
+    )
+
+    
+    
+    //variety.tamano_disponibilidad.splice(index, 1);
+      }
 
   editarCaracteristica(variedad: any, caracteristica: any) {
     this.accion='editar'
